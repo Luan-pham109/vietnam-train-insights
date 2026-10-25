@@ -1,0 +1,182 @@
+[
+ {
+  "stage": "inspire",
+  "segment": "Nước ngoài",
+  "evidence": 0
+ },
+ {
+  "stage": "inspire",
+  "segment": "Expat",
+  "evidence": 0
+ },
+ {
+  "stage": "inspire",
+  "segment": "Khách Việt",
+  "evidence": 0
+ },
+ {
+  "stage": "inspire",
+  "segment": "Chưa rõ",
+  "evidence": 0
+ },
+ {
+  "stage": "plan",
+  "segment": "Nước ngoài",
+  "evidence": 0
+ },
+ {
+  "stage": "plan",
+  "segment": "Expat",
+  "evidence": 0
+ },
+ {
+  "stage": "plan",
+  "segment": "Khách Việt",
+  "evidence": 0
+ },
+ {
+  "stage": "plan",
+  "segment": "Chưa rõ",
+  "evidence": 0
+ },
+ {
+  "stage": "compare",
+  "segment": "Nước ngoài",
+  "evidence": 0
+ },
+ {
+  "stage": "compare",
+  "segment": "Expat",
+  "evidence": 0
+ },
+ {
+  "stage": "compare",
+  "segment": "Khách Việt",
+  "evidence": 0
+ },
+ {
+  "stage": "compare",
+  "segment": "Chưa rõ",
+  "evidence": 0
+ },
+ {
+  "stage": "book",
+  "segment": "Nước ngoài",
+  "evidence": 0
+ },
+ {
+  "stage": "book",
+  "segment": "Expat",
+  "evidence": 0
+ },
+ {
+  "stage": "book",
+  "segment": "Khách Việt",
+  "evidence": 0
+ },
+ {
+  "stage": "book",
+  "segment": "Chưa rõ",
+  "evidence": 0
+ },
+ {
+  "stage": "pre_trip",
+  "segment": "Nước ngoài",
+  "evidence": 0
+ },
+ {
+  "stage": "pre_trip",
+  "segment": "Expat",
+  "evidence": 0
+ },
+ {
+  "stage": "pre_trip",
+  "segment": "Khách Việt",
+  "evidence": 0
+ },
+ {
+  "stage": "pre_trip",
+  "segment": "Chưa rõ",
+  "evidence": 0
+ },
+ {
+  "stage": "station",
+  "segment": "Nước ngoài",
+  "evidence": 0
+ },
+ {
+  "stage": "station",
+  "segment": "Expat",
+  "evidence": 0
+ },
+ {
+  "stage": "station",
+  "segment": "Khách Việt",
+  "evidence": 0
+ },
+ {
+  "stage": "station",
+  "segment": "Chưa rõ",
+  "evidence": 0
+ },
+ {
+  "stage": "onboard",
+  "segment": "Nước ngoài",
+  "evidence": 0
+ },
+ {
+  "stage": "onboard",
+  "segment": "Expat",
+  "evidence": 0
+ },
+ {
+  "stage": "onboard",
+  "segment": "Khách Việt",
+  "evidence": 0
+ },
+ {
+  "stage": "onboard",
+  "segment": "Chưa rõ",
+  "evidence": 0
+ },
+ {
+  "stage": "last_mile",
+  "segment": "Nước ngoài",
+  "evidence": 0
+ },
+ {
+  "stage": "last_mile",
+  "segment": "Expat",
+  "evidence": 0
+ },
+ {
+  "stage": "last_mile",
+  "segment": "Khách Việt",
+  "evidence": 0
+ },
+ {
+  "stage": "last_mile",
+  "segment": "Chưa rõ",
+  "evidence": 0
+ },
+ {
+  "stage": "post_trip",
+  "segment": "Nước ngoài",
+  "evidence": 0
+ },
+ {
+  "stage": "post_trip",
+  "segment": "Expat",
+  "evidence": 0
+ },
+ {
+  "stage": "post_trip",
+  "segment": "Khách Việt",
+  "evidence": 0
+ },
+ {
+  "stage": "post_trip",
+  "segment": "Chưa rõ",
+  "evidence": 0
+ }
+]

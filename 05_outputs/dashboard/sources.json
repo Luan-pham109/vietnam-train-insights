@@ -1,0 +1,114 @@
+[
+ {
+  "source": "reddit",
+  "name": "r/VietNam, r/travel, r/solotravel, r/backpacking, r/VietnamTravel",
+  "wave": 1,
+  "state": "đã giao",
+  "raw": 0,
+  "evidence": 0
+ },
+ {
+  "source": "tripadvisor_forum",
+  "name": "TripAdvisor Vietnam forum (train threads)",
+  "wave": 1,
+  "state": "đã giao",
+  "raw": 0,
+  "evidence": 0
+ },
+ {
+  "source": "tripadvisor_review",
+  "name": "Review tàu du lịch tư nhân",
+  "wave": 1,
+  "state": "chưa giao",
+  "raw": 0,
+  "evidence": 0
+ },
+ {
+  "source": "gmaps_station",
+  "name": "Google Maps review ga HAN, SGN, HUE, DAD, NHA, LCA, DTH",
+  "wave": 1,
+  "state": "đã giao",
+  "raw": 0,
+  "evidence": 0
+ },
+ {
+  "source": "appstore",
+  "name": "App Store + Google Play: DSVN, 12Go, Baolau, Trip.com, Traveloka, Vexere (review nhắc tàu)",
+  "wave": 1,
+  "state": "đã giao",
+  "raw": 0,
+  "evidence": 0
+ },
+ {
+  "source": "muse_fb_radar",
+  "name": "FB group Muse radar đang thu",
+  "wave": 1,
+  "state": "đã giao",
+  "raw": 0,
+  "evidence": 0
+ },
+ {
+  "source": "youtube",
+  "name": "Vlog tàu VN: transcript + comment",
+  "wave": 2,
+  "state": "chưa giao",
+  "raw": 0,
+  "evidence": 0
+ },
+ {
+  "source": "tiktok",
+  "name": "Video review tàu/khoang",
+  "wave": 2,
+  "state": "chưa giao",
+  "raw": 0,
+  "evidence": 0
+ },
+ {
+  "source": "seat61",
+  "name": "seat61.com trang Vietnam",
+  "wave": 2,
+  "state": "chưa giao",
+  "raw": 0,
+  "evidence": 0
+ },
+ {
+  "source": "serp_ai",
+  "name": "Google SERP + ChatGPT/Perplexity/Gemini với bộ prompt cố định",
+  "wave": 2,
+  "state": "chưa giao",
+  "raw": 0,
+  "evidence": 0
+ },
+ {
+  "source": "competitor_site",
+  "name": "Trang tàu VN của 12Go, Baolau, Trip.com, Klook, Traveloka",
+  "wave": 2,
+  "state": "chưa giao",
+  "raw": 0,
+  "evidence": 0
+ },
+ {
+  "source": "ad_library",
+  "name": "Meta Ad Library, Google Ads Transparency",
+  "wave": 3,
+  "state": "chưa giao",
+  "raw": 0,
+  "evidence": 0
+ },
+ {
+  "source": "news",
+  "name": "VnExpress, Tuổi Trẻ, Thanh Niên, VnExpress International, dsvn.vn",
+  "wave": 3,
+  "state": "chưa giao",
+  "raw": 0,
+  "evidence": 0
+ },
+ {
+  "source": "forum_vn",
+  "name": "VOZ, Tinhte",
+  "wave": 3,
+  "state": "chưa giao",
+  "raw": 0,
+  "evidence": 0
+ }
+]
