@@ -15,9 +15,24 @@
 `open` → `in_progress` (Muse nhận) → `submitted` (Muse nộp) → `reviewed` (Claude duyệt) / `rework` (Claude trả lại, có lý do)
 
 - Muse chỉ làm task `open`/`rework`, theo thứ tự `priority`.
+- Task có dòng "Chờ T-xxx reviewed" → chỉ nhận khi T-xxx đã `reviewed`.
 - Không tự mở task. Nguồn hay ngoài brief → ghi vào mục "Đề xuất" của task đang chạy.
 
-## 3. Chuẩn Muse phải giữ
+### Muse poll `01_tasks/`
+1. `git pull --rebase` → đọc frontmatter mọi `T-*.md`.
+2. Chọn 1 task theo thứ tự: `rework` trước `open`, rồi theo `priority`, rồi `task_id` nhỏ nhất.
+3. **Claim ngay**: đổi `status: in_progress`, thêm `claimed_at: <ISO time>`, commit `[muse] claim T-xxx`, push. Push bị reject → pull lại, task đã bị đổi thì bỏ và chọn task khác.
+4. Mỗi lần chỉ chạy 1 task. Batch lớn → commit dần, mỗi lần ≤200 raw, ghi tiến độ vào mục "Báo cáo".
+5. Xong: điền "Báo cáo" + "Đề xuất", đổi `status: submitted`, thêm `submitted_at`, push.
+6. Task `in_progress` quá 72h không có commit → coi như treo, Claude được reset về `open`.
+7. Không còn task chạy được → không làm gì, đợi lần poll sau. Không tự sinh việc.
+
+### Claude review
+- Mỗi phiên: pull, xử lý mọi task `submitted`, ghi `review` vào evidence, điền mục "Review", đổi sang `reviewed` hoặc `rework` (kèm lỗi cụ thể).
+- Ngay sau review, mở task tiếp theo/cập nhật taxonomy nếu cần.
+
+## 3. Chuẩn Muse phải giữ (thu thập + extract evidence)
+0. Đầu mỗi task, đọc lại `00_brain/taxonomy.md` và `03_evidence/SCHEMA.md` (có thể đã đổi version).
 1. **Raw trước, evidence sau.** Mỗi evidence phải trỏ về 1 `raw_id` có thật.
 2. **Quote nguyên văn.** `quote` phải copy y nguyên từ raw (không dịch, không sửa). Tóm tắt/diễn giải để ở `summary`.
 3. **Chỉ dùng mã trong `00_brain/taxonomy.md`.** Không khớp mã nào → `topic: "other"` + ghi `topic_suggest`.
