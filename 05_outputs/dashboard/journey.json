@@ -17,12 +17,12 @@
  {
   "stage": "inspire",
   "segment": "Chưa rõ",
-  "evidence": 0
+  "evidence": 1
  },
  {
   "stage": "plan",
   "segment": "Nước ngoài",
-  "evidence": 0
+  "evidence": 2
  },
  {
   "stage": "plan",
@@ -37,12 +37,12 @@
  {
   "stage": "plan",
   "segment": "Chưa rõ",
-  "evidence": 9
+  "evidence": 15
  },
  {
   "stage": "compare",
   "segment": "Nước ngoài",
-  "evidence": 0
+  "evidence": 1
  },
  {
   "stage": "compare",
@@ -57,12 +57,12 @@
  {
   "stage": "compare",
   "segment": "Chưa rõ",
-  "evidence": 12
+  "evidence": 16
  },
  {
   "stage": "book",
   "segment": "Nước ngoài",
-  "evidence": 0
+  "evidence": 8
  },
  {
   "stage": "book",
@@ -77,7 +77,7 @@
  {
   "stage": "book",
   "segment": "Chưa rõ",
-  "evidence": 25
+  "evidence": 97
  },
  {
   "stage": "pre_trip",
@@ -97,7 +97,7 @@
  {
   "stage": "pre_trip",
   "segment": "Chưa rõ",
-  "evidence": 3
+  "evidence": 5
  },
  {
   "stage": "station",
@@ -117,15 +117,15 @@
  {
   "stage": "station",
   "segment": "Chưa rõ",
+  "evidence": 272
+ },
+ {
+  "stage": "onboard",
+  "segment": "Nước ngoài",
   "evidence": 4
  },
  {
   "stage": "onboard",
-  "segment": "Nước ngoài",
-  "evidence": 0
- },
- {
-  "stage": "onboard",
   "segment": "Expat",
   "evidence": 0
  },
@@ -136,30 +136,30 @@
  },
  {
   "stage": "onboard",
+  "segment": "Chưa rõ",
+  "evidence": 50
+ },
+ {
+  "stage": "last_mile",
+  "segment": "Nước ngoài",
+  "evidence": 2
+ },
+ {
+  "stage": "last_mile",
+  "segment": "Expat",
+  "evidence": 0
+ },
+ {
+  "stage": "last_mile",
+  "segment": "Khách Việt",
+  "evidence": 0
+ },
+ {
+  "stage": "last_mile",
   "segment": "Chưa rõ",
   "evidence": 27
  },
  {
-  "stage": "last_mile",
-  "segment": "Nước ngoài",
-  "evidence": 0
- },
- {
-  "stage": "last_mile",
-  "segment": "Expat",
-  "evidence": 0
- },
- {
-  "stage": "last_mile",
-  "segment": "Khách Việt",
-  "evidence": 0
- },
- {
-  "stage": "last_mile",
-  "segment": "Chưa rõ",
-  "evidence": 3
- },
- {
   "stage": "post_trip",
   "segment": "Nước ngoài",
   "evidence": 0
@@ -177,6 +177,6 @@
  {
   "stage": "post_trip",
   "segment": "Chưa rõ",
-  "evidence": 0
+  "evidence": 1
  }
 ]

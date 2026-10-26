@@ -1,4 +1,6 @@
-# Evidence unit - schema v0.2
+# Evidence unit - schema v0.3
+
+v0.3: `date_precision` thêm giá trị `estimated` (ngày suy từ mốc tương đối "3 tháng trước" hoặc ngày-tháng không có năm). Ngày suy ra neo theo ngày crawl, lấy mốc gần nhất trước ngày crawl.
 
 v0.2: thêm field bắt buộc `market`. Evidence nộp trước v0.2 thiếu `market` được coi là `unknown`.
 
@@ -24,7 +26,7 @@ Path: `03_evidence/<YYYY-MM>/<task_id>.jsonl`, mỗi dòng 1 evidence.
 | `questions` | ✓ | string[] | Mã trong questions.md |
 | `author_hash` | ✓ | string | |
 | `posted_at` | ✓ | date | |
-| `date_precision` | | enum | `comment` / `thread` - khi ngày là ngày bài gốc chứ không phải ngày comment |
+| `date_precision` | | enum | `comment` / `thread` (ngày bài gốc chứ không phải ngày comment) / `estimated` (ngày suy từ mốc tương đối hoặc thiếu năm) |
 | `lang` | ✓ | string | |
 | `review` | | enum | Claude ghi: `ok` / `wrong_tag` / `quote_mismatch` / `irrelevant` |
 

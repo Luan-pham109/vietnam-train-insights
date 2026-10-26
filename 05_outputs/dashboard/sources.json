@@ -11,7 +11,7 @@
   "source": "tripadvisor_forum",
   "name": "TripAdvisor Vietnam forum (train threads)",
   "wave": "1",
-  "state": "đã giao",
+  "state": "đang chạy",
   "raw": 0,
   "evidence": 0
  },
@@ -27,25 +27,25 @@
   "source": "gmaps_station",
   "name": "Google Maps review ga HAN, SGN, HUE, DAD, NHA, LCA, DTH",
   "wave": "1",
-  "state": "đã giao",
-  "raw": 0,
-  "evidence": 0
+  "state": "đang chạy",
+  "raw": 243,
+  "evidence": 329
  },
  {
   "source": "appstore",
   "name": "App Store + Google Play: DSVN, 12Go, Baolau, Trip.com, Traveloka, Vexere (review nhắc tàu)",
   "wave": "1",
-  "state": "đã giao",
-  "raw": 0,
-  "evidence": 0
+  "state": "đã duyệt",
+  "raw": 37,
+  "evidence": 34
  },
  {
   "source": "muse_fb_radar",
   "name": "FB group Muse radar đang thu",
   "wave": "1",
-  "state": "đã giao",
-  "raw": 0,
-  "evidence": 0
+  "state": "đang chạy",
+  "raw": 20,
+  "evidence": 55
  },
  {
   "source": "youtube",

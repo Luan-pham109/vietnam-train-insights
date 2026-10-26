@@ -30,9 +30,9 @@
  {
   "market": "Phương Tây",
   "code": "western",
-  "evidence": 0,
-  "authors": 0,
-  "sources": 0
+  "evidence": 1,
+  "authors": 1,
+  "sources": 1
  },
  {
   "market": "Châu Á khác",
@@ -51,8 +51,8 @@
  {
   "market": "Chưa rõ",
   "code": "unknown",
-  "evidence": 84,
-  "authors": 60,
-  "sources": 1
+  "evidence": 501,
+  "authors": 371,
+  "sources": 4
  }
 ]

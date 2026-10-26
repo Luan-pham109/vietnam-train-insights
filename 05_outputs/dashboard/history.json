@@ -15,16 +15,16 @@
  },
  {
   "date": "2026-10-26",
-  "raw": 30,
-  "evidence": 100,
-  "evidence_usable": 84,
-  "authors": 60,
-  "questions_medium": 0,
-  "p0_medium": 0,
+  "raw": 330,
+  "evidence": 522,
+  "evidence_usable": 502,
+  "authors": 371,
+  "questions_medium": 12,
+  "p0_medium": 10,
   "p0_total": 17,
   "questions_total": 22,
-  "coverage_score": 0.391,
-  "tasks_reviewed": 1,
+  "coverage_score": 0.677,
+  "tasks_reviewed": 2,
   "tasks_total": 8
  }
 ]
