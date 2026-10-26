@@ -120,6 +120,18 @@ def main():
 
     good = [e for e in evidence if usable(e)]
 
+    # topic -> câu hỏi mặc định (taxonomy)
+    tmap = {}
+    for _, c in table_rows(p("00_brain", "taxonomy.md")):
+        if len(c) == 2 and re.fullmatch(r"([CMI]\d{2}\s*)+", c[1]):
+            for tp in re.findall(r"`([a-z0-9_]+)`", c[0]):
+                tmap[tp] = c[1].split()
+    for e in evidence:
+        qset = set(e.get("questions") or [])
+        for tp in e.get("topics") or []:
+            qset.update(tmap.get(tp, []))
+        e["_questions"] = qset
+
     # --- Tasks
     tasks = []
     for fp in sorted(glob.glob(p("01_tasks", "T-*.md"))):
@@ -152,7 +164,7 @@ def main():
     # --- Coverage per question
     coverage = []
     for q in questions:
-        evs = [e for e in good if q["q_id"] in (e.get("questions") or [])]
+        evs = [e for e in good if q["q_id"] in e["_questions"]]
         n_ev = len(evs)
         n_src = len({e["_source"] for e in evs})
         n_auth = len({e.get("author_hash") for e in evs if e.get("author_hash")})

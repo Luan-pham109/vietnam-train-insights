@@ -1,4 +1,4 @@
-# Taxonomy v0.2
+# Taxonomy v0.3
 
 Muse chỉ dùng mã ở đây. Thiếu mã → `other` + `topic_suggest`. Claude gom đề xuất, nâng version.
 
@@ -47,6 +47,22 @@ Muse chỉ dùng mã ở đây. Thiếu mã → `other` + `topic_suggest`. Claud
 | `vn_domestic` | Khách Việt |
 | `unknown` | Không xác định được - **dùng khi không chắc** |
 
+## topic → câu hỏi mặc định
+Script tính độ phủ tự gán thêm các câu hỏi dưới đây theo topic, cộng với `questions` Muse đã gán. Muse vẫn gán `questions` đầy đủ theo nội dung.
+
+| Topic | Câu hỏi |
+|---|---|
+| `price_vs_flight_bus` | C02 |
+| `booking_channel` | C03 M01 |
+| `trust_scam` · `trust_agent` · `price_fee_hidden` | C05 |
+| `class_cabin` · `seat_selection` · `train_type` | C06 |
+| `last_mile_transport` · `last_mile_shuttle` · `arrival_time` | C07 |
+| `route_missing` · `route_connection` | C08 |
+| `payment_card` · `payment_wallet` · `payment_currency` · `id_passport_name` | C09 |
+| `language_barrier` · `food_dietary` | C12 |
+| `private_train` | M04 |
+| `scenery` | I03 |
+
 ## market - thị trường khách (khác `segment`)
 `segment` = đi với ai, kiểu chuyến. `market` = khách đến từ thị trường nào. Hai chiều độc lập, evidence ghi cả hai.
 
@@ -79,4 +95,5 @@ Quy tắc xác định (theo thứ tự, không đạt thì `unknown`):
 Dạng `HAN-LCA`. Thêm ga mới → đề xuất.
 
 ## Changelog
+- v0.3 (2026-10-26, sau review T-001): thêm bảng topic → câu hỏi mặc định vì pilot cho thấy `questions` chỉ bám danh sách câu của task (vd `class_cabin` không map C06, `scenery` không map I03).
 - v0.2 (2026-10-26): thêm chiều `market` (Ấn, Trung, Đài/Hồng Kông, Hàn...); topic `payment_wallet`, `food_dietary`, `language_barrier`, `cross_border_train`; nhận đề xuất của Muse từ T-001: `power_outlet`, `air_conditioning`, `accessibility`; entity kênh/thanh toán theo thị trường; ga liên vận.

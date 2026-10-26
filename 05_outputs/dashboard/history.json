@@ -17,14 +17,14 @@
   "date": "2026-10-26",
   "raw": 30,
   "evidence": 100,
-  "evidence_usable": 86,
+  "evidence_usable": 84,
   "authors": 60,
   "questions_medium": 0,
   "p0_medium": 0,
   "p0_total": 17,
   "questions_total": 22,
-  "coverage_score": 0.214,
-  "tasks_reviewed": 0,
+  "coverage_score": 0.391,
+  "tasks_reviewed": 1,
   "tasks_total": 8
  }
 ]

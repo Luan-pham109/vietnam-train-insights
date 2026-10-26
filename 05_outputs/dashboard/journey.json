@@ -77,7 +77,7 @@
  {
   "stage": "book",
   "segment": "Chưa rõ",
-  "evidence": 26
+  "evidence": 25
  },
  {
   "stage": "pre_trip",
@@ -137,7 +137,7 @@
  {
   "stage": "onboard",
   "segment": "Chưa rõ",
-  "evidence": 28
+  "evidence": 27
  },
  {
   "stage": "last_mile",

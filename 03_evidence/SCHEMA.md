@@ -24,6 +24,7 @@ Path: `03_evidence/<YYYY-MM>/<task_id>.jsonl`, mỗi dòng 1 evidence.
 | `questions` | ✓ | string[] | Mã trong questions.md |
 | `author_hash` | ✓ | string | |
 | `posted_at` | ✓ | date | |
+| `date_precision` | | enum | `comment` / `thread` - khi ngày là ngày bài gốc chứ không phải ngày comment |
 | `lang` | ✓ | string | |
 | `review` | | enum | Claude ghi: `ok` / `wrong_tag` / `quote_mismatch` / `irrelevant` |
 
