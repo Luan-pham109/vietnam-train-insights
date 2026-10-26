@@ -28,36 +28,36 @@
   "group": "Khách hàng",
   "question": "Họ tìm thông tin và đặt vé ở đâu, theo thứ tự nào?",
   "priority": "P0",
-  "evidence": 0,
-  "sources": 0,
-  "authors": 0,
+  "evidence": 9,
+  "sources": 1,
+  "authors": 8,
   "intl_evidence": 0,
-  "score": 0.0,
-  "level": "none"
+  "score": 0.744,
+  "level": "low"
  },
  {
   "q_id": "C04",
   "group": "Khách hàng",
   "question": "Barrier lớn nhất ở từng journey stage là gì?",
   "priority": "P0",
-  "evidence": 0,
-  "sources": 0,
-  "authors": 0,
+  "evidence": 44,
+  "sources": 1,
+  "authors": 36,
   "intl_evidence": 0,
-  "score": 0.0,
-  "level": "none"
+  "score": 0.778,
+  "level": "low"
  },
  {
   "q_id": "C05",
   "group": "Khách hàng",
   "question": "Họ lo gì về trust (vé giả, mất tiền, phí ẩn, không có ghế)?",
   "priority": "P0",
-  "evidence": 0,
-  "sources": 0,
-  "authors": 0,
+  "evidence": 6,
+  "sources": 1,
+  "authors": 6,
   "intl_evidence": 0,
-  "score": 0.0,
-  "level": "none"
+  "score": 0.644,
+  "level": "low"
  },
  {
   "q_id": "C06",
@@ -100,6 +100,30 @@
   "group": "Khách hàng",
   "question": "Thanh toán, tiền tệ, giấy tờ (hộ chiếu, tên trên vé) gây vấn đề gì?",
   "priority": "P0",
+  "evidence": 6,
+  "sources": 1,
+  "authors": 5,
+  "intl_evidence": 0,
+  "score": 0.644,
+  "level": "low"
+ },
+ {
+  "q_id": "C11",
+  "group": "Khách hàng",
+  "question": "Khách Ấn, Trung, Hàn khác khách phương Tây thế nào ở lý do đi tàu, hạng ghế, barrier?",
+  "priority": "P0",
+  "evidence": 0,
+  "sources": 0,
+  "authors": 0,
+  "intl_evidence": 0,
+  "score": 0.0,
+  "level": "none"
+ },
+ {
+  "q_id": "C12",
+  "group": "Khách hàng",
+  "question": "Mỗi thị trường cần gì riêng: ví thanh toán, ngôn ngữ, đồ ăn (chay/kiêng), đi theo nhóm/gia đình?",
+  "priority": "P0",
   "evidence": 0,
   "sources": 0,
   "authors": 0,
@@ -124,24 +148,24 @@
   "group": "Cạnh tranh & thị trường",
   "question": "Kênh nào được nhắc/recommend nhiều nhất (dsvn.vn, 12Go, Baolau, Trip.com, Traveloka, Klook, agent, quầy ga)?",
   "priority": "P0",
-  "evidence": 0,
-  "sources": 0,
-  "authors": 0,
+  "evidence": 4,
+  "sources": 1,
+  "authors": 4,
   "intl_evidence": 0,
-  "score": 0.0,
-  "level": "none"
+  "score": 0.511,
+  "level": "low"
  },
  {
   "q_id": "M02",
   "group": "Cạnh tranh & thị trường",
   "question": "Từng kênh được khen/chê vì gì (giá, phí, UX, hỗ trợ, độ tin cậy)?",
   "priority": "P0",
-  "evidence": 0,
-  "sources": 0,
-  "authors": 0,
+  "evidence": 5,
+  "sources": 1,
+  "authors": 5,
   "intl_evidence": 0,
-  "score": 0.0,
-  "level": "none"
+  "score": 0.611,
+  "level": "low"
  },
  {
   "q_id": "M03",
@@ -180,6 +204,18 @@
   "level": "none"
  },
  {
+  "q_id": "M07",
+  "group": "Cạnh tranh & thị trường",
+  "question": "Mỗi thị trường đặt vé tàu VN qua kênh nào (Trip.com/Ctrip, Fliggy, MakeMyTrip, MyRealTrip, Klook, KKday...)? Họ tìm thông tin trên nền tảng nào?",
+  "priority": "P0",
+  "evidence": 0,
+  "sources": 0,
+  "authors": 0,
+  "intl_evidence": 0,
+  "score": 0.0,
+  "level": "none"
+ },
+ {
   "q_id": "M06",
   "group": "Cạnh tranh & thị trường",
   "question": "Chính sách, giá, tàu mới, sản lượng của DSVN thay đổi gì?",
@@ -196,12 +232,12 @@
   "group": "Insider",
   "question": "Tip/workaround người đi thật hay chia sẻ là gì?",
   "priority": "P0",
-  "evidence": 0,
-  "sources": 0,
-  "authors": 0,
+  "evidence": 30,
+  "sources": 1,
+  "authors": 23,
   "intl_evidence": 0,
-  "score": 0.0,
-  "level": "none"
+  "score": 0.778,
+  "level": "low"
  },
  {
   "q_id": "I02",

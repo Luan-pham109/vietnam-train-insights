@@ -16,6 +16,8 @@ Mọi task, evidence, insight phải map về ít nhất 1 mã câu hỏi. Câu 
 | C07 | Chặng cuối từ ga đến điểm đến (Sa Pa, Hội An, Hạ Long...) xử lý thế nào, đau ở đâu? | P0 | Last-mile + shuttle add-on |
 | C08 | Tuyến/combo nào họ muốn mà không có chuyến thẳng? | P1 | Connecting trips |
 | C09 | Thanh toán, tiền tệ, giấy tờ (hộ chiếu, tên trên vé) gây vấn đề gì? | P0 | Currency, payment |
+| C11 | Khách Ấn, Trung, Hàn khác khách phương Tây thế nào ở lý do đi tàu, hạng ghế, barrier? | P0 | Messaging + UI theo thị trường |
+| C12 | Mỗi thị trường cần gì riêng: ví thanh toán, ngôn ngữ, đồ ăn (chay/kiêng), đi theo nhóm/gia đình? | P0 | Payment, nội dung, ngôn ngữ |
 | C10 | Khách Việt đi tàu vì gì, đau gì (Tết, hoàn đổi, giá)? | P1 | Sau scope v0.1 |
 
 ## M - Cạnh tranh & thị trường
@@ -26,6 +28,7 @@ Mọi task, evidence, insight phải map về ít nhất 1 mã câu hỏi. Câu 
 | M03 | Đối thủ định vị và quảng cáo gì (messaging, offer)? | P1 | Positioning |
 | M04 | Tàu du lịch tư nhân (Lotus, Chapa Express, Violette, SapaLy, Livitrans...) được nhìn nhận thế nào so với tàu DSVN? | P0 | Mở bán tàu du lịch |
 | M05 | AI engine/SERP đang recommend ai khi hỏi cách đặt vé tàu VN? | P0 | AEO |
+| M07 | Mỗi thị trường đặt vé tàu VN qua kênh nào (Trip.com/Ctrip, Fliggy, MakeMyTrip, MyRealTrip, Klook, KKday...)? Họ tìm thông tin trên nền tảng nào? | P0 | Kênh phân phối, đối tác affiliate |
 | M06 | Chính sách, giá, tàu mới, sản lượng của DSVN thay đổi gì? | P1 | Signal log |
 
 ## I - Insider

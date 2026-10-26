@@ -1,4 +1,4 @@
-# Taxonomy v0.1
+# Taxonomy v0.2
 
 Muse chỉ dùng mã ở đây. Thiếu mã → `other` + `topic_suggest`. Claude gom đề xuất, nâng version.
 
@@ -23,13 +23,15 @@ Muse chỉ dùng mã ở đây. Thiếu mã → `other` + `topic_suggest`. Claud
 |---|---|
 | Giá & phí | `price_level` · `price_fee_hidden` · `price_vs_flight_bus` · `price_dynamic_tet` |
 | Đặt vé | `booking_channel` · `booking_ux` · `booking_availability` · `booking_window` · `eticket_delivery` · `seat_selection` |
-| Thanh toán & giấy tờ | `payment_card` · `payment_currency` · `id_passport_name` |
+| Thanh toán & giấy tờ | `payment_card` · `payment_wallet` (Alipay, WeChat Pay, UPI, Kakao/Naver Pay...) · `payment_currency` · `id_passport_name` |
 | Hoàn/đổi | `refund_change` |
-| Sản phẩm tàu | `class_cabin` · `train_type` · `private_train` · `cleanliness` · `toilet` · `food_onboard` · `noise_sleep` · `safety_security` · `luggage` · `punctuality_delay` · `scenery` · `staff_attitude` |
+| Sản phẩm tàu | `class_cabin` · `train_type` · `private_train` · `cleanliness` · `toilet` · `food_onboard` · `noise_sleep` · `safety_security` · `luggage` · `punctuality_delay` · `scenery` · `staff_attitude` · `power_outlet` · `air_conditioning` · `accessibility` · `food_dietary` (chay, halal, kiêng) |
 | Ga | `station_navigation` · `station_facilities` · `boarding_process` |
 | Chặng cuối | `last_mile_transport` · `last_mile_shuttle` · `arrival_time` |
 | Lộ trình | `route_missing` · `route_connection` · `schedule_info` |
 | Trust | `trust_scam` · `trust_agent` · `customer_support` |
+| Ngôn ngữ | `language_barrier` (biển báo, nhân viên, app/web không có ngôn ngữ của khách) |
+| Liên vận | `cross_border_train` (tàu liên vận Việt - Trung: Gia Lâm/Đồng Đăng - Nam Ninh, Lào Cai - Hà Khẩu) |
 | Khác | `other` |
 
 ## segment
@@ -45,12 +47,36 @@ Muse chỉ dùng mã ở đây. Thiếu mã → `other` + `topic_suggest`. Claud
 | `vn_domestic` | Khách Việt |
 | `unknown` | Không xác định được - **dùng khi không chắc** |
 
+## market - thị trường khách (khác `segment`)
+`segment` = đi với ai, kiểu chuyến. `market` = khách đến từ thị trường nào. Hai chiều độc lập, evidence ghi cả hai.
+
+| Mã | Nghĩa |
+|---|---|
+| `in` | Ấn Độ |
+| `cn` | Trung Quốc đại lục |
+| `tw_hk` | Đài Loan, Hồng Kông, Macau - **tách khỏi `cn`** dù cùng viết tiếng Trung |
+| `kr` | Hàn Quốc |
+| `western` | Âu, Mỹ, Úc, NZ, Canada |
+| `other_asia` | Châu Á khác (Nhật, ASEAN...) |
+| `vn` | Việt Nam |
+| `unknown` | Không xác định - **mặc định** |
+
+Quy tắc xác định (theo thứ tự, không đạt thì `unknown`):
+1. Tác giả tự nói ("as an Indian", "我们从广州来", "한국에서").
+2. Nền tảng + ngôn ngữ bản địa của thị trường: Xiaohongshu/Mafengwo/Douyin + chữ giản thể → `cn`; chữ phồn thể → `tw_hk`; Naver/Tistory + tiếng Hàn → `kr`; tiếng Hindi → `in`.
+3. **Không suy từ tên người, ảnh đại diện, hay tiếng Anh có giọng.** Reddit/TripAdvisor tiếng Anh mà không tự nói → `unknown`.
+
 ## entity - tên chuẩn (viết thường, snake_case)
 - Kênh bán: `dsvn` · `twelve_go` · `baolau` · `trip_com` · `traveloka` · `klook` · `vexere` · `local_agent` · `hotel_desk` · `station_counter` · `vietnam_railway_agent_site`
 - Tàu DSVN: theo mã tàu `se1`, `se3`, `sp3`... hoặc `dsvn_generic`
 - Tàu du lịch tư nhân: `lotus` · `chapa_express` · `violette` · `sapaly` · `livitrans` · `orient_express` · `hai_van_heritage`
+- Kênh theo thị trường: `fliggy` · `qunar` · `makemytrip` · `cleartrip` · `myrealtrip` · `kkday` (Ctrip trong nước TQ ghi `trip_com`)
+- Thanh toán: `alipay` · `wechat_pay` · `upi` · `kakao_pay` · `naver_pay` · `vnpay` · `apple_pay`
 - Thay thế: `flight` · `sleeper_bus` · `limousine` · `private_car`
 
 ## route - mã IATA-like của ga
-`HAN` Hà Nội · `SGN` Sài Gòn · `HUE` Huế · `DAD` Đà Nẵng · `NHA` Nha Trang · `LCA` Lào Cai · `HPH` Hải Phòng · `DTH` Đồng Hới · `QNH` Quy Nhơn · `NBH` Ninh Bình · `PTH` Phan Thiết · `DLT` Đà Lạt
+`HAN` Hà Nội · `SGN` Sài Gòn · `HUE` Huế · `DAD` Đà Nẵng · `NHA` Nha Trang · `LCA` Lào Cai · `HPH` Hải Phòng · `DTH` Đồng Hới · `QNH` Quy Nhơn · `NBH` Ninh Bình · `PTH` Phan Thiết · `DLT` Đà Lạt · `GLA` Gia Lâm · `DDG` Đồng Đăng · `NNG` Nam Ninh (TQ) · `HKO` Hà Khẩu (TQ)
 Dạng `HAN-LCA`. Thêm ga mới → đề xuất.
+
+## Changelog
+- v0.2 (2026-10-26): thêm chiều `market` (Ấn, Trung, Đài/Hồng Kông, Hàn...); topic `payment_wallet`, `food_dietary`, `language_barrier`, `cross_border_train`; nhận đề xuất của Muse từ T-001: `power_outlet`, `air_conditioning`, `accessibility`; entity kênh/thanh toán theo thị trường; ga liên vận.

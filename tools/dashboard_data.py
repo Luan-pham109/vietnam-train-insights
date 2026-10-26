@@ -1,7 +1,7 @@
 """Tính số liệu tiến độ + độ phủ từ repo, xuất JSON cho dashboard.
 
 Chạy: python3 -I tools/dashboard_data.py   (từ gốc repo)
-Output: 05_outputs/dashboard/{tasks,coverage,sources,journey,history}.json
+Output: 05_outputs/dashboard/{tasks,coverage,sources,journey,markets,history}.json
 history.json được giữ trong repo và cập nhật dòng của ngày chạy.
 """
 import datetime as dt
@@ -80,7 +80,7 @@ def main():
     for _, c in table_rows(p("00_brain", "source-map.md")):
         code = c[0].strip("`")
         if code and code != "Mã nguồn" and len(c) >= 6:
-            sources.append({"source": code, "name": c[1], "wave": int(c[5]) if c[5].isdigit() else None})
+            sources.append({"source": code, "name": c[1], "wave": c[5]})
 
     # --- Raw
     raw_by_id, raw_by_source, raw_by_task = {}, {}, {}
@@ -171,7 +171,8 @@ def main():
     # --- Sources progress
     task_status_by_source = {}
     for t in tasks:
-        task_status_by_source.setdefault(t["source"], []).append(t["status"])
+        for src in [x.strip() for x in t["source"].split(",") if x.strip()]:
+            task_status_by_source.setdefault(src, []).append(t["status"])
     src_rows = []
     for s in sources:
         sts = task_status_by_source.get(s["source"], [])
@@ -192,6 +193,16 @@ def main():
         for g in SEG_GROUPS:
             journey.append({"stage": st, "segment": g,
                             "evidence": sum(1 for e in good if e.get("stage") == st and seg_group(e.get("segment")) == g)})
+
+    # --- Market coverage
+    MARKETS = [("in", "Ấn Độ"), ("cn", "Trung Quốc"), ("tw_hk", "Đài Loan/Hồng Kông"), ("kr", "Hàn Quốc"),
+               ("western", "Phương Tây"), ("other_asia", "Châu Á khác"), ("vn", "Việt Nam"), ("unknown", "Chưa rõ")]
+    markets = []
+    for code, name in MARKETS:
+        evs = [e for e in good if (e.get("market") or "unknown") == code]
+        markets.append({"market": name, "code": code, "evidence": len(evs),
+                        "authors": len({e.get("author_hash") for e in evs if e.get("author_hash")}),
+                        "sources": len({e["_source"] for e in evs})})
 
     # --- History (giữ trong repo)
     hist_path = os.path.join(OUT, "history.json")
@@ -219,7 +230,7 @@ def main():
     history.sort(key=lambda h: h["date"])
 
     for name, data in [("tasks", tasks), ("coverage", coverage), ("sources", src_rows),
-                       ("journey", journey), ("history", history)]:
+                       ("journey", journey), ("markets", markets), ("history", history)]:
         with open(os.path.join(OUT, f"{name}.json"), "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=1)
     print(json.dumps(row, ensure_ascii=False))
