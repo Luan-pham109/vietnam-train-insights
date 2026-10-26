@@ -20,7 +20,7 @@
 
 ### Muse poll `01_tasks/`
 1. `git pull --rebase` → đọc frontmatter mọi `T-*.md`.
-2. Chọn 1 task theo thứ tự: `rework` trước `open`, rồi theo `priority`, rồi `task_id` nhỏ nhất.
+2. Chọn 1 task theo thứ tự: `rework` trước `open`, rồi `order` nhỏ nhất (nếu task có field `order`), rồi theo `priority`, rồi `task_id` nhỏ nhất. `order` do Claude/Luan đặt để điều phối, ưu tiên hơn `priority`.
 3. **Claim ngay**: đổi `status: in_progress`, thêm `claimed_at: <ISO time>`, commit `[muse] claim T-xxx`, push. Push bị reject → pull lại, task đã bị đổi thì bỏ và chọn task khác.
 4. Mỗi lần chỉ chạy 1 task. Batch lớn → commit dần, mỗi lần ≤200 raw, ghi tiến độ vào mục "Báo cáo".
 5. Xong: điền "Báo cáo" + "Đề xuất", đổi `status: submitted`, thêm `submitted_at`, push.
