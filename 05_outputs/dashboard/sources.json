@@ -115,31 +115,31 @@
   "source": "quora",
   "name": "Quora (câu hỏi về tàu VN)",
   "wave": "M",
-  "state": "đã giao",
+  "state": "đã duyệt",
   "raw": 0,
   "evidence": 0
  },
  {
   "source": "reddit_in",
-  "name": "r/india, r/IndiaTravel, r/indiasocial",
+  "name": "r/india, r/IndiaTravel, r/indiasocial, r/india_tourism",
   "wave": "M",
-  "state": "đã giao",
-  "raw": 0,
-  "evidence": 0
+  "state": "đã duyệt",
+  "raw": 2,
+  "evidence": 6
  },
  {
   "source": "youtube_in",
   "name": "Vlog Ấn Độ (Hindi/English) về tàu VN: transcript + comment",
   "wave": "M",
-  "state": "đã giao",
-  "raw": 0,
-  "evidence": 0
+  "state": "đã duyệt",
+  "raw": 9,
+  "evidence": 16
  },
  {
   "source": "xiaohongshu",
   "name": "小红书 - 越南火车/越南卧铺/河内到沙巴",
   "wave": "M",
-  "state": "đã giao",
+  "state": "đang chạy",
   "raw": 0,
   "evidence": 0
  },
@@ -147,7 +147,7 @@
   "source": "mafengwo",
   "name": "马蜂窝 - du ký + Q&A tàu VN",
   "wave": "M",
-  "state": "đã giao",
+  "state": "đang chạy",
   "raw": 0,
   "evidence": 0
  },
@@ -155,7 +155,7 @@
   "source": "trip_com_cn",
   "name": "Review/Q&A tiếng Trung trên Ctrip",
   "wave": "M",
-  "state": "đã giao",
+  "state": "đang chạy",
   "raw": 0,
   "evidence": 0
  },

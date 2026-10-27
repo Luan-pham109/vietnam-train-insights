@@ -2,11 +2,11 @@
  {
   "market": "Ấn Độ",
   "code": "in",
-  "evidence": 0,
-  "evidence_high": 0,
+  "evidence": 18,
+  "evidence_high": 18,
   "evidence_medium": 0,
-  "authors": 0,
-  "sources": 0
+  "authors": 8,
+  "sources": 2
  },
  {
   "market": "Trung Quốc",
@@ -56,11 +56,11 @@
  {
   "market": "Nước ngoài (chưa rõ nước)",
   "code": "intl",
-  "evidence": 93,
-  "evidence_high": 72,
+  "evidence": 95,
+  "evidence_high": 74,
   "evidence_medium": 21,
-  "authors": 52,
-  "sources": 2
+  "authors": 53,
+  "sources": 3
  },
  {
   "market": "Expat",
@@ -83,10 +83,10 @@
  {
   "market": "Chưa rõ",
   "code": "unknown",
-  "evidence": 385,
+  "evidence": 387,
   "evidence_high": 0,
   "evidence_medium": 0,
-  "authors": 222,
-  "sources": 5
+  "authors": 224,
+  "sources": 6
  }
 ]

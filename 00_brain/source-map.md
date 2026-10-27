@@ -17,7 +17,7 @@
 | `news` | VnExpress, Tuổi Trẻ, Thanh Niên, VnExpress International, dsvn.vn | vn | M06 C10 | Weekly | 3 |
 | `forum_vn` | VOZ, Tinhte | vn | C10 | Monthly | 3 |
 | `quora` | Quora (câu hỏi về tàu VN) | in | C11 C12 M07 I01 | Monthly | M |
-| `reddit_in` | r/india, r/IndiaTravel, r/indiasocial | in | C11 C12 M07 | Monthly | M |
+| `reddit_in` | r/india, r/IndiaTravel, r/indiasocial, r/india_tourism | in | C11 C12 M07 | Monthly | M |
 | `youtube_in` | Vlog Ấn Độ (Hindi/English) về tàu VN: transcript + comment | in | C02 C11 I02 | Monthly | M |
 | `xiaohongshu` | 小红书 - 越南火车/越南卧铺/河内到沙巴 | cn | C11 C12 M07 I01 | Monthly | M |
 | `mafengwo` | 马蜂窝 - du ký + Q&A tàu VN | cn | C11 I01 I02 | Monthly | M |
@@ -39,4 +39,6 @@
 - `appstore` (T-004, 2026-10-26): App Store web chỉ có trang đầu 10 review/storefront, không phân trang. **Baolau: không có app, website-only** - kiểm lại theo quý. Vexere, Traveloka: 0 review nhắc tàu trong tập mới nhất đã xem. Review tàu của 12Go/Trip.com/Klook chủ yếu về tàu nước khác.
 - `tripadvisor_forum` (T-002, 2026-10-27): đọc được không đăng nhập, không captcha (có lúc hiện DataDome Device Check rồi tự qua). Thread cũ chỉ hiện "1 year ago" → ngày suy từ forum search, có thể gán sai tác giả/ngày; tác giả + ngày trên trang thread thắng. Đợt sau mở rộng forum Da Nang, Ninh Binh, Quy Nhon, Nha Trang (thread tàu di sản Đà Nẵng - Huế k14919975 là thread chi tiết nhất về HD1/HD2/HD3).
 - `muse_fb_radar` (T-005, 2026-10-26): 3 nhóm riêng tư (Vietnam is Awesome, Another Side of Vietnam, Hanoi Massive) chưa tìm. Reply FB có tag tên thật → phải thay bằng `[name]` khi đưa vào raw.
-
+- `quora` (T-006, 2026-10-27): **không truy cập được** - tìm kiếm và đáp án dài bị tường đăng nhập; 4 đáp án đọc được đều trước 2025. Bỏ khỏi nguồn chủ động.
+- `reddit_in` (T-006): đọc được không đăng nhập; bài về tàu VN rất hiếm (2 bài dùng được qua 4 sub).
+- `youtube_in` (T-006): đọc được trang, mô tả, comment, transcript không đăng nhập.

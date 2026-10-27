@@ -22,7 +22,7 @@
  {
   "stage": "plan",
   "segment": "Nước ngoài",
-  "evidence": 20
+  "evidence": 24
  },
  {
   "stage": "plan",
@@ -42,7 +42,7 @@
  {
   "stage": "compare",
   "segment": "Nước ngoài",
-  "evidence": 13
+  "evidence": 15
  },
  {
   "stage": "compare",
@@ -62,7 +62,7 @@
  {
   "stage": "book",
   "segment": "Nước ngoài",
-  "evidence": 25
+  "evidence": 29
  },
  {
   "stage": "book",
@@ -82,7 +82,7 @@
  {
   "stage": "pre_trip",
   "segment": "Nước ngoài",
-  "evidence": 0
+  "evidence": 3
  },
  {
   "stage": "pre_trip",
@@ -102,7 +102,7 @@
  {
   "stage": "station",
   "segment": "Nước ngoài",
-  "evidence": 0
+  "evidence": 1
  },
  {
   "stage": "station",
@@ -122,7 +122,7 @@
  {
   "stage": "onboard",
   "segment": "Nước ngoài",
-  "evidence": 9
+  "evidence": 15
  },
  {
   "stage": "onboard",

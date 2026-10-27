@@ -28,18 +28,18 @@
   "tasks_total": 8
  },
  {
-  "origin_known_share": 0.467,
+  "origin_known_share": 0.48,
   "date": "2026-10-27",
-  "raw": 380,
-  "evidence": 814,
-  "evidence_usable": 722,
-  "authors": 444,
-  "questions_medium": 14,
-  "p0_medium": 12,
+  "raw": 391,
+  "evidence": 838,
+  "evidence_usable": 744,
+  "authors": 455,
+  "questions_medium": 16,
+  "p0_medium": 14,
   "p0_total": 17,
   "questions_total": 22,
-  "coverage_score": 0.699,
-  "tasks_reviewed": 5,
+  "coverage_score": 0.756,
+  "tasks_reviewed": 6,
   "tasks_total": 8
  }
 ]
