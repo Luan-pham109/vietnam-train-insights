@@ -2,7 +2,7 @@
 
 Cập nhật: 2026-10-27 (Claude). Nguồn: `05_outputs/dashboard/coverage.json`, `markets.json`. Ngưỡng theo `00_brain/confidence.md` (medium = ≥10 evidence, ≥3 nguồn, ≥5 tác giả).
 
-Task reviewed: T-001, T-004. T-003, T-005 đang `rework` chỉ vì redact PII trong raw (T-005 còn sót 2 chỗ sau lần sửa 27/10; chất lượng evidence đạt, lỗi spot-check 5% và 0%) nên evidence vẫn được tính. T-002 đang chạy. Tổng 330 raw, 522 evidence (502 dùng được), 371 tác giả.
+Task reviewed: T-001, T-003, T-004. T-005 đang `rework` chỉ vì còn sót 2 chỗ PII trong raw (chất lượng evidence đạt, lỗi spot-check 0%) nên evidence vẫn được tính. T-002 đang chạy. Tổng 330 raw, 522 evidence (502 dùng được), 371 tác giả.
 
 | Mã | Nhóm | Câu hỏi | Ưu tiên | Evidence | Nguồn | Tác giả | Evidence intl | Mức | |
 |---|---|---|---|---|---|---|---|---|---|
