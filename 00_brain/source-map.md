@@ -42,3 +42,9 @@
 - `quora` (T-006, 2026-10-27): **không truy cập được** - tìm kiếm và đáp án dài bị tường đăng nhập; 4 đáp án đọc được đều trước 2025. Bỏ khỏi nguồn chủ động.
 - `reddit_in` (T-006): đọc được không đăng nhập; bài về tàu VN rất hiếm (2 bài dùng được qua 4 sub).
 - `youtube_in` (T-006): đọc được trang, mô tả, comment, transcript không đăng nhập.
+- `xiaohongshu` (T-007, 2026-10-27): **không truy cập được** - tường đăng nhập QR/số điện thoại. Kiểm lại theo quý.
+- `mafengwo` (T-007): **không truy cập được** - note đầy đủ và Q&A đẩy về đăng nhập/trang chủ.
+- `trip_com_cn` (T-007): đọc được không đăng nhập; tìm kiếm nội bộ kém, phải dùng web search giới hạn site; có lúc gặp captcha. Đợt sau thử mục review ga.
+- `naver_blog`, `tistory`, `youtube_kr` (T-008, 2026-10-27): đọc đầy đủ không đăng nhập. Naver Cafe chỉ lấy bài công khai.
+- Kết luận wave M: Hàn thu tốt (29 bài), Ấn mỏng (11 bài, chủ yếu vlog), Trung gần như không thu được qua web công khai (3 bài).
+

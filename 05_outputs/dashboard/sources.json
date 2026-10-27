@@ -139,7 +139,7 @@
   "source": "xiaohongshu",
   "name": "小红书 - 越南火车/越南卧铺/河内到沙巴",
   "wave": "M",
-  "state": "đang chạy",
+  "state": "đã duyệt",
   "raw": 0,
   "evidence": 0
  },
@@ -147,7 +147,7 @@
   "source": "mafengwo",
   "name": "马蜂窝 - du ký + Q&A tàu VN",
   "wave": "M",
-  "state": "đang chạy",
+  "state": "đã duyệt",
   "raw": 0,
   "evidence": 0
  },
@@ -155,32 +155,32 @@
   "source": "trip_com_cn",
   "name": "Review/Q&A tiếng Trung trên Ctrip",
   "wave": "M",
-  "state": "đang chạy",
-  "raw": 0,
-  "evidence": 0
+  "state": "đã duyệt",
+  "raw": 3,
+  "evidence": 4
  },
  {
   "source": "naver_blog",
   "name": "Naver Blog/Cafe - 베트남 기차/침대기차/사파 기차",
   "wave": "M",
-  "state": "đã giao",
-  "raw": 0,
-  "evidence": 0
+  "state": "đã duyệt",
+  "raw": 12,
+  "evidence": 29
  },
  {
   "source": "tistory",
   "name": "Tistory blog tiếng Hàn",
   "wave": "M",
-  "state": "đã giao",
-  "raw": 0,
-  "evidence": 0
+  "state": "đã duyệt",
+  "raw": 10,
+  "evidence": 7
  },
  {
   "source": "youtube_kr",
   "name": "Vlog Hàn về tàu VN",
   "wave": "M",
-  "state": "đã giao",
-  "raw": 0,
-  "evidence": 0
+  "state": "đã duyệt",
+  "raw": 7,
+  "evidence": 11
  }
 ]

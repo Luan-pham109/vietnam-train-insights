@@ -11,11 +11,11 @@
  {
   "market": "Trung Quốc",
   "code": "cn",
-  "evidence": 0,
-  "evidence_high": 0,
+  "evidence": 4,
+  "evidence_high": 4,
   "evidence_medium": 0,
-  "authors": 0,
-  "sources": 0
+  "authors": 1,
+  "sources": 1
  },
  {
   "market": "Đài Loan/Hồng Kông",
@@ -29,11 +29,11 @@
  {
   "market": "Hàn Quốc",
   "code": "kr",
-  "evidence": 0,
-  "evidence_high": 0,
+  "evidence": 47,
+  "evidence_high": 47,
   "evidence_medium": 0,
-  "authors": 0,
-  "sources": 0
+  "authors": 28,
+  "sources": 3
  },
  {
   "market": "Phương Tây",

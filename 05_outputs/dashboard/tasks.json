@@ -88,27 +88,27 @@
   "title": "Khách Trung Quốc - tàu nội địa VN và tàu liên vận",
   "source": "xiaohongshu, mafengwo, trip_com_cn",
   "priority": "P1",
-  "status": "in_progress",
+  "status": "reviewed",
   "blocked_by": "",
   "claimed_at": "2026-10-27T08:15:31Z",
-  "submitted_at": "",
-  "raw": 0,
-  "evidence": 0,
-  "checked": 0,
-  "error_rate": null
+  "submitted_at": "2026-10-27",
+  "raw": 3,
+  "evidence": 7,
+  "checked": 7,
+  "error_rate": 0.0
  },
  {
   "task_id": "T-008",
   "title": "Khách Hàn Quốc - có đi tàu không, đi tuyến nào, vì sao",
   "source": "naver_blog, tistory, youtube_kr",
   "priority": "P1",
-  "status": "open",
+  "status": "reviewed",
   "blocked_by": "",
-  "claimed_at": "",
-  "submitted_at": "",
-  "raw": 0,
-  "evidence": 0,
-  "checked": 0,
-  "error_rate": null
+  "claimed_at": "2026-10-27T09:46:05Z",
+  "submitted_at": "2026-10-27",
+  "raw": 29,
+  "evidence": 51,
+  "checked": 20,
+  "error_rate": 0.1
  }
 ]

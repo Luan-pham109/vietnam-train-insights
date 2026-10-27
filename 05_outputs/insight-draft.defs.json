@@ -139,5 +139,37 @@
   "quote": "Availability of veg food in Vietnam or ready made food packets should be carried?",
   "note": "Mỏng: chủ yếu vlog YouTube (creator), 2 bài Reddit",
   "market": "in"
+ },
+ {
+  "id": "D12",
+  "insight": "Khách Hàn đặt vé tàu VN qua Klook, MyRealTrip và cả Vexere; né trang DSVN vì hay lỗi với thẻ Hàn; bàn rất kỹ chuyện giường tầng 1 hay 2 và khoang 4 người",
+  "who": "Hàn Quốc",
+  "market": "kr",
+  "topics": [
+   "booking_channel",
+   "seat_selection",
+   "class_cabin",
+   "payment_card"
+  ],
+  "vexere_fit": "Trực tiếp: Vexere đã có mặt trong hành trình đặt vé của khách Hàn",
+  "action": "Kiểm tra traffic/booking Train từ Hàn trên Vexere; nội dung hướng dẫn đặt vé tiếng Hàn (chọn tầng giường, khoang 4); cân nhắc affiliate với blogger Naver",
+  "quote": "저는 vexere앱에서 예약했어요!",
+  "note": "Chưa có insight nào khác chỉ thẳng tới Vexere mạnh như vậy - đáng validate bằng data nội bộ"
+ },
+ {
+  "id": "D13",
+  "insight": "Khách Trung đi tàu VN chủ yếu theo đoàn (tàu bao nguyên chuyến); khách lẻ mua vé tại ga bằng tiền mặt, vượt rào ngôn ngữ bằng app dịch",
+  "who": "Trung Quốc",
+  "market": "cn",
+  "topics": [
+   "train_type",
+   "booking_channel",
+   "language_barrier",
+   "payment_currency"
+  ],
+  "vexere_fit": "Thấp ở hiện tại: chưa thấy kênh online nào được nhắc",
+  "action": "Không hành động từ data này; cần data booking nội bộ theo quốc tịch hoặc nói chuyện với agent tour Trung",
+  "quote": "语言不通用翻译软件沟通顺利买好票",
+  "note": "Rất mỏng: 3 bài, 3 tác giả - Xiaohongshu/Mafengwo bị chặn"
  }
 ]

@@ -117,7 +117,7 @@ Dùng:
 - Thay thế: `flight` · `sleeper_bus` · `limousine` · `private_car`
 
 ## route - mã IATA-like của ga
-`HAN` Hà Nội · `SGN` Sài Gòn · `HUE` Huế · `DAD` Đà Nẵng · `NHA` Nha Trang · `LCA` Lào Cai · `HPH` Hải Phòng · `DTH` Đồng Hới · `QNH` Quy Nhơn · `NBH` Ninh Bình · `PTH` Phan Thiết · `DLT` Đà Lạt · `GLA` Gia Lâm · `DDG` Đồng Đăng · `NNG` Nam Ninh (TQ) · `HKO` Hà Khẩu (TQ) · `DTI` Diêu Trì · `TLO` Thọ Lộc
+`HAN` Hà Nội · `SGN` Sài Gòn · `HUE` Huế · `DAD` Đà Nẵng · `NHA` Nha Trang · `LCA` Lào Cai · `HPH` Hải Phòng · `DTH` Đồng Hới · `QNH` Quy Nhơn · `NBH` Ninh Bình · `PTH` Phan Thiết · `DLT` Đà Lạt · `GLA` Gia Lâm · `DDG` Đồng Đăng · `NNG` Nam Ninh (TQ) · `HKO` Hà Khẩu (TQ) · `TCH` Tháp Chàm (Phan Rang) · `DTI` Diêu Trì · `TLO` Thọ Lộc
 Dạng `HAN-LCA`. Thêm ga mới → đề xuất.
 
 ## Changelog
