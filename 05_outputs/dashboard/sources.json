@@ -43,9 +43,9 @@
   "source": "muse_fb_radar",
   "name": "FB group Muse radar đang thu",
   "wave": "1",
-  "state": "đang chạy",
+  "state": "đã duyệt",
   "raw": 20,
-  "evidence": 0
+  "evidence": 55
  },
  {
   "source": "youtube",

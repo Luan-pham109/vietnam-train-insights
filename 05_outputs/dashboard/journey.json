@@ -17,12 +17,12 @@
  {
   "stage": "inspire",
   "segment": "Chưa rõ",
-  "evidence": 0
+  "evidence": 1
  },
  {
   "stage": "plan",
   "segment": "Nước ngoài",
-  "evidence": 0
+  "evidence": 2
  },
  {
   "stage": "plan",
@@ -36,33 +36,33 @@
  },
  {
   "stage": "plan",
-  "segment": "Chưa rõ",
-  "evidence": 11
- },
- {
-  "stage": "compare",
-  "segment": "Nước ngoài",
-  "evidence": 0
- },
- {
-  "stage": "compare",
-  "segment": "Expat",
-  "evidence": 0
- },
- {
-  "stage": "compare",
-  "segment": "Khách Việt",
-  "evidence": 0
- },
- {
-  "stage": "compare",
   "segment": "Chưa rõ",
   "evidence": 15
  },
  {
+  "stage": "compare",
+  "segment": "Nước ngoài",
+  "evidence": 1
+ },
+ {
+  "stage": "compare",
+  "segment": "Expat",
+  "evidence": 0
+ },
+ {
+  "stage": "compare",
+  "segment": "Khách Việt",
+  "evidence": 0
+ },
+ {
+  "stage": "compare",
+  "segment": "Chưa rõ",
+  "evidence": 16
+ },
+ {
   "stage": "book",
   "segment": "Nước ngoài",
-  "evidence": 0
+  "evidence": 8
  },
  {
   "stage": "book",
@@ -77,7 +77,7 @@
  {
   "stage": "book",
   "segment": "Chưa rõ",
-  "evidence": 76
+  "evidence": 97
  },
  {
   "stage": "pre_trip",
@@ -122,7 +122,7 @@
  {
   "stage": "onboard",
   "segment": "Nước ngoài",
-  "evidence": 0
+  "evidence": 4
  },
  {
   "stage": "onboard",
@@ -137,12 +137,12 @@
  {
   "stage": "onboard",
   "segment": "Chưa rõ",
-  "evidence": 43
+  "evidence": 50
  },
  {
   "stage": "last_mile",
   "segment": "Nước ngoài",
-  "evidence": 0
+  "evidence": 2
  },
  {
   "stage": "last_mile",
@@ -157,7 +157,7 @@
  {
   "stage": "last_mile",
   "segment": "Chưa rõ",
-  "evidence": 24
+  "evidence": 27
  },
  {
   "stage": "post_trip",
@@ -177,6 +177,6 @@
  {
   "stage": "post_trip",
   "segment": "Chưa rõ",
-  "evidence": 0
+  "evidence": 1
  }
 ]
