@@ -17,7 +17,7 @@ Tự sinh bởi `tools/insight_draft.py`. Số evidence tính theo topic; tin c�
 | D08 | Khách Việt phàn nàn app/web DSVN: thanh toán rườm rà, tải vé lỗi, đặt nhầm ngày | Việt Nam | 18 / 18 | 2 | thấp | Cơ hội: Vexere là kênh thay thế dễ hơn | Messaging 'đặt vé tàu không rườm rà' cho khách Việt; so sánh số bước thanh toán Vexere vs DSVN |
 | D09 | Phòng chờ nóng, không điều hoà, quá tải ở nhiều ga - khách Việt phàn nàn nhiều nhất | Việt Nam | 7 / 7 | 1 | thấp | Thấp: Vexere không kiểm soát được | Chỉ dùng cho pre-trip guide (đến ga vừa đủ giờ); không ưu tiên |
 | D10 | Thái độ nhân viên ga (bảo vệ, soát vé) phân cực mạnh theo từng ga, là lý do chính của review 1 sao | Việt Nam | 35 / 35 | 1 | thấp | Thấp: thuộc DSVN | Không hành động trực tiếp; có thể chia sẻ với DSVN như feedback đối tác |
-| D11 | Khách Ấn lo nhất chuyện đồ chay khi đi tàu VN: hỏi có đồ chay không, mang đồ ăn sẵn theo; vlogger Ấn hay quy giá vé ra rupee | Ấn Độ | 45 / 45 | 7 | trung bình | Trực tiếp: nội dung + bộ lọc/ghi chú dịch vụ ăn chay, hiển thị giá quy đổi INR | FAQ/landing tiếng Anh cho khách Ấn: đồ chay trên tàu và tại ga; cân nhắc INR trong currency switch |
+| D11 | Khách Ấn lo nhất chuyện đồ chay khi đi tàu VN: hỏi có đồ chay không, mang đồ ăn sẵn theo; vlogger Ấn hay quy giá vé ra rupee | Ấn Độ | 11 / 11 | 2 | thấp | Trực tiếp: nội dung + bộ lọc/ghi chú dịch vụ ăn chay, hiển thị giá quy đổi INR | FAQ/landing tiếng Anh cho khách Ấn: đồ chay trên tàu và tại ga; cân nhắc INR trong currency switch |
 
 ## Quote tiêu biểu
 - **INS-001**: "a man suddenly ran towards us, claimed to be our driver, and took us to our destination."

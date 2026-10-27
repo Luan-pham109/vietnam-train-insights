@@ -19,6 +19,8 @@ for d in defs:
             return False
         if d.get("lang") and e.get("lang") != d["lang"]:
             return False
+        if d.get("market") and e.get("market") != d["market"]:  # insight riêng một thị trường: chỉ evidence market tin cậy cao
+            return False
         if d.get("sentiment_neg") and e.get("sentiment", 0) >= 0:
             return False
         return True

@@ -131,11 +131,13 @@
   "who": "Ấn Độ",
   "topics": [
    "food_dietary",
-   "price_level"
+   "price_level",
+   "booking_channel"
   ],
   "vexere_fit": "Trực tiếp: nội dung + bộ lọc/ghi chú dịch vụ ăn chay, hiển thị giá quy đổi INR",
   "action": "FAQ/landing tiếng Anh cho khách Ấn: đồ chay trên tàu và tại ga; cân nhắc INR trong currency switch",
   "quote": "Availability of veg food in Vietnam or ready made food packets should be carried?",
-  "note": "Mỏng: chủ yếu vlog YouTube (creator), 2 bài Reddit"
+  "note": "Mỏng: chủ yếu vlog YouTube (creator), 2 bài Reddit",
+  "market": "in"
  }
 ]
