@@ -3,6 +3,8 @@
   "market": "Ấn Độ",
   "code": "in",
   "evidence": 0,
+  "evidence_high": 0,
+  "evidence_medium": 0,
   "authors": 0,
   "sources": 0
  },
@@ -10,6 +12,8 @@
   "market": "Trung Quốc",
   "code": "cn",
   "evidence": 0,
+  "evidence_high": 0,
+  "evidence_medium": 0,
   "authors": 0,
   "sources": 0
  },
@@ -17,6 +21,8 @@
   "market": "Đài Loan/Hồng Kông",
   "code": "tw_hk",
   "evidence": 0,
+  "evidence_high": 0,
+  "evidence_medium": 0,
   "authors": 0,
   "sources": 0
  },
@@ -24,6 +30,8 @@
   "market": "Hàn Quốc",
   "code": "kr",
   "evidence": 0,
+  "evidence_high": 0,
+  "evidence_medium": 0,
   "authors": 0,
   "sources": 0
  },
@@ -31,6 +39,8 @@
   "market": "Phương Tây",
   "code": "western",
   "evidence": 0,
+  "evidence_high": 0,
+  "evidence_medium": 0,
   "authors": 0,
   "sources": 0
  },
@@ -38,21 +48,45 @@
   "market": "Châu Á khác",
   "code": "other_asia",
   "evidence": 0,
+  "evidence_high": 0,
+  "evidence_medium": 0,
+  "authors": 0,
+  "sources": 0
+ },
+ {
+  "market": "Nước ngoài (chưa rõ nước)",
+  "code": "intl",
+  "evidence": 0,
+  "evidence_high": 0,
+  "evidence_medium": 0,
+  "authors": 0,
+  "sources": 0
+ },
+ {
+  "market": "Expat",
+  "code": "expat",
+  "evidence": 0,
+  "evidence_high": 0,
+  "evidence_medium": 0,
   "authors": 0,
   "sources": 0
  },
  {
   "market": "Việt Nam",
   "code": "vn",
-  "evidence": 0,
-  "authors": 0,
-  "sources": 0
+  "evidence": 240,
+  "evidence_high": 240,
+  "evidence_medium": 0,
+  "authors": 176,
+  "sources": 2
  },
  {
   "market": "Chưa rõ",
   "code": "unknown",
-  "evidence": 447,
-  "authors": 323,
+  "evidence": 207,
+  "evidence_high": 0,
+  "evidence_medium": 0,
+  "authors": 147,
   "sources": 3
  }
 ]

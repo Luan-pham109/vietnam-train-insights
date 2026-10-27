@@ -83,11 +83,12 @@ def main():
             sources.append({"source": code, "name": c[1], "wave": c[5]})
 
     # --- Raw
-    raw_by_id, raw_by_source, raw_by_task = {}, {}, {}
+    raw_by_id, raw_by_source, raw_by_task, raw_url = {}, {}, {}, {}
     for fp in glob.glob(p("02_raw", "*", "*", "*.md")):
         meta, _ = frontmatter(fp)
         src = meta.get("source") or fp.split(os.sep)[-3]
         raw_by_id[meta.get("raw_id", os.path.basename(fp)[:-3])] = src
+        raw_url[meta.get("raw_id", os.path.basename(fp)[:-3])] = meta.get("url", "")
         raw_by_source[src] = raw_by_source.get(src, 0) + 1
         t = meta.get("task_id")
         if t:
@@ -214,13 +215,46 @@ def main():
             journey.append({"stage": st, "segment": g,
                             "evidence": sum(1 for e in good if e.get("stage") == st and seg_group(e.get("segment")) == g)})
 
+    # --- Origin: lớp suy luận (taxonomy.md mục origin)
+    LANG = {"vi": "vn", "ko": "kr", "zh-hans": "cn", "zh-cn": "cn", "zh": "cn", "zh-hant": "tw_hk", "zh-tw": "tw_hk", "zh-hk": "tw_hk", "hi": "in", "ja": "other_asia"}
+    INTL_SUBS = re.compile(r"/r/(travel|solotravel|backpacking)/", re.I)
+
+    def origin(e):
+        m = e.get("market") or "unknown"
+        if m != "unknown":
+            return m, "cao", "tự nói/nền tảng"
+        seg = e.get("segment") or "unknown"
+        if seg == "vn_domestic":
+            return "vn", "cao", "tự nói"
+        if seg == "expat":
+            return "expat", "cao", "tự nói"
+        if seg.startswith("intl"):
+            return "intl", "cao", "tự nói"
+        hint, cue = e.get("origin_hint"), str(e.get("origin_cue") or "")
+        if hint and cue.lower().startswith("profile:"):
+            return hint, "cao", "profile"
+        lang = str(e.get("lang") or "").lower()
+        if lang in LANG:
+            return LANG[lang], "cao", "ngôn ngữ"
+        if hint:
+            return hint, "trung bình", "dấu hiệu nội dung"
+        if (e["_source"].startswith("tripadvisor") and e.get("author_role") == "op") or INTL_SUBS.search(raw_url.get(e.get("raw_id"), "")):
+            return "intl", "trung bình", "nguồn"
+        return "unknown", "", ""
+
+    for e in evidence:
+        e["_origin"], e["_origin_conf"], e["_origin_rule"] = origin(e)
+
     # --- Market coverage
     MARKETS = [("in", "Ấn Độ"), ("cn", "Trung Quốc"), ("tw_hk", "Đài Loan/Hồng Kông"), ("kr", "Hàn Quốc"),
-               ("western", "Phương Tây"), ("other_asia", "Châu Á khác"), ("vn", "Việt Nam"), ("unknown", "Chưa rõ")]
+               ("western", "Phương Tây"), ("other_asia", "Châu Á khác"), ("intl", "Nước ngoài (chưa rõ nước)"),
+               ("expat", "Expat"), ("vn", "Việt Nam"), ("unknown", "Chưa rõ")]
     markets = []
     for code, name in MARKETS:
-        evs = [e for e in good if (e.get("market") or "unknown") == code]
+        evs = [e for e in good if e["_origin"] == code]
+        hi = [e for e in evs if e["_origin_conf"] == "cao"]
         markets.append({"market": name, "code": code, "evidence": len(evs),
+                        "evidence_high": len(hi), "evidence_medium": sum(1 for e in evs if e["_origin_conf"] == "trung bình"),
                         "authors": len({e.get("author_hash") for e in evs if e.get("author_hash")}),
                         "sources": len({e["_source"] for e in evs})})
 
@@ -232,7 +266,9 @@ def main():
     except (FileNotFoundError, json.JSONDecodeError):
         history = []
     p0 = [c for c in coverage if c["priority"] == "P0"]
+    known = [e for e in good if e["_origin"] != "unknown"]
     row = {
+        "origin_known_share": round(len(known) / len(good), 3) if good else 0,
         "date": today.isoformat(),
         "raw": len(raw_by_id),
         "evidence": len(evidence),

@@ -60,7 +60,7 @@
   "title": "Chuyển dữ liệu FB radar hiện có sang evidence",
   "source": "muse_fb_radar",
   "priority": "P0",
-  "status": "rework",
+  "status": "submitted",
   "blocked_by": "",
   "claimed_at": "2026-10-26T04:30:48Z",
   "submitted_at": "2026-10-27",

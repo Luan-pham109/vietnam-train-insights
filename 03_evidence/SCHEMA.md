@@ -2,6 +2,7 @@
 
 v0.3: `date_precision` thêm giá trị `estimated` (ngày suy từ mốc tương đối "3 tháng trước" hoặc ngày-tháng không có năm). Ngày suy ra neo theo ngày crawl, lấy mốc gần nhất trước ngày crawl.
 
+v0.3: thêm `author_role` (bắt buộc), `origin_hint`, `origin_cue` để script suy luận nguồn gốc khách. Evidence cũ thiếu các field này vẫn hợp lệ.
 v0.2: thêm field bắt buộc `market`. Evidence nộp trước v0.2 thiếu `market` được coi là `unknown`.
 
 Path: `03_evidence/<YYYY-MM>/<task_id>.jsonl`, mỗi dòng 1 evidence.
@@ -20,6 +21,9 @@ Path: `03_evidence/<YYYY-MM>/<task_id>.jsonl`, mỗi dòng 1 evidence.
 | `topic_suggest` | | string | Khi có `other` |
 | `segment` | ✓ | enum | Không chắc → `unknown` |
 | `market` | ✓ | enum | taxonomy.market, theo quy tắc xác định. Không chắc → `unknown` |
+| `author_role` | ✓ từ v0.3 | enum | `op` (người mở thread/bài) / `reply` (người trả lời) / `review` (review độc lập: Maps, app store) |
+| `origin_hint` | | enum | Mã market (`in`, `cn`, `kr`, `western`, `vn`, `expat`, `intl`...) khi có dấu hiệu nhưng tác giả **không tự nói thẳng**. Bỏ trống nếu không có dấu hiệu |
+| `origin_cue` | khi có `origin_hint` | string | Bằng chứng ngắn: trích cụm từ ("first time in Vietnam", "flight home to Sydney") hoặc `profile: <quê trên profile>` |
 | `entities` | | string[] | taxonomy.entity |
 | `routes` | | string[] | `HAN-LCA` |
 | `sentiment` | ✓ | int | -1 / 0 / 1 |

@@ -38,6 +38,12 @@
 2b. **Raw cũng phải nguyên văn.** Được cắt bỏ đoạn/comment không liên quan (đánh dấu `[...]`), không được viết lại bằng lời mình, không tóm tắt ngôi thứ ba ("The poster asks...", "Thanked..."), không đổi bài thành dạng hỏi-đáp. Ghi chú của Muse chỉ để ở dòng `Note:` riêng và không bao giờ được quote làm evidence.
 3. **Chỉ dùng mã trong `00_brain/taxonomy.md`.** Không khớp mã nào → `topic: "other"` + ghi `topic_suggest`.
 4. **Không suy diễn segment/market.** Không rõ là khách nước ngoài hay Việt → `unknown`. Nhưng **tác giả tự nhận** ("As a Vietnamese", "I live in Saigon", "as an Indian") thì bắt buộc gán đúng, và ưu tiên extract vì đây là góc nhìn insider.
+4a. **Gợi ý nguồn gốc (`origin_hint` + `origin_cue`)** - khác với tự nhận ở mục 4: khi tác giả không nói thẳng quốc tịch nhưng có dấu hiệu rõ, ghi `origin_hint` + trích dấu hiệu vào `origin_cue`. Dấu hiệu hợp lệ:
+   - Profile ghi quê/nơi ở (TripAdvisor "Sydney, Australia", Reddit flair) → `origin_cue: "profile: Sydney, Australia"`, `origin_hint: western`.
+   - Nội dung cho thấy là khách du lịch: "first time in Vietnam", "flight home", "our 2-week trip", hỏi cách đặt vé từ nước ngoài → `origin_hint: intl` (hoặc market cụ thể nếu nhắc nước).
+   - Nội dung cho thấy sống ở VN: "I live in Hanoi", "my Vietnamese wife" → `expat`.
+   - **Không dùng:** tên người, ảnh đại diện, văn phong, lỗi chính tả, giọng tiếng Anh.
+   Ghi `author_role` cho mọi evidence: `op` / `reply` / `review`.
 4b. **`questions` gán theo toàn bộ `00_brain/questions.md`**, không giới hạn trong danh sách câu của task.
 5. **Không PII.** Không lưu tên thật, avatar, số điện thoại. Tác giả → `author_hash` (sha1 của source+username, 10 ký tự đầu).
    - Tên người **xuất hiện trong nội dung** cũng là PII: tag tên khi reply trên FB ("Tatum Monnery use lotus"), tên nhân viên ga bị nêu trong review, tên người được gọi trong comment. Thay bằng `[name]`. Tên doanh nghiệp/sạp hàng/tàu thì giữ.

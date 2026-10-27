@@ -1,4 +1,4 @@
-# Taxonomy v0.5
+# Taxonomy v0.6
 
 Muse chỉ dùng mã ở đây. Thiếu mã → `other` + `topic_suggest`. Claude gom đề xuất, nâng version.
 
@@ -79,12 +79,33 @@ Script tính độ phủ tự gán thêm các câu hỏi dưới đây theo topi
 | `western` | Âu, Mỹ, Úc, NZ, Canada |
 | `other_asia` | Châu Á khác (Nhật, ASEAN...) |
 | `vn` | Việt Nam |
+| `expat` | Người nước ngoài sống ở VN |
+| `intl` | Khách nước ngoài, chưa rõ nước nào |
 | `unknown` | Không xác định - **mặc định** |
 
 Quy tắc xác định (theo thứ tự, không đạt thì `unknown`):
 1. Tác giả tự nói ("as an Indian", "我们从广州来", "한국에서").
 2. Nền tảng + ngôn ngữ bản địa của thị trường: Xiaohongshu/Mafengwo/Douyin + chữ giản thể → `cn`; chữ phồn thể → `tw_hk`; Naver/Tistory + tiếng Hàn → `kr`; tiếng Hindi → `in`.
 3. **Không suy từ tên người, ảnh đại diện, hay tiếng Anh có giọng.** Reddit/TripAdvisor tiếng Anh mà không tự nói → `unknown`.
+
+## origin - nguồn gốc khách do script suy luận (lớp riêng, không ghi đè `market`)
+`market` = khách tự nói hoặc nền tảng bản địa, Muse gán. `origin` = script `tools/dashboard_data.py` tự tính theo thứ tự dưới đây, mỗi evidence lấy quy tắc đầu tiên khớp.
+
+| # | Quy tắc | origin | Tin cậy |
+|---|---|---|---|
+| 1 | `market` khác `unknown` (khách tự nói / nền tảng bản địa) | theo `market` | cao |
+| 2 | `segment` = `vn_domestic` / `expat` / `intl_*` (khách tự nói) | `vn` / `expat` / `intl` | cao |
+| 3 | `origin_hint` + `origin_cue` bắt đầu bằng `profile:` (quê ghi trên profile, vd TripAdvisor) | theo `origin_hint` | cao |
+| 4 | `lang` = `vi` | `vn` | cao |
+| 5 | `lang` = `ko` / `zh-Hans` / `zh-Hant` / `hi` / `ja` | `kr` / `cn` / `tw_hk` / `in` / `other_asia` | cao |
+| 6 | `origin_hint` + `origin_cue` là dấu hiệu nội dung ("first time in Vietnam", "flight home") | theo `origin_hint` | trung bình |
+| 7 | `author_role: op` trên `tripadvisor_forum`, hoặc bài trên r/travel, r/solotravel, r/backpacking | `intl` | trung bình |
+| 8 | Còn lại (comment tiếng Anh trên r/VietNam, review tiếng Anh trên Maps...) | `unknown` | - |
+
+Dùng:
+- Insight cho **một thị trường cụ thể** (Ấn, Trung, Hàn, Việt...): chỉ dùng origin tin cậy **cao**.
+- Insight "khách nước ngoài nói chung": được cộng tin cậy trung bình, ghi rõ trong mục Phản biện.
+- Quy tắc 4 (tiếng Việt → người Việt): spot-check 30/30 đúng (2026-10-27, mẫu T-003/T-004). Quy tắc 7 chưa kiểm chứng, spot-check 30 dòng khi T-002 được duyệt. Sai >10% → hạ xuống trung bình.
 
 ## entity - tên chuẩn (viết thường, snake_case)
 - Kênh bán: `dsvn` · `twelve_go` · `baolau` · `bookaway` · `vietage` · `trip_com` · `traveloka` · `klook` · `vexere` · `local_agent` · `hotel_desk` · `station_counter` · `vietnam_railway_agent_site`
@@ -99,6 +120,7 @@ Quy tắc xác định (theo thứ tự, không đạt thì `unknown`):
 Dạng `HAN-LCA`. Thêm ga mới → đề xuất.
 
 ## Changelog
+- v0.6 (2026-10-27): thêm lớp `origin` do script suy luận (ngôn ngữ, profile, nguồn, dấu hiệu nội dung); market thêm `expat`, `intl`; field mới cho Muse `origin_hint`, `origin_cue`, `author_role`.
 - v0.5 (2026-10-27, sau review T-002): thêm topic `mode_choice` (đề xuất `mode_choice_train_vs_bus` của Muse ở T-002 raw 0005; cùng ý lặp ở T-002 0007/0017 và T-005 0014: tàu vs limousine/xe khách/xe riêng theo tiêu chí không phải giá), map → C02.
 - v0.4 (2026-10-26, sau review T-003/T-004/T-005): thêm topic `station_history` (16 dòng other ở T-003), `touting` (chèo kéo, gộp vendor_touting/vendor_conflict + taxi chèo kéo ở Huế/Đà Nẵng/Nha Trang), `wifi` (gộp wifi_onboard/station_wifi, 3 dòng), `overall_experience` (3 dòng qua T-001/T-003/T-004); map `touting` → C05 C07; entity `laman_express`, `hana_train`, `charmy_express`, `damitrans`, `the_hanoi_train`, `bookaway`, `vietage`; ga `DTI`, `TLO`. Không cần sửa lại dòng `other` cũ - Muse dùng mã mới từ task kế tiếp.
 - v0.3 (2026-10-26, sau review T-001): thêm bảng topic → câu hỏi mặc định vì pilot cho thấy `questions` chỉ bám danh sách câu của task (vd `class_cabin` không map C06, `scenery` không map I03).
