@@ -36,4 +36,4 @@ Quy tắc:
 - Dòng header mỗi bài: `role` (op/reply/review), `location` nếu trang có hiện, `date` nếu có. Tên người không ghi; tên được tag trong nội dung → `[name]`.
 - Evidence `quote` phải là chuỗi con của một đoạn trích trong raw.
 - Toàn văn để kiểm chứng: mở `url`. Claude spot-check bằng cách đối chiếu với trang gốc.
-- Raw tạo trước 2026-10-27 ở dạng toàn văn giữ nguyên, chưa xử lý (chờ Luan quyết).
+- Raw tạo trước 2026-10-27 (T-001, T-003, T-004, T-005) đã được cắt về dạng trích đoạn ngày 2026-10-27, Luan duyệt. T-002 đang được Muse đọc lại theo chuẩn mới.
