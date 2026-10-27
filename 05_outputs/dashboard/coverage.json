@@ -232,12 +232,12 @@
   "group": "Insider",
   "question": "Tip/workaround người đi thật hay chia sẻ là gì?",
   "priority": "P0",
-  "evidence": 56,
-  "sources": 2,
-  "authors": 49,
-  "intl_evidence": 0,
-  "score": 0.889,
-  "level": "low"
+  "evidence": 207,
+  "sources": 4,
+  "authors": 111,
+  "intl_evidence": 15,
+  "score": 1.0,
+  "level": "medium"
  },
  {
   "q_id": "I02",

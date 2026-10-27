@@ -139,6 +139,8 @@ def main():
         qset = set(e.get("questions") or [])
         for tp in e.get("topics") or []:
             qset.update(tmap.get(tp, []))
+        if e.get("type") in ("tip", "workaround"):  # taxonomy: type → câu hỏi mặc định
+            qset.add("I01")
         e["_questions"] = qset
 
     # --- Tasks

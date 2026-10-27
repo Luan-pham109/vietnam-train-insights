@@ -65,6 +65,7 @@ Script tính độ phủ tự gán thêm các câu hỏi dưới đây theo topi
 | `language_barrier` · `food_dietary` | C12 |
 | `private_train` | M04 |
 | `scenery` | I03 |
+| type `tip` · `workaround` (theo loại evidence, không theo topic) | I01 |
 | `touting` | C05 C07 |
 
 ## market - thị trường khách (khác `segment`)

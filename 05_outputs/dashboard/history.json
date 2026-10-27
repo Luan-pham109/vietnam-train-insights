@@ -34,11 +34,11 @@
   "evidence": 814,
   "evidence_usable": 722,
   "authors": 444,
-  "questions_medium": 13,
-  "p0_medium": 11,
+  "questions_medium": 14,
+  "p0_medium": 12,
   "p0_total": 17,
   "questions_total": 22,
-  "coverage_score": 0.694,
+  "coverage_score": 0.699,
   "tasks_reviewed": 5,
   "tasks_total": 8
  }
