@@ -29,15 +29,15 @@
  },
  {
   "date": "2026-10-27",
-  "raw": 330,
-  "evidence": 522,
-  "evidence_usable": 502,
-  "authors": 371,
-  "questions_medium": 12,
-  "p0_medium": 10,
+  "raw": 380,
+  "evidence": 696,
+  "evidence_usable": 635,
+  "authors": 440,
+  "questions_medium": 13,
+  "p0_medium": 11,
   "p0_total": 17,
   "questions_total": 22,
-  "coverage_score": 0.677,
+  "coverage_score": 0.694,
   "tasks_reviewed": 3,
   "tasks_total": 8
  }

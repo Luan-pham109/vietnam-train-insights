@@ -1,4 +1,4 @@
-# Taxonomy v0.4
+# Taxonomy v0.5
 
 Muse chỉ dùng mã ở đây. Thiếu mã → `other` + `topic_suggest`. Claude gom đề xuất, nâng version.
 
@@ -32,6 +32,7 @@ Muse chỉ dùng mã ở đây. Thiếu mã → `other` + `topic_suggest`. Claud
 | Trust | `trust_scam` · `trust_agent` · `customer_support` |
 | Tiện ích | `wifi` (wifi ở ga hoặc trên tàu) |
 | Ngôn ngữ | `language_barrier` (biển báo, nhân viên, app/web không có ngôn ngữ của khách) |
+| Chọn phương tiện | `mode_choice` (chọn tàu hay xe/bay/limousine vì lý do không phải giá: thời gian, say xe, thoải mái, ngắm cảnh, an toàn đi đêm) |
 | Liên vận | `cross_border_train` (tàu liên vận Việt - Trung: Gia Lâm/Đồng Đăng - Nam Ninh, Lào Cai - Hà Khẩu) |
 | Tổng quát | `overall_experience` (đánh giá chung, không nêu vấn đề cụ thể - giá trị thấp, chỉ dùng khi không tách được ý cụ thể hơn) |
 | Khác | `other` |
@@ -54,7 +55,7 @@ Script tính độ phủ tự gán thêm các câu hỏi dưới đây theo topi
 
 | Topic | Câu hỏi |
 |---|---|
-| `price_vs_flight_bus` | C02 |
+| `price_vs_flight_bus` · `mode_choice` | C02 |
 | `booking_channel` | C03 M01 |
 | `trust_scam` · `trust_agent` · `price_fee_hidden` | C05 |
 | `class_cabin` · `seat_selection` · `train_type` | C06 |
@@ -98,6 +99,7 @@ Quy tắc xác định (theo thứ tự, không đạt thì `unknown`):
 Dạng `HAN-LCA`. Thêm ga mới → đề xuất.
 
 ## Changelog
+- v0.5 (2026-10-27, sau review T-002): thêm topic `mode_choice` (đề xuất `mode_choice_train_vs_bus` của Muse ở T-002 raw 0005; cùng ý lặp ở T-002 0007/0017 và T-005 0014: tàu vs limousine/xe khách/xe riêng theo tiêu chí không phải giá), map → C02.
 - v0.4 (2026-10-26, sau review T-003/T-004/T-005): thêm topic `station_history` (16 dòng other ở T-003), `touting` (chèo kéo, gộp vendor_touting/vendor_conflict + taxi chèo kéo ở Huế/Đà Nẵng/Nha Trang), `wifi` (gộp wifi_onboard/station_wifi, 3 dòng), `overall_experience` (3 dòng qua T-001/T-003/T-004); map `touting` → C05 C07; entity `laman_express`, `hana_train`, `charmy_express`, `damitrans`, `the_hanoi_train`, `bookaway`, `vietage`; ga `DTI`, `TLO`. Không cần sửa lại dòng `other` cũ - Muse dùng mã mới từ task kế tiếp.
 - v0.3 (2026-10-26, sau review T-001): thêm bảng topic → câu hỏi mặc định vì pilot cho thấy `questions` chỉ bám danh sách câu của task (vd `class_cabin` không map C06, `scenery` không map I03).
 - v0.2 (2026-10-26): thêm chiều `market` (Ấn, Trung, Đài/Hồng Kông, Hàn...); topic `payment_wallet`, `food_dietary`, `language_barrier`, `cross_border_train`; nhận đề xuất của Muse từ T-001: `power_outlet`, `air_conditioning`, `accessibility`; entity kênh/thanh toán theo thị trường; ga liên vận.

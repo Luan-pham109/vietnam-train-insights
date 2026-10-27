@@ -1,4 +1,4 @@
-# Source map v0.2
+# Source map v0.3
 
 | Mã nguồn | Nguồn | Segment | Câu hỏi chính | Tần suất | Wave |
 |---|---|---|---|---|---|
@@ -37,5 +37,6 @@
 ## Trạng thái truy cập (cập nhật sau review)
 - `gmaps_station` (T-003, 2026-10-26): cần đăng nhập Google để xem >5 review và sắp xếp newest-first. Trần trong phạm vi 2 năm: Sài Gòn 26, Lào Cai 8, Đồng Hới 27, Huế 41, Đà Nẵng 41. Re-crawl theo quý để lấy review mới tích luỹ. Ngày chỉ có dạng tương đối → `date_precision: estimated`. Loại review gửi hàng hoá (ngoài scope).
 - `appstore` (T-004, 2026-10-26): App Store web chỉ có trang đầu 10 review/storefront, không phân trang. **Baolau: không có app, website-only** - kiểm lại theo quý. Vexere, Traveloka: 0 review nhắc tàu trong tập mới nhất đã xem. Review tàu của 12Go/Trip.com/Klook chủ yếu về tàu nước khác.
+- `tripadvisor_forum` (T-002, 2026-10-27): đọc được không đăng nhập, không captcha (có lúc hiện DataDome Device Check rồi tự qua). Thread cũ chỉ hiện "1 year ago" → ngày suy từ forum search, có thể gán sai tác giả/ngày; tác giả + ngày trên trang thread thắng. Đợt sau mở rộng forum Da Nang, Ninh Binh, Quy Nhon, Nha Trang (thread tàu di sản Đà Nẵng - Huế k14919975 là thread chi tiết nhất về HD1/HD2/HD3).
 - `muse_fb_radar` (T-005, 2026-10-26): 3 nhóm riêng tư (Vietnam is Awesome, Another Side of Vietnam, Hanoi Massive) chưa tìm. Reply FB có tag tên thật → phải thay bằng `[name]` khi đưa vào raw.
 

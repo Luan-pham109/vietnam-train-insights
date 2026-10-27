@@ -23,3 +23,5 @@ task_id: T-001
 ```
 
 1 thread = 1 file raw. Comment không liên quan đến tàu thì bỏ.
+
+Nội dung phải **nguyên văn** từ nguồn: được cắt đoạn không liên quan (ghi `[...]`), không viết lại, không tóm tắt. Ghi chú của Muse để ở dòng `Note:` riêng. Tên người được gọi/tag trong nội dung → `[name]`.

@@ -35,6 +35,7 @@
 0. Đầu mỗi task, đọc lại `00_brain/taxonomy.md` và `03_evidence/SCHEMA.md` (có thể đã đổi version).
 1. **Raw trước, evidence sau.** Mỗi evidence phải trỏ về 1 `raw_id` có thật.
 2. **Quote nguyên văn.** `quote` phải copy y nguyên từ raw (không dịch, không sửa). Tóm tắt/diễn giải để ở `summary`.
+2b. **Raw cũng phải nguyên văn.** Được cắt bỏ đoạn/comment không liên quan (đánh dấu `[...]`), không được viết lại bằng lời mình, không tóm tắt ngôi thứ ba ("The poster asks...", "Thanked..."), không đổi bài thành dạng hỏi-đáp. Ghi chú của Muse chỉ để ở dòng `Note:` riêng và không bao giờ được quote làm evidence.
 3. **Chỉ dùng mã trong `00_brain/taxonomy.md`.** Không khớp mã nào → `topic: "other"` + ghi `topic_suggest`.
 4. **Không suy diễn segment/market.** Không rõ là khách nước ngoài hay Việt → `unknown`. Nhưng **tác giả tự nhận** ("As a Vietnamese", "I live in Saigon", "as an Indian") thì bắt buộc gán đúng, và ưu tiên extract vì đây là góc nhìn insider.
 4b. **`questions` gán theo toàn bộ `00_brain/questions.md`**, không giới hạn trong danh sách câu của task.
@@ -42,6 +43,7 @@
    - Tên người **xuất hiện trong nội dung** cũng là PII: tag tên khi reply trên FB ("Tatum Monnery use lotus"), tên nhân viên ga bị nêu trong review, tên người được gọi trong comment. Thay bằng `[name]`. Tên doanh nghiệp/sạp hàng/tàu thì giữ.
    - Không ghi tên người (kể cả tên hiển thị của reviewer, tên chủ repo) trong mục "Báo cáo" của task - dùng `raw_id`/`author_hash`.
    - Ngoại lệ bất biến của raw: khi Claude trả `rework` vì PII, Muse được sửa raw đã có **chỉ để thay PII bằng `[name]`/`[redacted ...]`**, không đổi gì khác. Commit `[muse] T-xxx redact PII`.
+   - Ngoại lệ thứ hai: khi Claude trả `rework` vì raw không nguyên văn (§3.2b), Muse được ghi đè raw cùng `raw_id` bằng bản đọc lại nguyên văn, giữ frontmatter và `author_hash`. Commit `[muse] T-xxx raw verbatim re-read`.
    - `author_hash`: `source` = mã nguồn trong `source-map.md`. Riêng `gmaps_station` giữ tiền tố `gmaps` như T-003 để hash ổn định giữa các đợt.
 6. **Chỉ nội dung public.** FB group kín: chỉ lấy những gì Muse radar đã thu hợp lệ.
 7. **Ghi ngày gốc của bài**, không phải ngày crawl. Không lấy được ngày comment thì dùng ngày thread + `date_precision: "thread"`.

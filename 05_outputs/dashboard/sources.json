@@ -12,8 +12,8 @@
   "name": "TripAdvisor Vietnam forum (train threads)",
   "wave": "1",
   "state": "đang chạy",
-  "raw": 0,
-  "evidence": 0
+  "raw": 50,
+  "evidence": 133
  },
  {
   "source": "tripadvisor_review",

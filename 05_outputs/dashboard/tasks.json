@@ -18,14 +18,14 @@
   "title": "TripAdvisor forum - thread về tàu",
   "source": "tripadvisor_forum",
   "priority": "P0",
-  "status": "in_progress",
+  "status": "rework",
   "blocked_by": "",
   "claimed_at": "2026-10-26T14:55:21Z",
-  "submitted_at": "",
-  "raw": 0,
-  "evidence": 0,
-  "checked": 0,
-  "error_rate": null
+  "submitted_at": "2026-10-27",
+  "raw": 50,
+  "evidence": 174,
+  "checked": 18,
+  "error_rate": 0.222
  },
  {
   "task_id": "T-003",
