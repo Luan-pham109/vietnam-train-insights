@@ -105,7 +105,7 @@ Quy tắc xác định (theo thứ tự, không đạt thì `unknown`):
 Dùng:
 - Insight cho **một thị trường cụ thể** (Ấn, Trung, Hàn, Việt...): chỉ dùng origin tin cậy **cao**.
 - Insight "khách nước ngoài nói chung": được cộng tin cậy trung bình, ghi rõ trong mục Phản biện.
-- Quy tắc 4 (tiếng Việt → người Việt): spot-check 30/30 đúng (2026-10-27, mẫu T-003/T-004). Quy tắc 7 chưa kiểm chứng, spot-check 30 dòng khi T-002 được duyệt. Sai >10% → hạ xuống trung bình.
+- Quy tắc 4 (tiếng Việt → người Việt): spot-check 30/30 đúng (2026-10-27, mẫu T-003/T-004). Quy tắc 7: rà 26/26 dòng OP TripAdvisor không tự nhận (2026-10-27), sai ước ~4-8%, giữ tin cậy trung bình. Sai >10% → hạ xuống trung bình.
 
 ## entity - tên chuẩn (viết thường, snake_case)
 - Kênh bán: `dsvn` · `twelve_go` · `baolau` · `bookaway` · `vietage` · `trip_com` · `traveloka` · `klook` · `vexere` · `local_agent` · `hotel_desk` · `station_counter` · `vietnam_railway_agent_site`
