@@ -31,13 +31,13 @@
   "date": "2026-10-27",
   "raw": 380,
   "evidence": 696,
-  "evidence_usable": 635,
-  "authors": 440,
-  "questions_medium": 13,
-  "p0_medium": 11,
+  "evidence_usable": 447,
+  "authors": 323,
+  "questions_medium": 4,
+  "p0_medium": 4,
   "p0_total": 17,
   "questions_total": 22,
-  "coverage_score": 0.694,
+  "coverage_score": 0.608,
   "tasks_reviewed": 3,
   "tasks_total": 8
  }

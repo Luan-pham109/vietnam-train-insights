@@ -13,7 +13,7 @@
   "wave": "1",
   "state": "đang chạy",
   "raw": 50,
-  "evidence": 133
+  "evidence": 0
  },
  {
   "source": "tripadvisor_review",
@@ -45,7 +45,7 @@
   "wave": "1",
   "state": "đang chạy",
   "raw": 20,
-  "evidence": 55
+  "evidence": 0
  },
  {
   "source": "youtube",

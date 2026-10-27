@@ -109,7 +109,15 @@ def main():
                 ev["_source"] = raw_by_id.get(ev.get("raw_id"), "unknown")
                 evidence.append(ev)
 
+    reviewed_tasks = set()
+    for fp in glob.glob(p("01_tasks", "T-*.md")):
+        m, _ = frontmatter(fp)
+        if m.get("status") == "reviewed":
+            reviewed_tasks.add(m.get("task_id", os.path.basename(fp)[:-3]))
+
     def usable(ev):
+        if ev["_task"] not in reviewed_tasks:  # chỉ tính task đã duyệt
+            return False
         if ev.get("review") in BAD_REVIEW:
             return False
         try:
