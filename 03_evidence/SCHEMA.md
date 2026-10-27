@@ -13,7 +13,7 @@ Path: `03_evidence/<YYYY-MM>/<task_id>.jsonl`, mỗi dòng 1 evidence.
 | `ev_id` | ✓ | string | `<raw_id>-e<nn>` |
 | `raw_id` | ✓ | string | Phải tồn tại trong `02_raw/` |
 | `task_id` | ✓ | string | |
-| `quote` | ✓ | string | **Nguyên văn** từ raw, ≤400 ký tự, giữ ngôn ngữ gốc (中文, 한국어, हिन्दी...) - không dịch |
+| `quote` | ✓ | string | **Nguyên văn** từ raw, ≤50 từ (CJK ≤100 ký tự), giữ ngôn ngữ gốc (中文, 한국어, हिन्दी...) - không dịch |
 | `summary_vi` | ✓ | string | 1 câu tiếng Việt |
 | `type` | ✓ | enum | taxonomy.type |
 | `stage` | ✓ | enum | taxonomy.stage |

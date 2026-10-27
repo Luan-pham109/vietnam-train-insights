@@ -34,8 +34,8 @@
 ## 3. Chuẩn Muse phải giữ (thu thập + extract evidence)
 0. Đầu mỗi task, đọc lại `00_brain/taxonomy.md` và `03_evidence/SCHEMA.md` (có thể đã đổi version).
 1. **Raw trước, evidence sau.** Mỗi evidence phải trỏ về 1 `raw_id` có thật.
-2. **Quote nguyên văn.** `quote` phải copy y nguyên từ raw (không dịch, không sửa). Tóm tắt/diễn giải để ở `summary`.
-2b. **Raw cũng phải nguyên văn.** Được cắt bỏ đoạn/comment không liên quan (đánh dấu `[...]`), không được viết lại bằng lời mình, không tóm tắt ngôi thứ ba ("The poster asks...", "Thanked..."), không đổi bài thành dạng hỏi-đáp. Ghi chú của Muse chỉ để ở dòng `Note:` riêng và không bao giờ được quote làm evidence.
+2. **Quote nguyên văn, ngắn.** `quote` phải copy y nguyên từ raw (không dịch, không sửa), **tối đa 50 từ** (tiếng Trung/Nhật/Hàn: tối đa 100 ký tự). Tóm tắt/diễn giải để ở `summary_vi`.
+2b. **Raw dạng trích đoạn (excerpt), không lưu nguyên thread** (từ 2026-10-27). Bài viết trên diễn đàn/review là tác phẩm của người khác: raw chỉ lưu link + metadata + **các đoạn trích nguyên văn ≤50 từ mỗi bài đăng (mỗi post/comment)**, chỉ trích phần dùng làm evidence. Không chép lại cả thread, không viết lại bằng lời mình, không tóm tắt ngôi thứ ba. Ghi chú của Muse chỉ ở dòng `Note:` riêng và không bao giờ được quote làm evidence. Nội dung đầy đủ để kiểm chứng nằm ở `url`. Chuẩn chi tiết: `02_raw/README.md`.
 3. **Chỉ dùng mã trong `00_brain/taxonomy.md`.** Không khớp mã nào → `topic: "other"` + ghi `topic_suggest`.
 4. **Không suy diễn segment/market.** Không rõ là khách nước ngoài hay Việt → `unknown`. Nhưng **tác giả tự nhận** ("As a Vietnamese", "I live in Saigon", "as an Indian") thì bắt buộc gán đúng, và ưu tiên extract vì đây là góc nhìn insider.
 4a. **Gợi ý nguồn gốc (`origin_hint` + `origin_cue`)** - khác với tự nhận ở mục 4: khi tác giả không nói thẳng quốc tịch nhưng có dấu hiệu rõ, ghi `origin_hint` + trích dấu hiệu vào `origin_cue`. Dấu hiệu hợp lệ:
