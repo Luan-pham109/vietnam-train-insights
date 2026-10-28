@@ -166,5 +166,33 @@
   "evidence": 89,
   "checked": 49,
   "error_rate": 0.0
+ },
+ {
+  "task_id": "T-013",
+  "title": "Trang bán vé tàu VN của đối thủ: messaging, phí, thanh toán, trust",
+  "source": "competitor_site",
+  "priority": "P0",
+  "status": "open",
+  "blocked_by": "",
+  "claimed_at": "",
+  "submitted_at": "",
+  "raw": 0,
+  "evidence": 0,
+  "checked": 0,
+  "error_rate": null
+ },
+ {
+  "task_id": "T-014",
+  "title": "TikTok review tàu/khoang VN (EN + VI)",
+  "source": "tiktok",
+  "priority": "P1",
+  "status": "open",
+  "blocked_by": "",
+  "claimed_at": "",
+  "submitted_at": "",
+  "raw": 0,
+  "evidence": 0,
+  "checked": 0,
+  "error_rate": null
  }
 ]
