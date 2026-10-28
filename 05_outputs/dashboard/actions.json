@@ -1,0 +1,58 @@
+[
+ {
+  "rank": 1,
+  "action": "Baseline + nội dung AEO nêu tên Vexere, ưu tiên ChatGPT",
+  "insights": "F02",
+  "impact": "Cao",
+  "effort": "Thấp",
+  "measure": "Vexere x/30 lượt hỏi AI, chạy 2 lần/tháng"
+ },
+ {
+  "rank": 2,
+  "action": "Đưa tàu tư nhân lên trang EN cùng lúc onboard Chapa; chốt cam kết đúng cabin đã đặt",
+  "insights": "F04 F14",
+  "impact": "Cao",
+  "effort": "Trung bình",
+  "measure": "CVR trang tàu tư nhân, khiếu nại đổi cabin"
+ },
+ {
+  "rank": 3,
+  "action": "UI chọn khoang/giường + nhãn tàu mới/cũ",
+  "insights": "F03",
+  "impact": "Cao",
+  "effort": "Trung bình",
+  "measure": "CVR bước chọn chỗ, field abandonment (Clarity)"
+ },
+ {
+  "rank": 4,
+  "action": "Kiểm ô SĐT quốc tế + thẻ quốc tế trong flow EN",
+  "insights": "F01",
+  "impact": "Trung bình",
+  "effort": "Thấp",
+  "measure": "Drop-off bước thông tin theo locale"
+ },
+ {
+  "rank": 5,
+  "action": "Trạng thái 'chưa mở bán - mở ngày X' thay cho 'hết vé'",
+  "insights": "F06",
+  "impact": "Trung bình",
+  "effort": "Thấp",
+  "measure": "Search không có chuyến trong cửa sổ 30-60 ngày"
+ },
+ {
+  "rank": 6,
+  "action": "Shuttle Lào Cai → Sa Pa đặt trước + pre-trip guide theo ga",
+  "insights": "F08 F09",
+  "impact": "Trung bình",
+  "effort": "Trung bình",
+  "measure": "Attach rate add-on"
+ },
+ {
+  "rank": 7,
+  "action": "Nội dung tiếng Hàn + kiểm booking khách Hàn",
+  "insights": "F11",
+  "impact": "Trung bình",
+  "effort": "Thấp",
+  "measure": "Booking Train theo quốc tịch Hàn"
+ }
+]

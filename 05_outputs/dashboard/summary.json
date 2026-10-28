@@ -1,0 +1,37 @@
+[
+ {
+  "rank": 1,
+  "title": "AI engine chưa gọi tên Vexere",
+  "body": "AI gợi ý dsvn.vn đầu tiên ở 20/30 lượt hỏi; Vexere được nhắc 11/30, riêng ChatGPT 1/10 - dù vexere.com là domain AI trích dẫn nhiều nhất.",
+  "insights": "F02",
+  "tone": "risk"
+ },
+ {
+  "rank": 2,
+  "title": "Chọn khoang, giường là nỗi lo số 1",
+  "body": "Khoang 4 riêng, giường dưới, cả nhóm cùng khoang, tàu mới hay cũ - trùng đúng hạng mục UI phân loại tàu Q4.",
+  "insights": "F03",
+  "tone": "opportunity"
+ },
+ {
+  "rank": 3,
+  "title": "Tàu tư nhân: đừng bán lời hứa ngủ ngon",
+  "body": "Được khen đồ ăn, nhân viên; bị chê ồn, giá, bị đổi cabin. 2/3 ca đổi cabin là Chapa Express - hãng Vexere onboard đầu tiên.",
+  "insights": "F04 F05",
+  "tone": "risk"
+ },
+ {
+  "rank": 4,
+  "title": "Trust đứt ở site giả và cửa ga",
+  "body": "Site giả dạng DSVN bán gấp nhiều lần giá ga; ra khỏi ga gặp chèo kéo, giả tài xế, thu phí ngầm.",
+  "insights": "F01 F08 F09",
+  "tone": "risk"
+ },
+ {
+  "rank": 5,
+  "title": "Khách Hàn đã tự tìm tới Vexere",
+  "body": "3 bài Naver kể đặt vé tàu qua app Vexere, cạnh Klook và MyRealTrip - insight trỏ thẳng vào Vexere rõ nhất.",
+  "insights": "F11",
+  "tone": "opportunity"
+ }
+]

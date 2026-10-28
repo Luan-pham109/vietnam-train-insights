@@ -1,0 +1,74 @@
+[
+ {
+  "channel": "dsvn.vn",
+  "evidence": 25,
+  "authors": 22,
+  "positive": 9,
+  "negative": 3,
+  "neutral": 13
+ },
+ {
+  "channel": "Baolau",
+  "evidence": 20,
+  "authors": 13,
+  "positive": 14,
+  "negative": 1,
+  "neutral": 5
+ },
+ {
+  "channel": "12Go",
+  "evidence": 16,
+  "authors": 11,
+  "positive": 4,
+  "negative": 3,
+  "neutral": 9
+ },
+ {
+  "channel": "Vexere",
+  "evidence": 8,
+  "authors": 8,
+  "positive": 3,
+  "negative": 1,
+  "neutral": 4
+ },
+ {
+  "channel": "Quầy ga",
+  "evidence": 7,
+  "authors": 7,
+  "positive": 0,
+  "negative": 1,
+  "neutral": 6
+ },
+ {
+  "channel": "Klook",
+  "evidence": 5,
+  "authors": 5,
+  "positive": 1,
+  "negative": 0,
+  "neutral": 4
+ },
+ {
+  "channel": "Site giả dạng DSVN",
+  "evidence": 3,
+  "authors": 3,
+  "positive": 0,
+  "negative": 2,
+  "neutral": 1
+ },
+ {
+  "channel": "Bookaway",
+  "evidence": 1,
+  "authors": 1,
+  "positive": 0,
+  "negative": 0,
+  "neutral": 1
+ },
+ {
+  "channel": "MyRealTrip",
+  "evidence": 1,
+  "authors": 1,
+  "positive": 0,
+  "negative": 0,
+  "neutral": 1
+ }
+]

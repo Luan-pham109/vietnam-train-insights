@@ -1,0 +1,26 @@
+[
+ {
+  "engine": "ChatGPT",
+  "runs": 10,
+  "vexere_mentioned": 1,
+  "vexere_first": 0,
+  "dsvn_first": 9,
+  "vexere_cited": 0
+ },
+ {
+  "engine": "Gemini",
+  "runs": 10,
+  "vexere_mentioned": 5,
+  "vexere_first": 1,
+  "dsvn_first": 4,
+  "vexere_cited": 2
+ },
+ {
+  "engine": "Google AI",
+  "runs": 10,
+  "vexere_mentioned": 5,
+  "vexere_first": 1,
+  "dsvn_first": 7,
+  "vexere_cited": 3
+ }
+]
