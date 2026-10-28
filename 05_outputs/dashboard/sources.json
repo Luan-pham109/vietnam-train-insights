@@ -57,9 +57,9 @@
  },
  {
   "source": "tiktok",
-  "name": "Video review tàu/khoang",
+  "name": "Video review tàu/khoang (chặn đăng nhập, xem dưới)",
   "wave": "2",
-  "state": "đã giao",
+  "state": "đã duyệt",
   "raw": 0,
   "evidence": 0
  },
@@ -83,9 +83,9 @@
   "source": "competitor_site",
   "name": "Trang tàu VN của 12Go, Baolau, Trip.com, Klook, Traveloka",
   "wave": "2",
-  "state": "đã giao",
-  "raw": 0,
-  "evidence": 0
+  "state": "đã duyệt",
+  "raw": 11,
+  "evidence": 60
  },
  {
   "source": "ad_library",

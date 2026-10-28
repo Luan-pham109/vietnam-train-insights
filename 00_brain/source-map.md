@@ -1,4 +1,4 @@
-# Source map v0.4
+# Source map v0.5
 
 | Mã nguồn | Nguồn | Segment | Câu hỏi chính | Tần suất | Wave |
 |---|---|---|---|---|---|
@@ -9,7 +9,7 @@
 | `appstore` | App Store + Google Play: DSVN, 12Go, Baolau, Trip.com, Traveloka, Vexere (review nhắc tàu) | intl + vn | C04 C05 C09 M02 | Monthly | 1 |
 | `muse_fb_radar` | FB group Muse radar đang thu | intl + vn | C03 C04 C07 I01 | Liên tục | 1 |
 | `youtube` | Vlog tàu VN: transcript + comment | intl | C02 C06 I02 I03 | Monthly | 2 |
-| `tiktok` | Video review tàu/khoang | intl + vn | C02 C06 I02 | Monthly | 2 |
+| `tiktok` | Video review tàu/khoang (chặn đăng nhập, xem dưới) | intl + vn | C02 C06 I02 | Quarterly (thử lại) | 2 |
 | `seat61` | seat61.com trang Vietnam | intl | M01 C03 | Quarterly (snapshot) | 2 |
 | `serp_ai` | Google SERP + ChatGPT/Perplexity/Gemini với bộ prompt cố định | intl | M05 M01 | Monthly | 2 |
 | `competitor_site` | Trang tàu VN của 12Go, Baolau, Trip.com, Klook, Traveloka | - | M02 M03 | Monthly | 2 |
@@ -51,3 +51,5 @@
 - `youtube` EN (T-010, 2026-10-27): đọc được transcript + comment không đăng nhập. Ngày comment dạng tương đối → `estimated`. Loại video có nhãn AD/HOSTED và kênh của hãng/đại lý (SJourney, Lotus Train, New Livitrans, Travel Agent Hanoi).
 - `seat61` (T-011, 2026-10-28): toàn bộ nội dung tàu VN nằm trong 1 trang `Vietnam.htm` (cập nhật 2026-06-10). Snapshot theo quý, so ngày cập nhật trên trang. Link đặt vé mang tham số affiliate (Baolau, 12Go, cổng seat61) nhưng trang không ghi công bố hoa hồng cho vé tàu.
 - `tripadvisor_review` (T-012, 2026-10-27): 7/7 trang hãng đọc được. Tàu di sản Huế - Đà Nẵng không có trang hãng riêng. Sapaly (9) và Livitrans (5) có ít review từ 2025 → re-crawl theo quý. Chapa Express có 2 trang trùng tên - dùng trang 219 review.
+- `competitor_site` (T-013, 2026-10-28): 12Go, Baolau, Klook, Bookaway, vietnam-railway.com, Trip.com (trang kết quả `businessType=vn_train`), Vexere (`vexere.com/vn/trains.en`; `/en/trains` 404) đọc được không đăng nhập. **Traveloka desktop không xem được** (báo chỉ hỗ trợ mobile web) - thử mobile web lần sau. Phí và chính sách hoàn/đổi phần lớn chỉ hiện ở checkout. Phải tìm bằng tìm kiếm nội bộ của trang, không chỉ đoán URL. Chạy lại hằng tháng, giữ Vexere làm mốc.
+- `tiktok` (T-014, 2026-10-28): **không truy cập được** - tìm kiếm EN/VI bật tường đăng nhập, không có video/caption/comment. Kiểm lại theo quý; góc video ngắn tạm lấy từ YouTube Shorts.
