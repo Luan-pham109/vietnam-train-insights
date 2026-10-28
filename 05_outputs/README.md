@@ -10,5 +10,4 @@ Claude cập nhật sau mỗi chu kỳ synthesis (mặc định hàng tháng).
 | `question-library.md` | Câu hỏi thật của khách, gom cụm, dùng cho AEO/FAQ | C03 M05 |
 | `signal-log.md` | Tin thị trường theo thời gian | M06 |
 | `coverage.md` | Mỗi câu hỏi đã có bao nhiêu evidence/insight - chỉ ra chỗ hổng | tất cả |
-
 | `insights-final.md` | Báo cáo insight cuối (F01-F14), 2026-10-28 | tất cả |
