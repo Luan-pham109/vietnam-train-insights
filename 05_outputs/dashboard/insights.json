@@ -1,274 +1,588 @@
 [
  {
-  "id": "INS-001",
-  "insight": "Lúc bước ra khỏi ga là điểm mất trust lớn nhất của chặng cuối: chèo kéo, hét giá, giả tài xế; khách tự vệ bằng Grab hoặc đặt xe trước",
-  "who": "Xem card",
-  "evidence": 22,
-  "authors": 20,
-  "sources": 3,
-  "evidence_reviewed": null,
-  "sources_reviewed": null,
-  "confidence": "trung bình",
-  "status": "supported",
-  "action": "Add-on chặng cuối (BRD hướng dẫn chặng cuối train): ưu tiên ga có pain rõ nhất **Lào Cai → Sa Pa**, rồi Huế, Đà Nẵng. Bán xe đón đặt trước (tên khách trên bảng, biển số gửi trước) - trả lời đúng nỗi sợ \"giả tài xế\".",
-  "quote": "a man suddenly ran towards us, claimed to be our driver, and took us to our destination.",
-  "vexere_fit": "Card đầy đủ trong 04_insights",
-  "note": ""
- },
- {
-  "id": "INS-002",
-  "insight": "Nhà vệ sinh (ở ga và trên tàu) là pain vệ sinh lặp lại nhiều nhất; khách đã quen tự chuẩn bị, chất lượng khác nhau rõ theo ga",
-  "who": "Xem card",
-  "evidence": 25,
-  "authors": 23,
-  "sources": 3,
-  "evidence_reviewed": null,
-  "sources_reviewed": null,
-  "confidence": "trung bình",
-  "status": "supported",
-  "action": "Pre-trip checklist trên e-ticket: mang khăn ướt/giấy, lót gối, khẩu trang - giảm gap kỳ vọng (I02), giảm review xấu đổ về kênh bán.",
-  "quote": "The toilets are sooo dirty, they also occasionally will just launch piss when you push the flush button.",
-  "vexere_fit": "Card đầy đủ trong 04_insights",
-  "note": ""
- },
- {
-  "id": "INS-003",
-  "insight": "Khách không phân biệt được site chính thức với site trung gian bán vé DSVN giá cao gấp nhiều lần; cộng đồng tự \"dạy nhau\" dsvn.vn là chính thức",
-  "who": "Xem card",
-  "evidence": 10,
-  "authors": 9,
-  "sources": 2,
-  "evidence_reviewed": null,
-  "sources_reviewed": null,
-  "confidence": "thấp",
-  "status": "hypothesis",
-  "action": "Trust signal là điều kiện cần cho kênh bán vé tàu cho khách nước ngoài: ghi rõ \"giá vé = giá DSVN + phí dịch vụ X\", hiển thị giá VND gốc, nói rõ quan hệ với DSVN.",
-  "quote": " dsvn.vn là chính thức\n\n## Bằng chứng\n- ",
-  "vexere_fit": "Card đầy đủ trong 04_insights",
-  "note": ""
- },
- {
-  "id": "INS-004",
-  "insight": "Ngủ kém trên tàu đêm (ồn, xóc, loa thông báo mỗi ga) là pain lặp lại ở cả toa DSVN lẫn toa tư nhân - kể cả khi cabin được khen sạch, đẹp",
-  "who": "Xem card",
-  "evidence": 15,
-  "authors": 14,
-  "sources": 6,
-  "evidence_reviewed": null,
-  "sources_reviewed": null,
-  "confidence": "trung bình",
-  "status": "supported",
-  "action": "Khi mở bán tàu tư nhân (Chapa Express Q4): **không bán bằng lời hứa \"ngủ ngon\"**. Toa tư nhân vẫn chạy trên đầu máy và đường ray DSVN; khách trả gấp đôi mà vẫn mất ngủ là nguồn review 1-2 sao và yêu cầu hoàn tiền.",
-  "quote": "[...] the subpar sleep quality pretty much fully defeats the point of taking a night train in my books.",
-  "vexere_fit": "Card đầy đủ trong 04_insights",
-  "note": ""
- },
- {
-  "id": "D01",
-  "insight": "Khách nước ngoài muốn đặt kênh chính thức nhưng bị đẩy sang trung gian giá cao: dsvn.vn khó dùng, thẻ quốc tế lỗi, Vexere đòi số điện thoại VN",
+  "id": "F01",
+  "theme": "Kênh đặt vé & trust",
+  "insight": "dsvn.vn dùng được với khách nước ngoài nếu biết mẹo (chọn VNPay, có Apple Pay trên app iOS, thêm số 0 trước số điện thoại); khách không biết mẹo thì sang Baolau/12Go chấp nhận trả thêm phí để thẻ nước ngoài chạy được; site giả dạng DSVN bắt trả gấp nhiều lần giá ga",
   "who": "Nước ngoài",
-  "evidence": 38,
-  "authors": 36,
+  "evidence": 131,
+  "authors": 108,
+  "sources": 7,
+  "evidence_reviewed": 131,
+  "authors_reviewed": 108,
+  "sources_reviewed": 7,
+  "source_list": [
+   "appstore",
+   "gmaps_station",
+   "muse_fb_radar",
+   "reddit",
+   "tripadvisor",
+   "tripadvisor_review",
+   "youtube"
+  ],
+  "confidence": "trung bình",
+  "status": "supported",
+  "action": "Landing EN: 'đại lý chính thức DSVN' + giá all-in so với giá ga + thẻ quốc tế/Apple Pay chạy ngay, không cần mẹo; kiểm ô SĐT trong flow EN nhận số quốc tế (có 1 phàn nàn 'Vexere doesn't let me book without VN number', dsvn cũng cần mẹo thêm số 0)",
+  "quote": "Choose the vnpay option when it comes to paying and there's no problem using international cards.",
+  "quotes": [
+   {
+    "ev_id": "reddit-20261026-0020-e02",
+    "quote": "Choose the vnpay option when it comes to paying and there's no problem using international cards.",
+    "summary_vi": "Chọn thanh toán VNPay thì thẻ quốc tế không gặp vấn đề gì."
+   },
+   {
+    "ev_id": "reddit-20261026-0007-e04",
+    "quote": "Should’ve used Baolau, its a little bit more expensive than the official VR website but you can pay using any sort of card.",
+    "summary_vi": "Baolau đắt hơn web chính thức một chút nhưng chấp nhận mọi loại thẻ."
+   },
+   {
+    "ev_id": "reddit-20261026-0007-e02",
+    "quote": "At the station the price for the return tickets were only 27 USD (700K VND) for both of us",
+    "summary_vi": "Vé khứ hồi mua tại ga chỉ 27 USD cho hai người, rẻ hơn nhiều so với web giả."
+   }
+  ],
+  "vexere_fit": "Trực tiếp: định vị 'kênh chính thức + thẻ quốc tế chạy được + giá minh bạch'",
+  "note": "",
+  "counter": "Ô số điện thoại và lỗi thẻ mới có vài evidence - là giả thuyết cần đo funnel, không phải kết luận; Reddit/TripAdvisor lệch về khách tự lên kế hoạch"
+ },
+ {
+  "id": "F02",
+  "theme": "Kênh đặt vé & trust",
+  "insight": "AI engine gợi ý dsvn.vn đầu tiên ở 20/30 lượt hỏi; Vexere được nhắc 11/30 (ChatGPT 1/10, Gemini 5/10, Google AI 5/10). Trong 15 lượt có dẫn nguồn, vexere.com được trích ở 5 lượt (nhiều nhất, dsvn.vn 4) - nội dung Vexere đã được AI dùng làm nguồn nhưng chưa thành lời gợi ý đặt vé ở ChatGPT",
+  "who": "Khách hỏi AI (proxy)",
+  "evidence": 119,
+  "authors": 3,
+  "sources": 1,
+  "evidence_reviewed": 119,
+  "authors_reviewed": 3,
+  "sources_reviewed": 1,
+  "source_list": [
+   "serp_ai"
+  ],
+  "confidence": "đo lường",
+  "status": "supported",
+  "action": "Đặt baseline AEO: 10 prompt × 3 engine, mục tiêu tăng Vexere từ 11/30 lượt; nội dung answer-first nêu tên thương hiệu trong câu trả lời (không chỉ là nguồn); ưu tiên ChatGPT (1/10)",
+  "quote": "1. Best Overall for Foreign Travelers: Vexere [...] vexere.com/vn/trains.en",
+  "quotes": [
+   {
+    "ev_id": "serp_ai-20261027-gemini-p02-e01",
+    "quote": "1. Best Overall for Foreign Travelers: Vexere [...] vexere.com/vn/trains.en",
+    "summary_vi": "Gemini xếp Vexere đầu tiên cho khách nước ngoài."
+   },
+   {
+    "ev_id": "serp_ai-20261027-chatgpt-p01-e01",
+    "quote": "Option 1: Official Vietnam Railways website",
+    "summary_vi": "ChatGPT gợi ý đặt trực tiếp qua trang chính thức của Đường sắt Việt Nam."
+   }
+  ],
+  "vexere_fit": "Trực tiếp: KPI của workstream AEO",
+  "note": "Dao động mạnh giữa 2 ngày chạy; Google ra IP Mỹ; Perplexity bị chặn",
+  "counter": "1 lần chạy/engine/prompt, dao động cao - đọc là mốc, chưa phải xu hướng"
+ },
+ {
+  "id": "F03",
+  "theme": "Chọn chỗ & sản phẩm tàu",
+  "insight": "Chọn khoang và giường là nỗi lo lớn nhất trước chuyến: khoang 4 riêng, giường dưới, cả nhóm cùng khoang, bên nào ngắm cảnh, tàu mới hay cũ (SE3 khác SE13); có ca bị xếp khác chỗ đã đặt (giường trên thay vì dưới, toa đổi chiều)",
+  "who": "Nước ngoài (cả Tây và Hàn)",
+  "evidence": 217,
+  "authors": 180,
+  "sources": 12,
+  "evidence_reviewed": 217,
+  "authors_reviewed": 180,
+  "sources_reviewed": 12,
+  "source_list": [
+   "gmaps_station",
+   "muse_fb_radar",
+   "naver_blog",
+   "reddit",
+   "reddit_in",
+   "tistory",
+   "trip_com_cn",
+   "tripadvisor",
+   "tripadvisor_review",
+   "youtube",
+   "youtube_in",
+   "youtube_kr"
+  ],
+  "confidence": "trung bình",
+  "status": "supported",
+  "action": "Sơ đồ khoang EN (tầng giường, khoang 4/6, hướng ngồi), nút đặt trọn khoang, nhãn chất lượng/năm đóng toa theo mã tàu",
+  "quote": "having traveled several times by train and been assigned to the top bunk in a 6 berth cabin when I had booked a bottom bunk in a 4 berth",
+  "quotes": [
+   {
+    "ev_id": "muse_fb_radar-20261026-0014-e03",
+    "quote": "having traveled several times by train and been assigned to the top bunk in a 6 berth cabin when I had booked a bottom bunk in a 4 berth",
+    "summary_vi": "Khách nhiều lần bị xếp giường trên khoang 6 giường dù đã đặt giường dưới khoang 4."
+   },
+   {
+    "ev_id": "reddit-20261026-0022-e01",
+    "quote": "Book/pay for a 4 bed room all to yourself. People in hard seats will try to get an empty bed.",
+    "summary_vi": "Nên đặt trọn phòng 4 giường vì khách ghế cứng sẽ tìm cách chiếm giường trống."
+   },
+   {
+    "ev_id": "tripadvisor-20261026-0026-e05",
+    "quote": "we booked a standard/local 4 berth soft sleeper on 2 trains. SE3 was very clean, modern and slightly longer beds than SE13.",
+    "summary_vi": "Khoang mềm 4 giường tàu thường: SE3 rất sạch, hiện đại, giường dài hơn SE13 một chút."
+   }
+  ],
+  "vexere_fit": "Trực tiếp: UI chọn chỗ, card vé, phân loại tàu Q4",
+  "note": "",
+  "counter": "Câu hỏi trước chuyến chiếm nhiều; chưa đo được tỷ lệ bị xếp sai thực tế"
+ },
+ {
+  "id": "F04",
+  "theme": "Chọn chỗ & sản phẩm tàu",
+  "insight": "Tàu tư nhân phân cực mạnh theo hãng: được khen đồ ăn và nhân viên, nhưng vẫn ngủ kém vì toa gắn đoàn tàu DSVN; bị chê giá không xứng; 3 review (2 là Chapa Express) kể bị đổi sang cabin chung dù đã trả tiền cabin VIP/riêng. Vietage (15/15 khen), Lotus được khen; Sapaly, Livitrans, Laman bị chê nhiều; Chapa Express, Violette lẫn lộn",
+  "who": "Nước ngoài",
+  "evidence": 205,
+  "authors": 158,
   "sources": 9,
-  "evidence_reviewed": 38,
+  "evidence_reviewed": 205,
+  "authors_reviewed": 158,
   "sources_reviewed": 9,
+  "source_list": [
+   "gmaps_station",
+   "muse_fb_radar",
+   "naver_blog",
+   "reddit",
+   "seat61",
+   "tripadvisor",
+   "tripadvisor_review",
+   "youtube",
+   "youtube_in"
+  ],
   "confidence": "trung bình",
   "status": "supported",
-  "action": "Kiểm tra ngay flow đặt vé EN: cho nhập số điện thoại quốc tế, test thẻ quốc tế; đo tỷ lệ rớt ở bước nhập SĐT",
-  "quote": "Vexere doesn't let me book without VN number..",
-  "vexere_fit": "Trực tiếp: lỗi của chính Vexere",
-  "note": "Mới 1 quote nhắc Vexere - cần kiểm chứng bằng funnel nội bộ, đây là giả thuyết đáng test nhất"
+  "action": "Trước khi mở bán Chapa: chốt với hãng cam kết đúng cabin đã đặt + chính sách hoàn tiền khi đổi cabin; trang hãng ghi rõ toa gắn đoàn tàu nào, khác toa thường ở đâu; review thật theo hãng; không quảng cáo 'ngủ ngon'",
+  "quote": "What we actually got: two bunk beds in a shared 4-berth cabin with two strangers. That is not an upgrade. It is a downgrade dressed up in the word “upgrade.”",
+  "quotes": [
+   {
+    "ev_id": "tripadvisor_review-20261027-0001-e10",
+    "quote": "What we actually got: two bunk beds in a shared 4-berth cabin with two strangers. That is not an upgrade. It is a downgrade dressed up in the word “upgrade.”",
+    "summary_vi": "Thực tế nhận được là hai giường tầng trong cabin 4 giường chung với hai người lạ, không phải nâng cấp mà là hạ cấp trá hình."
+   },
+   {
+    "ev_id": "tripadvisor_review-20261027-0007-e10",
+    "quote": "This was amazing. The view is very nice, the food is awsome and the service was impeccable. I really recommand",
+    "summary_vi": "Chuyến đi tuyệt vời, cảnh rất đẹp, đồ ăn tuyệt và dịch vụ hoàn hảo."
+   },
+   {
+    "ev_id": "tripadvisor-20261026-0026-e06",
+    "quote": "A friend recently went on lotus and aircon stopped frequently throughout the night.",
+    "summary_vi": "Bạn của người viết mới đi Lotus thì điều hòa ngừng chạy nhiều lần trong đêm."
+   }
+  ],
+  "vexere_fit": "Trực tiếp: mở bán tàu tư nhân Q4 (Chapa Express đầu tiên); trang tàu EN của Vexere chưa có tàu tư nhân",
+  "note": "",
+  "counter": "TripAdvisor review lệch về trải nghiệm cực đoan; mỗi hãng ≤15 review"
  },
  {
-  "id": "D02",
-  "insight": "Chọn khoang và chỗ là nỗi lo lớn nhất trước chuyến: khoang 4 riêng, giường dưới, cả nhóm cùng 1 khoang, bên nào ngắm cảnh - và bị xếp khác với chỗ đã đặt",
-  "who": "Nước ngoài",
-  "evidence": 187,
-  "authors": 160,
-  "sources": 11,
-  "evidence_reviewed": 187,
-  "sources_reviewed": 11,
-  "confidence": "trung bình",
-  "status": "supported",
-  "action": "Sơ đồ khoang rõ trên trang chọn chỗ EN (giường dưới/trên, khoang 4/6, hướng ngồi), nút 'đặt trọn khoang'",
-  "quote": "been assigned to the top bunk in a 6 berth cabin when I had booked a bottom bunk in a 4 berth",
-  "vexere_fit": "Trực tiếp: UI chọn chỗ, card vé",
-  "note": ""
- },
- {
-  "id": "D03",
-  "insight": "Khách không phân biệt được tàu mới với tàu cũ qua mã tàu (SE3 sạch hơn SE13), trong khi đây là yếu tố quyết định trải nghiệm",
+  "id": "F05",
+  "theme": "Chọn chỗ & sản phẩm tàu",
+  "insight": "Ngủ kém trên tàu đêm (ồn, xóc, loa thông báo mỗi ga) là pain lặp lại ở cả toa DSVN lẫn toa tư nhân, kể cả khi cabin được khen sạch đẹp",
   "who": "Nước ngoài",
   "evidence": 30,
-  "authors": 25,
-  "sources": 6,
-  "evidence_reviewed": 30,
-  "sources_reviewed": 6,
-  "confidence": "trung bình",
-  "status": "supported",
-  "action": "Gắn nhãn chất lượng/năm đóng toa theo mã tàu trên card vé",
-  "quote": "SE3 was very clean, modern and slightly longer beds than SE13. SE13 was old and not as clean.",
-  "vexere_fit": "Trực tiếp: hạng mục phân loại tàu Q4",
-  "note": ""
- },
- {
-  "id": "D04",
-  "insight": "Toa tư nhân (Lotus, Livitrans, Chapa...) bị hoài nghi có đáng tiền không so với tàu SE đã nâng cấp; khách thấy chủ yếu trả cho trang trí và đồ ăn nhẹ",
-  "who": "Nước ngoài",
-  "evidence": 67,
-  "authors": 42,
+  "authors": 29,
   "sources": 7,
-  "evidence_reviewed": 67,
+  "evidence_reviewed": 30,
+  "authors_reviewed": 29,
   "sources_reviewed": 7,
+  "source_list": [
+   "gmaps_station",
+   "muse_fb_radar",
+   "naver_blog",
+   "reddit",
+   "tripadvisor",
+   "tripadvisor_review",
+   "youtube"
+  ],
   "confidence": "trung bình",
   "status": "supported",
-  "action": "Card so sánh toa tư nhân vs SE cùng chuyến (giá, dịch vụ khác gì); review thật trên trang tàu tư nhân",
-  "quote": "you are just paying extra for some snacks and a decorated carriage with colourful bedding",
-  "vexere_fit": "Trực tiếp: mở bán tàu du lịch tư nhân",
-  "note": "Phần lớn evidence từ T-002 đang làm lại"
+  "action": "Pre-trip: nút tai, bịt mắt, giờ dừng ga; không hứa 'ngủ ngon' trong copy",
+  "quote": "We did not get a good night's sleep. The track was rough and the train bounced, swayed and bumped. It was noisy.",
+  "quotes": [
+   {
+    "ev_id": "tripadvisor-20261026-0016-e05",
+    "quote": "We did not get a good night's sleep. The track was rough and the train bounced, swayed and bumped. It was noisy.",
+    "summary_vi": "Ngủ không ngon vì đường xấu, tàu xóc nảy và ồn."
+   },
+   {
+    "ev_id": "reddit-20261026-0004-e01",
+    "quote": "Toilet is pre-departure clean. But very obvious is the sound of the people next door.",
+    "summary_vi": "Nhà vệ sinh lúc xuất phát còn sạch nhưng cách âm khoang rất kém."
+   },
+   {
+    "ev_id": "gmaps_station-20261026-0059-e02",
+    "quote": "Tàu chạy rất ồn.",
+    "summary_vi": "Tàu chạy rất ồn."
+   }
+  ],
+  "vexere_fit": "Gián tiếp: kỳ vọng + pre-trip guide",
+  "note": "",
+  "counter": "Người ngủ ngon ít viết review"
  },
  {
-  "id": "D05",
-  "insight": "Hiểu nhầm về thời điểm mở bán: thấy 'hết vé' nhưng thực ra chưa mở (60/30 ngày); khoang 4 và giường dưới hết sớm vào cuối tuần",
+  "id": "F06",
+  "theme": "Đặt vé",
+  "insight": "Hiểu nhầm thời điểm mở bán: thấy 'hết vé' nhưng thực ra chưa mở (60/30 ngày); khoang 4 và giường dưới hết sớm vào cuối tuần, lễ",
   "who": "Nước ngoài",
-  "evidence": 47,
-  "authors": 34,
-  "sources": 8,
-  "evidence_reviewed": 47,
-  "sources_reviewed": 8,
+  "evidence": 46,
+  "authors": 33,
+  "sources": 7,
+  "evidence_reviewed": 46,
+  "authors_reviewed": 33,
+  "sources_reviewed": 7,
+  "source_list": [
+   "appstore",
+   "gmaps_station",
+   "muse_fb_radar",
+   "reddit",
+   "seat61",
+   "tripadvisor",
+   "youtube"
+  ],
   "confidence": "trung bình",
   "status": "supported",
-  "action": "Hiển thị 'chưa mở bán - mở ngày X' thay cho 'hết vé'; nhắc khi mở bán",
-  "quote": "It looks fully booked but it means not avible yet so far in advance",
+  "action": "Hiện 'chưa mở bán - mở ngày X' thay cho 'hết vé' + nhắc khi mở bán",
+  "quote": "some bookingsites start sale 1 month before travel. It looks fully booked but it means not avible yet so far in advance",
+  "quotes": [
+   {
+    "ev_id": "muse_fb_radar-20261026-0003-e02",
+    "quote": "some bookingsites start sale 1 month before travel. It looks fully booked but it means not avible yet so far in advance",
+    "summary_vi": "Một số trang chỉ mở bán trước 1 tháng, nhìn như hết vé nhưng thật ra chưa mở bán."
+   },
+   {
+    "ev_id": "reddit-20261026-0012-e02",
+    "quote": "Sleeper 4-berth soft compartments sell out 2-5 days ahead on Lao Cai-Hanoi, especially Fri/Sat/Sun departures",
+    "summary_vi": "Khoang mềm 4 giường Lào Cai - Hà Nội hết vé trước 2-5 ngày, nhất là cuối tuần."
+   },
+   {
+    "ev_id": "tripadvisor-20261026-0033-e01",
+    "quote": "I guess you have to face a harsh reality..2 berth sleeper cabins are few + very hard to book - due to lack of availability - especially at this late date.",
+    "summary_vi": "Cabin 2 giường rất ít và khó đặt, nhất là khi đặt muộn."
+   }
+  ],
   "vexere_fit": "Trực tiếp: hiển thị trạng thái chuyến",
-  "note": ""
+  "note": "",
+  "counter": "Quy tắc mở bán do DSVN đổi theo mùa (Tết) - cần nguồn chính thức"
  },
  {
-  "id": "D06",
-  "insight": "Đoạn Huế - Đà Nẵng (Hải Vân) là lý do chính để đi tàu ban ngày; khách hỏi ngồi bên nào nhưng toa đảo chiều làm hỏng kỳ vọng",
+  "id": "F07",
+  "theme": "Nội dung & tuyến",
+  "insight": "Đoạn Huế - Đà Nẵng (đèo Hải Vân) là lý do chính để đi tàu ban ngày, khách Tây và khách Hàn cùng nhắc; khách hỏi ngồi bên nào nhưng toa có thể bị đổi chiều làm sai kỳ vọng",
   "who": "Nước ngoài",
   "evidence": 67,
   "authors": 54,
   "sources": 8,
   "evidence_reviewed": 67,
+  "authors_reviewed": 54,
   "sources_reviewed": 8,
+  "source_list": [
+   "gmaps_station",
+   "muse_fb_radar",
+   "naver_blog",
+   "reddit",
+   "tistory",
+   "tripadvisor",
+   "tripadvisor_review",
+   "youtube"
+  ],
   "confidence": "trung bình",
   "status": "supported",
-  "action": "Trang tuyến Huế - Đà Nẵng: bên ngồi ngắm biển theo chiều đi, cảnh báo toa có thể đảo chiều",
+  "action": "Trang tuyến Huế - Đà Nẵng: bên ngắm biển theo chiều đi, cảnh báo đổi chiều; tàu di sản HD",
   "quote": "I booked coach 1, seat 16 which was supposed to be the ocean view but unfortunately my carriage was switched around",
+  "quotes": [
+   {
+    "ev_id": "reddit-20261026-0021-e03",
+    "quote": "I booked coach 1, seat 16 which was supposed to be the ocean view but unfortunately my carriage was switched around",
+    "summary_vi": "Đặt toa 1 ghế 16 hướng biển nhưng toa bị đảo chiều nên ghế không còn hướng biển."
+   },
+   {
+    "ev_id": "tripadvisor-20261026-0035-e09",
+    "quote": "The 2 bed cab8n is fir 10 am train reach8ng Da nang at 6 am in morning, so the scenic part is in dark I think",
+    "summary_vi": "Chuyến 10 giờ sáng tới Đà Nẵng lúc 6 giờ sáng nên phần cảnh đẹp rơi vào ban đêm."
+   },
+   {
+    "ev_id": "muse_fb_radar-20261026-0005-e02",
+    "quote": "that's South to North, seat on the right side of the train for the coastal view",
+    "summary_vi": "Đi hướng Nam ra Bắc nên ngồi bên phải để ngắm biển."
+   }
+  ],
   "vexere_fit": "Content/SEO + UI chọn chỗ",
-  "note": ""
+  "note": "",
+  "counter": "Ít liên quan chuyển đổi trực tiếp"
  },
  {
-  "id": "D07",
-  "insight": "Thu phí ngầm tại ga: gửi hành lý, porter đòi tiền, phòng chờ 'miễn phí' rồi tính tiền, giá vé khác nhau giữa các lần mua",
+  "id": "F08",
+  "theme": "Tại ga & chặng cuối",
+  "insight": "Lúc bước ra khỏi ga là điểm mất trust lớn nhất: chèo kéo, hét giá, giả tài xế (Lào Cai, Huế); khách tự vệ bằng Grab hoặc đặt xe trước",
+  "who": "Cả hai",
+  "evidence": 49,
+  "authors": 47,
+  "sources": 6,
+  "evidence_reviewed": 49,
+  "authors_reviewed": 47,
+  "sources_reviewed": 6,
+  "source_list": [
+   "gmaps_station",
+   "muse_fb_radar",
+   "reddit",
+   "reddit_in",
+   "tripadvisor",
+   "youtube"
+  ],
+  "confidence": "trung bình",
+  "status": "supported",
+  "action": "Bán xe đón đặt trước có tên khách + biển số gửi trước; FAQ theo ga (Grab có ở Lào Cai không)",
+  "quote": "a man suddenly ran towards us, claimed to be our driver, and took us to our destination.",
+  "quotes": [
+   {
+    "ev_id": "gmaps_station-20261026-0087-e01",
+    "quote": "a man suddenly ran towards us, claimed to be our driver, and took us to our destination.",
+    "summary_vi": "Người lạ giả làm tài xế đón sẵn, chở khách đi dù không phải tài xế thật."
+   },
+   {
+    "ev_id": "reddit-20261026-0010-e04",
+    "quote": "Just say no thank you and ignore. The shuttle from lao cai is 55k.",
+    "summary_vi": "Cứ từ chối và bỏ qua, xe trung chuyển từ Lào Cai giá 55k."
+   },
+   {
+    "ev_id": "gmaps_station-20261026-0012-e01",
+    "quote": "beware of random local taxi drivers may scam passengers by tampering with meters",
+    "summary_vi": "Cảnh báo taxi lạ chỉnh đồng hồ để lừa khách."
+   }
+  ],
+  "vexere_fit": "Trực tiếp: add-on shuttle chặng cuối (Lào Cai → Sa Pa trước)",
+  "note": "",
+  "counter": "Google Maps lệch về phàn nàn; chưa biết tần suất thật"
+ },
+ {
+  "id": "F09",
+  "theme": "Tại ga & chặng cuối",
+  "insight": "Thu phí ngầm tại ga: gửi hành lý, porter đòi tiền, phòng chờ 'miễn phí' rồi tính tiền",
   "who": "Cả hai",
   "evidence": 26,
   "authors": 25,
   "sources": 4,
   "evidence_reviewed": 26,
+  "authors_reviewed": 25,
   "sources_reviewed": 4,
+  "source_list": [
+   "gmaps_station",
+   "muse_fb_radar",
+   "reddit",
+   "tistory"
+  ],
   "confidence": "trung bình",
   "status": "supported",
-  "action": "Email/e-ticket: các khoản không phải trả tại ga, giá tham chiếu gửi đồ",
-  "quote": "he will demand a tip which was unexpected as he is a train staff",
+  "action": "E-ticket/email: khoản nào không phải trả tại ga, giá tham chiếu gửi đồ",
+  "quote": "For luggage they charge you 100000 VND.",
+  "quotes": [
+   {
+    "ev_id": "gmaps_station-20261026-0019-e01",
+    "quote": "For luggage they charge you 100000 VND.",
+    "summary_vi": "Gửi hành lý ở phòng VIP bị tính 100.000 đồng."
+   },
+   {
+    "ev_id": "gmaps_station-20261026-0167-e01",
+    "quote": "he will demand a tip which was unexpected as he is a train staff",
+    "summary_vi": "Nhân viên tàu ở ga Đà Nẵng giúp hành lý rồi đòi tiền tip ngoài dự kiến."
+   },
+   {
+    "ev_id": "gmaps_station-20261026-0063-e01",
+    "quote": "Bảo vào phòng chờ VIP miễn phí,bảo lựa đồ ăn đồ uống thoải mái đi xong tính 120k.",
+    "summary_vi": "Bảo phòng VIP miễn phí, chọn đồ thoải mái rồi tính 120.000 đồng."
+   }
+  ],
   "vexere_fit": "Gián tiếp: trust + pre-trip guide",
-  "note": ""
+  "note": "",
+  "counter": "Tập trung ở vài ga"
  },
  {
-  "id": "D08",
+  "id": "F10",
+  "theme": "Tại ga & chặng cuối",
+  "insight": "Nhà vệ sinh (ở ga và trên tàu) là pain vệ sinh lặp lại nhiều nhất; khách đã quen tự chuẩn bị, chất lượng khác rõ theo ga",
+  "who": "Cả hai",
+  "evidence": 24,
+  "authors": 23,
+  "sources": 5,
+  "evidence_reviewed": 24,
+  "authors_reviewed": 23,
+  "sources_reviewed": 5,
+  "source_list": [
+   "gmaps_station",
+   "muse_fb_radar",
+   "reddit",
+   "tripadvisor",
+   "tripadvisor_review"
+  ],
+  "confidence": "trung bình",
+  "status": "supported",
+  "action": "Chỉ dùng cho pre-trip guide; feedback cho đối tác",
+  "quote": "The toilets are sooo dirty, they also occasionally will just launch piss when you push the flush button.",
+  "quotes": [
+   {
+    "ev_id": "reddit-20261026-0001-e02",
+    "quote": "The toilets are sooo dirty, they also occasionally will just launch piss when you push the flush button.",
+    "summary_vi": "Nhà vệ sinh trên tàu rất bẩn và xả nước bị bắn ngược."
+   },
+   {
+    "ev_id": "tripadvisor-20261026-0001-e05",
+    "quote": "Toilets are generally good at the start of a trip but can get a bit grim towards the end.",
+    "summary_vi": "Toilet đầu chuyến còn tốt nhưng càng về cuối càng tệ."
+   },
+   {
+    "ev_id": "gmaps_station-20261026-0018-e01",
+    "quote": "nhà vệ sinh công cộng thường xuyên rơi vào tình trạng ẩm thấp, có mùi khó chịu",
+    "summary_vi": "Nhà vệ sinh công cộng ga Hà Nội thường ẩm thấp, có mùi khó chịu."
+   }
+  ],
+  "vexere_fit": "Thấp: thuộc DSVN/hãng tàu",
+  "note": "",
+  "counter": "Vexere không kiểm soát"
+ },
+ {
+  "id": "F11",
+  "theme": "Thị trường",
+  "insight": "Khách Hàn tự đặt vé tàu qua Klook, MyRealTrip và cả Vexere (3 bài Naver kể đặt qua app Vexere, 1 hướng dẫn trên Tistory); bàn rất kỹ chuyện giường tầng 1/2 và khoang 4 người",
+  "who": "Hàn Quốc",
+  "evidence": 20,
+  "authors": 18,
+  "sources": 3,
+  "evidence_reviewed": 20,
+  "authors_reviewed": 18,
+  "sources_reviewed": 3,
+  "source_list": [
+   "naver_blog",
+   "tistory",
+   "youtube_kr"
+  ],
+  "confidence": "trung bình",
+  "status": "supported",
+  "action": "Kéo booking Train theo quốc tịch Hàn để kiểm chứng; hướng dẫn đặt vé tiếng Hàn; cân nhắc affiliate blogger Naver",
+  "quote": "저는 vexere앱에서 예약했어요!",
+  "quotes": [
+   {
+    "ev_id": "naver_blog-20261027-0006-e01",
+    "quote": "저는 vexere앱에서 예약했어요!",
+    "summary_vi": "Đặt vé trên ứng dụng Vexere."
+   },
+   {
+    "ev_id": "tistory-20261027-0002-e01",
+    "quote": "클룩 같은 대행앱에서 기차예약을 하면 수수료도 있고, 좌석 선택도 자유롭지 않아요.",
+    "summary_vi": "Đặt vé tàu qua ứng dụng trung gian như Klook vừa có phí vừa không được chọn ghế tự do."
+   },
+   {
+    "ev_id": "youtube_kr-20261027-0006-e01",
+    "quote": "1등석을 탔는데도 몸이 거부하니까 다음에는 제일 낮은 자리 타야겠어.",
+    "summary_vi": "Đi ghế hạng nhất mà cơ thể vẫn khó chịu nên lần sau phải chọn chỗ thấp nhất."
+   }
+  ],
+  "vexere_fit": "Trực tiếp: Vexere đã có mặt trong hành trình của khách Hàn",
+  "note": "",
+  "counter": "29 bài blog/vlog; blogger không đại diện toàn bộ khách"
+ },
+ {
+  "id": "F12",
+  "theme": "Thị trường",
+  "insight": "Khách Ấn lo nhất chuyện đồ chay khi đi tàu VN và quen quy giá ra rupee; thảo luận công khai về tàu VN rất ít",
+  "who": "Ấn Độ",
+  "evidence": 11,
+  "authors": 8,
+  "sources": 2,
+  "evidence_reviewed": 11,
+  "authors_reviewed": 8,
+  "sources_reviewed": 2,
+  "source_list": [
+   "reddit_in",
+   "youtube_in"
+  ],
+  "confidence": "thấp",
+  "status": "hypothesis",
+  "action": "FAQ EN cho khách Ấn: đồ chay trên tàu/tại ga; cân nhắc INR trong currency switch",
+  "quote": "हमें सीधे वहां तो कुछ वेजिटेरियन मिलेगा नहीं।",
+  "quotes": [
+   {
+    "ev_id": "youtube_in-20261027-0001-e01",
+    "quote": "हमें सीधे वहां तो कुछ वेजिटेरियन मिलेगा नहीं।",
+    "summary_vi": "Lo ngại trên tàu không có sẵn đồ chay."
+   },
+   {
+    "ev_id": "reddit_in-20261027-0002-e03",
+    "quote": "Stock a few ready-to-eat packs for train journeys.",
+    "summary_vi": "Chuẩn bị sẵn vài gói đồ ăn liền cho chặng tàu."
+   }
+  ],
+  "vexere_fit": "Nội dung + currency (INR)",
+  "note": "Chủ yếu vlog YouTube",
+  "counter": "Mỏng, chủ yếu creator"
+ },
+ {
+  "id": "F13",
+  "theme": "Thị trường",
   "insight": "Khách Việt phàn nàn app/web DSVN: thanh toán rườm rà, tải vé lỗi, đặt nhầm ngày",
   "who": "Việt Nam",
   "evidence": 18,
   "authors": 18,
   "sources": 2,
   "evidence_reviewed": 18,
+  "authors_reviewed": 18,
   "sources_reviewed": 2,
+  "source_list": [
+   "appstore",
+   "gmaps_station"
+  ],
   "confidence": "thấp",
   "status": "hypothesis",
-  "action": "Messaging 'đặt vé tàu không rườm rà' cho khách Việt; so sánh số bước thanh toán Vexere vs DSVN",
+  "action": "Messaging 'đặt vé tàu không rườm rà'; so số bước thanh toán Vexere vs DSVN",
   "quote": "Hình thức thanh toán quá phức tạp, hãy đơn giản quy trình và đa dạng ngân hàng sao cho thuận tiện. Lằng nhằng quá, rất muốn bỏ cuộc",
-  "vexere_fit": "Cơ hội: Vexere là kênh thay thế dễ hơn",
-  "note": ""
+  "quotes": [
+   {
+    "ev_id": "appstore-20261026-0005-e01",
+    "quote": "Hình thức thanh toán quá phức tạp, hãy đơn giản quy trình và đa dạng ngân hàng sao cho thuận tiện. Lằng nhằng quá, rất muốn bỏ cuộc",
+    "summary_vi": "Người dùng chê thanh toán trên app DSVN phức tạp và muốn bỏ cuộc."
+   },
+   {
+    "ev_id": "gmaps_station-20261026-0226-e01",
+    "quote": "lúc về check lại thì thấy nhầm ngày khởi hành sang 17/8",
+    "summary_vi": "Vé giường nằm đi Vinh bị nhập nhầm ngày khởi hành sang 17/8."
+   }
+  ],
+  "vexere_fit": "Cơ hội: kênh thay thế dễ hơn cho khách Việt",
+  "note": "",
+  "counter": "Chỉ 2 nguồn (app store, Maps)"
  },
  {
-  "id": "D09",
-  "insight": "Phòng chờ nóng, không điều hoà, quá tải ở nhiều ga - khách Việt phàn nàn nhiều nhất",
-  "who": "Việt Nam",
-  "evidence": 7,
+  "id": "F14",
+  "theme": "Đối thủ",
+  "insight": "Trên trang bán vé, chỉ Baolau và Vexere claim rõ 'đại lý chính thức DSVN'; mọi đối thủ đều bán tàu tư nhân, trang tàu EN của Vexere thì chưa; Baolau có Alipay, Vexere chưa có ví châu Á",
+  "who": "Đối thủ (proxy)",
+  "evidence": 60,
   "authors": 7,
   "sources": 1,
-  "evidence_reviewed": 7,
+  "evidence_reviewed": 60,
+  "authors_reviewed": 7,
   "sources_reviewed": 1,
-  "confidence": "thấp",
-  "status": "hypothesis",
-  "action": "Chỉ dùng cho pre-trip guide (đến ga vừa đủ giờ); không ưu tiên",
-  "quote": "NHƯNG NHÀ GA KHÔNG CÓ ĐIỀU HOÀ !!",
-  "vexere_fit": "Thấp: Vexere không kiểm soát được",
-  "note": ""
- },
- {
-  "id": "D10",
-  "insight": "Thái độ nhân viên ga (bảo vệ, soát vé) phân cực mạnh theo từng ga, là lý do chính của review 1 sao",
-  "who": "Việt Nam",
-  "evidence": 35,
-  "authors": 35,
-  "sources": 1,
-  "evidence_reviewed": 35,
-  "sources_reviewed": 1,
-  "confidence": "thấp",
-  "status": "hypothesis",
-  "action": "Không hành động trực tiếp; có thể chia sẻ với DSVN như feedback đối tác",
-  "quote": "nhân viên soát vé thái độ vô cùng, khách đang vội hỏi thì không hướng dẫn",
-  "vexere_fit": "Thấp: thuộc DSVN",
-  "note": ""
- },
- {
-  "id": "D11",
-  "insight": "Khách Ấn lo nhất chuyện đồ chay khi đi tàu VN: hỏi có đồ chay không, mang đồ ăn sẵn theo; vlogger Ấn hay quy giá vé ra rupee",
-  "who": "Ấn Độ",
-  "evidence": 11,
-  "authors": 8,
-  "sources": 2,
-  "evidence_reviewed": 11,
-  "sources_reviewed": 2,
-  "confidence": "thấp",
-  "status": "hypothesis",
-  "action": "FAQ/landing tiếng Anh cho khách Ấn: đồ chay trên tàu và tại ga; cân nhắc INR trong currency switch",
-  "quote": "Availability of veg food in Vietnam or ready made food packets should be carried?",
-  "vexere_fit": "Trực tiếp: nội dung + bộ lọc/ghi chú dịch vụ ăn chay, hiển thị giá quy đổi INR",
-  "note": "Mỏng: chủ yếu vlog YouTube (creator), 2 bài Reddit"
- },
- {
-  "id": "D12",
-  "insight": "Khách Hàn đặt vé tàu VN qua Klook, MyRealTrip và cả Vexere; né trang DSVN vì hay lỗi với thẻ Hàn; bàn rất kỹ chuyện giường tầng 1 hay 2 và khoang 4 người",
-  "who": "Hàn Quốc",
-  "evidence": 20,
-  "authors": 18,
-  "sources": 3,
-  "evidence_reviewed": 20,
-  "sources_reviewed": 3,
-  "confidence": "trung bình",
+  "source_list": [
+   "competitor_site"
+  ],
+  "confidence": "đo lường",
   "status": "supported",
-  "action": "Kiểm tra traffic/booking Train từ Hàn trên Vexere; nội dung hướng dẫn đặt vé tiếng Hàn (chọn tầng giường, khoang 4); cân nhắc affiliate với blogger Naver",
-  "quote": "저는 vexere앱에서 예약했어요!",
-  "vexere_fit": "Trực tiếp: Vexere đã có mặt trong hành trình đặt vé của khách Hàn",
-  "note": "Chưa có insight nào khác chỉ thẳng tới Vexere mạnh như vậy - đáng validate bằng data nội bộ"
- },
- {
-  "id": "D13",
-  "insight": "Khách Trung đi tàu VN chủ yếu theo đoàn (tàu bao nguyên chuyến); khách lẻ mua vé tại ga bằng tiền mặt, vượt rào ngôn ngữ bằng app dịch",
-  "who": "Trung Quốc",
-  "evidence": 6,
-  "authors": 3,
-  "sources": 1,
-  "evidence_reviewed": 6,
-  "sources_reviewed": 1,
-  "confidence": "thấp",
-  "status": "hypothesis",
-  "action": "Không hành động từ data này; cần data booking nội bộ theo quốc tịch hoặc nói chuyện với agent tour Trung",
-  "quote": "语言不通用翻译软件沟通顺利买好票",
-  "vexere_fit": "Thấp ở hiện tại: chưa thấy kênh online nào được nhắc",
-  "note": "Rất mỏng: 3 bài, 3 tác giả - Xiaohongshu/Mafengwo bị chặn"
+  "action": "Đưa tàu tư nhân lên trang EN cùng lúc onboard Chapa; cân nhắc Alipay/WeChat nếu theo khách Trung",
+  "quote": "Baolau is an official ticket agent of Vietnam Railways since 2015 and works directly with the major private railway companies in Vietnam",
+  "quotes": [
+   {
+    "ev_id": "competitor_site-20261028-0004-e04",
+    "quote": "Baolau is an official ticket agent of Vietnam Railways since 2015 and works directly with the major private railway companies in Vietnam",
+    "summary_vi": "Baolau tự gọi là đại lý bán vé chính thức của Đường sắt Việt Nam từ 2015 và làm việc trực tiếp với các hãng tàu tư nhân lớn."
+   },
+   {
+    "ev_id": "competitor_site-20261028-0010-e06",
+    "quote": "Vexere is an Official Partner of Vietnam Railways (VNR / DSVN)",
+    "summary_vi": "Vexere tự gọi là đối tác chính thức của Đường sắt Việt Nam (VNR / DSVN)."
+   }
+  ],
+  "vexere_fit": "Trực tiếp: positioning, lấp khoảng trống tàu tư nhân",
+  "note": "",
+  "counter": "Claim trên trang, chưa kiểm chứng; snapshot 1 ngày"
  }
 ]
