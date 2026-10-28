@@ -1,20 +1,20 @@
 ---
 raw_id: serp_ai-20261027-google-p04
 source: serp_ai
-url: https://www.google.com/search
+url: https://www.google.com/
 title: Hanoi to Hue overnight train how to book
-posted_at: 2026-10-27
-crawled_at: 2026-10-27
+posted_at: 2026-10-28
+crawled_at: 2026-10-28
 lang: en
 raw_mode: excerpt
 engine: google
 prompt_id: p04
 prompt: Hanoi to Hue overnight train how to book
-run_at: 2026-10-27T21:25:00+07:00
+run_at: 2026-10-28T10:41:00+07:00
 browser_locale: vi
 task_id: T-009
 ---
 
-Note: AI Overview appeared: Yes. Top 5 organic domains in order: vietnamairlines.com, awinterescape.com, stepintovietnam.com, vietnam-railway.com, vietexpresstravel.com. Vexere mentioned: Yes, as a booking channel in the AI Overview ('third-party aggregators'); not in the top 5 organic result titles.
-[c:eb204e04b5] role: review | date: 2026-10-27
-> "You can book an overnight train from Hanoi to Hue directly through the Official Vietnam Railways Website or via trusted third-party ticketing platforms like 12Go Asia."
+Note: channels in order: dsvn rank 1, twelve_go rank 2, baolau rank 3, laman_express rank 4, violette rank 5, livitrans rank 6, local_agent rank 7. Vexere mentioned: No. Footer location: Dallas-Ft. Worth TX.
+[c:eb204e04b5] role: review | date: 2026-10-28
+> "Booking Channels: Official Website / App [...] dsvn.vn [...] Third-Party Platforms [...] 12Go Asia [...] Baolau [...] Private Luxury Carriages [...] Laman Express [...] Violette [...] Livitrans [...] travel agents in Hanoi's Old Quarter"
