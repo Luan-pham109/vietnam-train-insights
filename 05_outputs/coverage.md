@@ -6,7 +6,7 @@ Task reviewed: T-001 → T-008, T-010, T-011 (10/12). T-009 (SERP/AI) và T-012 
 
 | Mã | Câu hỏi | Ưu tiên | Evidence | Nguồn | Tác giả | Evidence intl | Mức | |
 |---|---|---|---|---|---|---|---|---|
-| C01 | Khách nước ngoài đi tàu VN gồm những segment nào (backpacker, couple, family, senior, group tour)? | P0 | 0 | 0 | 0 | 0 | none | ⚠ P0 < medium |
+| C01 | Khách nước ngoài đi tàu VN gồm những segment nào (backpacker, couple, family, senior, group tour)? | P0 | 41 | 5 | 17 | 41 | medium |  |
 | C02 | Vì sao họ chọn tàu thay vì bay/xe (JTBD, trigger)? | P0 | 65 | 9 | 49 | 23 | medium |  |
 | C03 | Họ tìm thông tin và đặt vé ở đâu, theo thứ tự nào? | P0 | 107 | 11 | 83 | 29 | medium |  |
 | C04 | Barrier lớn nhất ở từng journey stage là gì? | P0 | 218 | 6 | 190 | 26 | medium |  |
@@ -29,10 +29,9 @@ Task reviewed: T-001 → T-008, T-010, T-011 (10/12). T-009 (SERP/AI) và T-012 
 | I02 | "Ước gì biết trước" - kỳ vọng vs thực tế trên tàu/tại ga? | P0 | 146 | 6 | 132 | 18 | medium |  |
 | I03 | Tuyến/đoạn nào được khen là đẹp, đáng đi (Hải Vân, ven biển...)? | P1 | 57 | 7 | 44 | 12 | medium |  |
 
-Độ phủ tổng: 79% (17/22 câu đạt medium; P0: 15/17). Không đổi so với 2026-10-27: T-010, T-011 thêm volume cho C02/C03/C06/I02/I03 nhưng không mở thêm câu nào.
+Độ phủ tổng: 83% (18/22 câu đạt medium; P0: 16/17). Tăng từ 79% nhờ taxonomy v0.8 map segment khách nước ngoài cụ thể → C01 (Luan duyệt 2026-10-28). C01 là proxy ai hay viết (family/couple/group tour nhiều, backpacker ít tự nhận), không phải cơ cấu khách thật.
 
 P0 còn dưới ngưỡng:
-- C01 (0 ev, 0 nguồn, 0 tác giả)
 - M05 (0 ev, 0 nguồn, 0 tác giả) - chờ T-009 rework.
 
 **Đọc đúng:** medium = đủ *volume* để viết insight. Insight cho một thị trường cụ thể chỉ dùng origin tin cậy cao (cột `cao` bên dưới). Share of voice/số evidence là proxy, không phải thị phần.

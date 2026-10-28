@@ -141,6 +141,8 @@ def main():
             qset.update(tmap.get(tp, []))
         if e.get("type") in ("tip", "workaround"):  # taxonomy: type → câu hỏi mặc định
             qset.add("I01")
+        if e.get("segment") in ("intl_backpacker", "intl_couple", "intl_family", "intl_senior", "intl_group_tour"):
+            qset.add("C01")  # taxonomy v0.8: segment intl cụ thể → C01
         e["_questions"] = qset
 
     # --- Tasks

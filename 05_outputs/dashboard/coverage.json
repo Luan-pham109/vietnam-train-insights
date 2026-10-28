@@ -4,12 +4,12 @@
   "group": "Khách hàng",
   "question": "Khách nước ngoài đi tàu VN gồm những segment nào (backpacker, couple, family, senior, group tour)?",
   "priority": "P0",
-  "evidence": 0,
-  "sources": 0,
-  "authors": 0,
-  "intl_evidence": 0,
-  "score": 0.0,
-  "level": "none"
+  "evidence": 41,
+  "sources": 5,
+  "authors": 17,
+  "intl_evidence": 41,
+  "score": 1.0,
+  "level": "medium"
  },
  {
   "q_id": "C02",

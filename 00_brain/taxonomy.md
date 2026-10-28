@@ -1,4 +1,4 @@
-# Taxonomy v0.7
+# Taxonomy v0.8
 
 Muse chỉ dùng mã ở đây. Thiếu mã → `other` + `topic_suggest`. Claude gom đề xuất, nâng version.
 
@@ -66,6 +66,7 @@ Script tính độ phủ tự gán thêm các câu hỏi dưới đây theo topi
 | `private_train` | M04 |
 | `scenery` | I03 |
 | type `tip` · `workaround` (theo loại evidence, không theo topic) | I01 |
+| segment `intl_backpacker` · `intl_couple` · `intl_family` · `intl_senior` · `intl_group_tour` (theo segment, không tính `intl_unknown`) | C01 |
 | `touting` | C05 C07 |
 
 ## market - thị trường khách (khác `segment`)
@@ -122,6 +123,7 @@ Dùng:
 Dạng `HAN-LCA`. Thêm ga mới → đề xuất.
 
 ## Changelog
+- v0.8 (2026-10-28, Luan duyệt): evidence có segment khách nước ngoài cụ thể tự map → C01 (trước đó C01 = 0 vì không topic nào map). Đọc như proxy ai hay viết, không phải cơ cấu khách thật.
 - v0.7 (2026-10-28, sau review T-009..T-012): thêm entity kênh `vetau`, `getyourguide`, `ivivu`; ví `momo`, `viettel_money`; tàu tư nhân `king_express`, `victoria_express`, `et_pumpkin`, `vicsapa`, `sjourney`, `fanxipan_express` (gặp ở T-009 SERP, T-010, T-011); ghi rõ mã sai hay gặp (`12go`, `lotus_train`, `violette_train`, `sapaly_express`); đại lý địa phương có tên → `local_agent`; ga `QNG` (T-008). Không nhận `route_distance` (T-011) - thông tin tĩnh, không phục vụ câu hỏi nào. Có `tools/validate_evidence.py` để Muse tự kiểm trước khi nộp.
 - v0.6 (2026-10-27): thêm lớp `origin` do script suy luận (ngôn ngữ, profile, nguồn, dấu hiệu nội dung); market thêm `expat`, `intl`; field mới cho Muse `origin_hint`, `origin_cue`, `author_role`.
 - v0.5 (2026-10-27, sau review T-002): thêm topic `mode_choice` (đề xuất `mode_choice_train_vs_bus` của Muse ở T-002 raw 0005; cùng ý lặp ở T-002 0007/0017 và T-005 0014: tàu vs limousine/xe khách/xe riêng theo tiêu chí không phải giá), map → C02.

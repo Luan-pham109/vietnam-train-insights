@@ -49,11 +49,11 @@
   "evidence": 1213,
   "evidence_usable": 903,
   "authors": 531,
-  "questions_medium": 17,
-  "p0_medium": 15,
+  "questions_medium": 18,
+  "p0_medium": 16,
   "p0_total": 17,
   "questions_total": 22,
-  "coverage_score": 0.787,
+  "coverage_score": 0.832,
   "tasks_reviewed": 10,
   "tasks_total": 12
  }
