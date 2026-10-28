@@ -32,6 +32,7 @@ Note: <ghi chú của Muse nếu cần - không bao giờ dùng làm quote>
 
 Quy tắc:
 - **Mỗi bài đăng (post/comment/review) trích tối đa 50 từ**, cộng dồn mọi đoạn của bài đó (tiếng Trung/Nhật/Hàn: 100 ký tự). Chỉ trích đoạn dùng làm evidence; bài không dùng thì không ghi.
+- Ngoại lệ nội dung dài (Luan duyệt 2026-10-28): transcript video tối đa 5 đoạn, trang hướng dẫn dài (seat61) tối đa 10 đoạn/trang; mỗi đoạn ≤50 từ (CJK ≤100 ký tự). Comment dưới video vẫn theo mức 50 từ/comment.
 - Đoạn trích là **nguyên văn** trong ngoặc kép, được cắt giữa câu bằng `[...]`. Không viết lại, không tóm tắt, không dịch.
 - Dòng header mỗi bài: `role` (op/reply/review), `location` nếu trang có hiện, `date` nếu có. Tên người không ghi; tên được tag trong nội dung → `[name]`.
 - Evidence `quote` phải là chuỗi con của một đoạn trích trong raw.
