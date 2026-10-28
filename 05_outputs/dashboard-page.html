@@ -488,6 +488,8 @@ dash.calc('latest', {
   fn: (history) => history.slice(-1),
 });
 
+const arr = (v) => { if (Array.isArray(v)) return v; if (typeof v === 'string') { try { const x = JSON.parse(v); return Array.isArray(x) ? x : []; } catch (e) { return v ? v.split(/\s*[,·]\s*/) : []; } } return []; };
+const safe = (fn) => { try { fn(); } catch (e) { console.error(e); } };
 const intf = d3.format(',');
 const pct = d3.format('.0%');
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
@@ -617,7 +619,7 @@ function drawInsights() {
       const a = el('div'); a.append(el('h4', null, 'Làm gì cho Vexere'), el('p', null, d.action));
       const fit = el('div'); fit.append(el('h4', null, 'Mức gắn với Vexere'), el('p', null, d.vexere_fit));
       const q = el('div'); q.append(el('h4', null, 'Khách nói gì'));
-      (d.quotes || []).forEach((x) => {
+      arr(d.quotes).forEach((x) => {
         const bq = el('blockquote', 'rp-q');
         bq.append(el('q', null, x.quote));
         if (x.summary_vi) bq.append(el('span', null, x.summary_vi));
@@ -626,7 +628,7 @@ function drawInsights() {
       });
       const cn = el('div'); cn.append(el('h4', null, 'Phản biện'), el('p', null, d.counter || '—'));
       if (d.note) cn.append(el('p', 'rp-note', d.note));
-      const src = el('div'); src.append(el('h4', null, 'Nguồn'), el('p', 'rp-note', (d.source_list || []).join(' · ')));
+      const src = el('div'); src.append(el('h4', null, 'Nguồn'), el('p', 'rp-note', arr(d.source_list).join(' · ')));
       det.append(q, a, fit, cn, src);
       item.append(det);
     }
@@ -852,7 +854,7 @@ function drawWalk() {
   if (ins.status === 'ok') {
     const f = ins.data.find((d) => d.id === 'F04');
     if (f) {
-      qBox.replaceChildren(...(f.quotes || []).map((x) => {
+      qBox.replaceChildren(...arr(f.quotes).map((x) => {
         const bq = el('blockquote', 'rp-q'); bq.append(el('q', null, x.quote));
         if (x.summary_vi) bq.append(el('span', null, x.summary_vi));
         const s2 = el('span'); s2.append(el('code', null, x.ev_id)); bq.append(s2); return bq;
@@ -908,12 +910,12 @@ function drawQA() {
   foot.replaceChildren(tr);
 }
 function drawMethodReport() {
-  drawSteps(); drawFunnel();
-  fillTable('ruleTable', 'method_rules', [['rule'], ['logic', 'w'], ['purpose', 'w'], ['validation', 'w']]);
-  fillTable('cbTable', 'codebook', [['dimension'], ['codes', 'num', intf], ['used', 'num', intf], ['example', 'w']]);
-  fillTable('rejTable', 'rejected', [['claim', 'w'], ['found', 'w'], ['decision', 'w']]);
-  fillTable('msrcTable', 'method_sources', [['group'], ['sources', 'w'], ['raw', 'num', intf], ['evidence', 'num', intf], ['authors', 'num', intf], ['bias', 'w']]);
-  drawWalk(); drawTri(); drawQA();
+  safe(drawSteps); safe(drawFunnel);
+  safe(() => fillTable('ruleTable', 'method_rules', [['rule'], ['logic', 'w'], ['purpose', 'w'], ['validation', 'w']]));
+  safe(() => fillTable('cbTable', 'codebook', [['dimension'], ['codes', 'num', intf], ['used', 'num', intf], ['example', 'w']]));
+  safe(() => fillTable('rejTable', 'rejected', [['claim', 'w'], ['found', 'w'], ['decision', 'w']]));
+  safe(() => fillTable('msrcTable', 'method_sources', [['group'], ['sources', 'w'], ['raw', 'num', intf], ['evidence', 'num', intf], ['authors', 'num', intf], ['bias', 'w']]));
+  safe(drawWalk); safe(drawTri); safe(drawQA);
 }
 document.getElementById('wkGo').addEventListener('click', () => goInsight('F04'));
 document.getElementById('m-app').addEventListener('toggle', (e) => { if (e.target.open) drawTrend(); });
@@ -924,7 +926,7 @@ function draw() {
   if (tab === 'insights') drawInsights();
   if (tab === 'compete') { drawAI(); drawChannels(); }
   if (tab === 'markets') { drawMarkets(); drawHeat(); drawTips(); }
-  if (tab === 'method') { drawMethodReport(); drawMethod(); }
+  if (tab === 'method') { safe(drawMethodReport); safe(drawMethod); }
 }
 dash.onData(draw);
 
