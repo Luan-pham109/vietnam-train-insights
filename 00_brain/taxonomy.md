@@ -1,4 +1,4 @@
-# Taxonomy v0.6
+# Taxonomy v0.7
 
 Muse chỉ dùng mã ở đây. Thiếu mã → `other` + `topic_suggest`. Claude gom đề xuất, nâng version.
 
@@ -109,18 +109,20 @@ Dùng:
 - Quy tắc 4 (tiếng Việt → người Việt): spot-check 30/30 đúng (2026-10-27, mẫu T-003/T-004). Quy tắc 7: rà 26/26 dòng OP TripAdvisor không tự nhận (2026-10-27), sai ước ~4-8%, giữ tin cậy trung bình. Sai >10% → hạ xuống trung bình.
 
 ## entity - tên chuẩn (viết thường, snake_case)
-- Kênh bán: `dsvn` · `twelve_go` · `baolau` · `bookaway` · `vietage` · `trip_com` · `traveloka` · `klook` · `vexere` · `local_agent` · `hotel_desk` · `station_counter` · `vietnam_railway_agent_site`
+- Kênh bán: `dsvn` · `vetau` (vetau.com.vn + app Vé Tàu) · `twelve_go` (**không** viết `12go`) · `baolau` · `bookaway` · `vietage` · `trip_com` · `traveloka` · `klook` · `getyourguide` · `ivivu` · `vexere` · `local_agent` (đại lý địa phương có tên như Sapa Nomad cũng ghi mã này) · `hotel_desk` · `station_counter` · `vietnam_railway_agent_site`
 - Tàu DSVN: theo mã tàu `se1`, `se3`, `sp3`... hoặc `dsvn_generic`
-- Tàu du lịch tư nhân: `lotus` · `chapa_express` · `violette` · `sapaly` · `livitrans` · `orient_express` · `hai_van_heritage` · `laman_express` (Laman/Lamen/LAMAN) · `hana_train` · `charmy_express` · `damitrans` · `the_hanoi_train` (Tàu Hà Nội 5 Cửa Ô)
+- Tàu du lịch tư nhân (**dùng đúng mã ngắn**: `lotus` không phải `lotus_train`, `violette` không phải `violette_train`, `sapaly` không phải `sapaly_express`): `lotus` · `chapa_express` · `violette` · `sapaly` · `king_express` · `victoria_express` · `et_pumpkin` · `vicsapa` · `sjourney` · `fanxipan_express` · `livitrans` · `orient_express` · `hai_van_heritage` · `laman_express` (Laman/Lamen/LAMAN) · `hana_train` · `charmy_express` · `damitrans` · `the_hanoi_train` (Tàu Hà Nội 5 Cửa Ô)
 - Kênh theo thị trường: `fliggy` · `qunar` · `makemytrip` · `cleartrip` · `myrealtrip` · `kkday` (Ctrip trong nước TQ ghi `trip_com`)
-- Thanh toán: `alipay` · `wechat_pay` · `upi` · `kakao_pay` · `naver_pay` · `vnpay` · `apple_pay`
+- Thanh toán: `alipay` · `wechat_pay` · `upi` · `kakao_pay` · `naver_pay` · `vnpay` · `momo` · `viettel_money` · `apple_pay`
+- `vietage` = The Vietage by Anantara (vừa là tàu, vừa tự bán vé)
 - Thay thế: `flight` · `sleeper_bus` · `limousine` · `private_car`
 
 ## route - mã IATA-like của ga
-`HAN` Hà Nội · `SGN` Sài Gòn · `HUE` Huế · `DAD` Đà Nẵng · `NHA` Nha Trang · `LCA` Lào Cai · `HPH` Hải Phòng · `DTH` Đồng Hới · `QNH` Quy Nhơn · `NBH` Ninh Bình · `PTH` Phan Thiết · `DLT` Đà Lạt · `GLA` Gia Lâm · `DDG` Đồng Đăng · `NNG` Nam Ninh (TQ) · `HKO` Hà Khẩu (TQ) · `TCH` Tháp Chàm (Phan Rang) · `DTI` Diêu Trì · `TLO` Thọ Lộc
+`HAN` Hà Nội · `SGN` Sài Gòn · `HUE` Huế · `DAD` Đà Nẵng · `NHA` Nha Trang · `LCA` Lào Cai · `HPH` Hải Phòng · `DTH` Đồng Hới · `QNH` Quy Nhơn · `NBH` Ninh Bình · `PTH` Phan Thiết · `DLT` Đà Lạt · `GLA` Gia Lâm · `DDG` Đồng Đăng · `NNG` Nam Ninh (TQ) · `HKO` Hà Khẩu (TQ) · `TCH` Tháp Chàm (Phan Rang) · `DTI` Diêu Trì · `TLO` Thọ Lộc · `QNG` Quảng Ngãi
 Dạng `HAN-LCA`. Thêm ga mới → đề xuất.
 
 ## Changelog
+- v0.7 (2026-10-28, sau review T-009..T-012): thêm entity kênh `vetau`, `getyourguide`, `ivivu`; ví `momo`, `viettel_money`; tàu tư nhân `king_express`, `victoria_express`, `et_pumpkin`, `vicsapa`, `sjourney`, `fanxipan_express` (gặp ở T-009 SERP, T-010, T-011); ghi rõ mã sai hay gặp (`12go`, `lotus_train`, `violette_train`, `sapaly_express`); đại lý địa phương có tên → `local_agent`; ga `QNG` (T-008). Không nhận `route_distance` (T-011) - thông tin tĩnh, không phục vụ câu hỏi nào. Có `tools/validate_evidence.py` để Muse tự kiểm trước khi nộp.
 - v0.6 (2026-10-27): thêm lớp `origin` do script suy luận (ngôn ngữ, profile, nguồn, dấu hiệu nội dung); market thêm `expat`, `intl`; field mới cho Muse `origin_hint`, `origin_cue`, `author_role`.
 - v0.5 (2026-10-27, sau review T-002): thêm topic `mode_choice` (đề xuất `mode_choice_train_vs_bus` của Muse ở T-002 raw 0005; cùng ý lặp ở T-002 0007/0017 và T-005 0014: tàu vs limousine/xe khách/xe riêng theo tiêu chí không phải giá), map → C02.
 - v0.4 (2026-10-26, sau review T-003/T-004/T-005): thêm topic `station_history` (16 dòng other ở T-003), `touting` (chèo kéo, gộp vendor_touting/vendor_conflict + taxi chèo kéo ở Huế/Đà Nẵng/Nha Trang), `wifi` (gộp wifi_onboard/station_wifi, 3 dòng), `overall_experience` (3 dòng qua T-001/T-003/T-004); map `touting` → C05 C07; entity `laman_express`, `hana_train`, `charmy_express`, `damitrans`, `the_hanoi_train`, `bookaway`, `vietage`; ga `DTI`, `TLO`. Không cần sửa lại dòng `other` cũ - Muse dùng mã mới từ task kế tiếp.

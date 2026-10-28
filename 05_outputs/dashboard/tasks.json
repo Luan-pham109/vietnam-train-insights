@@ -110,5 +110,61 @@
   "evidence": 51,
   "checked": 20,
   "error_rate": 0.1
+ },
+ {
+  "task_id": "T-009",
+  "title": "AI engine và Google gợi ý kênh nào khi khách hỏi cách đặt vé tàu VN",
+  "source": "serp_ai",
+  "priority": "P0",
+  "status": "rework",
+  "blocked_by": "",
+  "claimed_at": "2026-10-27T14:01:58Z",
+  "submitted_at": "2026-10-27",
+  "raw": 30,
+  "evidence": 118,
+  "checked": 67,
+  "error_rate": 0.91
+ },
+ {
+  "task_id": "T-010",
+  "title": "YouTube vlog tàu VN tiếng Anh: transcript + comment",
+  "source": "youtube",
+  "priority": "P0",
+  "status": "reviewed",
+  "blocked_by": "",
+  "claimed_at": "2026-10-27T15:40:00Z",
+  "submitted_at": "2026-10-28",
+  "raw": 13,
+  "evidence": 99,
+  "checked": 21,
+  "error_rate": 0.048
+ },
+ {
+  "task_id": "T-011",
+  "title": "Snapshot seat61.com trang Vietnam",
+  "source": "seat61",
+  "priority": "P0",
+  "status": "reviewed",
+  "blocked_by": "",
+  "claimed_at": "2026-10-27T23:52:00Z",
+  "submitted_at": "2026-10-28",
+  "raw": 1,
+  "evidence": 11,
+  "checked": 11,
+  "error_rate": 0.091
+ },
+ {
+  "task_id": "T-012",
+  "title": "TripAdvisor review tàu du lịch tư nhân",
+  "source": "tripadvisor_review",
+  "priority": "P0",
+  "status": "rework",
+  "blocked_by": "",
+  "claimed_at": "2026-10-27T14:33:37Z",
+  "submitted_at": "2026-10-27",
+  "raw": 7,
+  "evidence": 89,
+  "checked": 49,
+  "error_rate": 0.837
  }
 ]

@@ -38,29 +38,29 @@
  {
   "market": "Phương Tây",
   "code": "western",
-  "evidence": 3,
-  "evidence_high": 3,
+  "evidence": 18,
+  "evidence_high": 18,
   "evidence_medium": 0,
-  "authors": 3,
-  "sources": 2
+  "authors": 6,
+  "sources": 3
  },
  {
   "market": "Châu Á khác",
   "code": "other_asia",
-  "evidence": 0,
-  "evidence_high": 0,
+  "evidence": 5,
+  "evidence_high": 5,
   "evidence_medium": 0,
-  "authors": 0,
-  "sources": 0
+  "authors": 1,
+  "sources": 1
  },
  {
   "market": "Nước ngoài (chưa rõ nước)",
   "code": "intl",
-  "evidence": 95,
-  "evidence_high": 74,
+  "evidence": 147,
+  "evidence_high": 126,
   "evidence_medium": 21,
-  "authors": 53,
-  "sources": 3
+  "authors": 69,
+  "sources": 4
  },
  {
   "market": "Expat",
@@ -74,19 +74,19 @@
  {
   "market": "Việt Nam",
   "code": "vn",
-  "evidence": 241,
-  "evidence_high": 241,
+  "evidence": 242,
+  "evidence_high": 242,
   "evidence_medium": 0,
-  "authors": 177,
-  "sources": 3
+  "authors": 178,
+  "sources": 4
  },
  {
   "market": "Chưa rõ",
   "code": "unknown",
-  "evidence": 387,
+  "evidence": 422,
   "evidence_high": 0,
   "evidence_medium": 0,
-  "authors": 224,
-  "sources": 6
+  "authors": 250,
+  "sources": 8
  }
 ]

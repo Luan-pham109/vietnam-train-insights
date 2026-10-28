@@ -1,4 +1,4 @@
-# Source map v0.3
+# Source map v0.4
 
 | Mã nguồn | Nguồn | Segment | Câu hỏi chính | Tần suất | Wave |
 |---|---|---|---|---|---|
@@ -47,4 +47,7 @@
 - `trip_com_cn` (T-007): đọc được không đăng nhập; tìm kiếm nội bộ kém, phải dùng web search giới hạn site; có lúc gặp captcha. Đợt sau thử mục review ga.
 - `naver_blog`, `tistory`, `youtube_kr` (T-008, 2026-10-27): đọc đầy đủ không đăng nhập. Naver Cafe chỉ lấy bài công khai.
 - Kết luận wave M: Hàn thu tốt (29 bài), Ấn mỏng (11 bài, chủ yếu vlog), Trung gần như không thu được qua web công khai (3 bài).
-
+- `serp_ai` (T-009, 2026-10-27): ChatGPT dùng được không đăng nhập; **Perplexity không truy cập được** (tường đăng nhập trước khi hiện đáp án) - kiểm lại theo tháng; Gemini dùng được sau khi đăng xuất (phải chạy phiên đăng xuất); Google SERP + AI Overview dùng được nhưng IP ra Mỹ (California) dù giao diện tiếng Việt - baseline là góc nhìn truy cập từ Mỹ, không phải từ VN. Chạy lại bộ 10 prompt cố định hằng tháng. Đáp án AI không lặp lại được → raw phải chứa trích đoạn nêu đủ mọi kênh được xếp hạng.
+- `youtube` EN (T-010, 2026-10-27): đọc được transcript + comment không đăng nhập. Ngày comment dạng tương đối → `estimated`. Loại video có nhãn AD/HOSTED và kênh của hãng/đại lý (SJourney, Lotus Train, New Livitrans, Travel Agent Hanoi).
+- `seat61` (T-011, 2026-10-28): toàn bộ nội dung tàu VN nằm trong 1 trang `Vietnam.htm` (cập nhật 2026-06-10). Snapshot theo quý, so ngày cập nhật trên trang. Link đặt vé mang tham số affiliate (Baolau, 12Go, cổng seat61) nhưng trang không ghi công bố hoa hồng cho vé tàu.
+- `tripadvisor_review` (T-012, 2026-10-27): 7/7 trang hãng đọc được. Tàu di sản Huế - Đà Nẵng không có trang hãng riêng. Sapaly (9) và Livitrans (5) có ít review từ 2025 → re-crawl theo quý. Chapa Express có 2 trang trùng tên - dùng trang 219 review.

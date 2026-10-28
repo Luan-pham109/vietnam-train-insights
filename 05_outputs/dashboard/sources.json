@@ -19,8 +19,8 @@
   "source": "tripadvisor_review",
   "name": "Review tàu du lịch tư nhân",
   "wave": "1",
-  "state": "chưa giao",
-  "raw": 0,
+  "state": "đang chạy",
+  "raw": 7,
   "evidence": 0
  },
  {
@@ -51,9 +51,9 @@
   "source": "youtube",
   "name": "Vlog tàu VN: transcript + comment",
   "wave": "2",
-  "state": "chưa giao",
-  "raw": 0,
-  "evidence": 0
+  "state": "đã duyệt",
+  "raw": 13,
+  "evidence": 98
  },
  {
   "source": "tiktok",
@@ -67,16 +67,16 @@
   "source": "seat61",
   "name": "seat61.com trang Vietnam",
   "wave": "2",
-  "state": "chưa giao",
-  "raw": 0,
-  "evidence": 0
+  "state": "đã duyệt",
+  "raw": 1,
+  "evidence": 10
  },
  {
   "source": "serp_ai",
   "name": "Google SERP + ChatGPT/Perplexity/Gemini với bộ prompt cố định",
   "wave": "2",
-  "state": "chưa giao",
-  "raw": 0,
+  "state": "đang chạy",
+  "raw": 30,
   "evidence": 0
  },
  {
