@@ -1,0 +1,352 @@
+[
+ {
+  "insight": "F01",
+  "group": "Diễn đàn & cộng đồng",
+  "evidence": 82
+ },
+ {
+  "insight": "F01",
+  "group": "Review sau trải nghiệm",
+  "evidence": 42
+ },
+ {
+  "insight": "F01",
+  "group": "Vlog & blog",
+  "evidence": 7
+ },
+ {
+  "insight": "F01",
+  "group": "Nguồn định hình nhận thức",
+  "evidence": 0
+ },
+ {
+  "insight": "F01",
+  "group": "Phía cung (trang đối thủ)",
+  "evidence": 0
+ },
+ {
+  "insight": "F02",
+  "group": "Diễn đàn & cộng đồng",
+  "evidence": 0
+ },
+ {
+  "insight": "F02",
+  "group": "Review sau trải nghiệm",
+  "evidence": 0
+ },
+ {
+  "insight": "F02",
+  "group": "Vlog & blog",
+  "evidence": 0
+ },
+ {
+  "insight": "F02",
+  "group": "Nguồn định hình nhận thức",
+  "evidence": 119
+ },
+ {
+  "insight": "F02",
+  "group": "Phía cung (trang đối thủ)",
+  "evidence": 0
+ },
+ {
+  "insight": "F03",
+  "group": "Diễn đàn & cộng đồng",
+  "evidence": 100
+ },
+ {
+  "insight": "F03",
+  "group": "Review sau trải nghiệm",
+  "evidence": 71
+ },
+ {
+  "insight": "F03",
+  "group": "Vlog & blog",
+  "evidence": 46
+ },
+ {
+  "insight": "F03",
+  "group": "Nguồn định hình nhận thức",
+  "evidence": 0
+ },
+ {
+  "insight": "F03",
+  "group": "Phía cung (trang đối thủ)",
+  "evidence": 0
+ },
+ {
+  "insight": "F04",
+  "group": "Diễn đàn & cộng đồng",
+  "evidence": 56
+ },
+ {
+  "insight": "F04",
+  "group": "Review sau trải nghiệm",
+  "evidence": 90
+ },
+ {
+  "insight": "F04",
+  "group": "Vlog & blog",
+  "evidence": 57
+ },
+ {
+  "insight": "F04",
+  "group": "Nguồn định hình nhận thức",
+  "evidence": 2
+ },
+ {
+  "insight": "F04",
+  "group": "Phía cung (trang đối thủ)",
+  "evidence": 0
+ },
+ {
+  "insight": "F05",
+  "group": "Diễn đàn & cộng đồng",
+  "evidence": 8
+ },
+ {
+  "insight": "F05",
+  "group": "Review sau trải nghiệm",
+  "evidence": 15
+ },
+ {
+  "insight": "F05",
+  "group": "Vlog & blog",
+  "evidence": 7
+ },
+ {
+  "insight": "F05",
+  "group": "Nguồn định hình nhận thức",
+  "evidence": 0
+ },
+ {
+  "insight": "F05",
+  "group": "Phía cung (trang đối thủ)",
+  "evidence": 0
+ },
+ {
+  "insight": "F06",
+  "group": "Diễn đàn & cộng đồng",
+  "evidence": 37
+ },
+ {
+  "insight": "F06",
+  "group": "Review sau trải nghiệm",
+  "evidence": 5
+ },
+ {
+  "insight": "F06",
+  "group": "Vlog & blog",
+  "evidence": 1
+ },
+ {
+  "insight": "F06",
+  "group": "Nguồn định hình nhận thức",
+  "evidence": 3
+ },
+ {
+  "insight": "F06",
+  "group": "Phía cung (trang đối thủ)",
+  "evidence": 0
+ },
+ {
+  "insight": "F07",
+  "group": "Diễn đàn & cộng đồng",
+  "evidence": 42
+ },
+ {
+  "insight": "F07",
+  "group": "Review sau trải nghiệm",
+  "evidence": 11
+ },
+ {
+  "insight": "F07",
+  "group": "Vlog & blog",
+  "evidence": 14
+ },
+ {
+  "insight": "F07",
+  "group": "Nguồn định hình nhận thức",
+  "evidence": 0
+ },
+ {
+  "insight": "F07",
+  "group": "Phía cung (trang đối thủ)",
+  "evidence": 0
+ },
+ {
+  "insight": "F08",
+  "group": "Diễn đàn & cộng đồng",
+  "evidence": 20
+ },
+ {
+  "insight": "F08",
+  "group": "Review sau trải nghiệm",
+  "evidence": 27
+ },
+ {
+  "insight": "F08",
+  "group": "Vlog & blog",
+  "evidence": 2
+ },
+ {
+  "insight": "F08",
+  "group": "Nguồn định hình nhận thức",
+  "evidence": 0
+ },
+ {
+  "insight": "F08",
+  "group": "Phía cung (trang đối thủ)",
+  "evidence": 0
+ },
+ {
+  "insight": "F09",
+  "group": "Diễn đàn & cộng đồng",
+  "evidence": 5
+ },
+ {
+  "insight": "F09",
+  "group": "Review sau trải nghiệm",
+  "evidence": 20
+ },
+ {
+  "insight": "F09",
+  "group": "Vlog & blog",
+  "evidence": 1
+ },
+ {
+  "insight": "F09",
+  "group": "Nguồn định hình nhận thức",
+  "evidence": 0
+ },
+ {
+  "insight": "F09",
+  "group": "Phía cung (trang đối thủ)",
+  "evidence": 0
+ },
+ {
+  "insight": "F10",
+  "group": "Diễn đàn & cộng đồng",
+  "evidence": 7
+ },
+ {
+  "insight": "F10",
+  "group": "Review sau trải nghiệm",
+  "evidence": 17
+ },
+ {
+  "insight": "F10",
+  "group": "Vlog & blog",
+  "evidence": 0
+ },
+ {
+  "insight": "F10",
+  "group": "Nguồn định hình nhận thức",
+  "evidence": 0
+ },
+ {
+  "insight": "F10",
+  "group": "Phía cung (trang đối thủ)",
+  "evidence": 0
+ },
+ {
+  "insight": "F11",
+  "group": "Diễn đàn & cộng đồng",
+  "evidence": 0
+ },
+ {
+  "insight": "F11",
+  "group": "Review sau trải nghiệm",
+  "evidence": 0
+ },
+ {
+  "insight": "F11",
+  "group": "Vlog & blog",
+  "evidence": 20
+ },
+ {
+  "insight": "F11",
+  "group": "Nguồn định hình nhận thức",
+  "evidence": 0
+ },
+ {
+  "insight": "F11",
+  "group": "Phía cung (trang đối thủ)",
+  "evidence": 0
+ },
+ {
+  "insight": "F12",
+  "group": "Diễn đàn & cộng đồng",
+  "evidence": 2
+ },
+ {
+  "insight": "F12",
+  "group": "Review sau trải nghiệm",
+  "evidence": 0
+ },
+ {
+  "insight": "F12",
+  "group": "Vlog & blog",
+  "evidence": 9
+ },
+ {
+  "insight": "F12",
+  "group": "Nguồn định hình nhận thức",
+  "evidence": 0
+ },
+ {
+  "insight": "F12",
+  "group": "Phía cung (trang đối thủ)",
+  "evidence": 0
+ },
+ {
+  "insight": "F13",
+  "group": "Diễn đàn & cộng đồng",
+  "evidence": 0
+ },
+ {
+  "insight": "F13",
+  "group": "Review sau trải nghiệm",
+  "evidence": 18
+ },
+ {
+  "insight": "F13",
+  "group": "Vlog & blog",
+  "evidence": 0
+ },
+ {
+  "insight": "F13",
+  "group": "Nguồn định hình nhận thức",
+  "evidence": 0
+ },
+ {
+  "insight": "F13",
+  "group": "Phía cung (trang đối thủ)",
+  "evidence": 0
+ },
+ {
+  "insight": "F14",
+  "group": "Diễn đàn & cộng đồng",
+  "evidence": 0
+ },
+ {
+  "insight": "F14",
+  "group": "Review sau trải nghiệm",
+  "evidence": 0
+ },
+ {
+  "insight": "F14",
+  "group": "Vlog & blog",
+  "evidence": 0
+ },
+ {
+  "insight": "F14",
+  "group": "Nguồn định hình nhận thức",
+  "evidence": 0
+ },
+ {
+  "insight": "F14",
+  "group": "Phía cung (trang đối thủ)",
+  "evidence": 60
+ }
+]

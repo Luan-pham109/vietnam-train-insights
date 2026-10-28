@@ -1,0 +1,42 @@
+[
+ {
+  "group": "Diễn đàn & cộng đồng",
+  "sources": "muse_fb_radar, reddit, reddit_in, tripadvisor, tripadvisor_forum",
+  "raw": 102,
+  "evidence": 449,
+  "authors": 218,
+  "bias": "Lệch về khách tự lên kế hoạch, nói tiếng Anh; câu hỏi trước chuyến nhiều hơn trải nghiệm"
+ },
+ {
+  "group": "Review sau trải nghiệm",
+  "sources": "appstore, gmaps_station, tripadvisor_review",
+  "raw": 287,
+  "evidence": 455,
+  "authors": 355,
+  "bias": "Lệch về phàn nàn và trải nghiệm cực đoan"
+ },
+ {
+  "group": "Vlog & blog",
+  "sources": "naver_blog, tistory, trip_com_cn, youtube, youtube_in, youtube_kr",
+  "raw": 54,
+  "evidence": 170,
+  "authors": 88,
+  "bias": "Lệch về người làm nội dung, tuyến du lịch; có thể có affiliate"
+ },
+ {
+  "group": "Nguồn định hình nhận thức",
+  "sources": "seat61, serp_ai",
+  "raw": 31,
+  "evidence": 129,
+  "authors": 4,
+  "bias": "Ít mẫu, đọc theo ảnh hưởng; AI dao động giữa các lần chạy"
+ },
+ {
+  "group": "Phía cung (trang đối thủ)",
+  "sources": "competitor_site",
+  "raw": 11,
+  "evidence": 60,
+  "authors": 7,
+  "bias": "Claim của chính đối thủ, chưa kiểm chứng"
+ }
+]

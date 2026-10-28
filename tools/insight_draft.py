@@ -47,9 +47,11 @@ def stats(x):
 
 
 out = []
+ev_map = {}
 for d in defs:
     es = [e for e in rows if match(d, e)]
     rv = [e for e in es if status.get(e["task_id"]) == "reviewed"]
+    ev_map[d["id"]] = [e["ev_id"] for e in rv]
     n, a, s = stats(es)
     rn, ra, rs = stats(rv)
     if d.get("influence"):
@@ -70,6 +72,7 @@ for d in defs:
                 "action": d["action"], "quote": d.get("quote") or (pick[0]["quote"] if pick else ""),
                 "quotes": [{"ev_id": e["ev_id"], "quote": e["quote"], "summary_vi": e.get("summary_vi", "")} for e in pick],
                 "vexere_fit": d["vexere_fit"], "note": d.get("note", ""), "counter": d.get("counter", "")})
+json.dump(ev_map, open(os.path.join(ROOT, "05_outputs", "insight_ev.json"), "w", encoding="utf-8"))
 json.dump(out, open(os.path.join(ROOT, "05_outputs", "dashboard", "insights.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 md = ["# Bảng insight - tự sinh", "", "Sinh bởi `tools/insight_draft.py` từ `05_outputs/insight-draft.defs.json`. Tin cậy chỉ tính evidence của task đã reviewed (ngưỡng ≥10 ev, ≥3 nguồn, ≥5 tác giả).", "",
       "| ID | Insight | Nhóm khách | Ev đã duyệt | Tác giả | Nguồn | Tin cậy | Gắn với Vexere |", "|---|---|---|---|---|---|---|---|"]

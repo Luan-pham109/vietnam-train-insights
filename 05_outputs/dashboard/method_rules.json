@@ -1,0 +1,56 @@
+[
+ {
+  "rule": "Ngưỡng tin cậy trung bình",
+  "logic": "≥10 evidence, ≥3 nguồn khác nhau, ≥5 người viết khác nhau, chỉ tính task đã duyệt",
+  "purpose": "Không để 1 nguồn hay 1 người viết nhiều tạo ra insight",
+  "validation": "Áp dụng cho toàn bộ F01-F14"
+ },
+ {
+  "rule": "Tin cậy cao",
+  "logic": "Đạt mức trung bình và được data nội bộ Vexere xác nhận (funnel, booking, CS)",
+  "purpose": "Phân biệt điều khách nói với điều khách làm",
+  "validation": "Chưa insight nào đạt - cần kéo data nội bộ"
+ },
+ {
+  "rule": "Nguồn định hình nhận thức",
+  "logic": "AI engine, Seat61, trang đối thủ: đọc theo ảnh hưởng, ghi 'đo lường', không áp ngưỡng đếm",
+  "purpose": "Ít mẫu nhưng tác động lên hàng nghìn khách",
+  "validation": "F02, F14"
+ },
+ {
+  "rule": "Đếm người viết, không đếm bài",
+  "logic": "Mã hoá người viết bằng hash; 1 người viết nhiều ý vẫn chỉ tính 1 người",
+  "purpose": "Chống spam và người viết nhiều chiếm số",
+  "validation": "Áp dụng mọi chỉ số tác giả"
+ },
+ {
+  "rule": "Độ mới",
+  "logic": "Chỉ tính evidence không quá 18 tháng; bài cũ hơn chỉ làm bối cảnh",
+  "purpose": "Giá, chính sách, app thay đổi nhanh",
+  "validation": "Loại tự động khi tính"
+ },
+ {
+  "rule": "Suy luận nguồn gốc - ngôn ngữ",
+  "logic": "Viết tiếng Việt → khách Việt; tiếng Hàn/Trung/Hindi → thị trường tương ứng",
+  "purpose": "Giảm tỷ lệ 'chưa rõ' khách là ai",
+  "validation": "Spot-check 30/30 đúng (review tiếng Việt)"
+ },
+ {
+  "rule": "Suy luận nguồn gốc - người hỏi trên TripAdvisor",
+  "logic": "Người mở thread không tự nhận → khách nước ngoài, tin cậy trung bình",
+  "purpose": "Người hỏi gần như luôn là khách đang lên kế hoạch",
+  "validation": "Rà 26/26 câu, sai ước 4-8%"
+ },
+ {
+  "rule": "Insight riêng một thị trường",
+  "logic": "Chỉ dùng evidence có thị trường xác định chắc chắn (tự nhận, ngôn ngữ, nền tảng bản địa)",
+  "purpose": "Không gán nhầm insight khách Tây cho khách Hàn/Ấn",
+  "validation": "F11, F12"
+ },
+ {
+  "rule": "Đối chiếu từng nhận định",
+  "logic": "Mỗi vế trong câu insight phải có evidence trực tiếp; vế không có evidence bị bỏ",
+  "purpose": "Chống suy diễn từ cụm topic đủ ngưỡng",
+  "validation": "Đã bỏ 2 nhận định, sửa 2 nhận định trước khi chốt"
+ }
+]

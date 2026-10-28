@@ -1,0 +1,22 @@
+[
+ {
+  "claim": "dsvn.vn hay lỗi thẻ quốc tế, khách buộc phải đi trung gian",
+  "found": "Chỉ 1 evidence tiêu cực về thẻ, và nó nói về Vexere; nhiều evidence cho thấy dsvn.vn chạy thẻ quốc tế qua VNPay",
+  "decision": "Bỏ. Viết lại F01: dsvn.vn dùng được nếu biết mẹo"
+ },
+ {
+  "claim": "Khách Hàn né DSVN vì lỗi thẻ Hàn",
+  "found": "0 evidence - câu này chỉ có trong báo cáo thu thập, không có quote nào",
+  "decision": "Bỏ khỏi F11"
+ },
+ {
+  "claim": "vexere.com được AI trích dẫn 26 lần",
+  "found": "26 là số dòng dữ liệu (mỗi lượt hỏi có nhiều dòng); tính theo lượt là 5/15 lượt có dẫn nguồn",
+  "decision": "Sửa số trong F02, giữ kết luận vì vẫn nhiều nhất"
+ },
+ {
+  "claim": "Tàu tư nhân bị hoài nghi có đáng tiền không (từ forum)",
+  "found": "Review sau chuyến cho thấy phân cực theo hãng: Vietage được khen toàn bộ, Sapaly/Livitrans bị chê",
+  "decision": "Viết lại F04 theo hãng"
+ }
+]

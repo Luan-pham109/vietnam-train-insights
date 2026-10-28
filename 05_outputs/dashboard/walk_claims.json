@@ -1,0 +1,26 @@
+[
+ {
+  "claim": "Được khen đồ ăn, nhân viên",
+  "evidence": 35,
+  "authors": 34,
+  "how": "topic food_onboard/staff_attitude, sắc thái tích cực"
+ },
+ {
+  "claim": "Vẫn ngủ kém, ồn, xóc",
+  "evidence": 20,
+  "authors": 20,
+  "how": "topic noise_sleep, sắc thái tiêu cực"
+ },
+ {
+  "claim": "Giá không xứng",
+  "evidence": 13,
+  "authors": 13,
+  "how": "topic price_level, sắc thái tiêu cực"
+ },
+ {
+  "claim": "Bị đổi sang cabin chung dù đã trả tiền cabin riêng",
+  "evidence": 3,
+  "authors": 3,
+  "how": "đọc tay từng review, 2 là Chapa Express"
+ }
+]

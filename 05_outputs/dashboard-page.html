@@ -1,0 +1,934 @@
+<style>
+#dash-root .rp { display: flex; flex-direction: column; gap: var(--cds-gap-lg); font-family: var(--font-anthropic-sans); }
+#dash-root .rp-head h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+#dash-root .rp-sub { color: var(--color-fg-muted); font-size: var(--cds-font-size-body); margin: var(--cds-gap-xs) 0 0; max-width: 70ch; }
+#dash-root .rp-tabs { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); border-bottom: 1px solid var(--color-border-line); }
+#dash-root .rp-tab { font: inherit; font-size: var(--cds-font-size-body); background: transparent; border: 0; border-bottom: 2px solid transparent; color: var(--color-fg-muted); padding: var(--cds-pad-sm) var(--cds-pad-md); cursor: pointer; margin-bottom: -1px; }
+#dash-root .rp-tab[aria-selected="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+#dash-root .rp-tab:focus-visible, #dash-root .rp-btn:focus-visible, #dash-root .rp-chip:focus-visible, #dash-root .rp-row:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+#dash-root .rp-page { display: flex; flex-direction: column; gap: var(--cds-gap-xl); }
+#dash-root .rp-section { display: flex; flex-direction: column; gap: var(--cds-gap-md); }
+#dash-root .rp-section > h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+#dash-root .rp-note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: 0; max-width: 80ch; }
+#dash-root .rp-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-sm); min-width: 0; }
+#dash-root .rp-card h3 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+#dash-root .rp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); }
+#dash-root .rp-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr)); gap: var(--cds-gap-md); }
+#dash-root .rp-kpi { display: flex; flex-direction: column; gap: 2px; padding: var(--cds-pad-sm) 0; border-top: 1px solid var(--color-border-line); }
+#dash-root .rp-kpi-v { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; line-height: 1.1; }
+#dash-root .rp-kpi-l { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+#dash-root .rp-take { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: var(--cds-gap-md); }
+#dash-root .rp-t { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md) var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-sm); position: relative; overflow: hidden; }
+#dash-root .rp-t::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--color-fg-muted); }
+#dash-root .rp-t.risk::before { background: var(--color-bad); }
+#dash-root .rp-t.opportunity::before { background: var(--color-ok); }
+#dash-root .rp-t-top { display: flex; align-items: center; gap: var(--cds-gap-sm); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+#dash-root .rp-t-n { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-heading); color: var(--color-fg); }
+#dash-root .rp-t h3 { margin: 0; font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); text-wrap: balance; }
+#dash-root .rp-t p { margin: 0; font-size: var(--cds-font-size-body); color: var(--color-fg-muted); }
+#dash-root .rp-links { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); margin-top: auto; }
+#dash-root .rp-btn { font: inherit; font-size: var(--cds-font-size-caption); background: transparent; border: 1px solid var(--color-border-line); border-radius: 999px; padding: 2px var(--cds-pad-sm); color: var(--color-fg); cursor: pointer; }
+#dash-root .rp-btn:hover { border-color: var(--color-fg-muted); }
+#dash-root .rp-pill { display: inline-block; padding: 1px var(--cds-pad-sm); border-radius: 999px; font-size: var(--cds-font-size-caption); white-space: nowrap; border: 1px solid var(--color-border-line); color: var(--color-fg-muted); }
+#dash-root .rp-pill.ok { color: var(--color-ok); border-color: currentColor; }
+#dash-root .rp-pill.warn { color: var(--color-warn); border-color: currentColor; }
+#dash-root .rp-pill.bad { color: var(--color-bad); border-color: currentColor; }
+#dash-root .rp-pill.run { color: var(--color-fg); border-color: var(--color-fg-muted); }
+#dash-root .rp-scroll { overflow-x: auto; }
+#dash-root table.rp-table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+#dash-root .rp-table th { text-align: left; font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+#dash-root .rp-table td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+#dash-root .rp-table .num { text-align: right; white-space: nowrap; }
+#dash-root .rp-table .w { min-width: 14rem; }
+#dash-root .rp-table code, #dash-root .rp-q code { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); overflow-wrap: anywhere; }
+#dash-root .rp-filters { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); align-items: center; }
+#dash-root .rp-filters .lbl { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin-right: var(--cds-gap-xs); }
+#dash-root .rp-chip { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-radius: 999px; border: 1px solid var(--color-border-line); background: transparent; color: var(--color-fg-muted); cursor: pointer; }
+#dash-root .rp-chip[aria-pressed="true"] { color: var(--color-fg); border-color: var(--color-fg); }
+#dash-root .rp-list { display: flex; flex-direction: column; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-panel); }
+#dash-root .rp-theme { padding: var(--cds-pad-sm) var(--cds-pad-lg); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .06em; border-bottom: 1px solid var(--color-border-line); }
+#dash-root .rp-item { border-bottom: 1px solid var(--color-border-line); }
+#dash-root .rp-item:last-child { border-bottom: 0; }
+#dash-root .rp-row { width: 100%; font: inherit; text-align: left; background: transparent; border: 0; color: var(--color-fg); cursor: pointer; display: grid; grid-template-columns: 3rem minmax(0, 1fr) 9rem; gap: var(--cds-gap-md); padding: var(--cds-pad-md) var(--cds-pad-lg); align-items: start; }
+#dash-root .rp-row:hover { background: color-mix(in srgb, var(--color-fg) 4%, transparent); }
+#dash-root .rp-id { font-family: var(--font-anthropic-serif); color: var(--color-fg-muted); font-size: var(--cds-font-size-body); }
+#dash-root .rp-stmt { font-size: var(--cds-font-size-body); line-height: 1.45; }
+#dash-root .rp-meta { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); margin-top: var(--cds-gap-xs); }
+#dash-root .rp-side { display: flex; flex-direction: column; gap: var(--cds-gap-xs); align-items: stretch; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+#dash-root .rp-bar { height: 6px; border-radius: 3px; background: var(--cds-chart-grid); overflow: hidden; }
+#dash-root .rp-bar > span { display: block; height: 100%; border-radius: 3px; }
+#dash-root .rp-detail { padding: 0 var(--cds-pad-lg) var(--cds-pad-lg) calc(3rem + var(--cds-gap-md) + var(--cds-pad-lg)); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: var(--cds-gap-md); }
+#dash-root .rp-detail h4 { margin: 0 0 var(--cds-gap-xs); font-size: var(--cds-font-size-caption); font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .06em; }
+#dash-root .rp-detail p { margin: 0; font-size: var(--cds-font-size-body); }
+#dash-root .rp-q { margin: 0 0 var(--cds-gap-sm); padding-left: var(--cds-pad-sm); border-left: 2px solid var(--color-border-line); font-size: var(--cds-font-size-body); }
+#dash-root .rp-q q { font-style: italic; }
+#dash-root .rp-q span { display: block; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+#dash-root .rp-bars { display: flex; flex-direction: column; gap: var(--cds-gap-sm); }
+#dash-root .rp-brow { display: grid; grid-template-columns: minmax(6rem, 9rem) minmax(0, 1fr) 5.5rem; gap: var(--cds-gap-sm); align-items: center; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+#dash-root .rp-brow .n { text-align: right; color: var(--color-fg-muted); }
+#dash-root .rp-stack { display: flex; height: 14px; border-radius: 3px; overflow: hidden; background: var(--cds-chart-grid); }
+#dash-root .rp-stack > span { height: 100%; }
+#dash-root .rp-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+#dash-root .rp-legend i { display: inline-block; width: .7rem; height: .7rem; border-radius: 2px; margin-right: 4px; vertical-align: -1px; }
+#dash-root .rp-matrix { display: grid; grid-template-columns: 6.5rem repeat(10, minmax(2.4rem, 1fr)); gap: 3px; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; min-width: 32rem; }
+#dash-root .rp-matrix .h { color: var(--color-fg-muted); text-align: center; padding: var(--cds-pad-xs) 0; }
+#dash-root .rp-matrix .r { color: var(--color-fg-muted); padding: var(--cds-pad-xs) 0; }
+#dash-root .rp-matrix .c { border-radius: 4px; text-align: center; padding: var(--cds-pad-xs) 0; border: 1px solid var(--color-border-line); cursor: default; position: relative; }
+#dash-root .rp-matrix .c:focus-visible { outline: 2px solid var(--color-fg); }
+#dash-root .rp-tipbox { position: absolute; z-index: 5; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); max-width: 18rem; }
+#dash-root .rp-tipbox .d { color: var(--cds-text-secondary); }
+#dash-root .rp-rel { position: relative; }
+#dash-root .rp-heat { display: grid; grid-template-columns: minmax(6rem, auto) repeat(4, minmax(3.5rem, 1fr)); gap: 3px; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; min-width: 22rem; }
+#dash-root .rp-heat .h { color: var(--color-fg-muted); padding: var(--cds-pad-xs); text-align: center; }
+#dash-root .rp-heat .r { color: var(--color-fg-muted); padding: var(--cds-pad-xs); }
+#dash-root .rp-heat .c { border-radius: 4px; padding: var(--cds-pad-xs); text-align: center; border: 1px solid var(--color-border-line); }
+#dash-root .rp-fail { display: flex; align-items: center; justify-content: center; gap: var(--cds-gap-xs); color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); min-height: 4rem; }
+#dash-root .rp-fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+#dash-root .rp-chart { position: relative; min-height: 180px; }
+#dash-root [data-dash-source-state=empty] { color: transparent; }
+#dash-root [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+#dash-root .rp-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: var(--cds-gap-md); counter-reset: st; }
+#dash-root .rp-step { border-top: 2px solid var(--color-fg); padding-top: var(--cds-pad-sm); display: flex; flex-direction: column; gap: var(--cds-gap-xs); counter-increment: st; }
+#dash-root .rp-step h3 { margin: 0; font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); }
+#dash-root .rp-step h3::before { content: counter(st) ". "; color: var(--color-fg-muted); font-family: var(--font-anthropic-serif); }
+#dash-root .rp-step p { margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+#dash-root .rp-step .v { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-heading); font-variant-numeric: tabular-nums; color: var(--color-fg); }
+#dash-root .rp-funnel { display: flex; flex-direction: column; gap: var(--cds-gap-sm); }
+#dash-root .rp-frow { display: grid; grid-template-columns: minmax(8rem, 11rem) minmax(0, 1fr); gap: var(--cds-gap-sm); align-items: center; font-size: var(--cds-font-size-caption); }
+#dash-root .rp-frow .lab { display: flex; flex-direction: column; }
+#dash-root .rp-frow .lab b { font-weight: var(--cds-font-weight-medium); }
+#dash-root .rp-frow .lab span { color: var(--color-fg-muted); }
+#dash-root .rp-fbar { display: flex; align-items: center; gap: var(--cds-gap-sm); min-width: 0; }
+#dash-root .rp-fbar > i { display: block; height: 18px; border-radius: 3px; min-width: 3px; flex: none; }
+#dash-root .rp-fbar > span { font-variant-numeric: tabular-nums; }
+#dash-root .rp-callout { border-left: 3px solid var(--color-fg); padding: var(--cds-pad-sm) var(--cds-pad-md); background: var(--color-panel); font-size: var(--cds-font-size-body); }
+#dash-root .rp-callout p { margin: 0 0 var(--cds-gap-xs); }
+#dash-root .rp-callout p:last-child { margin: 0; }
+#dash-root .rp-walk { display: flex; flex-direction: column; gap: var(--cds-gap-md); }
+#dash-root .rp-wstep { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: var(--cds-gap-md); padding-bottom: var(--cds-gap-md); border-bottom: 1px dashed var(--color-border-line); }
+#dash-root .rp-wstep:last-child { border-bottom: 0; padding-bottom: 0; }
+#dash-root .rp-wstep > .k { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .06em; padding-top: 2px; }
+#dash-root .rp-wstep > div { display: flex; flex-direction: column; gap: var(--cds-gap-xs); min-width: 0; font-size: var(--cds-font-size-body); }
+#dash-root .rp-codes { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); }
+#dash-root .rp-div { display: grid; grid-template-columns: 7rem minmax(0, 1fr) minmax(0, 1fr) 4rem; gap: var(--cds-gap-sm); align-items: center; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+#dash-root .rp-div .neg { display: flex; justify-content: flex-end; }
+#dash-root .rp-div .neg i, #dash-root .rp-div .pos i { display: block; height: 12px; border-radius: 2px; }
+#dash-root .rp-div .n { color: var(--color-fg-muted); text-align: right; }
+#dash-root .rp-tri { display: grid; grid-template-columns: 3rem repeat(5, minmax(4.2rem, 1fr)); gap: 3px; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; min-width: 28rem; }
+#dash-root .rp-tri .h { color: var(--color-fg-muted); padding: var(--cds-pad-xs); text-align: center; line-height: 1.2; }
+#dash-root .rp-tri .r { color: var(--color-fg-muted); padding: var(--cds-pad-xs); font-family: var(--font-anthropic-serif); }
+#dash-root .rp-tri .r button { font: inherit; background: none; border: 0; padding: 0; color: inherit; cursor: pointer; text-decoration: underline dotted; }
+#dash-root .rp-tri .c { border-radius: 4px; padding: var(--cds-pad-xs); text-align: center; border: 1px solid var(--color-border-line); }
+#dash-root .rp-tri .t { padding: var(--cds-pad-xs); text-align: center; color: var(--color-fg-muted); }
+#dash-root .rp-limits { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: var(--cds-gap-xs); font-size: var(--cds-font-size-body); }
+#dash-root .rp-limits b { font-weight: var(--cds-font-weight-medium); }
+#dash-root details.rp-app > summary { cursor: pointer; font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); padding: var(--cds-pad-sm) 0; }
+#dash-root details.rp-app[open] > summary { margin-bottom: var(--cds-gap-md); }
+#dash-root .rp-table tfoot td { font-weight: var(--cds-font-weight-medium); border-bottom: 0; }
+@media (max-width: 40rem) {
+  #dash-root .rp-wstep { grid-template-columns: 1fr; gap: var(--cds-gap-xs); }
+  #dash-root .rp-frow { grid-template-columns: 1fr; }
+  #dash-root .rp-fbar > i { max-width: 55%; }
+  #dash-root .rp-div { grid-template-columns: 5rem minmax(0, 1fr) minmax(0, 1fr) 3rem; }
+}
+@media (max-width: 40rem) {
+  #dash-root .rp-row { grid-template-columns: 2.5rem minmax(0, 1fr); }
+  #dash-root .rp-side { grid-column: 2; }
+  #dash-root .rp-detail { padding-left: var(--cds-pad-lg); }
+}
+</style>
+
+<div class="rp">
+  <header class="rp-head" id="top">
+    <h1>Insight tàu hoả Việt Nam</h1>
+    <p class="rp-sub dash-skeleton" id="scope">—</p>
+  </header>
+
+  <nav class="rp-tabs" role="tablist" aria-label="Phần của báo cáo">
+    <button class="rp-tab" role="tab" id="tab-overview" data-tab="overview" aria-selected="true">Tổng quan</button>
+    <button class="rp-tab" role="tab" id="tab-insights" data-tab="insights" aria-selected="false">Insight</button>
+    <button class="rp-tab" role="tab" id="tab-compete" data-tab="compete" aria-selected="false">Cạnh tranh &amp; AI</button>
+    <button class="rp-tab" role="tab" id="tab-markets" data-tab="markets" aria-selected="false">Thị trường &amp; hành trình</button>
+    <button class="rp-tab" role="tab" id="tab-method" data-tab="method" aria-selected="false">Phương pháp &amp; tiến độ</button>
+  </nav>
+
+  <!-- TỔNG QUAN -->
+  <div class="rp-page" id="overview" role="tabpanel" aria-labelledby="tab-overview">
+    <div class="rp-kpis" id="kpis">
+      <div class="rp-kpi"><span class="rp-kpi-v dash-skeleton" data-source="latest" data-field="evidence_usable" data-row="0">—</span><span class="rp-kpi-l">evidence đã duyệt</span></div>
+      <div class="rp-kpi"><span class="rp-kpi-v dash-skeleton" data-source="latest" data-field="authors" data-row="0">—</span><span class="rp-kpi-l">người viết khác nhau</span></div>
+      <div class="rp-kpi"><span class="rp-kpi-v dash-skeleton" data-source="latest" data-field="raw" data-row="0">—</span><span class="rp-kpi-l">bài gốc</span></div>
+      <div class="rp-kpi"><span class="rp-kpi-v dash-skeleton" data-source="latest" data-field="p0_medium" data-row="0">—</span><span class="rp-kpi-l">câu hỏi P0 đủ bằng chứng, trên <b data-source="latest" data-field="p0_total" data-row="0">—</b></span></div>
+    </div>
+
+    <section class="rp-section" id="takeaways">
+      <h2>Điều cần biết</h2>
+      <div class="rp-take" data-source="summary" id="takeList"></div>
+    </section>
+
+    <section class="rp-section" id="actions">
+      <h2>Việc nên làm, theo thứ tự ưu tiên</h2>
+      <div class="rp-card">
+        <p class="rp-note">Xếp theo tác động lên chuyển đổi và độ khó làm. Cột "Đo bằng" là chỉ số để biết việc có hiệu quả.</p>
+        <div class="rp-scroll">
+          <table class="rp-table" id="actTable" data-source="actions" data-row-key="rank">
+            <thead><tr>
+              <th data-field="rank">#</th>
+              <th data-field="action">Việc</th>
+              <th data-field="impact">Tác động</th>
+              <th data-field="effort">Công sức</th>
+              <th data-field="measure">Đo bằng</th>
+              <th data-field="insights">Insight</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- INSIGHT -->
+  <div class="rp-page" id="insights" role="tabpanel" aria-labelledby="tab-insights" hidden>
+    <section class="rp-section">
+      <p class="rp-note">Mỗi dòng là một insight đã đối chiếu với data. Bấm để xem quote gốc, hành động cho Vexere và phản biện. Tin cậy "trung bình" = ≥10 evidence, ≥3 nguồn, ≥5 người viết; "đo lường" = nguồn định hình nhận thức (AI engine, trang đối thủ), đọc theo ảnh hưởng chứ không theo số đếm.</p>
+      <div class="rp-filters" role="group" aria-label="Lọc theo chủ đề" id="themeFilter"><span class="lbl">Chủ đề</span></div>
+      <div class="rp-filters" role="group" aria-label="Lọc theo tin cậy" id="confFilter"><span class="lbl">Tin cậy</span></div>
+      <div class="rp-list" data-source="insights" id="insList"></div>
+    </section>
+  </div>
+
+  <!-- CẠNH TRANH & AI -->
+  <div class="rp-page" id="compete" role="tabpanel" aria-labelledby="tab-compete" hidden>
+    <section class="rp-section" id="ai">
+      <h2>AI engine gợi ý ai khi khách hỏi đặt vé tàu</h2>
+      <div class="rp-grid">
+        <div class="rp-card">
+          <h3>Số lượt trên bộ câu hỏi cố định, theo engine</h3>
+          <p class="rp-note">Cùng một bộ câu hỏi cố định (EN, VI, KO, ZH) chạy trên mỗi engine. Perplexity bị chặn đăng nhập. Google ra IP Mỹ.</p>
+          <div class="rp-bars" data-source="ai_engines" id="aiBars"></div>
+          <div class="rp-legend"><span><i id="lgV"></i>Vexere được nhắc</span><span><i id="lgD"></i>dsvn.vn đứng đầu</span></div>
+        </div>
+        <div class="rp-card rp-rel">
+          <h3>Vexere đứng hạng mấy ở từng câu hỏi</h3>
+          <p class="rp-note">Số trong ô là hạng của Vexere trong câu trả lời; ô trống là không được nhắc. Rê chuột hoặc chọn ô để xem câu hỏi và kênh đứng đầu.</p>
+          <div class="rp-scroll"><div class="rp-matrix" data-source="ai_runs" id="aiMatrix"></div></div>
+          <div class="rp-tipbox" id="aiTip" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rp-section" id="sov">
+      <h2>Khách nhắc tới kênh nào</h2>
+      <div class="rp-card">
+        <p class="rp-note">Đếm trong nội dung do người dùng viết (không tính AI engine, Seat61, trang đối thủ). Đây là share of voice - proxy, không phải thị phần.</p>
+        <div class="rp-bars" data-source="channels" id="chBars"></div>
+        <div class="rp-legend"><span><i id="lgP"></i>Tích cực</span><span><i id="lgN0"></i>Trung tính</span><span><i id="lgNg"></i>Tiêu cực</span></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- THỊ TRƯỜNG & HÀNH TRÌNH -->
+  <div class="rp-page" id="markets" role="tabpanel" aria-labelledby="tab-markets" hidden>
+    <div class="rp-grid">
+      <section class="rp-card" id="mkt">
+        <h3>Evidence theo thị trường khách</h3>
+        <p class="rp-note">Độ dày nội dung công khai, không phải tỷ trọng khách. "Chắc chắn" = tự nhận, ngôn ngữ hoặc nền tảng bản địa; "suy luận" = dấu hiệu trong nội dung.</p>
+        <div class="rp-bars" data-source="markets" id="mktBars"></div>
+        <div class="rp-legend"><span><i id="lgH"></i>Chắc chắn</span><span><i id="lgM"></i>Suy luận</span></div>
+      </section>
+      <section class="rp-card" id="journey">
+        <h3>Evidence theo bước hành trình</h3>
+        <p class="rp-note">Ô đậm là nơi khách nói nhiều nhất. Ô trống là chỗ chưa có dữ liệu.</p>
+        <div class="rp-scroll"><div class="rp-heat" data-source="journey" id="heat"></div></div>
+      </section>
+    </div>
+    <section class="rp-section" id="tips">
+      <h2>Mẹo người đi thật chia sẻ</h2>
+      <div class="rp-card">
+        <p class="rp-note">Dùng được ngay cho FAQ, AEO, pre-trip guide. Mã evidence để tra quote gốc trong repo.</p>
+        <div class="rp-scroll">
+          <table class="rp-table" id="tipTable" data-source="tips" data-row-key="tip">
+            <thead><tr><th data-field="tip">Mẹo</th><th data-field="use">Dùng cho</th><th data-field="ev">Evidence</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PHƯƠNG PHÁP -->
+  <div class="rp-page" id="method" role="tabpanel" aria-labelledby="tab-method" hidden>
+
+    <section class="rp-section" id="m-approach">
+      <h2>Cách nghiên cứu, tóm tắt</h2>
+      <div class="rp-callout">
+        <p>Đây là nghiên cứu <b>social listening có cấu trúc</b>: đọc những gì khách đi tàu tự viết ở nơi công khai, cắt thành từng ý nhỏ có trích dẫn nguyên văn, gắn mã theo một bộ khung cố định, rồi đếm và đọc lại để ra nhận định.</p>
+        <p>Mỗi insight trong báo cáo phải qua hai cửa: <b>cửa định lượng</b> (đủ số ý, đủ số nguồn, đủ số người viết) và <b>cửa định tính</b> (đọc lại quote gốc, xác nhận nhận định đúng với điều khách nói, tìm phản ví dụ). Insight không qua cửa nào thì bị sửa hoặc loại.</p>
+        <p>Giới hạn chính: đây là điều khách <b>nói</b>, chưa phải điều khách <b>làm</b>. Mức tin cậy cao nhất chỉ đạt được khi đối chiếu với data nội bộ Vexere.</p>
+      </div>
+      <div class="rp-steps" id="mSteps">
+        <div class="rp-step"><h3>Đặt câu hỏi</h3><span class="v" data-source="coverage" data-calc="count">—</span><p>câu hỏi nghiên cứu, chia 3 nhóm: khách hàng (C), thị trường &amp; cạnh tranh (M), mẹo người trong cuộc (I). Mỗi câu có mức ưu tiên P0-P2, quyết định nguồn nào được thu trước.</p></div>
+        <div class="rp-step"><h3>Thu thập</h3><span class="v" data-source="method_funnel" data-step="Bài gốc thu về">—</span><p>bài gốc từ diễn đàn, review, vlog, AI engine, trang đối thủ. Chỉ nội dung công khai, không đăng nhập. Lưu link gốc và trích đoạn ≤50 từ mỗi bài, không lưu thông tin cá nhân.</p></div>
+        <div class="rp-step"><h3>Mã hoá</h3><span class="v" data-source="method_funnel" data-step="Đơn vị evidence">—</span><p>đơn vị evidence. Mỗi ý riêng trong một bài là một evidence, kèm quote nguyên văn và 9 chiều mã (loại ý, bước hành trình, chủ đề, nhóm khách, thị trường, kênh, sắc thái...).</p></div>
+        <div class="rp-step"><h3>Tổng hợp</h3><span class="v" data-source="method_funnel" data-step="Insight cuối">—</span><p>insight cuối. Gom evidence theo cụm mã, đếm, đọc lại, viết thành câu nhận định kèm "so what" cho Vexere, rồi kiểm từng nhận định con với evidence.</p></div>
+      </div>
+    </section>
+
+    <section class="rp-section" id="m-funnel">
+      <h2>Phễu dữ liệu: từ bài gốc tới insight</h2>
+      <div class="rp-card">
+        <p class="rp-note">Mỗi bước lọc có lý do rõ. Bước cuối thu hẹp nhiều nhất vì chỉ evidence thật sự đỡ một nhận định mới được tính; phần còn lại vẫn nằm trong kho để trả lời câu hỏi khác.</p>
+        <div class="rp-funnel" data-source="method_funnel" id="funnel"></div>
+      </div>
+    </section>
+
+    <section class="rp-section" id="m-quant">
+      <h2>Phần định lượng: đếm gì, tin tới đâu</h2>
+      <div class="rp-grid">
+        <div class="rp-card">
+          <h3>Chỉ số dùng trong báo cáo</h3>
+          <div class="rp-scroll">
+            <table class="rp-table">
+              <thead><tr><th>Chỉ số</th><th>Định nghĩa</th><th>Đọc thế nào</th></tr></thead>
+              <tbody>
+                <tr><td>Evidence</td><td class="w">Một ý riêng biệt trong một bài, có quote nguyên văn</td><td class="w">Độ dày của chủ đề. Một bài dài có thể sinh nhiều evidence</td></tr>
+                <tr><td>Người viết</td><td class="w">Số tác giả khác nhau (mã hoá ẩn danh)</td><td class="w">Chặn trường hợp một người viết nhiều tạo ra "xu hướng"</td></tr>
+                <tr><td>Nguồn</td><td class="w">Số nền tảng khác nhau (Reddit, TripAdvisor, Google Maps...)</td><td class="w">Chặn thiên lệch của một cộng đồng</td></tr>
+                <tr><td>Share of voice</td><td class="w">Tỷ lệ lượt nhắc một kênh trong nội dung do khách viết</td><td class="w">Proxy cho mức hiện diện, không phải thị phần</td></tr>
+                <tr><td>Sắc thái</td><td class="w">-1 tiêu cực, 0 trung tính, +1 tích cực, gắn theo từng evidence</td><td class="w">So sánh tương đối giữa kênh/hãng, không dùng như điểm hài lòng</td></tr>
+                <tr><td>Độ phủ câu hỏi</td><td class="w">Câu hỏi nghiên cứu đã đạt ngưỡng tin cậy trung bình hay chưa</td><td class="w">Chỉ ra chỗ còn thiếu dữ liệu</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="rp-card">
+          <h3>Thang tin cậy</h3>
+          <div class="rp-scroll">
+            <table class="rp-table">
+              <thead><tr><th>Mức</th><th>Điều kiện</th><th>Được dùng để</th></tr></thead>
+              <tbody>
+                <tr><td><span class="rp-pill warn">Thấp / giả thuyết</span></td><td class="w">Chưa đủ ngưỡng trung bình</td><td class="w">Định hướng nghiên cứu tiếp, không ra quyết định</td></tr>
+                <tr><td><span class="rp-pill ok">Trung bình</span></td><td class="w">≥10 evidence, ≥3 nguồn, ≥5 người viết, task đã duyệt</td><td class="w">Thiết kế thử nghiệm, nội dung, ưu tiên backlog</td></tr>
+                <tr><td><span class="rp-pill run">Đo lường</span></td><td class="w">Nguồn định hình nhận thức (AI engine, Seat61, đối thủ), đo trực tiếp</td><td class="w">Kết luận về hiện diện/hiển thị</td></tr>
+                <tr><td><span class="rp-pill ok">Cao</span></td><td class="w">Trung bình + data nội bộ xác nhận</td><td class="w">Quyết định đầu tư lớn</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="rp-card">
+        <h3>Quy tắc tính và cách đã kiểm chứng</h3>
+        <div class="rp-scroll">
+          <table class="rp-table" id="ruleTable" data-source="method_rules" data-row-key="rule">
+            <thead><tr><th data-field="rule">Quy tắc</th><th data-field="logic">Cách làm</th><th data-field="purpose">Vì sao</th><th data-field="validation">Kiểm chứng</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="rp-section" id="m-qual">
+      <h2>Phần định tính: từ câu khách nói tới insight</h2>
+      <div class="rp-grid">
+        <div class="rp-card">
+          <h3>Bộ mã (codebook)</h3>
+          <p class="rp-note">Mã được định nghĩa trước khi thu, bổ sung khi gặp ý mới (ghi "other" + đề xuất, Claude duyệt mới thêm). Cột "Đã dùng" cho thấy bộ mã có phủ thực tế không.</p>
+          <div class="rp-scroll">
+            <table class="rp-table" id="cbTable" data-source="codebook" data-row-key="dimension">
+              <thead><tr><th data-field="dimension">Chiều mã</th><th data-field="codes" class="num">Số mã</th><th data-field="used" class="num">Đã dùng</th><th data-field="example">Ví dụ</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="rp-card">
+          <h3>5 bước tổng hợp</h3>
+          <ol class="rp-limits">
+            <li><b>Gom cụm.</b> Lọc evidence theo tổ hợp mã (chủ đề × kênh × nhóm khách × sắc thái), không theo từ khoá.</li>
+            <li><b>Đọc toàn bộ cụm.</b> Đọc hết quote trong cụm, không đọc mẫu, để thấy các nhánh ý trái chiều.</li>
+            <li><b>Viết nhận định.</b> Một câu nói điều gì xảy ra, với ai, vì sao; tách riêng phần "so what" cho Vexere.</li>
+            <li><b>Đối chiếu từng nhận định con.</b> Mỗi vế trong câu phải trỏ được tới evidence; vế không có evidence bị bỏ.</li>
+            <li><b>Phản biện.</b> Tìm phản ví dụ và nguồn lệch có thể giải thích kết quả, ghi vào mục "Phản biện" của insight.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="rp-card">
+        <h3>Ví dụ đi trọn quy trình: F04, tàu tư nhân</h3>
+        <div class="rp-walk">
+          <div class="rp-wstep"><span class="k">Giả thuyết ban đầu</span><div><p style="margin:0">Từ diễn đàn: khách hoài nghi tàu tư nhân có đáng tiền so với khoang thường của DSVN không.</p></div></div>
+          <div class="rp-wstep"><span class="k">Quote gốc</span><div id="wkQuotes" data-source="insights"></div></div>
+          <div class="rp-wstep"><span class="k">Mã hoá</span><div><div class="rp-codes"><span class="rp-pill">type: praise / pain</span><span class="rp-pill">stage: onboard</span><span class="rp-pill">topic: class_cabin, food_onboard, noise_sleep, price_level</span><span class="rp-pill">entity: tên hãng</span><span class="rp-pill">sentiment: -1 / 0 / +1</span></div></div></div>
+          <div class="rp-wstep"><span class="k">Đếm theo hãng</span><div>
+            <p class="rp-note">Review sau chuyến trên TripAdvisor, số evidence theo sắc thái. Trái: tiêu cực, phải: tích cực, xếp theo chênh lệch.</p>
+            <div class="rp-bars" data-source="walk_ops" id="wkOps"></div>
+            <div class="rp-legend"><span><i id="lgWn"></i>Tiêu cực</span><span><i id="lgWp"></i>Tích cực</span></div>
+          </div></div>
+          <div class="rp-wstep"><span class="k">Kiểm nhận định con</span><div>
+            <div class="rp-scroll">
+              <table class="rp-table" id="wkClaims" data-source="walk_claims" data-row-key="claim">
+                <thead><tr><th data-field="claim">Nhận định con</th><th data-field="evidence" class="num">Evidence</th><th data-field="authors" class="num">Người viết</th><th data-field="how">Cách lấy</th></tr></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div></div>
+          <div class="rp-wstep"><span class="k">Kết luận</span><div>
+            <p style="margin:0">Giả thuyết ban đầu <b>sai một nửa</b>: khách không hoài nghi "tàu tư nhân" nói chung, mà trải nghiệm phân cực theo hãng. Câu insight được viết lại:</p>
+            <blockquote class="rp-q" id="wkFinal" data-source="insights"></blockquote>
+            <div><button class="rp-btn" type="button" id="wkGo">Mở F04 →</button></div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="rp-card">
+        <h3>Nhận định đã bị sửa hoặc loại khi đối chiếu</h3>
+        <p class="rp-note">Ghi lại để người đọc thấy bộ lọc thật sự chạy, và để không ai dùng lại các nhận định này.</p>
+        <div class="rp-scroll">
+          <table class="rp-table" id="rejTable" data-source="rejected" data-row-key="claim">
+            <thead><tr><th data-field="claim">Nhận định ban đầu</th><th data-field="found">Kiểm lại thấy gì</th><th data-field="decision">Quyết định</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="rp-section" id="m-tri">
+      <h2>Tam giác hoá: mỗi insight đứng trên mấy loại nguồn</h2>
+      <div class="rp-card">
+        <p class="rp-note">Số evidence của từng insight theo nhóm nguồn. Insight đứng trên ≥2 nhóm có độ lệch khác nhau (vd diễn đàn trước chuyến và review sau chuyến) chắc hơn insight chỉ dựa vào một nhóm. Bấm mã để mở insight.</p>
+        <div class="rp-scroll"><div class="rp-tri" data-source="triangulation" id="tri"></div></div>
+      </div>
+    </section>
+
+    <section class="rp-section" id="m-src">
+      <h2>Nguồn và độ lệch đã biết</h2>
+      <div class="rp-card">
+        <div class="rp-scroll">
+          <table class="rp-table" id="msrcTable" data-source="method_sources" data-row-key="group">
+            <thead><tr><th data-field="group">Nhóm nguồn</th><th data-field="sources">Gồm</th><th data-field="raw" class="num">Bài gốc</th><th data-field="evidence" class="num">Evidence</th><th data-field="authors" class="num">Người viết</th><th data-field="bias">Lệch về đâu</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="rp-section" id="m-qa">
+      <h2>Kiểm soát chất lượng</h2>
+      <div class="rp-card">
+        <p class="rp-note">Mỗi task được kiểm tay một mẫu (tối thiểu 5%, task nhỏ kiểm toàn bộ): quote có khớp nguyên văn bài gốc không, mã có đúng không, có lộ thông tin cá nhân không. Tỷ lệ lỗi trên 10% thì trả cả batch làm lại. Script kiểm tự động thêm toàn bộ schema, mã và độ dài quote.</p>
+        <div class="rp-scroll">
+          <table class="rp-table" id="qaTable" data-source="method_qa" data-row-key="task_id">
+            <thead><tr><th data-field="task_id">Task</th><th data-field="title">Nội dung</th><th data-field="evidence" class="num">Evidence</th><th data-field="checked" class="num">Kiểm tay</th><th data-field="errors" class="num">Lỗi</th><th data-field="error_rate" class="num">Tỷ lệ lỗi</th><th data-field="rework_rounds" class="num">Lần làm lại</th></tr></thead>
+            <tbody></tbody>
+            <tfoot></tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="rp-section" id="m-limits">
+      <h2>Giới hạn cần biết khi dùng báo cáo</h2>
+      <div class="rp-card">
+        <ul class="rp-limits">
+          <li><b>Nói khác làm.</b> Đây là điều khách viết công khai, chưa có data hành vi. Không insight nào đạt mức "cao".</li>
+          <li><b>Người im lặng không có mặt.</b> Khách đặt vé suôn sẻ ít khi viết; dữ liệu nghiêng về phàn nàn và về khách tự lên kế hoạch, nói tiếng Anh.</li>
+          <li><b>Thị trường châu Á mỏng.</b> Nguồn Trung Quốc (Xiaohongshu, Mafengwo) và TikTok bị chặn đăng nhập; nhận định cho khách Trung, Ấn chỉ là giả thuyết.</li>
+          <li><b>Nguồn gốc khách là suy luận</b> khi tác giả không tự nhận. Đã kiểm mẫu, nhưng vẫn có sai số vài phần trăm.</li>
+          <li><b>Share of voice không phải thị phần.</b> Kênh được nhắc nhiều có thể chỉ vì bị phàn nàn nhiều hoặc vì có cộng đồng viết bài.</li>
+          <li><b>AI engine thay đổi theo ngày.</b> Kết quả là ảnh chụp tại thời điểm chạy, cần chạy lại định kỳ.</li>
+        </ul>
+      </div>
+    </section>
+
+    <details class="rp-app" id="m-app">
+      <summary>Phụ lục: độ phủ câu hỏi, nguồn, task, tiến độ</summary>
+      <div class="rp-section">
+        <div class="rp-card">
+        <h3>Độ phủ theo câu hỏi</h3>
+        <div class="rp-scroll">
+          <table class="rp-table" id="covTable" data-source="coverage" data-row-key="q_id">
+            <thead><tr><th data-field="q_id">Mã</th><th data-field="question">Câu hỏi</th><th data-field="priority">Ưu tiên</th><th data-field="evidence" class="num">Evidence</th><th data-field="sources" class="num">Nguồn</th><th data-field="authors" class="num">Người viết</th><th data-field="level">Mức</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="rp-grid">
+        <div class="rp-card">
+          <h3>Nguồn</h3>
+          <div class="rp-scroll">
+            <table class="rp-table" id="srcTable" data-source="sources" data-row-key="source">
+              <thead><tr><th data-field="source">Nguồn</th><th data-field="state">Trạng thái</th><th data-field="raw" class="num">Bài gốc</th><th data-field="evidence" class="num">Evidence</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="rp-card">
+          <h3>Task của Muse</h3>
+          <div class="rp-scroll">
+            <table class="rp-table" id="taskTable" data-source="tasks" data-row-key="task_id">
+              <thead><tr><th data-field="task_id">Task</th><th data-field="title">Nội dung</th><th data-field="status">Trạng thái</th><th data-field="evidence" class="num">Evidence</th><th data-field="error_rate" class="num">Lỗi</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="rp-card">
+        <h3>Độ phủ tổng theo ngày</h3>
+        <div class="rp-chart" data-source="history" id="trend"></div>
+      </div>
+      </div>
+    </details>
+  </div>
+</div>
+
+<script>
+dash.calc('latest', {
+  inputs: ['history'],
+  title: 'Số liệu ngày gần nhất',
+  description: 'Dòng mới nhất của lịch sử cập nhật hằng ngày.',
+  fn: (history) => history.slice(-1),
+});
+
+const intf = d3.format(',');
+const pct = d3.format('.0%');
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+const pill = (t, c) => el('span', 'rp-pill ' + (c || ''), t);
+const fail = (box) => box.replaceChildren(el('div', 'rp-fail', 'Failed to load'));
+const C = () => ({ a: dash.colors[0], b: dash.colors[1], muted: 'var(--cds-chart-muted)', ok: 'var(--color-ok)', bad: 'var(--color-bad)', warn: 'var(--color-warn)' });
+
+/* ---- Tabs ---- */
+const TABS = ['overview', 'insights', 'compete', 'markets', 'method'];
+let tab = 'overview';
+const openRows = new Set();
+function showTab(t) {
+  if (!TABS.includes(t)) t = 'overview';
+  tab = t;
+  TABS.forEach((x) => {
+    document.getElementById(x).hidden = x !== t;
+    document.getElementById('tab-' + x).setAttribute('aria-selected', String(x === t));
+  });
+  dash.setLink(t);
+  draw();
+}
+document.querySelectorAll('.rp-tab').forEach((b) => b.addEventListener('click', () => showTab(b.dataset.tab)));
+function goInsight(id) {
+  openRows.add(id);
+  filterTheme = 'Tất cả'; filterConf = 'Tất cả';
+  showTab('insights');
+  const row = document.getElementById('ins-' + id);
+  if (row) { row.scrollIntoView({ block: 'start' }); row.querySelector('button').focus({ preventScroll: true }); }
+}
+
+/* ---- Overview ---- */
+function drawScope() {
+  const r = dash.data('latest');
+  const box = document.getElementById('scope');
+  const vals = document.querySelectorAll('#kpis [data-source="latest"]');
+  if (r.status !== 'ok' || !r.data.length) { vals.forEach((n) => { n.textContent = '—'; }); return; }
+  const d = r.data[0];
+  box.classList.remove('dash-skeleton');
+  vals.forEach((n) => { n.classList.remove('dash-skeleton'); n.textContent = intf(d[n.dataset.field]); });
+  box.textContent = `Tổng hợp social listening về khách đi tàu ở Việt Nam - ai đi, cần gì, vướng gì, đặt ở đâu. Cập nhật ${d3.utcFormat('%d/%m/%Y')(new Date(d.date))}, từ ${intf(d.raw)} bài gốc trên Reddit, TripAdvisor, Google Maps, Naver, YouTube, AI engine và trang đối thủ.`;
+}
+function drawTakeaways() {
+  const box = document.getElementById('takeList');
+  const r = dash.data('summary');
+  if (r.status !== 'ok') { if (r.status === 'error') fail(box); return; }
+  box.replaceChildren(...r.data.slice().sort((a, b) => a.rank - b.rank).map((d) => {
+    const c = el('article', 'rp-t ' + (d.tone || ''));
+    const top = el('div', 'rp-t-top');
+    top.append(el('span', 'rp-t-n', String(d.rank)), pill(d.tone === 'risk' ? 'Rủi ro' : 'Cơ hội', d.tone === 'risk' ? 'bad' : 'ok'));
+    const links = el('div', 'rp-links');
+    String(d.insights).split(/\s+/).filter(Boolean).forEach((id) => {
+      const b = el('button', 'rp-btn', 'Xem ' + id + ' →'); b.type = 'button';
+      b.addEventListener('click', () => goInsight(id));
+      links.append(b);
+    });
+    c.append(top, el('h3', null, d.title), el('p', null, d.body), links);
+    return c;
+  }));
+}
+const LVL = { 'Cao': 'ok', 'Trung bình': 'warn', 'Thấp': '' };
+function drawActions() {
+  const body = document.querySelector('#actTable tbody');
+  const r = dash.data('actions');
+  if (r.status !== 'ok') { body.replaceChildren(); return; }
+  body.replaceChildren(...r.data.slice().sort((a, b) => a.rank - b.rank).map((d) => {
+    const tr = el('tr');
+    const imp = el('td'); imp.append(pill(d.impact, LVL[d.impact]));
+    const eff = el('td'); eff.append(pill(d.effort, d.effort === 'Thấp' ? 'ok' : d.effort === 'Cao' ? 'bad' : ''));
+    const ins = el('td');
+    String(d.insights).split(/\s+/).filter(Boolean).forEach((id) => {
+      const b = el('button', 'rp-btn', id); b.type = 'button'; b.addEventListener('click', () => goInsight(id)); ins.append(b, document.createTextNode(' '));
+    });
+    tr.append(el('td', 'num', String(d.rank)), el('td', 'w', d.action), imp, eff, el('td', 'w', d.measure), ins);
+    return tr;
+  }));
+}
+
+/* ---- Insights ---- */
+let filterTheme = 'Tất cả';
+let filterConf = 'Tất cả';
+const CONF = { 'trung bình': 'ok', 'đo lường': 'run', 'thấp': 'warn', 'cao': 'ok' };
+function chips(box, values, current, onPick) {
+  const keep = box.querySelector('.lbl');
+  box.replaceChildren(keep, ...values.map((v) => {
+    const b = el('button', 'rp-chip', v); b.type = 'button';
+    b.setAttribute('aria-pressed', String(v === current));
+    b.addEventListener('click', () => onPick(v));
+    return b;
+  }));
+}
+function drawInsights() {
+  const box = document.getElementById('insList');
+  const r = dash.data('insights');
+  if (r.status !== 'ok') { if (r.status === 'error') fail(box); else box.replaceChildren(); return; }
+  const rows = r.data;
+  const themes = ['Tất cả', ...Array.from(new Set(rows.map((d) => d.theme).filter(Boolean)))];
+  chips(document.getElementById('themeFilter'), themes, filterTheme, (v) => { filterTheme = v; drawInsights(); });
+  chips(document.getElementById('confFilter'), ['Tất cả', 'trung bình', 'đo lường', 'thấp'], filterConf, (v) => { filterConf = v; drawInsights(); });
+  const max = d3.max(rows, (d) => d.evidence_reviewed) || 1;
+  const shown = rows.filter((d) => (filterTheme === 'Tất cả' || d.theme === filterTheme) && (filterConf === 'Tất cả' || d.confidence === filterConf));
+  const kids = [];
+  let lastTheme = null;
+  shown.forEach((d) => {
+    if (d.theme !== lastTheme) { kids.push(el('div', 'rp-theme', d.theme || 'Khác')); lastTheme = d.theme; }
+    const item = el('div', 'rp-item'); item.id = 'ins-' + d.id;
+    const open = openRows.has(d.id);
+    const btn = el('button', 'rp-row'); btn.type = 'button';
+    btn.setAttribute('aria-expanded', String(open));
+    btn.setAttribute('aria-controls', 'det-' + d.id);
+    const mid = el('div');
+    mid.append(el('div', 'rp-stmt', d.insight));
+    const meta = el('div', 'rp-meta');
+    meta.append(pill(d.who), pill('Tin cậy ' + d.confidence, CONF[d.confidence]));
+    mid.append(meta);
+    const side = el('div', 'rp-side');
+    side.append(el('span', null, `${intf(d.evidence_reviewed)} evidence · ${d.sources_reviewed} nguồn`));
+    const bar = el('div', 'rp-bar'); const fillb = el('span');
+    fillb.style.width = (100 * d.evidence_reviewed / max) + '%';
+    fillb.style.background = d.confidence === 'thấp' ? C().muted : C().a;
+    bar.append(fillb); side.append(bar);
+    side.append(el('span', null, open ? 'Thu gọn ▴' : 'Chi tiết ▾'));
+    btn.append(el('span', 'rp-id', d.id), mid, side);
+    btn.addEventListener('click', () => { if (openRows.has(d.id)) openRows.delete(d.id); else openRows.add(d.id); drawInsights(); });
+    item.append(btn);
+    if (open) {
+      const det = el('div', 'rp-detail'); det.id = 'det-' + d.id;
+      const a = el('div'); a.append(el('h4', null, 'Làm gì cho Vexere'), el('p', null, d.action));
+      const fit = el('div'); fit.append(el('h4', null, 'Mức gắn với Vexere'), el('p', null, d.vexere_fit));
+      const q = el('div'); q.append(el('h4', null, 'Khách nói gì'));
+      (d.quotes || []).forEach((x) => {
+        const bq = el('blockquote', 'rp-q');
+        bq.append(el('q', null, x.quote));
+        if (x.summary_vi) bq.append(el('span', null, x.summary_vi));
+        const code = el('code', null, x.ev_id); const s = el('span'); s.append(code); bq.append(s);
+        q.append(bq);
+      });
+      const cn = el('div'); cn.append(el('h4', null, 'Phản biện'), el('p', null, d.counter || '—'));
+      if (d.note) cn.append(el('p', 'rp-note', d.note));
+      const src = el('div'); src.append(el('h4', null, 'Nguồn'), el('p', 'rp-note', (d.source_list || []).join(' · ')));
+      det.append(q, a, fit, cn, src);
+      item.append(det);
+    }
+    kids.push(item);
+  });
+  if (!shown.length) kids.push(el('div', 'rp-fail', 'Không có insight khớp bộ lọc'));
+  box.replaceChildren(...kids);
+}
+
+/* ---- Compete ---- */
+function bars(box, rows, label, segs, total) {
+  const max = total || d3.max(rows, (r) => d3.sum(segs, (s) => r[s.k])) || 1;
+  box.replaceChildren(...rows.map((r) => {
+    const row = el('div', 'rp-brow');
+    const st = el('div', 'rp-stack');
+    segs.forEach((s) => { const sp = el('span'); sp.style.width = (100 * (r[s.k] || 0) / max) + '%'; sp.style.background = s.c; sp.title = s.n + ': ' + intf(r[s.k] || 0); st.append(sp); });
+    row.append(el('span', null, r[label]), st, el('span', 'n', segs.map((s) => intf(r[s.k] || 0)).join(' · ')));
+    return row;
+  }));
+}
+function drawAI() {
+  const c = C();
+  document.getElementById('lgV').style.background = c.a;
+  document.getElementById('lgD').style.background = c.muted;
+  const b = document.getElementById('aiBars');
+  const r = dash.data('ai_engines');
+  if (r.status === 'ok') {
+    b.replaceChildren(...r.data.flatMap((d) => {
+      const g = el('div', 'rp-bars');
+      [['vexere_mentioned', 'Vexere', c.a], ['dsvn_first', 'dsvn.vn #1', c.muted]].forEach(([k, n, col]) => {
+        const row = el('div', 'rp-brow');
+        const st = el('div', 'rp-stack'); const sp = el('span'); sp.style.width = (100 * d[k] / d.runs) + '%'; sp.style.background = col; st.append(sp);
+        row.append(el('span', null, k === 'vexere_mentioned' ? d.engine : ''), st, el('span', 'n', `${d[k]}/${d.runs} ${n}`));
+        g.append(row);
+      });
+      return [g];
+    }));
+  } else if (r.status === 'error') fail(b);
+
+  const m = document.getElementById('aiMatrix');
+  const tip = document.getElementById('aiTip');
+  const rr = dash.data('ai_runs');
+  if (rr.status !== 'ok') { if (rr.status === 'error') fail(m); return; }
+  const engines = Array.from(new Set(rr.data.map((d) => d.engine)));
+  const pids = Array.from(new Set(rr.data.map((d) => d.prompt_id))).sort();
+  const kids = [el('div', 'h', '')].concat(pids.map((p) => el('div', 'h', p)));
+  engines.forEach((eng) => {
+    kids.push(el('div', 'r', eng));
+    pids.forEach((p) => {
+      const d = rr.data.find((x) => x.engine === eng && x.prompt_id === p);
+      const cell = el('div', 'c', d && d.vexere_rank ? String(d.vexere_rank) : '');
+      cell.tabIndex = 0;
+      if (d && d.vexere_rank) {
+        cell.style.background = c.a;
+        cell.style.opacity = String(d.vexere_rank === 1 ? 1 : d.vexere_rank <= 3 ? 0.7 : 0.4);
+        cell.style.color = 'var(--color-bg)'; cell.style.borderColor = 'transparent';
+      }
+      const show = () => {
+        if (!d) return;
+        tip.replaceChildren(el('div', 'd', `${eng} · ${p}`), el('div', null, d.prompt),
+          el('div', null, `Đứng đầu: ${d.top1 || '—'}`), el('div', null, d.vexere_rank ? `Vexere hạng ${d.vexere_rank}` : 'Không nhắc Vexere'),
+          el('div', 'd', d.vexere_cited ? 'Có trích dẫn vexere.com' : ''));
+        tip.hidden = false;
+        const host = tip.parentElement.getBoundingClientRect(); const cr = cell.getBoundingClientRect();
+        tip.style.left = Math.max(0, Math.min(cr.left - host.left - 60, host.width - 290)) + 'px';
+        tip.style.top = (cr.bottom - host.top + 6) + 'px';
+      };
+      cell.addEventListener('mouseenter', show); cell.addEventListener('focus', show);
+      cell.addEventListener('mouseleave', () => { tip.hidden = true; }); cell.addEventListener('blur', () => { tip.hidden = true; });
+      kids.push(cell);
+    });
+  });
+  m.replaceChildren(...kids);
+}
+function drawChannels() {
+  const c = C();
+  document.getElementById('lgP').style.background = c.ok;
+  document.getElementById('lgN0').style.background = c.muted;
+  document.getElementById('lgNg').style.background = c.bad;
+  const box = document.getElementById('chBars');
+  const r = dash.data('channels');
+  if (r.status !== 'ok') { if (r.status === 'error') fail(box); return; }
+  bars(box, r.data, 'channel', [{ k: 'positive', c: c.ok, n: 'Tích cực' }, { k: 'neutral', c: c.muted, n: 'Trung tính' }, { k: 'negative', c: c.bad, n: 'Tiêu cực' }]);
+}
+
+/* ---- Markets ---- */
+function drawMarkets() {
+  const c = C();
+  document.getElementById('lgH').style.background = c.a;
+  document.getElementById('lgM').style.background = c.b;
+  const box = document.getElementById('mktBars');
+  const r = dash.data('markets');
+  if (r.status !== 'ok') { if (r.status === 'error') fail(box); return; }
+  bars(box, r.data.filter((d) => d.code !== 'unknown' && d.evidence > 0), 'market', [{ k: 'evidence_high', c: c.a, n: 'Chắc chắn' }, { k: 'evidence_medium', c: c.b, n: 'Suy luận' }]);
+}
+const STAGE_VI = { inspire: 'Cảm hứng', plan: 'Lên kế hoạch', compare: 'So sánh', book: 'Đặt vé', pre_trip: 'Trước chuyến', station: 'Tại ga', onboard: 'Trên tàu', last_mile: 'Chặng cuối', post_trip: 'Sau chuyến' };
+const SEGS = ['Nước ngoài', 'Expat', 'Khách Việt', 'Chưa rõ'];
+function drawHeat() {
+  const box = document.getElementById('heat');
+  const r = dash.data('journey');
+  if (r.status !== 'ok') { if (r.status === 'error') fail(box); return; }
+  const max = d3.max(r.data, (d) => d.evidence) || 1;
+  const kids = [el('div', 'h', '')].concat(SEGS.map((s) => el('div', 'h', s)));
+  Object.keys(STAGE_VI).forEach((st) => {
+    kids.push(el('div', 'r', STAGE_VI[st]));
+    SEGS.forEach((sg) => {
+      const d = r.data.find((x) => x.stage === st && x.segment === sg);
+      const v = d ? d.evidence : 0;
+      const cell = el('div', 'c', v ? intf(v) : '');
+      if (v) { cell.style.background = dash.colors[0]; cell.style.opacity = String(0.2 + 0.8 * v / max); cell.style.color = 'var(--color-bg)'; cell.style.borderColor = 'transparent'; }
+      kids.push(cell);
+    });
+  });
+  box.replaceChildren(...kids);
+}
+function drawTips() {
+  const body = document.querySelector('#tipTable tbody');
+  const r = dash.data('tips');
+  if (r.status !== 'ok') { body.replaceChildren(); return; }
+  body.replaceChildren(...r.data.map((d) => {
+    const tr = el('tr'); const ev = el('td'); ev.append(el('code', null, d.ev));
+    tr.append(el('td', 'w', d.tip), el('td', null, d.use), ev); return tr;
+  }));
+}
+
+/* ---- Method ---- */
+const LEVEL = { none: ['Chưa có', ''], low: ['Thấp', 'warn'], medium: ['Đạt ngưỡng', 'ok'] };
+const STATUS = { open: ['Chờ nhận', ''], in_progress: ['Đang chạy', 'run'], submitted: ['Chờ review', 'warn'], reviewed: ['Đã duyệt', 'ok'], rework: ['Làm lại', 'bad'] };
+function drawMethod() {
+  const cov = dash.data('coverage'); const cb = document.querySelector('#covTable tbody');
+  if (cov.status === 'ok') cb.replaceChildren(...cov.data.map((d) => {
+    const tr = el('tr'); const lv = el('td'); const [t, c] = LEVEL[d.level] || [d.level, '']; lv.append(pill(t, c));
+    tr.append(el('td', null, d.q_id), el('td', 'w', d.question), el('td', null, d.priority), el('td', 'num', intf(d.evidence)), el('td', 'num', intf(d.sources)), el('td', 'num', intf(d.authors)), lv); return tr;
+  }));
+  const src = dash.data('sources'); const sb = document.querySelector('#srcTable tbody');
+  if (src.status === 'ok') sb.replaceChildren(...src.data.map((d) => {
+    const tr = el('tr'); const st = el('td'); st.append(pill(d.state, d.state === 'đã duyệt' ? 'ok' : d.state === 'đang chạy' ? 'run' : ''));
+    tr.append(el('td', null, d.source), st, el('td', 'num', intf(d.raw)), el('td', 'num', intf(d.evidence))); return tr;
+  }));
+  const tk = dash.data('tasks'); const tb = document.querySelector('#taskTable tbody');
+  if (tk.status === 'ok') tb.replaceChildren(...tk.data.map((d) => {
+    const tr = el('tr'); const st = el('td'); const [t, c] = STATUS[d.status] || [d.status, '']; st.append(pill(t, c));
+    tr.append(el('td', null, d.task_id), el('td', 'w', d.title), st, el('td', 'num', intf(d.evidence)), el('td', 'num', d.error_rate == null ? '' : pct(d.error_rate))); return tr;
+  }));
+  drawTrend();
+}
+function drawTrend() {
+  const box = document.getElementById('trend');
+  const r = dash.data('history');
+  if (r.status !== 'ok') { if (r.status === 'error') fail(box); return; }
+  const data = r.data.map((d) => ({ ...d, t: new Date(d.date) }));
+  const W = box.clientWidth || 320, H = 180, m = { t: 10, r: 16, b: 24, l: 40 };
+  const x = d3.scaleUtc(data.length > 1 ? d3.extent(data, (d) => d.t) : [d3.utcDay.offset(data[0].t, -2), d3.utcDay.offset(data[0].t, 2)], [m.l, W - m.r]);
+  const y = d3.scaleLinear([0, 1], [H - m.b, m.t]);
+  const svg = d3.create('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Độ phủ tổng theo ngày');
+  svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(4).tickFormat(pct).tickSize(-(W - m.l - m.r)))
+    .attr('font-size', null).attr('font-family', null)
+    .call((g) => g.select('.domain').remove())
+    .call((g) => g.selectAll('line').attr('stroke', 'var(--cds-chart-grid)'))
+    .call((g) => g.selectAll('text').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)'));
+  svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.min(5, data.length)).tickFormat(d3.utcFormat('%d/%m')))
+    .attr('font-size', null).attr('font-family', null)
+    .call((g) => g.select('.domain').attr('stroke', 'var(--cds-chart-axis)'))
+    .call((g) => g.selectAll('line').attr('stroke', 'var(--cds-chart-axis)'))
+    .call((g) => g.selectAll('text').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)'));
+  svg.append('path').datum(data).attr('fill', 'none').attr('stroke', dash.colors[0]).attr('stroke-width', 2).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round')
+    .attr('d', d3.line().x((d) => x(d.t)).y((d) => y(d.coverage_score)));
+  svg.append('g').selectAll('circle').data(data).join('circle').attr('cx', (d) => x(d.t)).attr('cy', (d) => y(d.coverage_score)).attr('r', 3.5).attr('fill', dash.colors[0])
+    .append('title').text((d) => `${d3.utcFormat('%d/%m')(d.t)}: ${pct(d.coverage_score)}`);
+  box.replaceChildren(svg.node());
+}
+
+/* ---- Method: client report ---- */
+function fillTable(id, src, cols) {
+  const body = document.querySelector('#' + id + ' tbody');
+  const r = dash.data(src);
+  if (r.status !== 'ok') { body.replaceChildren(); return null; }
+  body.replaceChildren(...r.data.map((d) => { const tr = el('tr'); cols.forEach(([k, cls, fmt]) => tr.append(el('td', cls || null, fmt ? fmt(d[k], d) : (d[k] == null ? '' : String(d[k]))))); return tr; }));
+  return r.data;
+}
+function drawSteps() {
+  const cov = dash.data('coverage');
+  const fn = dash.data('method_funnel');
+  document.querySelectorAll('#mSteps .v').forEach((n) => {
+    if (n.dataset.calc === 'count') { n.textContent = cov.status === 'ok' ? intf(cov.data.length) : '—'; return; }
+    if (fn.status !== 'ok') { n.textContent = '—'; return; }
+    const row = fn.data.find((d) => d.step === n.dataset.step);
+    n.textContent = row ? intf(row.value) : '—';
+  });
+}
+function drawFunnel() {
+  const box = document.getElementById('funnel');
+  const r = dash.data('method_funnel');
+  if (r.status !== 'ok') { if (r.status === 'error') fail(box); return; }
+  const rows = r.data.filter((d) => d.step !== 'Nguồn đã thử' && d.step !== 'Insight cuối');
+  const max = d3.max(rows, (d) => d.value) || 1;
+  const x = d3.scaleSqrt([0, max], [0, 100]);
+  const kids = r.data.map((d, i) => {
+    const row = el('div', 'rp-frow');
+    const lab = el('div', 'lab'); lab.append(el('b', null, d.step), el('span', null, d.note));
+    const bar = el('div', 'rp-fbar');
+    const inBars = rows.includes(d);
+    if (inBars) {
+      const prev = rows[rows.indexOf(d) - 1];
+      const i2 = el('i'); i2.style.width = `calc(${x(d.value)}% - 5rem)`; i2.style.background = dash.colors[0];
+      i2.style.opacity = String(1 - 0.12 * rows.indexOf(d));
+      const ratio = !prev ? '' : d.value <= prev.value ? ` · giữ ${pct(d.value / prev.value)}` : ` · ${d3.format('.1f')(d.value / prev.value).replace('.', ',')} ý mỗi bài`;
+      bar.append(i2, el('span', null, intf(d.value) + ratio));
+    } else {
+      bar.append(el('span', 'rp-kpi-v', intf(d.value)));
+    }
+    row.append(lab, bar);
+    return row;
+  });
+  box.replaceChildren(...kids);
+}
+function drawWalk() {
+  const c = C();
+  document.getElementById('lgWn').style.background = c.bad;
+  document.getElementById('lgWp').style.background = c.ok;
+  const ins = dash.data('insights');
+  const qBox = document.getElementById('wkQuotes'); const fBox = document.getElementById('wkFinal');
+  if (ins.status === 'ok') {
+    const f = ins.data.find((d) => d.id === 'F04');
+    if (f) {
+      qBox.replaceChildren(...(f.quotes || []).map((x) => {
+        const bq = el('blockquote', 'rp-q'); bq.append(el('q', null, x.quote));
+        if (x.summary_vi) bq.append(el('span', null, x.summary_vi));
+        const s2 = el('span'); s2.append(el('code', null, x.ev_id)); bq.append(s2); return bq;
+      }));
+      fBox.replaceChildren(document.createTextNode(f.insight), el('span', null, `${intf(f.evidence_reviewed)} evidence · ${intf(f.authors_reviewed)} người viết · ${f.sources_reviewed} nguồn · tin cậy ${f.confidence}`));
+    }
+  } else if (ins.status === 'error') { fail(qBox); }
+  const ob = document.getElementById('wkOps');
+  const r = dash.data('walk_ops');
+  if (r.status === 'ok') {
+    const max = d3.max(r.data, (d) => Math.max(d.positive, d.negative)) || 1;
+    ob.replaceChildren(...r.data.map((d) => {
+      const row = el('div', 'rp-div');
+      const ng = el('div', 'neg'); const ni = el('i'); ni.style.width = (100 * d.negative / max) + '%'; ni.style.background = c.bad; ni.title = `Tiêu cực: ${d.negative}`; ng.append(ni);
+      const ps = el('div', 'pos'); const pi = el('i'); pi.style.width = (100 * d.positive / max) + '%'; pi.style.background = c.ok; pi.title = `Tích cực: ${d.positive}`; ps.append(pi);
+      row.append(el('span', null, d.operator), ng, ps, el('span', 'n', `${d.negative} / ${d.positive}`));
+      return row;
+    }));
+  } else if (r.status === 'error') fail(ob);
+  fillTable('wkClaims', 'walk_claims', [['claim', 'w'], ['evidence', 'num', intf], ['authors', 'num', intf], ['how', 'w']]);
+}
+function drawTri() {
+  const box = document.getElementById('tri');
+  const r = dash.data('triangulation');
+  if (r.status !== 'ok') { if (r.status === 'error') fail(box); return; }
+  const groups = Array.from(new Set(r.data.map((d) => d.group)));
+  const SHORT = { 'Diễn đàn': 'Diễn đàn', 'Review': 'Review', 'Vlog': 'Vlog, blog', 'Nguồn định hình': 'Định hình nhận thức', 'Phía cung': 'Phía cung' };
+  const short = groups.map((g) => { const k = Object.keys(SHORT).find((x) => g.startsWith(x)); return k ? SHORT[k] : g; });
+  const ids = Array.from(new Set(r.data.map((d) => d.insight))).sort();
+  const max = d3.max(r.data, (d) => d.evidence) || 1;
+  const kids = [el('div', 'h', '')].concat(short.map((g) => el('div', 'h', g)));
+  ids.forEach((id) => {
+    const rh = el('div', 'r'); const b = el('button', null, id); b.type = 'button'; b.addEventListener('click', () => goInsight(id)); rh.append(b); kids.push(rh);
+    groups.forEach((g) => {
+      const d = r.data.find((x) => x.insight === id && x.group === g);
+      const v = d ? d.evidence : 0;
+      const cell = el('div', 'c', v ? intf(v) : '');
+      if (v) { cell.style.background = dash.colors[0]; cell.style.opacity = String(0.25 + 0.75 * Math.sqrt(v / max)); cell.style.color = 'var(--color-bg)'; cell.style.borderColor = 'transparent'; }
+      cell.title = `${id} · ${g}: ${v}`;
+      kids.push(cell);
+    });
+  });
+  box.replaceChildren(...kids);
+}
+function drawQA() {
+  const data = fillTable('qaTable', 'method_qa', [['task_id'], ['title', 'w'], ['evidence', 'num', intf], ['checked', 'num', intf], ['errors', 'num', intf],
+    ['error_rate', 'num', (v) => (v == null ? '' : pct(v))], ['rework_rounds', 'num', intf]]);
+  const foot = document.querySelector('#qaTable tfoot');
+  if (!data) { foot.replaceChildren(); return; }
+  const ev = d3.sum(data, (d) => d.evidence), ck = d3.sum(data, (d) => d.checked), er = d3.sum(data, (d) => d.errors), rw = d3.sum(data, (d) => d.rework_rounds);
+  const tr = el('tr');
+  tr.append(el('td', null, 'Tổng'), el('td', null, `${pct(ck / ev)} evidence được kiểm tay`), el('td', 'num', intf(ev)), el('td', 'num', intf(ck)), el('td', 'num', intf(er)), el('td', 'num', pct(er / ck)), el('td', 'num', intf(rw)));
+  foot.replaceChildren(tr);
+}
+function drawMethodReport() {
+  drawSteps(); drawFunnel();
+  fillTable('ruleTable', 'method_rules', [['rule'], ['logic', 'w'], ['purpose', 'w'], ['validation', 'w']]);
+  fillTable('cbTable', 'codebook', [['dimension'], ['codes', 'num', intf], ['used', 'num', intf], ['example', 'w']]);
+  fillTable('rejTable', 'rejected', [['claim', 'w'], ['found', 'w'], ['decision', 'w']]);
+  fillTable('msrcTable', 'method_sources', [['group'], ['sources', 'w'], ['raw', 'num', intf], ['evidence', 'num', intf], ['authors', 'num', intf], ['bias', 'w']]);
+  drawWalk(); drawTri(); drawQA();
+}
+document.getElementById('wkGo').addEventListener('click', () => goInsight('F04'));
+document.getElementById('m-app').addEventListener('toggle', (e) => { if (e.target.open) drawTrend(); });
+
+function draw() {
+  drawScope();
+  if (tab === 'overview') { drawTakeaways(); drawActions(); }
+  if (tab === 'insights') drawInsights();
+  if (tab === 'compete') { drawAI(); drawChannels(); }
+  if (tab === 'markets') { drawMarkets(); drawHeat(); drawTips(); }
+  if (tab === 'method') { drawMethodReport(); drawMethod(); }
+}
+dash.onData(draw);
+
+const initial = location.hash.slice(1);
+if (TABS.includes(initial)) showTab(initial);
+else if (/^F\d{2}$/.test(initial)) goInsight(initial);
+</script>

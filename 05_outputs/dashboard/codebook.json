@@ -1,0 +1,44 @@
+[
+ {
+  "dimension": "Loại ý (type)",
+  "codes": 9,
+  "used": 9,
+  "example": "pain, barrier, question, tip, workaround, comparison, praise, need, signal"
+ },
+ {
+  "dimension": "Bước hành trình (stage)",
+  "codes": 10,
+  "used": 10,
+  "example": "plan → compare → book → pre_trip → station → onboard → last_mile → post_trip"
+ },
+ {
+  "dimension": "Chủ đề (topic)",
+  "codes": 51,
+  "used": 49,
+  "example": "class_cabin, seat_selection, trust_scam, last_mile_transport, noise_sleep..."
+ },
+ {
+  "dimension": "Nhóm khách (segment)",
+  "codes": 9,
+  "used": 6,
+  "example": "intl_family, intl_couple, intl_group_tour, vn_domestic, unknown"
+ },
+ {
+  "dimension": "Thị trường (market)",
+  "codes": 10,
+  "used": 6,
+  "example": "kr, in, cn, tw_hk, western, vn, unknown"
+ },
+ {
+  "dimension": "Thực thể (kênh, hãng tàu)",
+  "codes": 64,
+  "used": 43,
+  "example": "dsvn, baolau, twelve_go, vexere, chapa_express, lotus..."
+ },
+ {
+  "dimension": "Sắc thái (sentiment)",
+  "codes": 3,
+  "used": 3,
+  "example": "-1 tiêu cực, 0 trung tính, 1 tích cực"
+ }
+]

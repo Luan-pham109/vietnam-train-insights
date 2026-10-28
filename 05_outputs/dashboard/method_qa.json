@@ -1,0 +1,142 @@
+[
+ {
+  "task_id": "T-001",
+  "title": "PILOT Reddit - hiệu chỉnh extraction",
+  "evidence": 100,
+  "checked": 30,
+  "errors": 2,
+  "error_rate": 0.067,
+  "rework_rounds": 0,
+  "status": "reviewed"
+ },
+ {
+  "task_id": "T-002",
+  "title": "TripAdvisor forum - thread về tàu",
+  "evidence": 292,
+  "checked": 18,
+  "errors": 2,
+  "error_rate": 0.111,
+  "rework_rounds": 2,
+  "status": "reviewed"
+ },
+ {
+  "task_id": "T-003",
+  "title": "Google Maps review các ga chính",
+  "evidence": 330,
+  "checked": 20,
+  "errors": 1,
+  "error_rate": 0.05,
+  "rework_rounds": 1,
+  "status": "reviewed"
+ },
+ {
+  "task_id": "T-004",
+  "title": "App store review - kênh bán vé tàu",
+  "evidence": 37,
+  "checked": 10,
+  "errors": 0,
+  "error_rate": 0.0,
+  "rework_rounds": 0,
+  "status": "reviewed"
+ },
+ {
+  "task_id": "T-005",
+  "title": "Chuyển dữ liệu FB radar hiện có sang evidence",
+  "evidence": 55,
+  "checked": 10,
+  "errors": 0,
+  "error_rate": 0.0,
+  "rework_rounds": 2,
+  "status": "reviewed"
+ },
+ {
+  "task_id": "T-006",
+  "title": "Khách Ấn Độ - nhu cầu và barrier khi đi tàu VN",
+  "evidence": 24,
+  "checked": 24,
+  "errors": 2,
+  "error_rate": 0.083,
+  "rework_rounds": 0,
+  "status": "reviewed"
+ },
+ {
+  "task_id": "T-007",
+  "title": "Khách Trung Quốc - tàu nội địa VN và tàu liên vận",
+  "evidence": 7,
+  "checked": 7,
+  "errors": 0,
+  "error_rate": 0.0,
+  "rework_rounds": 0,
+  "status": "reviewed"
+ },
+ {
+  "task_id": "T-008",
+  "title": "Khách Hàn Quốc - có đi tàu không, đi tuyến nào, vì sao",
+  "evidence": 51,
+  "checked": 20,
+  "errors": 2,
+  "error_rate": 0.1,
+  "rework_rounds": 0,
+  "status": "reviewed"
+ },
+ {
+  "task_id": "T-009",
+  "title": "AI engine và Google gợi ý kênh nào khi khách hỏi cách đặt vé tàu VN",
+  "evidence": 119,
+  "checked": 25,
+  "errors": 0,
+  "error_rate": 0.0,
+  "rework_rounds": 1,
+  "status": "reviewed"
+ },
+ {
+  "task_id": "T-010",
+  "title": "YouTube vlog tàu VN tiếng Anh: transcript + comment",
+  "evidence": 99,
+  "checked": 21,
+  "errors": 1,
+  "error_rate": 0.048,
+  "rework_rounds": 0,
+  "status": "reviewed"
+ },
+ {
+  "task_id": "T-011",
+  "title": "Snapshot seat61.com trang Vietnam",
+  "evidence": 11,
+  "checked": 11,
+  "errors": 1,
+  "error_rate": 0.091,
+  "rework_rounds": 0,
+  "status": "reviewed"
+ },
+ {
+  "task_id": "T-012",
+  "title": "TripAdvisor review tàu du lịch tư nhân",
+  "evidence": 89,
+  "checked": 49,
+  "errors": 0,
+  "error_rate": 0.0,
+  "rework_rounds": 1,
+  "status": "reviewed"
+ },
+ {
+  "task_id": "T-013",
+  "title": "Trang bán vé tàu VN của đối thủ: messaging, phí, thanh toán, trust",
+  "evidence": 61,
+  "checked": 61,
+  "errors": 1,
+  "error_rate": 0.016,
+  "rework_rounds": 0,
+  "status": "reviewed"
+ },
+ {
+  "task_id": "T-014",
+  "title": "TikTok review tàu/khoang VN (EN + VI)",
+  "evidence": 0,
+  "checked": 0,
+  "errors": 0,
+  "error_rate": null,
+  "rework_rounds": 0,
+  "status": "reviewed"
+ }
+]

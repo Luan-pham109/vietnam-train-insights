@@ -1,28 +1,217 @@
 {
  "summary": [
-  {"rank": 1, "title": "AI engine chưa gọi tên Vexere", "body": "AI gợi ý dsvn.vn đầu tiên ở 20/30 lượt hỏi; Vexere được nhắc 11/30, riêng ChatGPT 1/10 - dù vexere.com là domain AI trích dẫn nhiều nhất.", "insights": "F02", "tone": "risk"},
-  {"rank": 2, "title": "Chọn khoang, giường là nỗi lo số 1", "body": "Khoang 4 riêng, giường dưới, cả nhóm cùng khoang, tàu mới hay cũ - trùng đúng hạng mục UI phân loại tàu Q4.", "insights": "F03", "tone": "opportunity"},
-  {"rank": 3, "title": "Tàu tư nhân: đừng bán lời hứa ngủ ngon", "body": "Được khen đồ ăn, nhân viên; bị chê ồn, giá, bị đổi cabin. 2/3 ca đổi cabin là Chapa Express - hãng Vexere onboard đầu tiên.", "insights": "F04 F05", "tone": "risk"},
-  {"rank": 4, "title": "Trust đứt ở site giả và cửa ga", "body": "Site giả dạng DSVN bán gấp nhiều lần giá ga; ra khỏi ga gặp chèo kéo, giả tài xế, thu phí ngầm.", "insights": "F01 F08 F09", "tone": "risk"},
-  {"rank": 5, "title": "Khách Hàn đã tự tìm tới Vexere", "body": "3 bài Naver kể đặt vé tàu qua app Vexere, cạnh Klook và MyRealTrip - insight trỏ thẳng vào Vexere rõ nhất.", "insights": "F11", "tone": "opportunity"}
+  {
+   "rank": 1,
+   "title": "AI engine chưa gọi tên Vexere",
+   "body": "AI gợi ý dsvn.vn đầu tiên ở 20/30 lượt hỏi; Vexere được nhắc 11/30, riêng ChatGPT 1/10 - dù vexere.com là domain AI trích dẫn nhiều nhất.",
+   "insights": "F02",
+   "tone": "risk"
+  },
+  {
+   "rank": 2,
+   "title": "Chọn khoang, giường là nỗi lo số 1",
+   "body": "Khoang 4 riêng, giường dưới, cả nhóm cùng khoang, tàu mới hay cũ - trùng đúng hạng mục UI phân loại tàu Q4.",
+   "insights": "F03",
+   "tone": "opportunity"
+  },
+  {
+   "rank": 3,
+   "title": "Tàu tư nhân: đừng bán lời hứa ngủ ngon",
+   "body": "Được khen đồ ăn, nhân viên; bị chê ồn, giá, bị đổi cabin. 2/3 ca đổi cabin là Chapa Express - hãng Vexere onboard đầu tiên.",
+   "insights": "F04 F05",
+   "tone": "risk"
+  },
+  {
+   "rank": 4,
+   "title": "Trust đứt ở site giả và cửa ga",
+   "body": "Site giả dạng DSVN bán gấp nhiều lần giá ga; ra khỏi ga gặp chèo kéo, giả tài xế, thu phí ngầm.",
+   "insights": "F01 F08 F09",
+   "tone": "risk"
+  },
+  {
+   "rank": 5,
+   "title": "Khách Hàn đã tự tìm tới Vexere",
+   "body": "3 bài Naver kể đặt vé tàu qua app Vexere, cạnh Klook và MyRealTrip - insight trỏ thẳng vào Vexere rõ nhất.",
+   "insights": "F11",
+   "tone": "opportunity"
+  }
  ],
  "actions": [
-  {"rank": 1, "action": "Baseline + nội dung AEO nêu tên Vexere, ưu tiên ChatGPT", "insights": "F02", "impact": "Cao", "effort": "Thấp", "measure": "Vexere x/30 lượt hỏi AI, chạy 2 lần/tháng"},
-  {"rank": 2, "action": "Đưa tàu tư nhân lên trang EN cùng lúc onboard Chapa; chốt cam kết đúng cabin đã đặt", "insights": "F04 F14", "impact": "Cao", "effort": "Trung bình", "measure": "CVR trang tàu tư nhân, khiếu nại đổi cabin"},
-  {"rank": 3, "action": "UI chọn khoang/giường + nhãn tàu mới/cũ", "insights": "F03", "impact": "Cao", "effort": "Trung bình", "measure": "CVR bước chọn chỗ, field abandonment (Clarity)"},
-  {"rank": 4, "action": "Kiểm ô SĐT quốc tế + thẻ quốc tế trong flow EN", "insights": "F01", "impact": "Trung bình", "effort": "Thấp", "measure": "Drop-off bước thông tin theo locale"},
-  {"rank": 5, "action": "Trạng thái 'chưa mở bán - mở ngày X' thay cho 'hết vé'", "insights": "F06", "impact": "Trung bình", "effort": "Thấp", "measure": "Search không có chuyến trong cửa sổ 30-60 ngày"},
-  {"rank": 6, "action": "Shuttle Lào Cai → Sa Pa đặt trước + pre-trip guide theo ga", "insights": "F08 F09", "impact": "Trung bình", "effort": "Trung bình", "measure": "Attach rate add-on"},
-  {"rank": 7, "action": "Nội dung tiếng Hàn + kiểm booking khách Hàn", "insights": "F11", "impact": "Trung bình", "effort": "Thấp", "measure": "Booking Train theo quốc tịch Hàn"}
+  {
+   "rank": 1,
+   "action": "Baseline + nội dung AEO nêu tên Vexere, ưu tiên ChatGPT",
+   "insights": "F02",
+   "impact": "Cao",
+   "effort": "Thấp",
+   "measure": "Vexere x/30 lượt hỏi AI, chạy 2 lần/tháng"
+  },
+  {
+   "rank": 2,
+   "action": "Đưa tàu tư nhân lên trang EN cùng lúc onboard Chapa; chốt cam kết đúng cabin đã đặt",
+   "insights": "F04 F14",
+   "impact": "Cao",
+   "effort": "Trung bình",
+   "measure": "CVR trang tàu tư nhân, khiếu nại đổi cabin"
+  },
+  {
+   "rank": 3,
+   "action": "UI chọn khoang/giường + nhãn tàu mới/cũ",
+   "insights": "F03",
+   "impact": "Cao",
+   "effort": "Trung bình",
+   "measure": "CVR bước chọn chỗ, field abandonment (Clarity)"
+  },
+  {
+   "rank": 4,
+   "action": "Kiểm ô SĐT quốc tế + thẻ quốc tế trong flow EN",
+   "insights": "F01",
+   "impact": "Trung bình",
+   "effort": "Thấp",
+   "measure": "Drop-off bước thông tin theo locale"
+  },
+  {
+   "rank": 5,
+   "action": "Trạng thái 'chưa mở bán - mở ngày X' thay cho 'hết vé'",
+   "insights": "F06",
+   "impact": "Trung bình",
+   "effort": "Thấp",
+   "measure": "Search không có chuyến trong cửa sổ 30-60 ngày"
+  },
+  {
+   "rank": 6,
+   "action": "Shuttle Lào Cai → Sa Pa đặt trước + pre-trip guide theo ga",
+   "insights": "F08 F09",
+   "impact": "Trung bình",
+   "effort": "Trung bình",
+   "measure": "Attach rate add-on"
+  },
+  {
+   "rank": 7,
+   "action": "Nội dung tiếng Hàn + kiểm booking khách Hàn",
+   "insights": "F11",
+   "impact": "Trung bình",
+   "effort": "Thấp",
+   "measure": "Booking Train theo quốc tịch Hàn"
+  }
  ],
  "tips": [
-  {"tip": "Trả trên dsvn.vn bằng VNPay thì thẻ quốc tế chạy; thêm số 0 trước số điện thoại", "use": "FAQ, AEO", "ev": "reddit-20261026-0020-e02 · reddit-20261026-0020-e03"},
-  {"tip": "Đặt trọn khoang 4 để không bị người ghế cứng chiếm giường trống", "use": "UI chọn chỗ, content", "ev": "reddit-20261026-0022-e01"},
-  {"tip": "Chọn giường tầng 1 - tầng 2 chạm trần, chỉ nằm được", "use": "Nội dung tiếng Hàn", "ev": "tistory-20261027-0004-e01"},
-  {"tip": "Tàu số thấp (SE1-SE4) mới và sạch hơn tàu số cao", "use": "Nhãn chất lượng tàu", "ev": "reddit-20261026-0002-e04 · tripadvisor-20261026-0026-e05"},
-  {"tip": "Tàu dài mở bán 60 ngày, tàu ngắn khoảng 30 ngày; 'hết vé' có thể là chưa mở", "use": "Trạng thái chuyến, FAQ", "ev": "muse_fb_radar-20261026-0003-e03 · muse_fb_radar-20261026-0003-e02"},
-  {"tip": "Huế - Đà Nẵng: đi Nam → Bắc ngồi bên phải để ngắm biển", "use": "Trang tuyến, chọn chỗ", "ev": "muse_fb_radar-20261026-0005-e02"},
-  {"tip": "Lào Cai → Sa Pa: shuttle 55k/người, từ chối người chèo kéo, hoặc đặt xe trước", "use": "Add-on shuttle, pre-trip", "ev": "reddit-20261026-0010-e04 · muse_fb_radar-20261026-0017-e02"},
-  {"tip": "Dùng Grab ở ga để tránh hét giá", "use": "Pre-trip guide theo ga", "ev": "gmaps_station-20261026-0012-e02"}
+  {
+   "tip": "Trả trên dsvn.vn bằng VNPay thì thẻ quốc tế chạy; thêm số 0 trước số điện thoại",
+   "use": "FAQ, AEO",
+   "ev": "reddit-20261026-0020-e02 · reddit-20261026-0020-e03"
+  },
+  {
+   "tip": "Đặt trọn khoang 4 để không bị người ghế cứng chiếm giường trống",
+   "use": "UI chọn chỗ, content",
+   "ev": "reddit-20261026-0022-e01"
+  },
+  {
+   "tip": "Chọn giường tầng 1 - tầng 2 chạm trần, chỉ nằm được",
+   "use": "Nội dung tiếng Hàn",
+   "ev": "tistory-20261027-0004-e01"
+  },
+  {
+   "tip": "Tàu số thấp (SE1-SE4) mới và sạch hơn tàu số cao",
+   "use": "Nhãn chất lượng tàu",
+   "ev": "reddit-20261026-0002-e04 · tripadvisor-20261026-0026-e05"
+  },
+  {
+   "tip": "Tàu dài mở bán 60 ngày, tàu ngắn khoảng 30 ngày; 'hết vé' có thể là chưa mở",
+   "use": "Trạng thái chuyến, FAQ",
+   "ev": "muse_fb_radar-20261026-0003-e03 · muse_fb_radar-20261026-0003-e02"
+  },
+  {
+   "tip": "Huế - Đà Nẵng: đi Nam → Bắc ngồi bên phải để ngắm biển",
+   "use": "Trang tuyến, chọn chỗ",
+   "ev": "muse_fb_radar-20261026-0005-e02"
+  },
+  {
+   "tip": "Lào Cai → Sa Pa: shuttle 55k/người, từ chối người chèo kéo, hoặc đặt xe trước",
+   "use": "Add-on shuttle, pre-trip",
+   "ev": "reddit-20261026-0010-e04 · muse_fb_radar-20261026-0017-e02"
+  },
+  {
+   "tip": "Dùng Grab ở ga để tránh hét giá",
+   "use": "Pre-trip guide theo ga",
+   "ev": "gmaps_station-20261026-0012-e02"
+  }
+ ],
+ "method_rules": [
+  {
+   "rule": "Ngưỡng tin cậy trung bình",
+   "logic": "≥10 evidence, ≥3 nguồn khác nhau, ≥5 người viết khác nhau, chỉ tính task đã duyệt",
+   "purpose": "Không để 1 nguồn hay 1 người viết nhiều tạo ra insight",
+   "validation": "Áp dụng cho toàn bộ F01-F14"
+  },
+  {
+   "rule": "Tin cậy cao",
+   "logic": "Đạt mức trung bình và được data nội bộ Vexere xác nhận (funnel, booking, CS)",
+   "purpose": "Phân biệt điều khách nói với điều khách làm",
+   "validation": "Chưa insight nào đạt - cần kéo data nội bộ"
+  },
+  {
+   "rule": "Nguồn định hình nhận thức",
+   "logic": "AI engine, Seat61, trang đối thủ: đọc theo ảnh hưởng, ghi 'đo lường', không áp ngưỡng đếm",
+   "purpose": "Ít mẫu nhưng tác động lên hàng nghìn khách",
+   "validation": "F02, F14"
+  },
+  {
+   "rule": "Đếm người viết, không đếm bài",
+   "logic": "Mã hoá người viết bằng hash; 1 người viết nhiều ý vẫn chỉ tính 1 người",
+   "purpose": "Chống spam và người viết nhiều chiếm số",
+   "validation": "Áp dụng mọi chỉ số tác giả"
+  },
+  {
+   "rule": "Độ mới",
+   "logic": "Chỉ tính evidence không quá 18 tháng; bài cũ hơn chỉ làm bối cảnh",
+   "purpose": "Giá, chính sách, app thay đổi nhanh",
+   "validation": "Loại tự động khi tính"
+  },
+  {
+   "rule": "Suy luận nguồn gốc - ngôn ngữ",
+   "logic": "Viết tiếng Việt → khách Việt; tiếng Hàn/Trung/Hindi → thị trường tương ứng",
+   "purpose": "Giảm tỷ lệ 'chưa rõ' khách là ai",
+   "validation": "Spot-check 30/30 đúng (review tiếng Việt)"
+  },
+  {
+   "rule": "Suy luận nguồn gốc - người hỏi trên TripAdvisor",
+   "logic": "Người mở thread không tự nhận → khách nước ngoài, tin cậy trung bình",
+   "purpose": "Người hỏi gần như luôn là khách đang lên kế hoạch",
+   "validation": "Rà 26/26 câu, sai ước 4-8%"
+  },
+  {
+   "rule": "Insight riêng một thị trường",
+   "logic": "Chỉ dùng evidence có thị trường xác định chắc chắn (tự nhận, ngôn ngữ, nền tảng bản địa)",
+   "purpose": "Không gán nhầm insight khách Tây cho khách Hàn/Ấn",
+   "validation": "F11, F12"
+  },
+  {
+   "rule": "Đối chiếu từng nhận định",
+   "logic": "Mỗi vế trong câu insight phải có evidence trực tiếp; vế không có evidence bị bỏ",
+   "purpose": "Chống suy diễn từ cụm topic đủ ngưỡng",
+   "validation": "Đã bỏ 2 nhận định, sửa 2 nhận định trước khi chốt"
+  }
+ ],
+ "rejected": [
+  {
+   "claim": "dsvn.vn hay lỗi thẻ quốc tế, khách buộc phải đi trung gian",
+   "found": "Chỉ 1 evidence tiêu cực về thẻ, và nó nói về Vexere; nhiều evidence cho thấy dsvn.vn chạy thẻ quốc tế qua VNPay",
+   "decision": "Bỏ. Viết lại F01: dsvn.vn dùng được nếu biết mẹo"
+  },
+  {
+   "claim": "Khách Hàn né DSVN vì lỗi thẻ Hàn",
+   "found": "0 evidence - câu này chỉ có trong báo cáo thu thập, không có quote nào",
+   "decision": "Bỏ khỏi F11"
+  },
+  {
+   "claim": "vexere.com được AI trích dẫn 26 lần",
+   "found": "26 là số dòng dữ liệu (mỗi lượt hỏi có nhiều dòng); tính theo lượt là 5/15 lượt có dẫn nguồn",
+   "decision": "Sửa số trong F02, giữ kết luận vì vẫn nhiều nhất"
+  },
+  {
+   "claim": "Tàu tư nhân bị hoài nghi có đáng tiền không (từ forum)",
+   "found": "Review sau chuyến cho thấy phân cực theo hãng: Vietage được khen toàn bộ, Sapaly/Livitrans bị chê",
+   "decision": "Viết lại F04 theo hãng"
+  }
  ]
 }
