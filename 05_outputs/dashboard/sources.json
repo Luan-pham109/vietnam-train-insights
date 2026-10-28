@@ -19,9 +19,9 @@
   "source": "tripadvisor_review",
   "name": "Review tàu du lịch tư nhân",
   "wave": "1",
-  "state": "đang chạy",
+  "state": "đã duyệt",
   "raw": 7,
-  "evidence": 0
+  "evidence": 87
  },
  {
   "source": "gmaps_station",
@@ -75,9 +75,9 @@
   "source": "serp_ai",
   "name": "Google SERP + ChatGPT/Perplexity/Gemini với bộ prompt cố định",
   "wave": "2",
-  "state": "đang chạy",
+  "state": "đã duyệt",
   "raw": 30,
-  "evidence": 0
+  "evidence": 119
  },
  {
   "source": "competitor_site",

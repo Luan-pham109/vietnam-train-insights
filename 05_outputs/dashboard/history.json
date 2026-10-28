@@ -43,18 +43,18 @@
   "tasks_total": 8
  },
  {
-  "origin_known_share": 0.533,
+  "origin_known_share": 0.546,
   "date": "2026-10-28",
   "raw": 474,
-  "evidence": 1213,
-  "evidence_usable": 903,
-  "authors": 531,
+  "evidence": 1214,
+  "evidence_usable": 1109,
+  "authors": 621,
   "questions_medium": 18,
   "p0_medium": 16,
   "p0_total": 17,
   "questions_total": 22,
-  "coverage_score": 0.832,
-  "tasks_reviewed": 10,
+  "coverage_score": 0.862,
+  "tasks_reviewed": 12,
   "tasks_total": 12
  }
 ]

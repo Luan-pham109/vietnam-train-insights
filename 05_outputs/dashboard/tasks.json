@@ -116,14 +116,14 @@
   "title": "AI engine và Google gợi ý kênh nào khi khách hỏi cách đặt vé tàu VN",
   "source": "serp_ai",
   "priority": "P0",
-  "status": "rework",
+  "status": "reviewed",
   "blocked_by": "",
   "claimed_at": "2026-10-27T14:01:58Z",
-  "submitted_at": "2026-10-27",
+  "submitted_at": "2026-10-28",
   "raw": 30,
-  "evidence": 118,
-  "checked": 67,
-  "error_rate": 0.91
+  "evidence": 119,
+  "checked": 25,
+  "error_rate": 0.0
  },
  {
   "task_id": "T-010",
@@ -158,13 +158,13 @@
   "title": "TripAdvisor review tàu du lịch tư nhân",
   "source": "tripadvisor_review",
   "priority": "P0",
-  "status": "rework",
+  "status": "reviewed",
   "blocked_by": "",
   "claimed_at": "2026-10-27T14:33:37Z",
   "submitted_at": "2026-10-27",
   "raw": 7,
   "evidence": 89,
   "checked": 49,
-  "error_rate": 0.837
+  "error_rate": 0.0
  }
 ]
