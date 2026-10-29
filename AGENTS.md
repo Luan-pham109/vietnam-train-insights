@@ -16,6 +16,7 @@
 
 - Muse chỉ làm task `open`/`rework`, theo thứ tự `priority`.
 - Task có dòng "Chờ T-xxx reviewed" → chỉ nhận khi T-xxx đã `reviewed`.
+- Task có field `not_before: YYYY-MM-DD` → chỉ nhận từ ngày đó (UTC); trước ngày đó bỏ qua, chọn task kế.
 - Không tự mở task. Nguồn hay ngoài brief → ghi vào mục "Đề xuất" của task đang chạy.
 
 ### Muse poll `01_tasks/`

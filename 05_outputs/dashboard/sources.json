@@ -75,7 +75,7 @@
   "source": "serp_ai",
   "name": "Google SERP + ChatGPT/Perplexity/Gemini với bộ prompt cố định",
   "wave": "2",
-  "state": "đã duyệt",
+  "state": "đã giao",
   "raw": 30,
   "evidence": 119
  },
@@ -91,7 +91,7 @@
   "source": "ad_library",
   "name": "Meta Ad Library, Google Ads Transparency",
   "wave": "3",
-  "state": "chưa giao",
+  "state": "đã giao",
   "raw": 0,
   "evidence": 0
  },

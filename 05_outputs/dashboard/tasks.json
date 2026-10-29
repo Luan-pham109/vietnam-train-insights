@@ -194,5 +194,33 @@
   "evidence": 0,
   "checked": 0,
   "error_rate": null
+ },
+ {
+  "task_id": "T-015",
+  "title": "Quảng cáo đang chạy của đối thủ về vé tàu VN (Meta Ad Library, Google Ads Transparency)",
+  "source": "ad_library",
+  "priority": "P1",
+  "status": "open",
+  "blocked_by": "",
+  "claimed_at": "",
+  "submitted_at": "",
+  "raw": 0,
+  "evidence": 0,
+  "checked": 0,
+  "error_rate": null
+ },
+ {
+  "task_id": "T-016",
+  "title": "serp_ai lượt 2 tháng 10-11/2026: chạy lại bộ 10 prompt cố định",
+  "source": "serp_ai",
+  "priority": "P0",
+  "status": "open",
+  "blocked_by": "",
+  "claimed_at": "",
+  "submitted_at": "",
+  "raw": 0,
+  "evidence": 0,
+  "checked": 0,
+  "error_rate": null
  }
 ]
