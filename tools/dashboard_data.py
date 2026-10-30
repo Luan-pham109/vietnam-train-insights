@@ -223,7 +223,11 @@ def main():
     LANG = {"vi": "vn", "ko": "kr", "zh-hans": "cn", "zh-cn": "cn", "zh": "cn", "zh-hant": "tw_hk", "zh-tw": "tw_hk", "zh-hk": "tw_hk", "hi": "in", "ja": "other_asia"}
     INTL_SUBS = re.compile(r"/r/(travel|solotravel|backpacking)/", re.I)
 
+    SUPPLY = {"competitor_site", "ad_library"}  # nội dung của nhà bán/nhà quảng cáo, không phải khách → không suy nguồn gốc khách
+
     def origin(e):
+        if e["_source"] in SUPPLY:
+            return "unknown", "", ""
         m = e.get("market") or "unknown"
         if m != "unknown":
             return m, "cao", "tự nói/nền tảng"

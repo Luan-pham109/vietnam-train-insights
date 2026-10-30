@@ -1,32 +1,32 @@
 [
  {
   "step": "Nguồn đã thử",
-  "value": 20,
+  "value": 21,
   "note": "Gồm 4 nguồn bị chặn đăng nhập, không thu được: Quora, Xiaohongshu, Mafengwo, TikTok"
  },
  {
   "step": "Bài gốc thu về",
-  "value": 485,
+  "value": 492,
   "note": "Thread, review, video, trang - lưu dạng trích đoạn, có link gốc"
  },
  {
   "step": "Đơn vị evidence",
-  "value": 1275,
+  "value": 1291,
   "note": "Mỗi ý riêng biệt trong một bài = 1 evidence, kèm quote nguyên văn"
  },
  {
   "step": "Đã duyệt, không lỗi",
-  "value": 1263,
+  "value": 1278,
   "note": "Task đã qua review; loại dòng bị đánh lỗi khi spot-check"
  },
  {
   "step": "Còn trong 18 tháng",
-  "value": 1169,
+  "value": 1184,
   "note": "Bài cũ hơn 18 tháng chỉ làm bối cảnh, không tính vào ngưỡng"
  },
  {
   "step": "Dùng trong insight",
-  "value": 801,
+  "value": 813,
   "note": "Evidence nằm trong ít nhất 1 cụm insight F01-F14"
  },
  {

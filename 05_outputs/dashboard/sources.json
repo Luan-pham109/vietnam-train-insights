@@ -11,7 +11,7 @@
   "source": "tripadvisor_forum",
   "name": "TripAdvisor Vietnam forum (train threads)",
   "wave": "1",
-  "state": "đã duyệt",
+  "state": "đã giao",
   "raw": 50,
   "evidence": 220
  },
@@ -91,15 +91,15 @@
   "source": "ad_library",
   "name": "Meta Ad Library, Google Ads Transparency",
   "wave": "3",
-  "state": "đã giao",
-  "raw": 0,
-  "evidence": 0
+  "state": "đã duyệt",
+  "raw": 7,
+  "evidence": 15
  },
  {
   "source": "news",
   "name": "VnExpress, Tuổi Trẻ, Thanh Niên, VnExpress International, dsvn.vn",
   "wave": "3",
-  "state": "chưa giao",
+  "state": "đã giao",
   "raw": 0,
   "evidence": 0
  },

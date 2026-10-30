@@ -22,7 +22,7 @@
  {
   "insight": "F01",
   "group": "Phía cung (trang đối thủ)",
-  "evidence": 0
+  "evidence": 1
  },
  {
   "insight": "F02",
@@ -72,7 +72,7 @@
  {
   "insight": "F03",
   "group": "Phía cung (trang đối thủ)",
-  "evidence": 0
+  "evidence": 3
  },
  {
   "insight": "F04",
@@ -97,7 +97,7 @@
  {
   "insight": "F04",
   "group": "Phía cung (trang đối thủ)",
-  "evidence": 0
+  "evidence": 11
  },
  {
   "insight": "F05",
@@ -172,7 +172,7 @@
  {
   "insight": "F07",
   "group": "Phía cung (trang đối thủ)",
-  "evidence": 0
+  "evidence": 1
  },
  {
   "insight": "F08",

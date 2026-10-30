@@ -1,4 +1,4 @@
-# Source map v0.5
+# Source map v0.6
 
 | Mã nguồn | Nguồn | Segment | Câu hỏi chính | Tần suất | Wave |
 |---|---|---|---|---|---|
@@ -53,3 +53,4 @@
 - `tripadvisor_review` (T-012, 2026-10-27): 7/7 trang hãng đọc được. Tàu di sản Huế - Đà Nẵng không có trang hãng riêng. Sapaly (9) và Livitrans (5) có ít review từ 2025 → re-crawl theo quý. Chapa Express có 2 trang trùng tên - dùng trang 219 review.
 - `competitor_site` (T-013, 2026-10-28): 12Go, Baolau, Klook, Bookaway, vietnam-railway.com, Trip.com (trang kết quả `businessType=vn_train`), Vexere (`vexere.com/vn/trains.en`; `/en/trains` 404) đọc được không đăng nhập. **Traveloka desktop không xem được** (báo chỉ hỗ trợ mobile web) - thử mobile web lần sau. Phí và chính sách hoàn/đổi phần lớn chỉ hiện ở checkout. Phải tìm bằng tìm kiếm nội bộ của trang, không chỉ đoán URL. Chạy lại hằng tháng, giữ Vexere làm mốc.
 - `tiktok` (T-014, 2026-10-28): **không truy cập được** - tìm kiếm EN/VI bật tường đăng nhập, không có video/caption/comment. Kiểm lại theo quý; góc video ngắn tạm lấy từ YouTube Shorts.
+- `ad_library` (T-015, 2026-10-29): Meta Ad Library đọc được không đăng nhập; tìm theo tên ngắn rất nhiễu (12Go, Trip.com ra hàng chục nghìn kết quả) - phải lọc theo trang + từ khoá. **Google Ads Transparency Center bị chặn** (trang unusual-traffic + reCAPTCHA) - thử lại đợt sau. Baolau, vietnam-railway.com, Livitrans không có trang nhà quảng cáo trên Meta. Hãng tàu tư nhân ít tự chạy ad, chủ yếu được nhắc qua Klook/đại lý tour. Ad là phía cung: không tính share of voice, không suy nguồn gốc khách.

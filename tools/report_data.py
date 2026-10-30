@@ -62,7 +62,7 @@ for eng in sorted({r["engine"] for r in ai_runs}):
                    "vexere_cited": sum(1 for r in rs if r["vexere_cited"])})
 
 # --- Share of voice trong nội dung người dùng
-USER_EXCL = {"T-009", "T-011", "T-013"}
+USER_EXCL = {"T-009", "T-011", "T-013", "T-015"}  # T-013, T-015: phía cung (trang + quảng cáo đối thủ)
 CH = ["dsvn", "baolau", "twelve_go", "vexere", "station_counter", "klook", "trip_com", "vietnam_railway_agent_site", "bookaway", "myrealtrip"]
 ch = []
 for c in CH:
@@ -80,7 +80,7 @@ GROUP = {"reddit": "Diễn đàn & cộng đồng", "reddit_in": "Diễn đàn &
          "gmaps_station": "Review sau trải nghiệm", "appstore": "Review sau trải nghiệm", "tripadvisor_review": "Review sau trải nghiệm",
          "youtube": "Vlog & blog", "youtube_in": "Vlog & blog", "youtube_kr": "Vlog & blog", "naver_blog": "Vlog & blog",
          "tistory": "Vlog & blog", "trip_com_cn": "Vlog & blog",
-         "seat61": "Nguồn định hình nhận thức", "serp_ai": "Nguồn định hình nhận thức", "competitor_site": "Phía cung (trang đối thủ)"}
+         "seat61": "Nguồn định hình nhận thức", "serp_ai": "Nguồn định hình nhận thức", "competitor_site": "Phía cung (trang đối thủ)", "ad_library": "Phía cung (trang đối thủ)"}
 GROUPS = ["Diễn đàn & cộng đồng", "Review sau trải nghiệm", "Vlog & blog", "Nguồn định hình nhận thức", "Phía cung (trang đối thủ)"]
 BIAS = {"Diễn đàn & cộng đồng": "Lệch về khách tự lên kế hoạch, nói tiếng Anh; câu hỏi trước chuyến nhiều hơn trải nghiệm",
         "Review sau trải nghiệm": "Lệch về phàn nàn và trải nghiệm cực đoan",

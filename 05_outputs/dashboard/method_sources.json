@@ -33,10 +33,10 @@
  },
  {
   "group": "Phía cung (trang đối thủ)",
-  "sources": "competitor_site",
-  "raw": 11,
-  "evidence": 60,
-  "authors": 7,
+  "sources": "ad_library, competitor_site",
+  "raw": 18,
+  "evidence": 75,
+  "authors": 14,
   "bias": "Claim của chính đối thủ, chưa kiểm chứng"
  }
 ]

@@ -71,5 +71,20 @@
   "coverage_score": 0.897,
   "tasks_reviewed": 14,
   "tasks_total": 16
+ },
+ {
+  "origin_known_share": 0.511,
+  "date": "2026-10-30",
+  "raw": 492,
+  "evidence": 1291,
+  "evidence_usable": 1184,
+  "authors": 635,
+  "questions_medium": 18,
+  "p0_medium": 16,
+  "p0_total": 17,
+  "questions_total": 22,
+  "coverage_score": 0.902,
+  "tasks_reviewed": 15,
+  "tasks_total": 18
  }
 ]
