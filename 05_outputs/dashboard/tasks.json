@@ -228,27 +228,27 @@
   "title": "TripAdvisor forum lượt 2: forum Đà Nẵng, Ninh Bình, Quy Nhơn, Nha Trang + thread mới",
   "source": "tripadvisor_forum",
   "priority": "P0",
-  "status": "open",
+  "status": "reviewed",
   "blocked_by": "",
-  "claimed_at": "",
-  "submitted_at": "",
-  "raw": 0,
-  "evidence": 0,
-  "checked": 0,
-  "error_rate": null
+  "claimed_at": "2026-10-30T04:42:00Z",
+  "submitted_at": "2026-10-30T05:30:00Z",
+  "raw": 6,
+  "evidence": 49,
+  "checked": 14,
+  "error_rate": 0.071
  },
  {
   "task_id": "T-018",
   "title": "News: tín hiệu chính sách, giá, tàu mới của DSVN (signal log)",
   "source": "news",
   "priority": "P1",
-  "status": "open",
+  "status": "reviewed",
   "blocked_by": "",
-  "claimed_at": "",
-  "submitted_at": "",
-  "raw": 0,
-  "evidence": 0,
-  "checked": 0,
-  "error_rate": null
+  "claimed_at": "2026-10-30T05:46:00Z",
+  "submitted_at": "2026-10-30T07:39:00Z",
+  "raw": 30,
+  "evidence": 52,
+  "checked": 12,
+  "error_rate": 0.0
  }
 ]

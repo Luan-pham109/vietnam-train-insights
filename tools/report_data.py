@@ -66,7 +66,7 @@ USER_EXCL = {"T-009", "T-011", "T-013", "T-015"}  # T-013, T-015: phía cung (tr
 CH = ["dsvn", "baolau", "twelve_go", "vexere", "station_counter", "klook", "trip_com", "vietnam_railway_agent_site", "bookaway", "myrealtrip"]
 ch = []
 for c in CH:
-    es = [e for e in rows if e["task_id"] not in USER_EXCL and c in (e.get("entities") or [])]
+    es = [e for e in rows if e["task_id"] not in USER_EXCL and not e["raw_id"].startswith("news-") and c in (e.get("entities") or [])]  # news: báo chí, không phải người dùng
     if not es:
         continue
     ch.append({"channel": NAME.get(c, c), "evidence": len(es), "authors": len({e["author_hash"] for e in es}),

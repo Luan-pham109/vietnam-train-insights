@@ -11,9 +11,9 @@
   "source": "tripadvisor_forum",
   "name": "TripAdvisor Vietnam forum (train threads)",
   "wave": "1",
-  "state": "đã giao",
-  "raw": 50,
-  "evidence": 220
+  "state": "đã duyệt",
+  "raw": 56,
+  "evidence": 268
  },
  {
   "source": "tripadvisor_review",
@@ -99,9 +99,9 @@
   "source": "news",
   "name": "VnExpress, Tuổi Trẻ, Thanh Niên, VnExpress International, dsvn.vn",
   "wave": "3",
-  "state": "đã giao",
-  "raw": 0,
-  "evidence": 0
+  "state": "đã duyệt",
+  "raw": 30,
+  "evidence": 52
  },
  {
   "source": "forum_vn",

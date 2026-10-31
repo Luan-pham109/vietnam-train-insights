@@ -5,6 +5,8 @@ Chạy: python3 -I tools/insight_draft.py
 Bộ lọc mỗi insight (AND giữa các điều kiện có mặt):
   topics (any) | entities (any) | match: "topics_or_entities" (mặc định topics)
   lang, market, author_role, sentiment ("neg"/"pos"), tasks (list), exclude_tasks (list)
+Nguồn báo chí (`news`) là signal log phía thị trường, không phải tiếng nói khách → mặc định không tính vào
+insight; insight muốn dùng phải có "include_news": true (Claude thêm 2026-10-31 sau T-018).
 Tin cậy: chỉ tính evidence của task reviewed và không bị đánh lỗi.
   trung bình: ≥10 evidence, ≥3 nguồn, ≥5 tác giả. Insight có "influence": true (nguồn định hình nhận thức
   như serp_ai) đánh giá theo ảnh hưởng, ghi "đo lường" thay vì ngưỡng đếm.
@@ -23,7 +25,11 @@ src = lambda e: e["raw_id"].split("-")[0]
 defs = json.load(open(os.path.join(ROOT, "05_outputs", "insight-draft.defs.json"), encoding="utf-8"))
 
 
+NEWS = {"news"}
+
+
 def match(d, e):
+    if src(e) in NEWS and not d.get("include_news"): return False
     tp = bool(set(d.get("topics", [])) & set(e.get("topics", [])))
     en = bool(set(d.get("entities", [])) & set(e.get("entities") or []))
     mode = d.get("match", "topics")

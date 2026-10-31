@@ -317,5 +317,27 @@
    "competitor_site-20261028-0010-e06"
   ],
   "match": "any"
+ },
+ {
+  "id": "D21",
+  "theme": "Thị trường (signal)",
+  "insight": "Giá vé DSVN đổi dày trong 2026 ngoài mùa Tết: +10% (8/3), -3% (13/3), giá linh hoạt giảm đến 35% chặng ngắn trên kênh điện tử (1/5), -10% tàu Bắc - Nam (1/7), giảm đến 40% giường nằm tàu SE (7-10/9); từ 10/7 thẻ lên tàu không còn in giá",
+  "who": "Phía cung (DSVN, báo chí)",
+  "topics": [
+   "price_level",
+   "booking_ux"
+  ],
+  "tasks": [
+   "T-018"
+  ],
+  "include_news": true,
+  "vexere_fit": "Trực tiếp: giá hiển thị/cache trên Vexere phải đồng bộ với DSVN theo đợt; giá linh hoạt làm so giá giữa kênh khó hơn",
+  "action": "Kiểm độ trễ đồng bộ giá DSVN trên Vexere trong các đợt đổi giá; theo dõi signal giá qua lượt news kế tiếp",
+  "counter": "Chỉ 1 nguồn (news, 3 báo) - signal log, không phải tiếng nói khách; chưa có evidence khách gặp giá lệch giữa các kênh",
+  "quote_ids": [
+   "news-20261030-0008-e01",
+   "news-20261030-0012-e01",
+   "news-20261030-0017-e01"
+  ]
  }
 ]

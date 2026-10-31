@@ -31,7 +31,7 @@ ENTS = set(re.findall(r"`([a-z0-9_]+)`", re.sub(r"không(\*\*)? (phải|viết) 
                                                  sect("## entity", "## route"))))
 ROUTES = set(re.findall(r"`([A-Z]{3})`", sect("## route", "## Changelog")))
 QS = set(re.findall(r"\| ([CMI]\d\d) \|", QB))
-TRAIN_CODE = re.compile(r"^(se|sp|snt|tn|hd|nh|ht|qb|lc|sh|dh)\d+[a-z]?$")
+TRAIN_CODE = re.compile(r"^(se|sp|spt|snt|tn|hd|hq|nh|ht|qb|lc|sh|dh)\d+[a-z]?$")
 REQ = ["ev_id", "raw_id", "task_id", "quote", "summary_vi", "type", "stage", "topics", "segment",
        "sentiment", "questions", "author_hash", "posted_at", "lang"]
 CJK = ("zh", "ja", "ko")

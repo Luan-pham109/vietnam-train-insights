@@ -1,19 +1,19 @@
 [
  {
   "channel": "dsvn.vn",
-  "evidence": 25,
-  "authors": 22,
+  "evidence": 26,
+  "authors": 23,
   "positive": 9,
   "negative": 3,
-  "neutral": 13
+  "neutral": 14
  },
  {
   "channel": "Baolau",
-  "evidence": 20,
-  "authors": 13,
+  "evidence": 21,
+  "authors": 14,
   "positive": 14,
   "negative": 1,
-  "neutral": 5
+  "neutral": 6
  },
  {
   "channel": "12Go",
@@ -25,11 +25,11 @@
  },
  {
   "channel": "Vexere",
-  "evidence": 8,
-  "authors": 8,
+  "evidence": 9,
+  "authors": 9,
   "positive": 3,
   "negative": 1,
-  "neutral": 4
+  "neutral": 5
  },
  {
   "channel": "Quầy ga",

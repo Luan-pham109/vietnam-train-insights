@@ -1,4 +1,4 @@
-# Source map v0.6
+# Source map v0.7
 
 | Mã nguồn | Nguồn | Segment | Câu hỏi chính | Tần suất | Wave |
 |---|---|---|---|---|---|
@@ -54,3 +54,5 @@
 - `competitor_site` (T-013, 2026-10-28): 12Go, Baolau, Klook, Bookaway, vietnam-railway.com, Trip.com (trang kết quả `businessType=vn_train`), Vexere (`vexere.com/vn/trains.en`; `/en/trains` 404) đọc được không đăng nhập. **Traveloka desktop không xem được** (báo chỉ hỗ trợ mobile web) - thử mobile web lần sau. Phí và chính sách hoàn/đổi phần lớn chỉ hiện ở checkout. Phải tìm bằng tìm kiếm nội bộ của trang, không chỉ đoán URL. Chạy lại hằng tháng, giữ Vexere làm mốc.
 - `tiktok` (T-014, 2026-10-28): **không truy cập được** - tìm kiếm EN/VI bật tường đăng nhập, không có video/caption/comment. Kiểm lại theo quý; góc video ngắn tạm lấy từ YouTube Shorts.
 - `ad_library` (T-015, 2026-10-29): Meta Ad Library đọc được không đăng nhập; tìm theo tên ngắn rất nhiễu (12Go, Trip.com ra hàng chục nghìn kết quả) - phải lọc theo trang + từ khoá. **Google Ads Transparency Center bị chặn** (trang unusual-traffic + reCAPTCHA) - thử lại đợt sau. Baolau, vietnam-railway.com, Livitrans không có trang nhà quảng cáo trên Meta. Hãng tàu tư nhân ít tự chạy ad, chủ yếu được nhắc qua Klook/đại lý tour. Ad là phía cung: không tính share of voice, không suy nguồn gốc khách.
+- `tripadvisor_forum` lượt 2 (T-017, 2026-10-30): forum Đà Nẵng/Ninh Bình/Quy Nhơn/Nha Trang chỉ ra 6 thread ngày hợp lệ (nhiều thread 2025 chỉ hiện "1 year ago"). **Hẹn ngày theo k-number** (Claude duyệt 2026-10-31): thread chỉ hiện "1 year ago" được nhận nếu k-number lớn hơn k-number của một thread mốc có ngày bài gốc chính xác ≥2025-01-01 (thread mốc đã thu hoặc mở được). Khi đó `posted_at` = ngày thread mốc, `date_precision: estimated`, `Note:` ghi k-number + ngày của thread mốc. Không dùng ngày reply sớm nhất làm cận dưới (đó là cận trên của bài gốc). Nha Trang: ít thread tàu mới, quét lại theo quý.
+- `news` (T-018, 2026-10-30): VnExpress, Tuổi Trẻ, Thanh Niên đọc được (VnExpress search trực tiếp có lúc 406, vào qua trang chủ). **dsvn.vn lỗi truy cập** (privacy error) - thử lại đợt sau. VnExpress International ít bài DSVN - kiểm theo quý. `author_hash` theo báo (publisher), không theo phóng viên. Lượt sau chỉ thu bài từ ngày bài mới nhất của T-018 (2026-10-12).

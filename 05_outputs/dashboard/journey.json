@@ -22,7 +22,7 @@
  {
   "stage": "plan",
   "segment": "Nước ngoài",
-  "evidence": 28
+  "evidence": 31
  },
  {
   "stage": "plan",
@@ -37,12 +37,12 @@
  {
   "stage": "plan",
   "segment": "Chưa rõ",
-  "evidence": 78
+  "evidence": 98
  },
  {
   "stage": "compare",
   "segment": "Nước ngoài",
-  "evidence": 17
+  "evidence": 21
  },
  {
   "stage": "compare",
@@ -57,12 +57,12 @@
  {
   "stage": "compare",
   "segment": "Chưa rõ",
-  "evidence": 47
+  "evidence": 49
  },
  {
   "stage": "book",
   "segment": "Nước ngoài",
-  "evidence": 54
+  "evidence": 62
  },
  {
   "stage": "book",
@@ -77,7 +77,7 @@
  {
   "stage": "book",
   "segment": "Chưa rõ",
-  "evidence": 345
+  "evidence": 387
  },
  {
   "stage": "pre_trip",
@@ -102,7 +102,7 @@
  {
   "stage": "station",
   "segment": "Nước ngoài",
-  "evidence": 5
+  "evidence": 6
  },
  {
   "stage": "station",
@@ -117,12 +117,12 @@
  {
   "stage": "station",
   "segment": "Chưa rõ",
-  "evidence": 273
+  "evidence": 276
  },
  {
   "stage": "onboard",
   "segment": "Nước ngoài",
-  "evidence": 178
+  "evidence": 181
  },
  {
   "stage": "onboard",
@@ -137,12 +137,12 @@
  {
   "stage": "onboard",
   "segment": "Chưa rõ",
-  "evidence": 79
+  "evidence": 81
  },
  {
   "stage": "last_mile",
   "segment": "Nước ngoài",
-  "evidence": 7
+  "evidence": 10
  },
  {
   "stage": "last_mile",
@@ -157,12 +157,12 @@
  {
   "stage": "last_mile",
   "segment": "Chưa rõ",
-  "evidence": 32
+  "evidence": 36
  },
  {
   "stage": "post_trip",
   "segment": "Nước ngoài",
-  "evidence": 5
+  "evidence": 6
  },
  {
   "stage": "post_trip",

@@ -1,4 +1,4 @@
-# Taxonomy v0.9
+# Taxonomy v0.10
 
 Muse chỉ dùng mã ở đây. Thiếu mã → `other` + `topic_suggest`. Claude gom đề xuất, nâng version.
 
@@ -111,7 +111,7 @@ Dùng:
 
 ## entity - tên chuẩn (viết thường, snake_case)
 - Kênh bán: `dsvn` · `vetau` (vetau.com.vn + app Vé Tàu) · `twelve_go` (**không** viết `12go`) · `baolau` · `bookaway` · `vietage` · `trip_com` · `traveloka` · `klook` · `getyourguide` · `ivivu` · `vexere` · `local_agent` (đại lý địa phương có tên như Sapa Nomad cũng ghi mã này) · `hotel_desk` · `station_counter` · `vietnam_railway_agent_site`
-- Tàu DSVN: theo mã tàu `se1`, `se3`, `sp3`... hoặc `dsvn_generic`
+- Tàu DSVN: theo mã tàu `se1`, `se3`, `sp3`, `spt1`, `hq2`... hoặc `dsvn_generic` (`hq1`/`hq2`... = tàu di sản Huế - Đà Nẵng/Phong Nha của DSVN; `spt1`/`spt2` = tàu Sài Gòn - Phan Thiết)
 - Tàu du lịch tư nhân (**dùng đúng mã ngắn**: `lotus` không phải `lotus_train`, `violette` không phải `violette_train`, `sapaly` không phải `sapaly_express`): `lotus` · `chapa_express` · `violette` · `sapaly` · `king_express` · `victoria_express` · `et_pumpkin` · `vicsapa` · `sjourney` · `fanxipan_express` · `family_express` · `king_sapa` (King Sapa Train/Express - chưa xác minh trùng `king_express`) · `tonkin_heritage_express` · `livitrans` · `orient_express` · `hai_van_heritage` · `laman_express` (Laman/Lamen/LAMAN) · `hana_train` · `charmy_express` · `damitrans` · `the_hanoi_train` (Tàu Hà Nội 5 Cửa Ô)
 - Kênh theo thị trường: `fliggy` · `qunar` · `makemytrip` · `cleartrip` · `myrealtrip` · `kkday` (Ctrip trong nước TQ ghi `trip_com`)
 - Thanh toán: `alipay` · `wechat_pay` · `upi` · `kakao_pay` · `naver_pay` · `vnpay` · `momo` · `viettel_money` · `apple_pay`
@@ -119,10 +119,11 @@ Dùng:
 - Thay thế: `flight` · `sleeper_bus` · `limousine` · `private_car`
 
 ## route - mã IATA-like của ga
-`HAN` Hà Nội · `SGN` Sài Gòn · `HUE` Huế · `DAD` Đà Nẵng · `NHA` Nha Trang · `LCA` Lào Cai · `HPH` Hải Phòng · `DTH` Đồng Hới · `QNH` Quy Nhơn · `NBH` Ninh Bình · `PTH` Phan Thiết · `DLT` Đà Lạt · `GLA` Gia Lâm · `DDG` Đồng Đăng · `NNG` Nam Ninh (TQ) · `HKO` Hà Khẩu (TQ) · `TCH` Tháp Chàm (Phan Rang) · `DTI` Diêu Trì · `TLO` Thọ Lộc · `QNG` Quảng Ngãi
+`HAN` Hà Nội · `SGN` Sài Gòn · `HUE` Huế · `DAD` Đà Nẵng · `NHA` Nha Trang · `LCA` Lào Cai · `HPH` Hải Phòng · `DTH` Đồng Hới · `QNH` Quy Nhơn · `NBH` Ninh Bình · `PTH` Phan Thiết · `DLT` Đà Lạt · `GLA` Gia Lâm · `DDG` Đồng Đăng · `NNG` Nam Ninh (TQ) · `HKO` Hà Khẩu (TQ) · `TCH` Tháp Chàm (Phan Rang) · `DTI` Diêu Trì · `TLO` Thọ Lộc · `QNG` Quảng Ngãi · `VIN` Vinh
 Dạng `HAN-LCA`. Thêm ga mới → đề xuất.
 
 ## Changelog
+- v0.10 (2026-10-31, sau review T-018): thêm ga `VIN` Vinh; mã tàu DSVN `spt*` (Sài Gòn - Phan Thiết) và `hq*` (tàu di sản) được validator nhận theo mẫu mã tàu.
 - v0.9 (2026-10-28, sau review T-013): thêm entity tàu tư nhân `family_express`, `king_sapa`, `tonkin_heritage_express` (gặp trên Baolau, Bookaway, vietnam-railway.com).
 - v0.8 (2026-10-28, Luan duyệt): evidence có segment khách nước ngoài cụ thể tự map → C01 (trước đó C01 = 0 vì không topic nào map). Đọc như proxy ai hay viết, không phải cơ cấu khách thật.
 - v0.7 (2026-10-28, sau review T-009..T-012): thêm entity kênh `vetau`, `getyourguide`, `ivivu`; ví `momo`, `viettel_money`; tàu tư nhân `king_express`, `victoria_express`, `et_pumpkin`, `vicsapa`, `sjourney`, `fanxipan_express` (gặp ở T-009 SERP, T-010, T-011); ghi rõ mã sai hay gặp (`12go`, `lotus_train`, `violette_train`, `sapaly_express`); đại lý địa phương có tên → `local_agent`; ga `QNG` (T-008). Không nhận `route_distance` (T-011) - thông tin tĩnh, không phục vụ câu hỏi nào. Có `tools/validate_evidence.py` để Muse tự kiểm trước khi nộp.

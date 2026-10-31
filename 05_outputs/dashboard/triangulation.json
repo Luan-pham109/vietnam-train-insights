@@ -2,7 +2,7 @@
  {
   "insight": "F01",
   "group": "Diễn đàn & cộng đồng",
-  "evidence": 82
+  "evidence": 87
  },
  {
   "insight": "F01",
@@ -52,7 +52,7 @@
  {
   "insight": "F03",
   "group": "Diễn đàn & cộng đồng",
-  "evidence": 100
+  "evidence": 102
  },
  {
   "insight": "F03",
@@ -127,7 +127,7 @@
  {
   "insight": "F06",
   "group": "Diễn đàn & cộng đồng",
-  "evidence": 37
+  "evidence": 44
  },
  {
   "insight": "F06",
@@ -152,7 +152,7 @@
  {
   "insight": "F07",
   "group": "Diễn đàn & cộng đồng",
-  "evidence": 42
+  "evidence": 44
  },
  {
   "insight": "F07",
@@ -177,7 +177,7 @@
  {
   "insight": "F08",
   "group": "Diễn đàn & cộng đồng",
-  "evidence": 20
+  "evidence": 26
  },
  {
   "insight": "F08",
@@ -202,7 +202,7 @@
  {
   "insight": "F09",
   "group": "Diễn đàn & cộng đồng",
-  "evidence": 5
+  "evidence": 6
  },
  {
   "insight": "F09",
@@ -348,5 +348,30 @@
   "insight": "F14",
   "group": "Phía cung (trang đối thủ)",
   "evidence": 60
+ },
+ {
+  "insight": "D21",
+  "group": "Diễn đàn & cộng đồng",
+  "evidence": 0
+ },
+ {
+  "insight": "D21",
+  "group": "Review sau trải nghiệm",
+  "evidence": 0
+ },
+ {
+  "insight": "D21",
+  "group": "Vlog & blog",
+  "evidence": 0
+ },
+ {
+  "insight": "D21",
+  "group": "Nguồn định hình nhận thức",
+  "evidence": 0
+ },
+ {
+  "insight": "D21",
+  "group": "Phía cung (trang đối thủ)",
+  "evidence": 0
  }
 ]

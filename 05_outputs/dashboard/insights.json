@@ -4,11 +4,11 @@
   "theme": "Kênh đặt vé & trust",
   "insight": "dsvn.vn dùng được với khách nước ngoài nếu biết mẹo (chọn VNPay, có Apple Pay trên app iOS, thêm số 0 trước số điện thoại); khách không biết mẹo thì sang Baolau/12Go chấp nhận trả thêm phí để thẻ nước ngoài chạy được; site giả dạng DSVN bắt trả gấp nhiều lần giá ga",
   "who": "Nước ngoài",
-  "evidence": 132,
-  "authors": 109,
+  "evidence": 137,
+  "authors": 113,
   "sources": 8,
-  "evidence_reviewed": 132,
-  "authors_reviewed": 109,
+  "evidence_reviewed": 137,
+  "authors_reviewed": 113,
   "sources_reviewed": 8,
   "source_list": [
    "ad_library",
@@ -84,11 +84,11 @@
   "theme": "Chọn chỗ & sản phẩm tàu",
   "insight": "Chọn khoang và giường là nỗi lo lớn nhất trước chuyến: khoang 4 riêng, giường dưới, cả nhóm cùng khoang, bên nào ngắm cảnh, tàu mới hay cũ (SE3 khác SE13); có ca bị xếp khác chỗ đã đặt (giường trên thay vì dưới, toa đổi chiều)",
   "who": "Nước ngoài (cả Tây và Hàn)",
-  "evidence": 220,
-  "authors": 182,
+  "evidence": 222,
+  "authors": 183,
   "sources": 13,
-  "evidence_reviewed": 220,
-  "authors_reviewed": 182,
+  "evidence_reviewed": 222,
+  "authors_reviewed": 183,
   "sources_reviewed": 13,
   "source_list": [
    "ad_library",
@@ -228,11 +228,11 @@
   "theme": "Đặt vé",
   "insight": "Hiểu nhầm thời điểm mở bán: thấy 'hết vé' nhưng thực ra chưa mở (60/30 ngày); khoang 4 và giường dưới hết sớm vào cuối tuần, lễ",
   "who": "Nước ngoài",
-  "evidence": 46,
-  "authors": 33,
+  "evidence": 53,
+  "authors": 37,
   "sources": 7,
-  "evidence_reviewed": 46,
-  "authors_reviewed": 33,
+  "evidence_reviewed": 53,
+  "authors_reviewed": 37,
   "sources_reviewed": 7,
   "source_list": [
    "appstore",
@@ -273,10 +273,10 @@
   "theme": "Nội dung & tuyến",
   "insight": "Đoạn Huế - Đà Nẵng (đèo Hải Vân) là lý do chính để đi tàu ban ngày, khách Tây và khách Hàn cùng nhắc; khách hỏi ngồi bên nào nhưng toa có thể bị đổi chiều làm sai kỳ vọng",
   "who": "Nước ngoài",
-  "evidence": 68,
+  "evidence": 70,
   "authors": 55,
   "sources": 9,
-  "evidence_reviewed": 68,
+  "evidence_reviewed": 70,
   "authors_reviewed": 55,
   "sources_reviewed": 9,
   "source_list": [
@@ -320,11 +320,11 @@
   "theme": "Tại ga & chặng cuối",
   "insight": "Lúc bước ra khỏi ga là điểm mất trust lớn nhất: chèo kéo, hét giá, giả tài xế (Lào Cai, Huế); khách tự vệ bằng Grab hoặc đặt xe trước",
   "who": "Cả hai",
-  "evidence": 49,
-  "authors": 47,
+  "evidence": 55,
+  "authors": 51,
   "sources": 6,
-  "evidence_reviewed": 49,
-  "authors_reviewed": 47,
+  "evidence_reviewed": 55,
+  "authors_reviewed": 51,
   "sources_reviewed": 6,
   "source_list": [
    "gmaps_station",
@@ -364,17 +364,18 @@
   "theme": "Tại ga & chặng cuối",
   "insight": "Thu phí ngầm tại ga: gửi hành lý, porter đòi tiền, phòng chờ 'miễn phí' rồi tính tiền",
   "who": "Cả hai",
-  "evidence": 26,
-  "authors": 25,
-  "sources": 4,
-  "evidence_reviewed": 26,
-  "authors_reviewed": 25,
-  "sources_reviewed": 4,
+  "evidence": 27,
+  "authors": 26,
+  "sources": 5,
+  "evidence_reviewed": 27,
+  "authors_reviewed": 26,
+  "sources_reviewed": 5,
   "source_list": [
    "gmaps_station",
    "muse_fb_radar",
    "reddit",
-   "tistory"
+   "tistory",
+   "tripadvisor"
   ],
   "confidence": "trung bình",
   "status": "supported",
@@ -588,5 +589,44 @@
   "vexere_fit": "Trực tiếp: positioning, lấp khoảng trống tàu tư nhân",
   "note": "",
   "counter": "Claim trên trang, chưa kiểm chứng; snapshot 1 ngày"
+ },
+ {
+  "id": "D21",
+  "theme": "Thị trường (signal)",
+  "insight": "Giá vé DSVN đổi dày trong 2026 ngoài mùa Tết: +10% (8/3), -3% (13/3), giá linh hoạt giảm đến 35% chặng ngắn trên kênh điện tử (1/5), -10% tàu Bắc - Nam (1/7), giảm đến 40% giường nằm tàu SE (7-10/9); từ 10/7 thẻ lên tàu không còn in giá",
+  "who": "Phía cung (DSVN, báo chí)",
+  "evidence": 13,
+  "authors": 3,
+  "sources": 1,
+  "evidence_reviewed": 13,
+  "authors_reviewed": 3,
+  "sources_reviewed": 1,
+  "source_list": [
+   "news"
+  ],
+  "confidence": "thấp",
+  "status": "hypothesis",
+  "action": "Kiểm độ trễ đồng bộ giá DSVN trên Vexere trong các đợt đổi giá; theo dõi signal giá qua lượt news kế tiếp",
+  "quote": "Công ty cổ phần Vận tải đường sắt đã tăng giá vé tàu 10% đối với vé hành khách và tăng giá vận chuyển hàng hóa 15% do giá xăng dầu tăng mạnh.",
+  "quotes": [
+   {
+    "ev_id": "news-20261030-0008-e01",
+    "quote": "Công ty cổ phần Vận tải đường sắt đã tăng giá vé tàu 10% đối với vé hành khách và tăng giá vận chuyển hàng hóa 15% do giá xăng dầu tăng mạnh.",
+    "summary_vi": "Tăng giá vé khách 10% và cước hàng 15% do giá xăng dầu tăng mạnh."
+   },
+   {
+    "ev_id": "news-20261030-0012-e01",
+    "quote": "Từ 1-5, Tổng công ty Đường sắt Việt Nam chính thức triển khai tính năng “giá vé linh hoạt” trên hệ thống bán vé tàu điện tử, với mức giảm đến 35% cho các chặng ngắn.",
+    "summary_vi": "Từ 1/5 triển khai giá vé linh hoạt trên hệ thống bán vé điện tử, giảm đến 35% chặng ngắn."
+   },
+   {
+    "ev_id": "news-20261030-0017-e01",
+    "quote": "Theo đó, giá vé sẽ không còn được hiển thị trên thẻ lên tàu hỏa.",
+    "summary_vi": "Giá vé sẽ không còn hiển thị trên thẻ lên tàu hỏa."
+   }
+  ],
+  "vexere_fit": "Trực tiếp: giá hiển thị/cache trên Vexere phải đồng bộ với DSVN theo đợt; giá linh hoạt làm so giá giữa kênh khó hơn",
+  "note": "",
+  "counter": "Chỉ 1 nguồn (news, 3 báo) - signal log, không phải tiếng nói khách; chưa có evidence khách gặp giá lệch giữa các kênh"
  }
 ]
