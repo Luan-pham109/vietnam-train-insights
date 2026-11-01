@@ -11,7 +11,7 @@
   "source": "tripadvisor_forum",
   "name": "TripAdvisor Vietnam forum (train threads)",
   "wave": "1",
-  "state": "đã duyệt",
+  "state": "đã giao",
   "raw": 56,
   "evidence": 268
  },
@@ -21,7 +21,7 @@
   "wave": "1",
   "state": "đã duyệt",
   "raw": 7,
-  "evidence": 87
+  "evidence": 86
  },
  {
   "source": "gmaps_station",
@@ -75,7 +75,7 @@
   "source": "serp_ai",
   "name": "Google SERP + ChatGPT/Perplexity/Gemini với bộ prompt cố định",
   "wave": "2",
-  "state": "đã giao",
+  "state": "đang chạy",
   "raw": 30,
   "evidence": 119
  },
@@ -107,7 +107,7 @@
   "source": "forum_vn",
   "name": "VOZ, Tinhte",
   "wave": "3",
-  "state": "chưa giao",
+  "state": "đã giao",
   "raw": 0,
   "evidence": 0
  },

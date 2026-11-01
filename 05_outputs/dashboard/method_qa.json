@@ -157,7 +157,7 @@
   "errors": 0,
   "error_rate": null,
   "rework_rounds": 0,
-  "status": "open"
+  "status": "in_progress"
  },
  {
   "task_id": "T-017",
@@ -178,5 +178,25 @@
   "error_rate": 0.0,
   "rework_rounds": 0,
   "status": "reviewed"
+ },
+ {
+  "task_id": "T-019",
+  "title": "TripAdvisor forum lượt 3: thread \"1 year ago\" hẹn ngày theo k-number + thread mới từ 2026-10-01",
+  "evidence": 0,
+  "checked": 0,
+  "errors": 0,
+  "error_rate": null,
+  "rework_rounds": 0,
+  "status": "open"
+ },
+ {
+  "task_id": "T-020",
+  "title": "Diễn đàn Việt (VOZ, Tinhte): khách Việt đi tàu vì gì, đau gì",
+  "evidence": 0,
+  "checked": 0,
+  "errors": 0,
+  "error_rate": null,
+  "rework_rounds": 0,
+  "status": "open"
  }
 ]
