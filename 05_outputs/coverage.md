@@ -1,6 +1,6 @@
 # Coverage
 
-Cập nhật: 2026-11-01 (Claude). Nguồn: `05_outputs/dashboard/coverage.json`, `markets.json`. Ngưỡng theo `00_brain/confidence.md` (medium = ≥10 evidence, ≥3 nguồn, ≥5 tác giả). Chỉ tính evidence của task `reviewed`, bỏ dòng review lỗi.
+Cập nhật: 2026-11-02 (Claude). Nguồn: `05_outputs/dashboard/coverage.json`, `markets.json`. Ngưỡng theo `00_brain/confidence.md` (medium = ≥10 evidence, ≥3 nguồn, ≥5 tác giả). Chỉ tính evidence của task `reviewed`, bỏ dòng review lỗi.
 
 Task reviewed: T-001 → T-018 trừ T-016 (17/18; T-014 TikTok bị chặn, 0 raw; T-015 `ad_library` chỉ Meta). Đang chạy: T-016 `serp_ai` lượt 2 (M05, Muse nhận 2026-10-31). Mở mới: T-019 `tripadvisor_forum` lượt 3 (hẹn ngày k-number), T-020 `forum_vn` (C10). Tổng 528 raw, 1392 evidence; dùng được 1283, 644 tác giả (1 evidence ra khỏi cửa sổ 2 năm). Tỷ lệ evidence biết nguồn gốc khách (origin): 50%.
 
