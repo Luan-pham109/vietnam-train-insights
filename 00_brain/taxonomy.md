@@ -1,4 +1,4 @@
-# Taxonomy v0.10
+# Taxonomy v0.11
 
 Muse chỉ dùng mã ở đây. Thiếu mã → `other` + `topic_suggest`. Claude gom đề xuất, nâng version.
 
@@ -32,6 +32,7 @@ Muse chỉ dùng mã ở đây. Thiếu mã → `other` + `topic_suggest`. Claud
 | Trust | `trust_scam` · `trust_agent` · `customer_support` |
 | Tiện ích | `wifi` (wifi ở ga hoặc trên tàu) |
 | Ngôn ngữ | `language_barrier` (biển báo, nhân viên, app/web không có ngôn ngữ của khách) |
+| Thời gian hành trình | `travel_time` (tàu chậm, số giờ chạy dài, tốc độ - không dùng cho trễ giờ, trễ giờ là `punctuality_delay`) |
 | Chọn phương tiện | `mode_choice` (chọn tàu hay xe/bay/limousine vì lý do không phải giá: thời gian, say xe, thoải mái, ngắm cảnh, an toàn đi đêm) |
 | Liên vận | `cross_border_train` (tàu liên vận Việt - Trung: Gia Lâm/Đồng Đăng - Nam Ninh, Lào Cai - Hà Khẩu) |
 | Tổng quát | `overall_experience` (đánh giá chung, không nêu vấn đề cụ thể - giá trị thấp, chỉ dùng khi không tách được ý cụ thể hơn) |
@@ -55,7 +56,7 @@ Script tính độ phủ tự gán thêm các câu hỏi dưới đây theo topi
 
 | Topic | Câu hỏi |
 |---|---|
-| `price_vs_flight_bus` · `mode_choice` | C02 |
+| `price_vs_flight_bus` · `mode_choice` · `travel_time` | C02 |
 | `booking_channel` | C03 M01 |
 | `trust_scam` · `trust_agent` · `price_fee_hidden` | C05 |
 | `class_cabin` · `seat_selection` · `train_type` | C06 |
@@ -123,6 +124,7 @@ Dùng:
 Dạng `HAN-LCA`. Thêm ga mới → đề xuất.
 
 ## Changelog
+- v0.11 (2026-11-05, sau review T-020): thêm topic `travel_time` (đề xuất của Muse: dòng chê tàu chậm 60-80 km/h, Sài Gòn - Hà Nội 31-36 tiếng phải gán `overall_experience`/`schedule_info`), map → C02. Nhắc lại: `vetau` là entity riêng, không gộp vào `dsvn` (T-016 gemini-p08).
 - v0.10 (2026-10-31, sau review T-018): thêm ga `VIN` Vinh; mã tàu DSVN `spt*` (Sài Gòn - Phan Thiết) và `hq*` (tàu di sản) được validator nhận theo mẫu mã tàu.
 - v0.9 (2026-10-28, sau review T-013): thêm entity tàu tư nhân `family_express`, `king_sapa`, `tonkin_heritage_express` (gặp trên Baolau, Bookaway, vietnam-railway.com).
 - v0.8 (2026-10-28, Luan duyệt): evidence có segment khách nước ngoài cụ thể tự map → C01 (trước đó C01 = 0 vì không topic nào map). Đọc như proxy ai hay viết, không phải cơ cấu khách thật.
