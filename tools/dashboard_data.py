@@ -223,7 +223,7 @@ def main():
     LANG = {"vi": "vn", "ko": "kr", "zh-hans": "cn", "zh-cn": "cn", "zh": "cn", "zh-hant": "tw_hk", "zh-tw": "tw_hk", "zh-hk": "tw_hk", "hi": "in", "ja": "other_asia"}
     INTL_SUBS = re.compile(r"/r/(travel|solotravel|backpacking)/", re.I)
 
-    SUPPLY = {"competitor_site", "ad_library", "news"}  # nội dung của nhà bán/nhà quảng cáo/báo chí, không phải khách → không suy nguồn gốc khách
+    SUPPLY = {"competitor_site", "ad_library", "news", "serp_ai"}  # nội dung của nhà bán/nhà quảng cáo/báo chí/đáp án AI, không phải khách → không suy nguồn gốc khách (serp_ai: ngôn ngữ prompt ≠ thị trường khách, sửa 2026-11-05)
 
     def origin(e):
         if e["_source"] in SUPPLY:

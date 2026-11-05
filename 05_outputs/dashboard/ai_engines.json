@@ -1,26 +1,41 @@
 [
  {
   "engine": "ChatGPT",
+  "round": "20261104",
   "runs": 10,
-  "vexere_mentioned": 1,
+  "vexere_mentioned": 3,
   "vexere_first": 0,
-  "dsvn_first": 9,
-  "vexere_cited": 0
+  "dsvn_first": 10,
+  "vexere_cited": 1,
+  "prev_round": "20261027",
+  "prev_vexere_mentioned": 1,
+  "prev_dsvn_first": 9,
+  "prev_vexere_cited": 0
  },
  {
   "engine": "Gemini",
-  "runs": 10,
-  "vexere_mentioned": 5,
-  "vexere_first": 1,
-  "dsvn_first": 4,
-  "vexere_cited": 2
- },
- {
-  "engine": "Google AI",
+  "round": "20261104",
   "runs": 10,
   "vexere_mentioned": 5,
   "vexere_first": 1,
   "dsvn_first": 7,
-  "vexere_cited": 3
+  "vexere_cited": 2,
+  "prev_round": "20261027",
+  "prev_vexere_mentioned": 5,
+  "prev_dsvn_first": 4,
+  "prev_vexere_cited": 2
+ },
+ {
+  "engine": "Google AI",
+  "round": "20261104",
+  "runs": 10,
+  "vexere_mentioned": 5,
+  "vexere_first": 0,
+  "dsvn_first": 8,
+  "vexere_cited": 2,
+  "prev_round": "20261027",
+  "prev_vexere_mentioned": 5,
+  "prev_dsvn_first": 7,
+  "prev_vexere_cited": 3
  }
 ]

@@ -11,11 +11,11 @@
  {
   "market": "Trung Quốc",
   "code": "cn",
-  "evidence": 17,
-  "evidence_high": 17,
+  "evidence": 4,
+  "evidence_high": 4,
   "evidence_medium": 0,
-  "authors": 4,
-  "sources": 2
+  "authors": 1,
+  "sources": 1
  },
  {
   "market": "Đài Loan/Hồng Kông",
@@ -29,11 +29,11 @@
  {
   "market": "Hàn Quốc",
   "code": "kr",
-  "evidence": 54,
-  "evidence_high": 54,
+  "evidence": 47,
+  "evidence_high": 47,
   "evidence_medium": 0,
-  "authors": 31,
-  "sources": 4
+  "authors": 28,
+  "sources": 3
  },
  {
   "market": "Phương Tây",
@@ -74,16 +74,16 @@
  {
   "market": "Việt Nam",
   "code": "vn",
-  "evidence": 259,
-  "evidence_high": 259,
+  "evidence": 242,
+  "evidence_high": 242,
   "evidence_medium": 0,
-  "authors": 181,
-  "sources": 5
+  "authors": 178,
+  "sources": 4
  },
  {
   "market": "Chưa rõ",
   "code": "unknown",
-  "evidence": 638,
+  "evidence": 772,
   "evidence_high": 0,
   "evidence_medium": 0,
   "authors": 270,

@@ -36,11 +36,11 @@ for f in glob.glob(os.path.join(ROOT, "02_raw", "serp_ai", "*", "*.md")):
     prompts[rid] = pr.group(1).strip() if pr else ""
 runs = collections.OrderedDict()
 for e in rows:
-    if e["task_id"] != "T-009":
+    if not e["raw_id"].startswith("serp_ai-"):  # mọi lượt serp_ai đã reviewed (T-009, T-016...)
         continue
-    m = re.search(r"(serp_ai-\d+-(\w+)-(p\d+))", e["ev_id"])
+    m = re.search(r"(serp_ai-(\d+)-(\w+)-(p\d+))", e["ev_id"])
     key = m.group(1)
-    r = runs.setdefault(key, {"run": key, "engine": ENGINE.get(m.group(2), m.group(2)), "prompt_id": m.group(3),
+    r = runs.setdefault(key, {"run": key, "round": m.group(2), "engine": ENGINE.get(m.group(3), m.group(3)), "prompt_id": m.group(4),
                               "prompt": prompts.get(e["raw_id"], ""), "top1": "", "vexere_rank": None,
                               "vexere_cited": False, "channels": 0})
     ents = e.get("entities") or []
@@ -52,21 +52,30 @@ for e in rows:
         r["vexere_rank"] = rk
     if "vexere.com" in (e.get("cited_domains") or []):
         r["vexere_cited"] = True
-ai_runs = sorted(runs.values(), key=lambda r: (r["engine"], r["prompt_id"]))
+ai_runs = sorted(runs.values(), key=lambda r: (r["round"], r["engine"], r["prompt_id"]))
 ai_eng = []
+# ai_engines: lượt mới nhất của mỗi engine; prev_* = lượt liền trước (so ổn định, không phải xu hướng)
+def _agg(rs):
+    return {"runs": len(rs), "vexere_mentioned": sum(1 for r in rs if r["vexere_rank"]),
+            "vexere_first": sum(1 for r in rs if r["vexere_rank"] == 1),
+            "dsvn_first": sum(1 for r in rs if r["top1"] == "dsvn.vn"),
+            "vexere_cited": sum(1 for r in rs if r["vexere_cited"])}
 for eng in sorted({r["engine"] for r in ai_runs}):
-    rs = [r for r in ai_runs if r["engine"] == eng]
-    ai_eng.append({"engine": eng, "runs": len(rs), "vexere_mentioned": sum(1 for r in rs if r["vexere_rank"]),
-                   "vexere_first": sum(1 for r in rs if r["vexere_rank"] == 1),
-                   "dsvn_first": sum(1 for r in rs if r["top1"] == "dsvn.vn"),
-                   "vexere_cited": sum(1 for r in rs if r["vexere_cited"])})
+    rounds = sorted({r["round"] for r in ai_runs if r["engine"] == eng})
+    cur = _agg([r for r in ai_runs if r["engine"] == eng and r["round"] == rounds[-1]])
+    row = {"engine": eng, "round": rounds[-1], **cur}
+    if len(rounds) > 1:
+        prev = _agg([r for r in ai_runs if r["engine"] == eng and r["round"] == rounds[-2]])
+        row.update({"prev_round": rounds[-2], "prev_vexere_mentioned": prev["vexere_mentioned"],
+                    "prev_dsvn_first": prev["dsvn_first"], "prev_vexere_cited": prev["vexere_cited"]})
+    ai_eng.append(row)
 
 # --- Share of voice trong nội dung người dùng
 USER_EXCL = {"T-009", "T-011", "T-013", "T-015"}  # T-013, T-015: phía cung (trang + quảng cáo đối thủ)
 CH = ["dsvn", "baolau", "twelve_go", "vexere", "station_counter", "klook", "trip_com", "vietnam_railway_agent_site", "bookaway", "myrealtrip"]
 ch = []
 for c in CH:
-    es = [e for e in rows if e["task_id"] not in USER_EXCL and not e["raw_id"].startswith("news-") and c in (e.get("entities") or [])]  # news: báo chí, không phải người dùng
+    es = [e for e in rows if e["task_id"] not in USER_EXCL and not e["raw_id"].startswith(("news-", "serp_ai-")) and c in (e.get("entities") or [])]  # news: báo chí; serp_ai: đáp án AI - không phải người dùng
     if not es:
         continue
     ch.append({"channel": NAME.get(c, c), "evidence": len(es), "authors": len({e["author_hash"] for e in es}),

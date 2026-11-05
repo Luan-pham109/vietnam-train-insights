@@ -214,14 +214,14 @@
   "title": "serp_ai lượt 2 tháng 10-11/2026: chạy lại bộ 10 prompt cố định",
   "source": "serp_ai",
   "priority": "P0",
-  "status": "open",
+  "status": "reviewed",
   "blocked_by": "",
-  "claimed_at": "",
-  "submitted_at": "",
-  "raw": 0,
-  "evidence": 0,
-  "checked": 0,
-  "error_rate": null
+  "claimed_at": "2026-11-04T02:20:00Z",
+  "submitted_at": "2026-11-04T03:19:26Z",
+  "raw": 30,
+  "evidence": 98,
+  "checked": 11,
+  "error_rate": 0.091
  },
  {
   "task_id": "T-017",
@@ -256,27 +256,27 @@
   "title": "TripAdvisor forum lượt 3: thread \"1 year ago\" hẹn ngày theo k-number + thread mới từ 2026-10-01",
   "source": "tripadvisor_forum",
   "priority": "P0",
-  "status": "open",
+  "status": "rework",
   "blocked_by": "",
-  "claimed_at": "",
-  "submitted_at": "",
-  "raw": 0,
-  "evidence": 0,
-  "checked": 0,
-  "error_rate": null
+  "claimed_at": "2026-11-04T03:44:24Z",
+  "submitted_at": "2026-11-04T04:15:00Z",
+  "raw": 1,
+  "evidence": 7,
+  "checked": 7,
+  "error_rate": 0.429
  },
  {
   "task_id": "T-020",
   "title": "Diễn đàn Việt (VOZ, Tinhte): khách Việt đi tàu vì gì, đau gì",
   "source": "forum_vn",
   "priority": "P1",
-  "status": "open",
+  "status": "rework",
   "blocked_by": "",
-  "claimed_at": "",
-  "submitted_at": "",
-  "raw": 0,
-  "evidence": 0,
-  "checked": 0,
-  "error_rate": null
+  "claimed_at": "2026-11-04T05:03:39Z",
+  "submitted_at": "2026-11-04T05:22:51Z",
+  "raw": 9,
+  "evidence": 125,
+  "checked": 11,
+  "error_rate": 0.0
  }
 ]

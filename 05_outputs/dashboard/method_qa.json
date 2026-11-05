@@ -152,12 +152,12 @@
  {
   "task_id": "T-016",
   "title": "serp_ai lượt 2 tháng 10-11/2026: chạy lại bộ 10 prompt cố định",
-  "evidence": 0,
-  "checked": 0,
-  "errors": 0,
-  "error_rate": null,
+  "evidence": 98,
+  "checked": 11,
+  "errors": 1,
+  "error_rate": 0.091,
   "rework_rounds": 0,
-  "status": "open"
+  "status": "reviewed"
  },
  {
   "task_id": "T-017",
@@ -182,21 +182,21 @@
  {
   "task_id": "T-019",
   "title": "TripAdvisor forum lượt 3: thread \"1 year ago\" hẹn ngày theo k-number + thread mới từ 2026-10-01",
-  "evidence": 0,
-  "checked": 0,
-  "errors": 0,
-  "error_rate": null,
+  "evidence": 7,
+  "checked": 7,
+  "errors": 3,
+  "error_rate": 0.429,
   "rework_rounds": 0,
-  "status": "open"
+  "status": "rework"
  },
  {
   "task_id": "T-020",
   "title": "Diễn đàn Việt (VOZ, Tinhte): khách Việt đi tàu vì gì, đau gì",
-  "evidence": 0,
-  "checked": 0,
+  "evidence": 125,
+  "checked": 11,
   "errors": 0,
-  "error_rate": null,
+  "error_rate": 0.0,
   "rework_rounds": 0,
-  "status": "open"
+  "status": "rework"
  }
 ]

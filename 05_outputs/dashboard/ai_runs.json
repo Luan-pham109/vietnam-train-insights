@@ -1,6 +1,7 @@
 [
  {
   "run": "serp_ai-20261027-chatgpt-p01",
+  "round": "20261027",
   "engine": "ChatGPT",
   "prompt_id": "p01",
   "prompt": "How do I book a train ticket in Vietnam?",
@@ -11,6 +12,7 @@
  },
  {
   "run": "serp_ai-20261027-chatgpt-p02",
+  "round": "20261027",
   "engine": "ChatGPT",
   "prompt_id": "p02",
   "prompt": "Best website to book Vietnam train tickets",
@@ -21,6 +23,7 @@
  },
  {
   "run": "serp_ai-20261027-chatgpt-p03",
+  "round": "20261027",
   "engine": "ChatGPT",
   "prompt_id": "p03",
   "prompt": "Hanoi to Sapa train booking",
@@ -31,6 +34,7 @@
  },
  {
   "run": "serp_ai-20261027-chatgpt-p04",
+  "round": "20261027",
   "engine": "ChatGPT",
   "prompt_id": "p04",
   "prompt": "Hanoi to Hue overnight train how to book",
@@ -41,6 +45,7 @@
  },
  {
   "run": "serp_ai-20261027-chatgpt-p05",
+  "round": "20261027",
   "engine": "ChatGPT",
   "prompt_id": "p05",
   "prompt": "Da Nang to Hue train tickets",
@@ -51,6 +56,7 @@
  },
  {
   "run": "serp_ai-20261027-chatgpt-p06",
+  "round": "20261027",
   "engine": "ChatGPT",
   "prompt_id": "p06",
   "prompt": "Is dsvn.vn the official Vietnam railway website?",
@@ -61,6 +67,7 @@
  },
  {
   "run": "serp_ai-20261027-chatgpt-p07",
+  "round": "20261027",
   "engine": "ChatGPT",
   "prompt_id": "p07",
   "prompt": "12Go vs Baolau vs official site for Vietnam trains",
@@ -71,6 +78,7 @@
  },
  {
   "run": "serp_ai-20261027-chatgpt-p08",
+  "round": "20261027",
   "engine": "ChatGPT",
   "prompt_id": "p08",
   "prompt": "Đặt vé tàu hỏa online ở đâu uy tín",
@@ -81,6 +89,7 @@
  },
  {
   "run": "serp_ai-20261027-chatgpt-p09",
+  "round": "20261027",
   "engine": "ChatGPT",
   "prompt_id": "p09",
   "prompt": "베트남 기차 예매 방법",
@@ -91,6 +100,7 @@
  },
  {
   "run": "serp_ai-20261027-chatgpt-p10",
+  "round": "20261027",
   "engine": "ChatGPT",
   "prompt_id": "p10",
   "prompt": "越南火车票怎么买",
@@ -101,6 +111,7 @@
  },
  {
   "run": "serp_ai-20261027-gemini-p01",
+  "round": "20261027",
   "engine": "Gemini",
   "prompt_id": "p01",
   "prompt": "How do I book a train ticket in Vietnam?",
@@ -111,6 +122,7 @@
  },
  {
   "run": "serp_ai-20261027-gemini-p02",
+  "round": "20261027",
   "engine": "Gemini",
   "prompt_id": "p02",
   "prompt": "Best website to book Vietnam train tickets",
@@ -121,6 +133,7 @@
  },
  {
   "run": "serp_ai-20261027-gemini-p03",
+  "round": "20261027",
   "engine": "Gemini",
   "prompt_id": "p03",
   "prompt": "Hanoi to Sapa train booking",
@@ -131,6 +144,7 @@
  },
  {
   "run": "serp_ai-20261027-gemini-p04",
+  "round": "20261027",
   "engine": "Gemini",
   "prompt_id": "p04",
   "prompt": "Hanoi to Hue overnight train how to book",
@@ -141,6 +155,7 @@
  },
  {
   "run": "serp_ai-20261027-gemini-p05",
+  "round": "20261027",
   "engine": "Gemini",
   "prompt_id": "p05",
   "prompt": "Da Nang to Hue train tickets",
@@ -151,6 +166,7 @@
  },
  {
   "run": "serp_ai-20261027-gemini-p06",
+  "round": "20261027",
   "engine": "Gemini",
   "prompt_id": "p06",
   "prompt": "Is dsvn.vn the official Vietnam railway website?",
@@ -161,6 +177,7 @@
  },
  {
   "run": "serp_ai-20261027-gemini-p07",
+  "round": "20261027",
   "engine": "Gemini",
   "prompt_id": "p07",
   "prompt": "12Go vs Baolau vs official site for Vietnam trains",
@@ -171,6 +188,7 @@
  },
  {
   "run": "serp_ai-20261027-gemini-p08",
+  "round": "20261027",
   "engine": "Gemini",
   "prompt_id": "p08",
   "prompt": "Đặt vé tàu hỏa online ở đâu uy tín",
@@ -181,6 +199,7 @@
  },
  {
   "run": "serp_ai-20261027-gemini-p09",
+  "round": "20261027",
   "engine": "Gemini",
   "prompt_id": "p09",
   "prompt": "베트남 기차 예매 방법",
@@ -191,6 +210,7 @@
  },
  {
   "run": "serp_ai-20261027-gemini-p10",
+  "round": "20261027",
   "engine": "Gemini",
   "prompt_id": "p10",
   "prompt": "越南火车票怎么买",
@@ -201,6 +221,7 @@
  },
  {
   "run": "serp_ai-20261027-google-p01",
+  "round": "20261027",
   "engine": "Google AI",
   "prompt_id": "p01",
   "prompt": "How do I book a train ticket in Vietnam?",
@@ -211,6 +232,7 @@
  },
  {
   "run": "serp_ai-20261027-google-p02",
+  "round": "20261027",
   "engine": "Google AI",
   "prompt_id": "p02",
   "prompt": "Best website to book Vietnam train tickets",
@@ -221,6 +243,7 @@
  },
  {
   "run": "serp_ai-20261027-google-p03",
+  "round": "20261027",
   "engine": "Google AI",
   "prompt_id": "p03",
   "prompt": "Hanoi to Sapa train booking",
@@ -231,6 +254,7 @@
  },
  {
   "run": "serp_ai-20261027-google-p04",
+  "round": "20261027",
   "engine": "Google AI",
   "prompt_id": "p04",
   "prompt": "Hanoi to Hue overnight train how to book",
@@ -241,6 +265,7 @@
  },
  {
   "run": "serp_ai-20261027-google-p05",
+  "round": "20261027",
   "engine": "Google AI",
   "prompt_id": "p05",
   "prompt": "Da Nang to Hue train tickets",
@@ -251,6 +276,7 @@
  },
  {
   "run": "serp_ai-20261027-google-p06",
+  "round": "20261027",
   "engine": "Google AI",
   "prompt_id": "p06",
   "prompt": "Is dsvn.vn the official Vietnam railway website?",
@@ -261,6 +287,7 @@
  },
  {
   "run": "serp_ai-20261027-google-p07",
+  "round": "20261027",
   "engine": "Google AI",
   "prompt_id": "p07",
   "prompt": "12Go vs Baolau vs official site for Vietnam trains",
@@ -271,6 +298,7 @@
  },
  {
   "run": "serp_ai-20261027-google-p08",
+  "round": "20261027",
   "engine": "Google AI",
   "prompt_id": "p08",
   "prompt": "Đặt vé tàu hỏa online ở đâu uy tín",
@@ -281,6 +309,7 @@
  },
  {
   "run": "serp_ai-20261027-google-p09",
+  "round": "20261027",
   "engine": "Google AI",
   "prompt_id": "p09",
   "prompt": "베트남 기차 예매 방법",
@@ -291,6 +320,7 @@
  },
  {
   "run": "serp_ai-20261027-google-p10",
+  "round": "20261027",
   "engine": "Google AI",
   "prompt_id": "p10",
   "prompt": "越南火车票怎么买",
@@ -298,5 +328,335 @@
   "vexere_rank": null,
   "vexere_cited": false,
   "channels": 4
+ },
+ {
+  "run": "serp_ai-20261104-chatgpt-p01",
+  "round": "20261104",
+  "engine": "ChatGPT",
+  "prompt_id": "p01",
+  "prompt": "How do I book a train ticket in Vietnam?",
+  "top1": "dsvn.vn",
+  "vexere_rank": null,
+  "vexere_cited": false,
+  "channels": 3
+ },
+ {
+  "run": "serp_ai-20261104-chatgpt-p02",
+  "round": "20261104",
+  "engine": "ChatGPT",
+  "prompt_id": "p02",
+  "prompt": "Best website to book Vietnam train tickets",
+  "top1": "dsvn.vn",
+  "vexere_rank": null,
+  "vexere_cited": false,
+  "channels": 3
+ },
+ {
+  "run": "serp_ai-20261104-chatgpt-p03",
+  "round": "20261104",
+  "engine": "ChatGPT",
+  "prompt_id": "p03",
+  "prompt": "Hanoi to Sapa train booking",
+  "top1": "dsvn.vn",
+  "vexere_rank": null,
+  "vexere_cited": false,
+  "channels": 3
+ },
+ {
+  "run": "serp_ai-20261104-chatgpt-p04",
+  "round": "20261104",
+  "engine": "ChatGPT",
+  "prompt_id": "p04",
+  "prompt": "Hanoi to Hue overnight train how to book",
+  "top1": "dsvn.vn",
+  "vexere_rank": null,
+  "vexere_cited": false,
+  "channels": 3
+ },
+ {
+  "run": "serp_ai-20261104-chatgpt-p05",
+  "round": "20261104",
+  "engine": "ChatGPT",
+  "prompt_id": "p05",
+  "prompt": "Da Nang to Hue train tickets",
+  "top1": "dsvn.vn",
+  "vexere_rank": 2,
+  "vexere_cited": true,
+  "channels": 3
+ },
+ {
+  "run": "serp_ai-20261104-chatgpt-p06",
+  "round": "20261104",
+  "engine": "ChatGPT",
+  "prompt_id": "p06",
+  "prompt": "Is dsvn.vn the official Vietnam railway website?",
+  "top1": "dsvn.vn",
+  "vexere_rank": null,
+  "vexere_cited": false,
+  "channels": 1
+ },
+ {
+  "run": "serp_ai-20261104-chatgpt-p07",
+  "round": "20261104",
+  "engine": "ChatGPT",
+  "prompt_id": "p07",
+  "prompt": "12Go vs Baolau vs official site for Vietnam trains",
+  "top1": "dsvn.vn",
+  "vexere_rank": null,
+  "vexere_cited": false,
+  "channels": 3
+ },
+ {
+  "run": "serp_ai-20261104-chatgpt-p08",
+  "round": "20261104",
+  "engine": "ChatGPT",
+  "prompt_id": "p08",
+  "prompt": "Đặt vé tàu hỏa online ở đâu uy tín",
+  "top1": "dsvn.vn",
+  "vexere_rank": 2,
+  "vexere_cited": false,
+  "channels": 3
+ },
+ {
+  "run": "serp_ai-20261104-chatgpt-p09",
+  "round": "20261104",
+  "engine": "ChatGPT",
+  "prompt_id": "p09",
+  "prompt": "베트남 기차 예매 방법",
+  "top1": "dsvn.vn",
+  "vexere_rank": null,
+  "vexere_cited": false,
+  "channels": 2
+ },
+ {
+  "run": "serp_ai-20261104-chatgpt-p10",
+  "round": "20261104",
+  "engine": "ChatGPT",
+  "prompt_id": "p10",
+  "prompt": "越南火车票怎么买",
+  "top1": "dsvn.vn",
+  "vexere_rank": 2,
+  "vexere_cited": false,
+  "channels": 3
+ },
+ {
+  "run": "serp_ai-20261104-gemini-p01",
+  "round": "20261104",
+  "engine": "Gemini",
+  "prompt_id": "p01",
+  "prompt": "How do I book a train ticket in Vietnam?",
+  "top1": "dsvn.vn",
+  "vexere_rank": 2,
+  "vexere_cited": false,
+  "channels": 4
+ },
+ {
+  "run": "serp_ai-20261104-gemini-p02",
+  "round": "20261104",
+  "engine": "Gemini",
+  "prompt_id": "p02",
+  "prompt": "Best website to book Vietnam train tickets",
+  "top1": "Vexere",
+  "vexere_rank": 1,
+  "vexere_cited": false,
+  "channels": 4
+ },
+ {
+  "run": "serp_ai-20261104-gemini-p03",
+  "round": "20261104",
+  "engine": "Gemini",
+  "prompt_id": "p03",
+  "prompt": "Hanoi to Sapa train booking",
+  "top1": "12Go",
+  "vexere_rank": null,
+  "vexere_cited": false,
+  "channels": 4
+ },
+ {
+  "run": "serp_ai-20261104-gemini-p04",
+  "round": "20261104",
+  "engine": "Gemini",
+  "prompt_id": "p04",
+  "prompt": "Hanoi to Hue overnight train how to book",
+  "top1": "dsvn.vn",
+  "vexere_rank": null,
+  "vexere_cited": false,
+  "channels": 3
+ },
+ {
+  "run": "serp_ai-20261104-gemini-p05",
+  "round": "20261104",
+  "engine": "Gemini",
+  "prompt_id": "p05",
+  "prompt": "Da Nang to Hue train tickets",
+  "top1": "dsvn.vn",
+  "vexere_rank": 5,
+  "vexere_cited": true,
+  "channels": 5
+ },
+ {
+  "run": "serp_ai-20261104-gemini-p06",
+  "round": "20261104",
+  "engine": "Gemini",
+  "prompt_id": "p06",
+  "prompt": "Is dsvn.vn the official Vietnam railway website?",
+  "top1": "dsvn.vn",
+  "vexere_rank": null,
+  "vexere_cited": false,
+  "channels": 1
+ },
+ {
+  "run": "serp_ai-20261104-gemini-p07",
+  "round": "20261104",
+  "engine": "Gemini",
+  "prompt_id": "p07",
+  "prompt": "12Go vs Baolau vs official site for Vietnam trains",
+  "top1": "dsvn.vn",
+  "vexere_rank": null,
+  "vexere_cited": false,
+  "channels": 3
+ },
+ {
+  "run": "serp_ai-20261104-gemini-p08",
+  "round": "20261104",
+  "engine": "Gemini",
+  "prompt_id": "p08",
+  "prompt": "Đặt vé tàu hỏa online ở đâu uy tín",
+  "top1": "",
+  "vexere_rank": 4,
+  "vexere_cited": true,
+  "channels": 6
+ },
+ {
+  "run": "serp_ai-20261104-gemini-p09",
+  "round": "20261104",
+  "engine": "Gemini",
+  "prompt_id": "p09",
+  "prompt": "베트남 기차 예매 방법",
+  "top1": "dsvn.vn",
+  "vexere_rank": 4,
+  "vexere_cited": false,
+  "channels": 4
+ },
+ {
+  "run": "serp_ai-20261104-gemini-p10",
+  "round": "20261104",
+  "engine": "Gemini",
+  "prompt_id": "p10",
+  "prompt": "越南火车票怎么买",
+  "top1": "dsvn.vn",
+  "vexere_rank": null,
+  "vexere_cited": false,
+  "channels": 4
+ },
+ {
+  "run": "serp_ai-20261104-google-p01",
+  "round": "20261104",
+  "engine": "Google AI",
+  "prompt_id": "p01",
+  "prompt": "How do I book a train ticket in Vietnam?",
+  "top1": "dsvn.vn",
+  "vexere_rank": null,
+  "vexere_cited": false,
+  "channels": 2
+ },
+ {
+  "run": "serp_ai-20261104-google-p02",
+  "round": "20261104",
+  "engine": "Google AI",
+  "prompt_id": "p02",
+  "prompt": "Best website to book Vietnam train tickets",
+  "top1": "dsvn.vn",
+  "vexere_rank": 2,
+  "vexere_cited": true,
+  "channels": 4
+ },
+ {
+  "run": "serp_ai-20261104-google-p03",
+  "round": "20261104",
+  "engine": "Google AI",
+  "prompt_id": "p03",
+  "prompt": "Hanoi to Sapa train booking",
+  "top1": "Klook",
+  "vexere_rank": null,
+  "vexere_cited": false,
+  "channels": 4
+ },
+ {
+  "run": "serp_ai-20261104-google-p04",
+  "round": "20261104",
+  "engine": "Google AI",
+  "prompt_id": "p04",
+  "prompt": "Hanoi to Hue overnight train how to book",
+  "top1": "dsvn.vn",
+  "vexere_rank": 3,
+  "vexere_cited": false,
+  "channels": 5
+ },
+ {
+  "run": "serp_ai-20261104-google-p05",
+  "round": "20261104",
+  "engine": "Google AI",
+  "prompt_id": "p05",
+  "prompt": "Da Nang to Hue train tickets",
+  "top1": "dsvn.vn",
+  "vexere_rank": 3,
+  "vexere_cited": false,
+  "channels": 3
+ },
+ {
+  "run": "serp_ai-20261104-google-p06",
+  "round": "20261104",
+  "engine": "Google AI",
+  "prompt_id": "p06",
+  "prompt": "Is dsvn.vn the official Vietnam railway website?",
+  "top1": "dsvn.vn",
+  "vexere_rank": null,
+  "vexere_cited": false,
+  "channels": 1
+ },
+ {
+  "run": "serp_ai-20261104-google-p07",
+  "round": "20261104",
+  "engine": "Google AI",
+  "prompt_id": "p07",
+  "prompt": "12Go vs Baolau vs official site for Vietnam trains",
+  "top1": "12Go",
+  "vexere_rank": null,
+  "vexere_cited": false,
+  "channels": 3
+ },
+ {
+  "run": "serp_ai-20261104-google-p08",
+  "round": "20261104",
+  "engine": "Google AI",
+  "prompt_id": "p08",
+  "prompt": "Đặt vé tàu hỏa online ở đâu uy tín",
+  "top1": "dsvn.vn",
+  "vexere_rank": 5,
+  "vexere_cited": true,
+  "channels": 6
+ },
+ {
+  "run": "serp_ai-20261104-google-p09",
+  "round": "20261104",
+  "engine": "Google AI",
+  "prompt_id": "p09",
+  "prompt": "베트남 기차 예매 방법",
+  "top1": "dsvn.vn",
+  "vexere_rank": 2,
+  "vexere_cited": false,
+  "channels": 3
+ },
+ {
+  "run": "serp_ai-20261104-google-p10",
+  "round": "20261104",
+  "engine": "Google AI",
+  "prompt_id": "p10",
+  "prompt": "越南火车票怎么买",
+  "top1": "dsvn.vn",
+  "vexere_rank": null,
+  "vexere_cited": false,
+  "channels": 2
  }
 ]

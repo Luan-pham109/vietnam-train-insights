@@ -15,9 +15,16 @@ import glob, json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BAD = {"wrong_tag", "quote_mismatch", "irrelevant"}
 status = {}
+tsrc = {}
+# exclude_tasks chứa một task của nguồn chạy lặp (serp_ai, seat61, competitor_site) → loại luôn các lượt sau của
+# cùng nguồn (vd T-016 = serp_ai lượt 2 của T-009). Thêm 2026-11-05, không đổi bộ lọc trong defs.
+RECUR = {"serp_ai", "seat61", "competitor_site"}
 for f in glob.glob(os.path.join(ROOT, "01_tasks", "T-*.md")):
     t = open(f, encoding="utf-8").read()
-    status[re.search(r"task_id: (\S+)", t).group(1)] = re.search(r"status: (\S+)", t).group(1)
+    tid = re.search(r"task_id: (\S+)", t).group(1)
+    status[tid] = re.search(r"status: (\S+)", t).group(1)
+    m = re.search(r"^source: (\S+)", t, re.M)
+    tsrc[tid] = m.group(1) if m else ""
 rows = [json.loads(l) for f in sorted(glob.glob(os.path.join(ROOT, "03_evidence", "*", "*.jsonl")))
         for l in open(f, encoding="utf-8") if l.strip()]
 rows = [e for e in rows if e.get("review") not in BAD]
@@ -45,6 +52,7 @@ def match(d, e):
     if d.get("sentiment") == "pos" and e.get("sentiment", 0) <= 0: return False
     if d.get("tasks") and e["task_id"] not in d["tasks"]: return False
     if d.get("exclude_tasks") and e["task_id"] in d["exclude_tasks"]: return False
+    if d.get("exclude_tasks") and tsrc.get(e["task_id"]) in {tsrc.get(x) for x in d["exclude_tasks"]} & RECUR: return False
     return True
 
 
