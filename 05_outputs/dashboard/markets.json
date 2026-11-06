@@ -38,10 +38,10 @@
  {
   "market": "Phương Tây",
   "code": "western",
-  "evidence": 36,
-  "evidence_high": 36,
+  "evidence": 37,
+  "evidence_high": 37,
   "evidence_medium": 0,
-  "authors": 12,
+  "authors": 13,
   "sources": 3
  },
  {
@@ -56,10 +56,10 @@
  {
   "market": "Nước ngoài (chưa rõ nước)",
   "code": "intl",
-  "evidence": 256,
-  "evidence_high": 235,
+  "evidence": 260,
+  "evidence_high": 239,
   "evidence_medium": 21,
-  "authors": 165,
+  "authors": 166,
   "sources": 5
  },
  {
@@ -83,10 +83,10 @@
  {
   "market": "Chưa rõ",
   "code": "unknown",
-  "evidence": 772,
+  "evidence": 774,
   "evidence_high": 0,
   "evidence_medium": 0,
-  "authors": 270,
+  "authors": 271,
   "sources": 12
  }
 ]

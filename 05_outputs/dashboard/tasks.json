@@ -256,14 +256,14 @@
   "title": "TripAdvisor forum lượt 3: thread \"1 year ago\" hẹn ngày theo k-number + thread mới từ 2026-10-01",
   "source": "tripadvisor_forum",
   "priority": "P0",
-  "status": "rework",
+  "status": "reviewed",
   "blocked_by": "",
   "claimed_at": "2026-11-04T03:44:24Z",
-  "submitted_at": "2026-11-04T04:15:00Z",
+  "submitted_at": "2026-11-05T05:12:54Z",
   "raw": 1,
   "evidence": 7,
   "checked": 7,
-  "error_rate": 0.429
+  "error_rate": 0.0
  },
  {
   "task_id": "T-020",

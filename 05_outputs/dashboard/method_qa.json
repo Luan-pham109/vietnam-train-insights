@@ -184,10 +184,10 @@
   "title": "TripAdvisor forum lượt 3: thread \"1 year ago\" hẹn ngày theo k-number + thread mới từ 2026-10-01",
   "evidence": 7,
   "checked": 7,
-  "errors": 3,
-  "error_rate": 0.429,
+  "errors": 0,
+  "error_rate": 0.0,
   "rework_rounds": 0,
-  "status": "rework"
+  "status": "reviewed"
  },
  {
   "task_id": "T-020",

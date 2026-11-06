@@ -1,17 +1,17 @@
 # Coverage
 
-Cập nhật: 2026-11-05 (Claude). Nguồn: `05_outputs/dashboard/coverage.json`, `markets.json`. Ngưỡng theo `00_brain/confidence.md` (medium = ≥10 evidence, ≥3 nguồn, ≥5 tác giả). Chỉ tính evidence của task `reviewed`, bỏ dòng review lỗi.
+Cập nhật: 2026-11-06 (Claude). Nguồn: `05_outputs/dashboard/coverage.json`, `markets.json`. Ngưỡng theo `00_brain/confidence.md` (medium = ≥10 evidence, ≥3 nguồn, ≥5 tác giả). Chỉ tính evidence của task `reviewed`, bỏ dòng review lỗi.
 
-Task reviewed: T-001 → T-018 + T-016 (18/20; T-014 TikTok bị chặn, 0 raw; T-015 `ad_library` chỉ Meta). Rework: T-019 `tripadvisor_forum` lượt 3 (gán sai C08), T-020 `forum_vn` (username trong `Note:` + 1 bài >50 từ). Tổng 568 raw, 1622 evidence; dùng được 1380, 644 tác giả. Tỷ lệ evidence biết nguồn gốc khách (origin): 44% (giảm từ 50% vì từ 2026-11-05 `serp_ai` không suy nguồn gốc khách - xem dưới).
+Task reviewed: T-001 → T-019 (19/20; T-014 TikTok bị chặn, 0 raw; T-015 `ad_library` chỉ Meta). Rework: T-020 `forum_vn` (username trong `Note:` + 1 bài >50 từ). Tổng 568 raw, 1622 evidence; dùng được 1387, 646 tác giả. Tỷ lệ evidence biết nguồn gốc khách (origin): 44% (giảm từ 50% vì từ 2026-11-05 `serp_ai` không suy nguồn gốc khách - xem dưới).
 
 | Mã | Câu hỏi | Ưu tiên | Evidence | Nguồn | Tác giả | Evidence intl | Mức | |
 |---|---|---|---|---|---|---|---|---|
-| C01 | Khách nước ngoài đi tàu VN gồm những segment nào (backpacker, couple, family, senior, group tour)? | P0 | 43 | 6 | 19 | 43 | medium |  |
+| C01 | Khách nước ngoài đi tàu VN gồm những segment nào (backpacker, couple, family, senior, group tour)? | P0 | 47 | 6 | 20 | 47 | medium |  |
 | C02 | Vì sao họ chọn tàu thay vì bay/xe (JTBD, trigger)? | P0 | 79 | 9 | 55 | 31 | medium |  |
-| C03 | Họ tìm thông tin và đặt vé ở đâu, theo thứ tự nào? | P0 | 359 | 16 | 110 | 44 | medium |  |
-| C04 | Barrier lớn nhất ở từng journey stage là gì? | P0 | 223 | 6 | 193 | 28 | medium |  |
+| C03 | Họ tìm thông tin và đặt vé ở đâu, theo thứ tự nào? | P0 | 363 | 16 | 112 | 47 | medium |  |
+| C04 | Barrier lớn nhất ở từng journey stage là gì? | P0 | 225 | 6 | 194 | 30 | medium |  |
 | C05 | Họ lo gì về trust (vé giả, mất tiền, phí ẩn, không có ghế)? | P0 | 124 | 12 | 98 | 30 | medium |  |
-| C06 | Họ chọn hạng/khoang thế nào, tiêu chí là gì (khoang 4 riêng, giường dưới, VIP)? | P0 | 249 | 13 | 186 | 138 | medium |  |
+| C06 | Họ chọn hạng/khoang thế nào, tiêu chí là gì (khoang 4 riêng, giường dưới, VIP)? | P0 | 250 | 13 | 186 | 138 | medium |  |
 | C07 | Chặng cuối từ ga đến điểm đến (Sa Pa, Hội An, Hạ Long...) xử lý thế nào, đau ở đâu? | P0 | 61 | 7 | 56 | 9 | medium |  |
 | C08 | Tuyến/combo nào họ muốn mà không có chuyến thẳng? | P1 | 82 | 7 | 50 | 13 | medium |  |
 | C09 | Thanh toán, tiền tệ, giấy tờ (hộ chiếu, tên trên vé) gây vấn đề gì? | P0 | 24 | 10 | 21 | 5 | medium |  |
@@ -25,7 +25,7 @@ Task reviewed: T-001 → T-018 + T-016 (18/20; T-014 TikTok bị chặn, 0 raw; 
 | M05 | AI engine/SERP đang recommend ai khi hỏi cách đặt vé tàu VN? | P0 | 216 | 1 | 3 | 0 | low | ⚠ P0 < medium |
 | M07 | Mỗi thị trường đặt vé tàu VN qua kênh nào (Trip.com/Ctrip, Fliggy, MakeMyTrip, MyRealTrip, Klook, KKday...)? Họ tìm thông tin trên nền tảng nào? | P0 | 12 | 4 | 12 | 12 | medium |  |
 | M06 | Chính sách, giá, tàu mới, sản lượng của DSVN thay đổi gì? | P1 | 54 | 2 | 5 | 0 | low |  |
-| I01 | Tip/workaround người đi thật hay chia sẻ là gì? | P0 | 240 | 11 | 129 | 37 | medium |  |
+| I01 | Tip/workaround người đi thật hay chia sẻ là gì? | P0 | 243 | 11 | 131 | 37 | medium |  |
 | I02 | "Ước gì biết trước" - kỳ vọng vs thực tế trên tàu/tại ga? | P0 | 199 | 7 | 185 | 71 | medium |  |
 | I03 | Tuyến/đoạn nào được khen là đẹp, đáng đi (Hải Vân, ven biển...)? | P1 | 68 | 9 | 53 | 20 | medium |  |
 
