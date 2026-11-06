@@ -11,22 +11,22 @@
  },
  {
   "step": "Đơn vị evidence",
-  "value": 1622,
+  "value": 1621,
   "note": "Mỗi ý riêng biệt trong một bài = 1 evidence, kèm quote nguyên văn"
  },
  {
   "step": "Đã duyệt, không lỗi",
-  "value": 1482,
+  "value": 1606,
   "note": "Task đã qua review; loại dòng bị đánh lỗi khi spot-check"
  },
  {
   "step": "Còn trong 18 tháng",
-  "value": 1387,
+  "value": 1503,
   "note": "Bài cũ hơn 18 tháng chỉ làm bối cảnh, không tính vào ngưỡng"
  },
  {
   "step": "Dùng trong insight",
-  "value": 853,
+  "value": 912,
   "note": "Evidence nằm trong ít nhất 1 cụm insight F01-F14"
  },
  {

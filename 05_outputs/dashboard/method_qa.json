@@ -192,11 +192,31 @@
  {
   "task_id": "T-020",
   "title": "Diễn đàn Việt (VOZ, Tinhte): khách Việt đi tàu vì gì, đau gì",
-  "evidence": 125,
-  "checked": 11,
+  "evidence": 124,
+  "checked": 23,
   "errors": 0,
   "error_rate": 0.0,
   "rework_rounds": 0,
-  "status": "rework"
+  "status": "reviewed"
+ },
+ {
+  "task_id": "T-021",
+  "title": "Reddit lượt 2: thread mới về tàu VN từ 2026-09-01",
+  "evidence": 0,
+  "checked": 0,
+  "errors": 0,
+  "error_rate": null,
+  "rework_rounds": 0,
+  "status": "open"
+ },
+ {
+  "task_id": "T-022",
+  "title": "News lượt 2: tin đường sắt từ 2026-10-25 (vé Tết 2027, giá, tàu mới)",
+  "evidence": 0,
+  "checked": 0,
+  "errors": 0,
+  "error_rate": null,
+  "rework_rounds": 0,
+  "status": "open"
  }
 ]

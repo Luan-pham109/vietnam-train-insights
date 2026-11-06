@@ -14,25 +14,25 @@
  {
   "dimension": "Chủ đề (topic)",
   "codes": 52,
-  "used": 49,
+  "used": 50,
   "example": "class_cabin, seat_selection, trust_scam, last_mile_transport, noise_sleep..."
  },
  {
   "dimension": "Nhóm khách (segment)",
   "codes": 9,
-  "used": 6,
+  "used": 7,
   "example": "intl_family, intl_couple, intl_group_tour, vn_domestic, unknown"
  },
  {
   "dimension": "Thị trường (market)",
   "codes": 10,
-  "used": 6,
+  "used": 7,
   "example": "kr, in, cn, tw_hk, western, vn, unknown"
  },
  {
   "dimension": "Thực thể (kênh, hãng tàu)",
   "codes": 68,
-  "used": 48,
+  "used": 52,
   "example": "dsvn, baolau, twelve_go, vexere, chapa_express, lotus..."
  },
  {

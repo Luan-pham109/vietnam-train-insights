@@ -2,34 +2,34 @@
 
 Cập nhật: 2026-11-06 (Claude). Nguồn: `05_outputs/dashboard/coverage.json`, `markets.json`. Ngưỡng theo `00_brain/confidence.md` (medium = ≥10 evidence, ≥3 nguồn, ≥5 tác giả). Chỉ tính evidence của task `reviewed`, bỏ dòng review lỗi.
 
-Task reviewed: T-001 → T-019 (19/20; T-014 TikTok bị chặn, 0 raw; T-015 `ad_library` chỉ Meta). Rework: T-020 `forum_vn` (username trong `Note:` + 1 bài >50 từ). Tổng 568 raw, 1622 evidence; dùng được 1387, 646 tác giả. Tỷ lệ evidence biết nguồn gốc khách (origin): 44% (giảm từ 50% vì từ 2026-11-05 `serp_ai` không suy nguồn gốc khách - xem dưới).
+Task reviewed: T-001 → T-020 (20/20; T-014 TikTok bị chặn, 0 raw; T-015 `ad_library` chỉ Meta). Tổng 568 raw, 1621 evidence; dùng được 1503, 729 tác giả. Tỷ lệ evidence biết nguồn gốc khách (origin): 49% (tăng từ 44% nhờ T-020 `forum_vn` - khách Việt).
 
 | Mã | Câu hỏi | Ưu tiên | Evidence | Nguồn | Tác giả | Evidence intl | Mức | |
 |---|---|---|---|---|---|---|---|---|
 | C01 | Khách nước ngoài đi tàu VN gồm những segment nào (backpacker, couple, family, senior, group tour)? | P0 | 47 | 6 | 20 | 47 | medium |  |
-| C02 | Vì sao họ chọn tàu thay vì bay/xe (JTBD, trigger)? | P0 | 79 | 9 | 55 | 31 | medium |  |
-| C03 | Họ tìm thông tin và đặt vé ở đâu, theo thứ tự nào? | P0 | 363 | 16 | 112 | 47 | medium |  |
+| C02 | Vì sao họ chọn tàu thay vì bay/xe (JTBD, trigger)? | P0 | 101 | 10 | 74 | 31 | medium |  |
+| C03 | Họ tìm thông tin và đặt vé ở đâu, theo thứ tự nào? | P0 | 384 | 17 | 130 | 47 | medium |  |
 | C04 | Barrier lớn nhất ở từng journey stage là gì? | P0 | 225 | 6 | 194 | 30 | medium |  |
-| C05 | Họ lo gì về trust (vé giả, mất tiền, phí ẩn, không có ghế)? | P0 | 124 | 12 | 98 | 30 | medium |  |
-| C06 | Họ chọn hạng/khoang thế nào, tiêu chí là gì (khoang 4 riêng, giường dưới, VIP)? | P0 | 250 | 13 | 186 | 138 | medium |  |
-| C07 | Chặng cuối từ ga đến điểm đến (Sa Pa, Hội An, Hạ Long...) xử lý thế nào, đau ở đâu? | P0 | 61 | 7 | 56 | 9 | medium |  |
-| C08 | Tuyến/combo nào họ muốn mà không có chuyến thẳng? | P1 | 82 | 7 | 50 | 13 | medium |  |
-| C09 | Thanh toán, tiền tệ, giấy tờ (hộ chiếu, tên trên vé) gây vấn đề gì? | P0 | 24 | 10 | 21 | 5 | medium |  |
+| C05 | Họ lo gì về trust (vé giả, mất tiền, phí ẩn, không có ghế)? | P0 | 125 | 13 | 99 | 30 | medium |  |
+| C06 | Họ chọn hạng/khoang thế nào, tiêu chí là gì (khoang 4 riêng, giường dưới, VIP)? | P0 | 272 | 14 | 203 | 138 | medium |  |
+| C07 | Chặng cuối từ ga đến điểm đến (Sa Pa, Hội An, Hạ Long...) xử lý thế nào, đau ở đâu? | P0 | 69 | 8 | 64 | 9 | medium |  |
+| C08 | Tuyến/combo nào họ muốn mà không có chuyến thẳng? | P1 | 88 | 8 | 55 | 13 | medium |  |
+| C09 | Thanh toán, tiền tệ, giấy tờ (hộ chiếu, tên trên vé) gây vấn đề gì? | P0 | 33 | 11 | 27 | 5 | medium |  |
 | C11 | Khách Ấn, Trung, Hàn khác khách phương Tây thế nào ở lý do đi tàu, hạng ghế, barrier? | P0 | 45 | 7 | 28 | 41 | medium |  |
 | C12 | Mỗi thị trường cần gì riêng: ví thanh toán, ngôn ngữ, đồ ăn (chay/kiêng), đi theo nhóm/gia đình? | P0 | 15 | 5 | 14 | 7 | medium |  |
-| C10 | Khách Việt đi tàu vì gì, đau gì (Tết, hoàn đổi, giá)? | P1 | 17 | 1 | 3 | 0 | low |  |
-| M01 | Kênh nào được nhắc/recommend nhiều nhất (dsvn.vn, 12Go, Baolau, Trip.com, Traveloka, Klook, agent, quầy ga)? | P0 | 315 | 16 | 83 | 37 | medium |  |
+| C10 | Khách Việt đi tàu vì gì, đau gì (Tết, hoàn đổi, giá)? | P1 | 57 | 2 | 39 | 0 | low |  |
+| M01 | Kênh nào được nhắc/recommend nhiều nhất (dsvn.vn, 12Go, Baolau, Trip.com, Traveloka, Klook, agent, quầy ga)? | P0 | 319 | 17 | 87 | 37 | medium |  |
 | M02 | Từng kênh được khen/chê vì gì (giá, phí, UX, hỗ trợ, độ tin cậy)? | P0 | 72 | 5 | 49 | 0 | medium |  |
 | M03 | Đối thủ định vị và quảng cáo gì (messaging, offer)? | P1 | 25 | 2 | 14 | 0 | low |  |
 | M04 | Tàu du lịch tư nhân (Lotus, Chapa Express, Violette, SapaLy, Livitrans...) được nhìn nhận thế nào so với tàu DSVN? | P0 | 150 | 10 | 126 | 101 | medium |  |
 | M05 | AI engine/SERP đang recommend ai khi hỏi cách đặt vé tàu VN? | P0 | 216 | 1 | 3 | 0 | low | ⚠ P0 < medium |
 | M07 | Mỗi thị trường đặt vé tàu VN qua kênh nào (Trip.com/Ctrip, Fliggy, MakeMyTrip, MyRealTrip, Klook, KKday...)? Họ tìm thông tin trên nền tảng nào? | P0 | 12 | 4 | 12 | 12 | medium |  |
 | M06 | Chính sách, giá, tàu mới, sản lượng của DSVN thay đổi gì? | P1 | 54 | 2 | 5 | 0 | low |  |
-| I01 | Tip/workaround người đi thật hay chia sẻ là gì? | P0 | 243 | 11 | 131 | 37 | medium |  |
+| I01 | Tip/workaround người đi thật hay chia sẻ là gì? | P0 | 259 | 12 | 146 | 37 | medium |  |
 | I02 | "Ước gì biết trước" - kỳ vọng vs thực tế trên tàu/tại ga? | P0 | 199 | 7 | 185 | 71 | medium |  |
-| I03 | Tuyến/đoạn nào được khen là đẹp, đáng đi (Hải Vân, ven biển...)? | P1 | 68 | 9 | 53 | 20 | medium |  |
+| I03 | Tuyến/đoạn nào được khen là đẹp, đáng đi (Hải Vân, ven biển...)? | P1 | 76 | 10 | 61 | 20 | medium |  |
 
-Độ phủ tổng: 96% (18/22 câu đạt medium; P0: 16/17). C10 (khách Việt, P1) vẫn 1 nguồn (`news`) tới khi T-020 `forum_vn` (125 evidence) qua rework. M06, M03 vẫn 2 nguồn.
+Độ phủ tổng: 97% (18/22 câu đạt medium; P0: 16/17). C10 (khách Việt, P1) 57 evidence, 39 tác giả nhưng mới 2 nguồn (`news`, `forum_vn`) → còn `low`, cần thêm 1 nguồn Việt (vd review app DSVN tiếng Việt, FB group Việt). M06, M03 vẫn 2 nguồn.
 
 - C01 tính từ taxonomy v0.8 (segment khách nước ngoài cụ thể → C01, Luan duyệt 2026-10-28): proxy ai hay viết, không phải cơ cấu khách thật.
 - M05 script ghi `low` vì chỉ 1 nguồn (`serp_ai`) và 3 "tác giả" (3 engine). Theo `confidence.md`, `serp_ai` đánh giá theo ảnh hưởng → coi là đủ dùng. Đã có **2 lượt** (T-009 2026-10-27/28, T-016 2026-11-04), 60 cặp engine × prompt. Google 2 lượt khác IP (Mỹ → VN) nên không so xu hướng Google. Perplexity chặn cả 2 lượt.
