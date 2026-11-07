@@ -6,22 +6,22 @@
  },
  {
   "step": "Bài gốc thu về",
-  "value": 568,
+  "value": 578,
   "note": "Thread, review, video, trang - lưu dạng trích đoạn, có link gốc"
  },
  {
   "step": "Đơn vị evidence",
-  "value": 1621,
+  "value": 1642,
   "note": "Mỗi ý riêng biệt trong một bài = 1 evidence, kèm quote nguyên văn"
  },
  {
   "step": "Đã duyệt, không lỗi",
-  "value": 1606,
+  "value": 1609,
   "note": "Task đã qua review; loại dòng bị đánh lỗi khi spot-check"
  },
  {
   "step": "Còn trong 18 tháng",
-  "value": 1503,
+  "value": 1506,
   "note": "Bài cũ hơn 18 tháng chỉ làm bối cảnh, không tính vào ngưỡng"
  },
  {

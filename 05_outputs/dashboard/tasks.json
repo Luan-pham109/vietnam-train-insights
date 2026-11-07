@@ -284,27 +284,27 @@
   "title": "Reddit lượt 2: thread mới về tàu VN từ 2026-09-01",
   "source": "reddit",
   "priority": "P0",
-  "status": "open",
+  "status": "rework",
   "blocked_by": "",
-  "claimed_at": "",
-  "submitted_at": "",
-  "raw": 0,
-  "evidence": 0,
-  "checked": 0,
-  "error_rate": null
+  "claimed_at": "2026-11-06T07:02:39Z",
+  "submitted_at": "2026-11-06T09:16:42Z",
+  "raw": 9,
+  "evidence": 18,
+  "checked": 18,
+  "error_rate": 0.111
  },
  {
   "task_id": "T-022",
   "title": "News lượt 2: tin đường sắt từ 2026-10-25 (vé Tết 2027, giá, tàu mới)",
   "source": "news",
   "priority": "P1",
-  "status": "open",
+  "status": "reviewed",
   "blocked_by": "",
-  "claimed_at": "",
-  "submitted_at": "",
-  "raw": 0,
-  "evidence": 0,
-  "checked": 0,
-  "error_rate": null
+  "claimed_at": "2026-11-06T10:12:31Z",
+  "submitted_at": "2026-11-06T10:36:25Z",
+  "raw": 1,
+  "evidence": 3,
+  "checked": 3,
+  "error_rate": 0.0
  }
 ]

@@ -1,10 +1,10 @@
 [
  {
   "source": "reddit",
-  "name": "r/VietNam, r/travel, r/solotravel, r/backpacking, r/VietnamTravel",
+  "name": "r/VietNam, r/travel, r/solotravel, r/backpacking (r/VietnamTravel đã bị banned - bỏ từ v0.9)",
   "wave": "1",
-  "state": "đã giao",
-  "raw": 30,
+  "state": "đang chạy",
+  "raw": 39,
   "evidence": 84
  },
  {
@@ -97,11 +97,11 @@
  },
  {
   "source": "news",
-  "name": "VnExpress, Tuổi Trẻ, Thanh Niên, VnExpress International, dsvn.vn",
+  "name": "VnExpress, Tuổi Trẻ, Thanh Niên, VnExpress International (dsvn.vn: xem trạng thái truy cập)",
   "wave": "3",
-  "state": "đã giao",
-  "raw": 30,
-  "evidence": 52
+  "state": "đã duyệt",
+  "raw": 31,
+  "evidence": 55
  },
  {
   "source": "forum_vn",

@@ -202,21 +202,21 @@
  {
   "task_id": "T-021",
   "title": "Reddit lượt 2: thread mới về tàu VN từ 2026-09-01",
-  "evidence": 0,
-  "checked": 0,
-  "errors": 0,
-  "error_rate": null,
+  "evidence": 18,
+  "checked": 18,
+  "errors": 2,
+  "error_rate": 0.111,
   "rework_rounds": 0,
-  "status": "open"
+  "status": "rework"
  },
  {
   "task_id": "T-022",
   "title": "News lượt 2: tin đường sắt từ 2026-10-25 (vé Tết 2027, giá, tàu mới)",
-  "evidence": 0,
-  "checked": 0,
+  "evidence": 3,
+  "checked": 3,
   "errors": 0,
-  "error_rate": null,
+  "error_rate": 0.0,
   "rework_rounds": 0,
-  "status": "open"
+  "status": "reviewed"
  }
 ]

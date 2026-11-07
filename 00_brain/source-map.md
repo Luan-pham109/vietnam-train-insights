@@ -1,8 +1,8 @@
-# Source map v0.8
+# Source map v0.9
 
 | Mã nguồn | Nguồn | Segment | Câu hỏi chính | Tần suất | Wave |
 |---|---|---|---|---|---|
-| `reddit` | r/VietNam, r/travel, r/solotravel, r/backpacking, r/VietnamTravel | intl | C03 C04 C05 C06 M01 M02 I01 | Weekly | 1 |
+| `reddit` | r/VietNam, r/travel, r/solotravel, r/backpacking (r/VietnamTravel đã bị banned - bỏ từ v0.9) | intl | C03 C04 C05 C06 M01 M02 I01 | Weekly | 1 |
 | `tripadvisor_forum` | TripAdvisor Vietnam forum (train threads) | intl | C03 C04 C07 M01 I01 | Weekly | 1 |
 | `tripadvisor_review` | Review tàu du lịch tư nhân | intl | C06 M04 I02 | Monthly | 1 |
 | `gmaps_station` | Google Maps review ga HAN, SGN, HUE, DAD, NHA, LCA, DTH | intl + vn | C04 C07 I02 | Monthly | 1 |
@@ -14,7 +14,7 @@
 | `serp_ai` | Google SERP + ChatGPT/Perplexity/Gemini với bộ prompt cố định | intl | M05 M01 | Monthly | 2 |
 | `competitor_site` | Trang tàu VN của 12Go, Baolau, Trip.com, Klook, Traveloka | - | M02 M03 | Monthly | 2 |
 | `ad_library` | Meta Ad Library, Google Ads Transparency | - | M03 | Monthly | 3 |
-| `news` | VnExpress, Tuổi Trẻ, Thanh Niên, VnExpress International, dsvn.vn | vn | M06 C10 | Weekly | 3 |
+| `news` | VnExpress, Tuổi Trẻ, Thanh Niên, VnExpress International (dsvn.vn: xem trạng thái truy cập) | vn | M06 C10 | 2 tuần/lần, weekly lại từ 2026-12-15 (mùa vé Tết) | 3 |
 | `forum_vn` | VOZ, Tinhte | vn | C10 | Monthly | 3 |
 | `quora` | Quora (câu hỏi về tàu VN) | in | C11 C12 M07 I01 | Monthly | M |
 | `reddit_in` | r/india, r/IndiaTravel, r/indiasocial, r/india_tourism | in | C11 C12 M07 | Monthly | M |
@@ -25,6 +25,9 @@
 | `naver_blog` | Naver Blog/Cafe - 베트남 기차/침대기차/사파 기차 | kr | C11 C12 M07 I01 | Monthly | M |
 | `tistory` | Tistory blog tiếng Hàn | kr | C11 I02 | Monthly | M |
 | `youtube_kr` | Vlog Hàn về tàu VN | kr | C02 C11 I02 | Monthly | M |
+
+## Changelog
+- v0.9 (2026-11-07, sau review T-021/T-022): bỏ r/VietnamTravel; news giãn 2 tuần/lần tới 2026-12-15; dsvn.vn kiểm theo quý.
 
 ## Ghi chú độ lệch nguồn (bắt buộc đọc khi synthesis)
 - `reddit`, `tripadvisor`: lệch về khách phương Tây, nói tiếng Anh, chủ động lên kế hoạch → over-represent ở `plan`/`book`.
@@ -59,3 +62,5 @@
 - `serp_ai` lượt 2 (T-016, 2026-11-04): ChatGPT, Gemini 10/10 không captcha. Google ra IP **Việt Nam** (Sài Gòn) - khác lượt 1 (Mỹ) nên Google 2 lượt không so được với nhau; từ lượt 3 ghi `browser_location`, giữ IP VN làm baseline. Google bật unusual-traffic ở p01 (Luan tự qua khi có mặt). Perplexity tường đăng nhập 10/10.
 - `tripadvisor_forum` lượt 3 (T-019, 2026-11-04): **hẹn ngày k-number không dùng được cho thread cũ** - thread >~12 tháng chỉ hiện ngày tương đối nên không có mốc ngày chính xác nhỏ hơn; 9/9 thread nhóm A loại. Bỏ phương pháp này cho thread cũ. Thread mới từ 2026-10-01 rất ít (1 thread/8 forum) → nhóm B quét theo tháng, listing trước search sau. m.tripadvisor.com lỗi DNS.
 - `forum_vn` (T-020, 2026-11-04): VOZ và Tinhte đọc được thread + reply không đăng nhập, không captcha. VOZ có search nội bộ (lọc tiêu đề, sắp theo ngày); Tinhte search là Google CSE, không sắp newest-first đáng tin. Nhiều hit sai nghĩa "tàu" (thuyền, metro) và thread tin dán → chỉ 9/20 thread đạt. Không ghi username trong `Note:`. Quét theo quý.
+- `reddit` lượt 2 (T-021, 2026-11-06): **r/VietnamTravel đã bị banned** - bỏ khỏi nguồn. Đọc qua redlib: bị Gandalf/Cloudflare chặn nếu mở thẳng thread - vào trang chủ, chờ interstitial ~30s rồi mới mở thread. Số comment redlib đếm có thể cao hơn số hiển thị. Thread mới từ 2026-09-01: 10/25 đạt. Lượt sau thêm truy vấn "night train sleep", "sleeper train quality".
+- `news` lượt 2 (T-022, 2026-11-06): cửa sổ 2026-10-25 - 11-06 chỉ 1 bài đạt. **dsvn.vn lỗi privacy 2 lượt liên tiếp** (T-018, T-022) → coi là không truy cập được, kiểm lại theo quý, không thử mỗi lượt. Giãn nhịp 2 tuần/lần tới 2026-12-15 rồi weekly lại cho mùa vé Tết.
