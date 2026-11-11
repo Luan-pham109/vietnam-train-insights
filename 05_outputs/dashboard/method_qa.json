@@ -204,10 +204,10 @@
   "title": "Reddit lượt 2: thread mới về tàu VN từ 2026-09-01",
   "evidence": 18,
   "checked": 18,
-  "errors": 2,
-  "error_rate": 0.111,
+  "errors": 0,
+  "error_rate": 0.0,
   "rework_rounds": 0,
-  "status": "rework"
+  "status": "reviewed"
  },
  {
   "task_id": "T-022",
@@ -218,5 +218,25 @@
   "error_rate": 0.0,
   "rework_rounds": 0,
   "status": "reviewed"
+ },
+ {
+  "task_id": "T-023",
+  "title": "serp_ai lượt 3 (lượt 2 của tháng 11/2026): chạy lại bộ 10 prompt cố định",
+  "evidence": 0,
+  "checked": 0,
+  "errors": 0,
+  "error_rate": null,
+  "rework_rounds": 0,
+  "status": "open"
+ },
+ {
+  "task_id": "T-024",
+  "title": "Reddit lượt 3: chất lượng/giấc ngủ tàu đêm + thread mới từ 2026-10-01",
+  "evidence": 0,
+  "checked": 0,
+  "errors": 0,
+  "error_rate": null,
+  "rework_rounds": 0,
+  "status": "open"
  }
 ]

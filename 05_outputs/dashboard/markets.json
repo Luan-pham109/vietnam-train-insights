@@ -56,11 +56,11 @@
  {
   "market": "Nước ngoài (chưa rõ nước)",
   "code": "intl",
-  "evidence": 260,
-  "evidence_high": 239,
-  "evidence_medium": 21,
-  "authors": 166,
-  "sources": 5
+  "evidence": 274,
+  "evidence_high": 251,
+  "evidence_medium": 23,
+  "authors": 177,
+  "sources": 6
  },
  {
   "market": "Expat",
@@ -83,10 +83,10 @@
  {
   "market": "Chưa rõ",
   "code": "unknown",
-  "evidence": 777,
+  "evidence": 781,
   "evidence_high": 0,
   "evidence_medium": 0,
-  "authors": 271,
+  "authors": 274,
   "sources": 12
  }
 ]

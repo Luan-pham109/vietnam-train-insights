@@ -1,51 +1,51 @@
 [
  {
   "channel": "dsvn.vn",
-  "evidence": 27,
-  "authors": 24,
-  "positive": 9,
+  "evidence": 29,
+  "authors": 26,
+  "positive": 10,
   "negative": 4,
-  "neutral": 14
+  "neutral": 15
  },
  {
   "channel": "Baolau",
-  "evidence": 21,
-  "authors": 14,
-  "positive": 14,
+  "evidence": 22,
+  "authors": 15,
+  "positive": 15,
   "negative": 1,
   "neutral": 6
  },
  {
   "channel": "12Go",
-  "evidence": 16,
-  "authors": 11,
+  "evidence": 19,
+  "authors": 14,
   "positive": 4,
-  "negative": 3,
+  "negative": 6,
   "neutral": 9
  },
  {
+  "channel": "Quầy ga",
+  "evidence": 11,
+  "authors": 11,
+  "positive": 1,
+  "negative": 2,
+  "neutral": 8
+ },
+ {
   "channel": "Vexere",
-  "evidence": 9,
-  "authors": 9,
-  "positive": 3,
+  "evidence": 10,
+  "authors": 10,
+  "positive": 4,
   "negative": 1,
   "neutral": 5
  },
  {
-  "channel": "Quầy ga",
-  "evidence": 9,
-  "authors": 9,
-  "positive": 0,
-  "negative": 1,
-  "neutral": 8
- },
- {
   "channel": "Klook",
-  "evidence": 5,
-  "authors": 5,
+  "evidence": 7,
+  "authors": 7,
   "positive": 1,
-  "negative": 0,
-  "neutral": 4
+  "negative": 1,
+  "neutral": 5
  },
  {
   "channel": "Site giả dạng DSVN",

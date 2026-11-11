@@ -16,17 +16,17 @@
  },
  {
   "step": "Đã duyệt, không lỗi",
-  "value": 1609,
+  "value": 1627,
   "note": "Task đã qua review; loại dòng bị đánh lỗi khi spot-check"
  },
  {
   "step": "Còn trong 18 tháng",
-  "value": 1506,
+  "value": 1524,
   "note": "Bài cũ hơn 18 tháng chỉ làm bối cảnh, không tính vào ngưỡng"
  },
  {
   "step": "Dùng trong insight",
-  "value": 912,
+  "value": 925,
   "note": "Evidence nằm trong ít nhất 1 cụm insight F01-F14"
  },
  {
