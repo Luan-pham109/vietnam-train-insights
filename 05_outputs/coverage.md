@@ -1,14 +1,14 @@
 # Coverage
 
-Cập nhật: 2026-11-12 (Claude). Nguồn: `05_outputs/dashboard/coverage.json`, `markets.json`. Ngưỡng theo `00_brain/confidence.md` (medium = ≥10 evidence, ≥3 nguồn, ≥5 tác giả). Chỉ tính evidence của task `reviewed`, bỏ dòng review lỗi.
+Cập nhật: 2026-11-13 (Claude). Nguồn: `05_outputs/dashboard/coverage.json`, `markets.json`. Ngưỡng theo `00_brain/confidence.md` (medium = ≥10 evidence, ≥3 nguồn, ≥5 tác giả). Chỉ tính evidence của task `reviewed`, bỏ dòng review lỗi.
 
-Task reviewed: T-001 → T-022 (22/24; T-021 `reddit` lượt 2 reviewed 2026-11-11 sau rework; T-023 `serp_ai` lượt 3 đang chạy (Muse claim 2026-11-11), T-024 `reddit` lượt 3 open; T-014 TikTok bị chặn, 0 raw; T-015 `ad_library` chỉ Meta). Tổng 578 raw, 1642 evidence; dùng được 1524, 743 tác giả. Tỷ lệ evidence biết nguồn gốc khách (origin): 49%.
+Task reviewed: T-001 → T-022 (22/24; T-021 `reddit` lượt 2 reviewed 2026-11-11 sau rework; T-023 `serp_ai` lượt 3 đang chạy (Muse claim 2026-11-11, ~45h), T-024 `reddit` lượt 3 open; T-014 TikTok bị chặn, 0 raw; T-015 `ad_library` chỉ Meta). Tổng 578 raw, 1642 evidence; dùng được 1523, 742 tác giả (1 evidence ra khỏi cửa sổ 18 tháng). Tỷ lệ evidence biết nguồn gốc khách (origin): 49%.
 
 | Mã | Câu hỏi | Ưu tiên | Evidence | Nguồn | Tác giả | Evidence intl | Mức | |
 |---|---|---|---|---|---|---|---|---|
 | C01 | Khách nước ngoài đi tàu VN gồm những segment nào (backpacker, couple, family, senior, group tour)? | P0 | 49 | 7 | 21 | 49 | medium |  |
 | C02 | Vì sao họ chọn tàu thay vì bay/xe (JTBD, trigger)? | P0 | 106 | 10 | 78 | 36 | medium |  |
-| C03 | Họ tìm thông tin và đặt vé ở đâu, theo thứ tự nào? | P0 | 393 | 17 | 138 | 50 | medium |  |
+| C03 | Họ tìm thông tin và đặt vé ở đâu, theo thứ tự nào? | P0 | 392 | 17 | 137 | 49 | medium |  |
 | C04 | Barrier lớn nhất ở từng journey stage là gì? | P0 | 227 | 6 | 195 | 32 | medium |  |
 | C05 | Họ lo gì về trust (vé giả, mất tiền, phí ẩn, không có ghế)? | P0 | 126 | 13 | 100 | 31 | medium |  |
 | C06 | Họ chọn hạng/khoang thế nào, tiêu chí là gì (khoang 4 riêng, giường dưới, VIP)? | P0 | 277 | 14 | 207 | 143 | medium |  |
@@ -18,15 +18,15 @@ Task reviewed: T-001 → T-022 (22/24; T-021 `reddit` lượt 2 reviewed 2026-11
 | C11 | Khách Ấn, Trung, Hàn khác khách phương Tây thế nào ở lý do đi tàu, hạng ghế, barrier? | P0 | 45 | 7 | 28 | 41 | medium |  |
 | C12 | Mỗi thị trường cần gì riêng: ví thanh toán, ngôn ngữ, đồ ăn (chay/kiêng), đi theo nhóm/gia đình? | P0 | 15 | 5 | 14 | 7 | medium |  |
 | C10 | Khách Việt đi tàu vì gì, đau gì (Tết, hoàn đổi, giá)? | P1 | 57 | 2 | 39 | 0 | low |  |
-| M01 | Kênh nào được nhắc/recommend nhiều nhất (dsvn.vn, 12Go, Baolau, Trip.com, Traveloka, Klook, agent, quầy ga)? | P0 | 328 | 17 | 95 | 40 | medium |  |
+| M01 | Kênh nào được nhắc/recommend nhiều nhất (dsvn.vn, 12Go, Baolau, Trip.com, Traveloka, Klook, agent, quầy ga)? | P0 | 327 | 17 | 94 | 39 | medium |  |
 | M02 | Từng kênh được khen/chê vì gì (giá, phí, UX, hỗ trợ, độ tin cậy)? | P0 | 72 | 5 | 49 | 0 | medium |  |
 | M03 | Đối thủ định vị và quảng cáo gì (messaging, offer)? | P1 | 25 | 2 | 14 | 0 | low |  |
-| M04 | Tàu du lịch tư nhân (Lotus, Chapa Express, Violette, SapaLy, Livitrans...) được nhìn nhận thế nào so với tàu DSVN? | P0 | 150 | 10 | 126 | 101 | medium |  |
+| M04 | Tàu du lịch tư nhân (Lotus, Chapa Express, Violette, SapaLy, Livitrans...) được nhìn nhận thế nào so với tàu DSVN? | P0 | 149 | 10 | 125 | 100 | medium |  |
 | M05 | AI engine/SERP đang recommend ai khi hỏi cách đặt vé tàu VN? | P0 | 216 | 1 | 3 | 0 | low | ⚠ P0 < medium |
 | M07 | Mỗi thị trường đặt vé tàu VN qua kênh nào (Trip.com/Ctrip, Fliggy, MakeMyTrip, MyRealTrip, Klook, KKday...)? Họ tìm thông tin trên nền tảng nào? | P0 | 12 | 4 | 12 | 12 | medium |  |
 | M06 | Chính sách, giá, tàu mới, sản lượng của DSVN thay đổi gì? | P1 | 57 | 2 | 5 | 0 | low |  |
 | I01 | Tip/workaround người đi thật hay chia sẻ là gì? | P0 | 265 | 12 | 151 | 37 | medium |  |
-| I02 | "Ước gì biết trước" - kỳ vọng vs thực tế trên tàu/tại ga? | P0 | 201 | 8 | 186 | 73 | medium |  |
+| I02 | "Ước gì biết trước" - kỳ vọng vs thực tế trên tàu/tại ga? | P0 | 200 | 8 | 185 | 72 | medium |  |
 | I03 | Tuyến/đoạn nào được khen là đẹp, đáng đi (Hải Vân, ven biển...)? | P1 | 77 | 10 | 62 | 21 | medium |  |
 
 Độ phủ tổng: 97% (18/22 câu đạt medium; P0: 16/17). C10 (khách Việt, P1) 57 evidence, 39 tác giả nhưng mới 2 nguồn (`news`, `forum_vn`) → còn `low`, cần thêm 1 nguồn Việt (vd review app DSVN tiếng Việt, FB group Việt). M06 (57 evidence), M03 vẫn 2 nguồn; T-022 news lượt 2 chỉ thêm 3 evidence (1 bài).
@@ -48,7 +48,7 @@ Task reviewed: T-001 → T-022 (22/24; T-021 `reddit` lượt 2 reviewed 2026-11
 | Hàn Quốc | kr | 47 | 47 | 0 | 28 | 3 |
 | Phương Tây | western | 37 | 37 | 0 | 13 | 3 |
 | Châu Á khác | other_asia | 5 | 5 | 0 | 1 | 1 |
-| Nước ngoài (chưa rõ nước) | intl | 274 | 251 | 23 | 177 | 6 |
+| Nước ngoài (chưa rõ nước) | intl | 273 | 250 | 23 | 176 | 6 |
 | Expat | expat | 0 | 0 | 0 | 0 | 0 |
 | Việt Nam | vn | 358 | 358 | 0 | 261 | 5 |
 | Chưa rõ | unknown | 781 | 0 | 0 | 274 | 12 |
