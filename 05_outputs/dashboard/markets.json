@@ -56,10 +56,10 @@
  {
   "market": "Nước ngoài (chưa rõ nước)",
   "code": "intl",
-  "evidence": 273,
+  "evidence": 272,
   "evidence_high": 250,
-  "evidence_medium": 23,
-  "authors": 176,
+  "evidence_medium": 22,
+  "authors": 175,
   "sources": 6
  },
  {
@@ -83,10 +83,10 @@
  {
   "market": "Chưa rõ",
   "code": "unknown",
-  "evidence": 781,
+  "evidence": 778,
   "evidence_high": 0,
   "evidence_medium": 0,
-  "authors": 274,
+  "authors": 273,
   "sources": 12
  }
 ]
