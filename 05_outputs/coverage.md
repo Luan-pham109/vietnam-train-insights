@@ -1,8 +1,8 @@
 # Coverage
 
-Cập nhật: 2026-11-15 (Claude). Nguồn: `05_outputs/dashboard/coverage.json`, `markets.json`. Ngưỡng theo `00_brain/confidence.md` (medium = ≥10 evidence, ≥3 nguồn, ≥5 tác giả). Chỉ tính evidence của task `reviewed`, bỏ dòng review lỗi.
+Cập nhật: 2026-11-16 (Claude). Nguồn: `05_outputs/dashboard/coverage.json`, `markets.json`. Ngưỡng theo `00_brain/confidence.md` (medium = ≥10 evidence, ≥3 nguồn, ≥5 tác giả). Chỉ tính evidence của task `reviewed`, bỏ dòng review lỗi.
 
-Task reviewed: T-001 → T-022 (22/24; T-021 `reddit` lượt 2 reviewed 2026-11-11 sau rework; T-023 `serp_ai` lượt 3 reset về open 2026-11-15 (claim 2026-11-11, quá 72h không commit), T-024 `reddit` lượt 3 open; T-014 TikTok bị chặn, 0 raw; T-015 `ad_library` chỉ Meta). Tổng 578 raw, 1642 evidence; dùng được 1519, 740 tác giả (5 evidence ra khỏi cửa sổ 18 tháng). Tỷ lệ evidence biết nguồn gốc khách (origin): 49%.
+Task reviewed: T-001 → T-022 (22/24; T-021 `reddit` lượt 2 reviewed 2026-11-11 sau rework; T-023 `serp_ai` lượt 3 reset về open 2026-11-15 (claim 2026-11-11, quá 72h không commit), T-024 `reddit` lượt 3 open, chưa được claim tính đến 2026-11-16; T-014 TikTok bị chặn, 0 raw; T-015 `ad_library` chỉ Meta). Tổng 578 raw, 1642 evidence; dùng được 1519, 740 tác giả (5 evidence ra khỏi cửa sổ 18 tháng). Tỷ lệ evidence biết nguồn gốc khách (origin): 49%.
 
 | Mã | Câu hỏi | Ưu tiên | Evidence | Nguồn | Tác giả | Evidence intl | Mức | |
 |---|---|---|---|---|---|---|---|---|
