@@ -1,15 +1,15 @@
 # Coverage
 
-Cập nhật: 2026-11-17 (Claude). Nguồn: `05_outputs/dashboard/coverage.json`, `markets.json`. Ngưỡng theo `00_brain/confidence.md` (medium = ≥10 evidence, ≥3 nguồn, ≥5 tác giả). Chỉ tính evidence của task `reviewed`, bỏ dòng review lỗi.
+Cập nhật: 2026-11-18 (Claude). Nguồn: `05_outputs/dashboard/coverage.json`, `markets.json`. Ngưỡng theo `00_brain/confidence.md` (medium = ≥10 evidence, ≥3 nguồn, ≥5 tác giả). Chỉ tính evidence của task `reviewed`, bỏ dòng review lỗi.
 
-Task reviewed: T-001 → T-022 (22/24; T-021 `reddit` lượt 2 reviewed 2026-11-11 sau rework; T-023 `serp_ai` lượt 3 reset về open 2026-11-15 (claim 2026-11-11, quá 72h không commit), T-024 `reddit` lượt 3 open, chưa được claim tính đến 2026-11-17; Muse không commit từ 2026-11-11; T-014 TikTok bị chặn, 0 raw; T-015 `ad_library` chỉ Meta). Tổng 578 raw, 1642 evidence; dùng được 1519, 740 tác giả (5 evidence ra khỏi cửa sổ 18 tháng). Tỷ lệ evidence biết nguồn gốc khách (origin): 49%.
+Task reviewed: T-001 → T-022 (22/24; T-021 `reddit` lượt 2 reviewed 2026-11-11 sau rework; T-023 `serp_ai` lượt 3 reset về open 2026-11-15 (claim 2026-11-11, quá 72h không commit), T-024 `reddit` lượt 3 open, chưa được claim tính đến 2026-11-18; Muse không commit từ 2026-11-11; T-014 TikTok bị chặn, 0 raw; T-015 `ad_library` chỉ Meta). Tổng 578 raw, 1642 evidence; dùng được 1518, 739 tác giả (6 evidence ra khỏi cửa sổ 18 tháng). Tỷ lệ evidence biết nguồn gốc khách (origin): 49%.
 
 | Mã | Câu hỏi | Ưu tiên | Evidence | Nguồn | Tác giả | Evidence intl | Mức | |
 |---|---|---|---|---|---|---|---|---|
 | C01 | Khách nước ngoài đi tàu VN gồm những segment nào (backpacker, couple, family, senior, group tour)? | P0 | 49 | 7 | 21 | 49 | medium |  |
 | C02 | Vì sao họ chọn tàu thay vì bay/xe (JTBD, trigger)? | P0 | 105 | 10 | 77 | 36 | medium |  |
 | C03 | Họ tìm thông tin và đặt vé ở đâu, theo thứ tự nào? | P0 | 392 | 17 | 137 | 49 | medium |  |
-| C04 | Barrier lớn nhất ở từng journey stage là gì? | P0 | 227 | 6 | 195 | 32 | medium |  |
+| C04 | Barrier lớn nhất ở từng journey stage là gì? | P0 | 226 | 6 | 194 | 32 | medium |  |
 | C05 | Họ lo gì về trust (vé giả, mất tiền, phí ẩn, không có ghế)? | P0 | 126 | 13 | 100 | 31 | medium |  |
 | C06 | Họ chọn hạng/khoang thế nào, tiêu chí là gì (khoang 4 riêng, giường dưới, VIP)? | P0 | 276 | 14 | 206 | 143 | medium |  |
 | C07 | Chặng cuối từ ga đến điểm đến (Sa Pa, Hội An, Hạ Long...) xử lý thế nào, đau ở đâu? | P0 | 71 | 8 | 66 | 10 | medium |  |
@@ -19,7 +19,7 @@ Task reviewed: T-001 → T-022 (22/24; T-021 `reddit` lượt 2 reviewed 2026-11
 | C12 | Mỗi thị trường cần gì riêng: ví thanh toán, ngôn ngữ, đồ ăn (chay/kiêng), đi theo nhóm/gia đình? | P0 | 15 | 5 | 14 | 7 | medium |  |
 | C10 | Khách Việt đi tàu vì gì, đau gì (Tết, hoàn đổi, giá)? | P1 | 57 | 2 | 39 | 0 | low |  |
 | M01 | Kênh nào được nhắc/recommend nhiều nhất (dsvn.vn, 12Go, Baolau, Trip.com, Traveloka, Klook, agent, quầy ga)? | P0 | 327 | 17 | 94 | 39 | medium |  |
-| M02 | Từng kênh được khen/chê vì gì (giá, phí, UX, hỗ trợ, độ tin cậy)? | P0 | 72 | 5 | 49 | 0 | medium |  |
+| M02 | Từng kênh được khen/chê vì gì (giá, phí, UX, hỗ trợ, độ tin cậy)? | P0 | 71 | 5 | 48 | 0 | medium |  |
 | M03 | Đối thủ định vị và quảng cáo gì (messaging, offer)? | P1 | 25 | 2 | 14 | 0 | low |  |
 | M04 | Tàu du lịch tư nhân (Lotus, Chapa Express, Violette, SapaLy, Livitrans...) được nhìn nhận thế nào so với tàu DSVN? | P0 | 149 | 10 | 125 | 100 | medium |  |
 | M05 | AI engine/SERP đang recommend ai khi hỏi cách đặt vé tàu VN? | P0 | 216 | 1 | 3 | 0 | low | ⚠ P0 < medium |
@@ -50,7 +50,7 @@ Task reviewed: T-001 → T-022 (22/24; T-021 `reddit` lượt 2 reviewed 2026-11
 | Châu Á khác | other_asia | 5 | 5 | 0 | 1 | 1 |
 | Nước ngoài (chưa rõ nước) | intl | 272 | 250 | 22 | 175 | 6 |
 | Expat | expat | 0 | 0 | 0 | 0 | 0 |
-| Việt Nam | vn | 358 | 358 | 0 | 261 | 5 |
+| Việt Nam | vn | 357 | 357 | 0 | 260 | 5 |
 | Chưa rõ | unknown | 778 | 0 | 0 | 273 | 12 |
 
 Trung Quốc gần như trống (4 evidence, 1 tác giả) do Xiaohongshu/Mafengwo chặn đăng nhập (xem `source-map.md`). Ấn mỏng, Hàn tốt nhất trong wave M.

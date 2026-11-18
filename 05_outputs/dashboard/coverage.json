@@ -40,9 +40,9 @@
   "group": "Khách hàng",
   "question": "Barrier lớn nhất ở từng journey stage là gì?",
   "priority": "P0",
-  "evidence": 227,
+  "evidence": 226,
   "sources": 6,
-  "authors": 195,
+  "authors": 194,
   "intl_evidence": 32,
   "score": 1.0,
   "level": "medium"
@@ -160,9 +160,9 @@
   "group": "Cạnh tranh & thị trường",
   "question": "Từng kênh được khen/chê vì gì (giá, phí, UX, hỗ trợ, độ tin cậy)?",
   "priority": "P0",
-  "evidence": 72,
+  "evidence": 71,
   "sources": 5,
-  "authors": 49,
+  "authors": 48,
   "intl_evidence": 0,
   "score": 1.0,
   "level": "medium"
